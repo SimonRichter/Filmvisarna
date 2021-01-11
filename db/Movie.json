@@ -1,0 +1,51 @@
+[ {
+  "id" : "u1PGy07GlIw78Q5s__XXz",
+  "number" : 1,
+  "name" : "Bulbasaur",
+  "ability" : "Overgrow",
+  "height" : 0.7,
+  "weight" : 6.9,
+  "type" : "Grass",
+  "trivia" : "For some time after its birth, it grows by gaining nourishment from the seed on its back.",
+  "imageUrl" : "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
+}, {
+  "id" : "WYV0oGoEsEh0eC4AwVX7A",
+  "number" : 4,
+  "name" : "Charmander",
+  "ability" : "Blaze",
+  "height" : 0.6,
+  "weight" : 8.5,
+  "type" : "Fire",
+  "trivia" : "The fire on the tip of its tail is a measure of its life. If healthy, its tail burns intensely.",
+  "imageUrl" : "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png"
+}, {
+  "id" : "1MWISO0fBlFNZT0EezWkT",
+  "number" : 7,
+  "name" : "Squirtle",
+  "ability" : "Torrent",
+  "height" : 0.5,
+  "weight" : 9.0,
+  "type" : "Water",
+  "trivia" : "It shelters itself in its shell then strikes back with spouts of water at every opportunity.",
+  "imageUrl" : "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png"
+}, {
+  "id" : "GkSNqcQniQxRK4ae5rIx5",
+  "number" : 25,
+  "name" : "Pikachu",
+  "ability" : "Static",
+  "height" : 0.4,
+  "weight" : 6.0,
+  "type" : "Electric",
+  "trivia" : "It occasionally uses an electric shock to recharge a fellow Pikachu that is in a weakened state.",
+  "imageUrl" : "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png"
+}, {
+  "id" : "K2qmMniSfs8hqfZut69fN",
+  "number" : 135,
+  "name" : "Jolteon",
+  "ability" : "Volt Absorb",
+  "height" : 0.8,
+  "weight" : 24.5,
+  "type" : "Electric",
+  "trivia" : "By storing electricity in its body, it can shoot its bristlelike fur like a barrage of missiles.",
+  "imageUrl" : "https://assets.pokemon.com/assets/cms2/img/pokedex/full/135.png"
+} ]
