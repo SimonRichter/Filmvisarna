@@ -1,7 +1,7 @@
 package com.company;
-import com.company.models.Booking;
+//import com.company.models.Booking;
 import com.company.models.Movie;
-import com.company.models.Showing;
+//import com.company.models.Showing;
 import express.Express;
 import static express.database.Database.collection;
 
@@ -23,16 +23,16 @@ public class Main {
 
         app.get("/rest/showings", (req, res) -> {
 
-            var showings = collection(Showing.class).find();
+           // var showings = collection(Showing.class).find();
 
-            res.json(showings);
+           // res.json(showings);
         });
 
         app.get("/rest/bookings", (req, res) -> {
 
-            var bookings = collection(Booking.class).find();
+           // var bookings = collection(Booking.class).find();
 
-            res.json(bookings);
+            //res.json(bookings);
         });
         //choose another port so it doesn't collide with VUE port
         app.listen(5000);
