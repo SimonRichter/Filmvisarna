@@ -10,7 +10,7 @@
     v-for="movie of movies"
     :key="movie.id"
     :movieId="movie.id"
-    :image="movie.imageUrl"
+    :image="movie.poster"
   />
 </template>
 

@@ -6,13 +6,13 @@
 -->
 <template>
   <router-link :to="'/chosen-movie/' + movieId">
-    <img :src="image" />
+    <img :src="moviePoster" />
   </router-link>
 </template>
 
 <script>
 export default {
-  props: ['movieId', 'image']
+  props: ['movieId', 'moviePoster']
 }
 </script>
 

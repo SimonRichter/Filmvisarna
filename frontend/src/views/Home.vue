@@ -14,14 +14,14 @@ export default {
   components: {
     ShowingList,
   },
-  data() {
-    return {};
-  },
-  computed: {
-    movie() {
-      return this.$store.state.movie;
-    },
-  },
+  // data() {
+  //   return {};
+  // },
+  // computed: {
+  //   movies() {
+  //     return this.$store.state.movies;
+  //   },
+  // },
 };
 </script>
 
