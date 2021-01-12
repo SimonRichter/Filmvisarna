@@ -6,12 +6,27 @@
 -->
 
 <template>
-
+  <ShowingItem
+    v-for="movie of movies"
+    :key="movie.id"
+    :movieId="movie.id"
+    :image="movie.imageUrl"
+  />
 </template>
 
 <script>
-import ShowingItem from './ShowingItem.vue'
-export default {};
+import ShowingItem from "./ShowingItem.vue";
+
+export default {
+  components: {
+    ShowingItem,
+  },
+  computed: {
+    movies() {
+      return this.$store.state.movies;
+    },
+  },
+};
 </script>
 
 <style>
