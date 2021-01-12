@@ -18,6 +18,19 @@ const mutations = {
   },
   addMemberToState(store, newMember) {
     store.members.push(newMember)
+  },
+  removeMemberFromState(store, memberToDelete) {
+    const index = store.members.indexOf(memberToDelete.email)
+    if (index > -1) {
+      store.members.splice(index, 1)
+    }
+  },
+  updateMemberInState(store, updatedMember) {
+    const index = store.members.indexOf(updatedMember.email)
+    if (index > -1) {
+      // Remove the old member object with the new
+      store.members.splice(index, 1, updatedMember)
+    }
   }
 }
 
@@ -50,15 +63,23 @@ const actions = {
     newMember = await response.json()
     store.commit('addMemberToState', newMember)
   },
-  removeMemberFromServer() {
-
+  removeMemberFromServer(store, memberToDelete) {
+    let response = await fetch('/rest/member', {
+      method: 'DELETE',
+      body: JSON.stringify(memberToDelete)
+    })
+    memberToDelete = await response.json()
+    store.commit('removeMemberFromState', memberToDelete)
   },
-  addBookingToMember() {
-
+  // Updates the member if they have added or removed a booking in My Page or Confirmed window
+  updateMemberInServer(store, updatedMember) {
+    let response = await fetch('/rest/member', {
+      method: 'PUT',
+      body: JSON.stringify(updatedMember)
+    })
+    member = await response.json()
+    store.commit('updateMemberInState', updatedMember)
   },
-  removeBookingFromMember() {
-
-  }
 }
 
 export default createStore({ state, mutations, actions })
