@@ -3,11 +3,17 @@
     <!-- Put all content here in grid container -->
     <div class="carousel">Carousel</div>
     <div class="movieList">Movie List</div>
+    <ShowingList />
   </div>
 </template>
 
 <script>
+import ShowingList from "../components/ShowingList.vue";
+
 export default {
+  components: {
+    ShowingList,
+  },
   data() {
     return {};
   },
