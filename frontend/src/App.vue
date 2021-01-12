@@ -17,7 +17,7 @@ export default {
     NavBar,
   },
   created() {
-    // this.$store.dispatch("fetchMovie");
+    this.$store.dispatch("fetchMovie");
   },
 };
 </script>

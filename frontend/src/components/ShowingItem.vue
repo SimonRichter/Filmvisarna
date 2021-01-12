@@ -5,17 +5,21 @@
 4. Have a routerlink for the poster to get to chosen-movie-view
 -->
 <template>
-  <router-link :to="'/chosen-movie/' + movieId">
-    <img :src="moviePoster" />
-  </router-link>
+  <div>
+    <router-link :to="'/chosen-movie/' + movieId">
+      <img :src="moviePoster" />
+    </router-link>
+  </div>
 </template>
 
 <script>
 export default {
-  props: ['movieId', 'moviePoster']
-}
+  props: ["movieId", "moviePoster"],
+};
 </script>
 
-<style>
-
+<style scoped>
+div {
+  max-width: 200px;
+}
 </style>
