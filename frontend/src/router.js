@@ -31,7 +31,7 @@ const routes = [
   },
   {
     name: 'Booking',
-    path: '/chosen-movie/:title/booking',
+    path: '/:title/:id/booking',
     component: Booking
   }
 ]

@@ -5,7 +5,7 @@ import { createStore } from 'vuex'
 const state = {
   movies: [],
   members: [],
-  bookings: []
+  showings: []
 }
 
 const mutations = {
@@ -15,8 +15,8 @@ const mutations = {
   // setMembers(store, membersList) {
   //   store.members = membersList;
   // },
-  setBookings(store, bookingsList) {
-    store.bookings = bookingsList;
+  setShowings(store, showingsList) {
+    store.showings = showingsList;
   },
   // ----------- SPRINT 2 -----------
   // addMemberToState(store, newMember) {
@@ -49,11 +49,12 @@ const actions = {
   //   membersList = await membersList.json()
   //   store.commit('setMembers', membersList)
   // },
-  async fetchBookings(store) {
-    let bookingsList = await fetch('/rest/booking')
-    bookingsList = await bookingsList.json()
-    store.commit('setBookings', bookingsList)
-  },
+  async fetchShowings(store) {
+    let showingsList = await fetch('/rest/showings')
+    showingsList = await showingsList.json()
+    console.log(showingsList);
+    store.commit('setShowings', showingsList)
+  }
   // ------------- SPRINT 2 ------------
   // in-parameter is a user object user = {name: Anna, email: anna@gmail.com, password: Hej123}
   // Backend: need to use collection('Klass').insert(Object) to add a new 
