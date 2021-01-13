@@ -21,6 +21,8 @@ public class Movie {
     private String country;
     private String awards;
     private String poster;
+    private String posterLandscape;
+
 
     public String getId() {
         return id;
@@ -140,5 +142,13 @@ public class Movie {
 
     public void setPoster(String poster) {
         this.poster = poster;
+    }
+
+    public String getPosterLandscape() {
+        return posterLandscape;
+    }
+
+    public void setPosterLandscape(String posterLandscape) {
+        this.posterLandscape = posterLandscape;
     }
 }
