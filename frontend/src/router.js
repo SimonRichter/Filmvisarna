@@ -21,7 +21,7 @@ const routes = [
   },
   {
     name: 'ChosenMovie',
-    path: '/chosen-movies/:id',
+    path: '/chosen-movie/:id',
     component: ChosenMovie
   },
   {

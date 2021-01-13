@@ -1,13 +1,13 @@
 <template>
-  <NavBar />
+   <NavBar />
 
-  <router-view />
+   <router-view />
 
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&display=swap"
-    rel="stylesheet"
-  />
+   <link rel="preconnect" href="https://fonts.gstatic.com" />
+   <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&display=swap"
+      rel="stylesheet"
+   />
 </template>
 
 <script>
@@ -17,10 +17,10 @@ export default {
     NavBar,
   },
   created() {
-    // this.$store.dispatch("fetchMovie");
+    this.$store.dispatch("fetchMovies");
   },
 };
 </script>
 
-<style>
+<style scoped>
 </style>
