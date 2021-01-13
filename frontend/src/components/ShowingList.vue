@@ -1,5 +1,5 @@
 <template>
-  <div class="gridContainer">
+  <div class="flexBox_showingList">
     <ShowingItem
       class="showingItem"
       v-for="movie of movies"
@@ -27,13 +27,14 @@ export default {
 </script>
 
 <style scoped>
-.gridContainer {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
-  grid-template-rows: 1;
-}
+
 .showingItem {
-  grid-row: 1;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
 }
 </style>
