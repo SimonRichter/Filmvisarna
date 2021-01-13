@@ -24,7 +24,7 @@ export default {
   props: ["title", "items"],
   data() {
     return {
-      isHidden: false,
+      isHidden: true,
     };
   },
   methods: {
