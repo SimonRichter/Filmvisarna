@@ -28,6 +28,10 @@ public class Main {
 
             res.json(showings);
         });
+        app.get("/rest/bookings", (req, res) -> {
+            var bookings = collection(Booking.class).find();
+            res.json(bookings);
+        });
 
         app.post("/rest/bookings",(req,res) ->{
             var booking=req.body(Booking.class);
@@ -53,6 +57,12 @@ public class Main {
 
         //update to an existing member
 
+
+        //Delete (cancel membership) member
+        app.delete("/rest/members/:id",(req,res)->{
+            var id=(req.params("id"));
+            collection(Member.class).deleteById(id);
+        });
 
 
 
