@@ -14,7 +14,7 @@ public class Member {
     private String password;
     private String telephone;
     private String email;
-    private ArrayList<String> bookingsId = new ArrayList<>();
+    private ArrayList<String> bookingsId = new ArrayList<>(); //only "ID's" will be saved here
 
     public String getId() {
         return id;
