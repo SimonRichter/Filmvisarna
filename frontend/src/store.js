@@ -36,8 +36,9 @@ const mutations = {
 
 const actions = {
   async fetchMovies(store) {
-    let moviesList = await fetch('/rest/movie')
+    let moviesList = await fetch('/rest/movies')
     moviesList = await moviesList.json()
+    console.log(moviesList);
     store.commit('setMovies', moviesList)
   },
   // async fetchMembers(store) {
