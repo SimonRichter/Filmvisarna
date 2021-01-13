@@ -2,6 +2,7 @@
   margin: 0;
   scrollbar-width: thin;
   scrollbar-color: rgb(51, 51, 51) #2c3e50;
+  letter-spacing: .5px;
 }
 
 /* Works on Firefox */
@@ -32,7 +33,7 @@
 }
 
 h1{
- 
+  
   font-weight: 700;
 }
 
