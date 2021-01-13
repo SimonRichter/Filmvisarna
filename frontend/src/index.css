@@ -5,8 +5,6 @@
   letter-spacing: .5px;
 }
 
-/* Works on Firefox */
-
 /* Works on Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
   width: 14px;
