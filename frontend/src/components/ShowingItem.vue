@@ -1,7 +1,7 @@
 <template>
   <div>
     <h3>{{ movieTitle }}</h3>
-    <router-link :to="'/chosen-movie/' + movieId">
+    <router-link :to="'/chosen-movie/' + movieTitle">
       <img class="moviePoster" :src="moviePoster" />
     </router-link>
   </div>
@@ -9,16 +9,16 @@
 
 <script>
 export default {
-  props: ["movieId", "moviePoster", "movieTitle"],
+  props: ["moviePoster", "movieTitle"],
 };
 </script>
 
 <style scoped>
-h3{
+h3 {
   color: white;
   padding: 14px 16px;
 }
-.moviePoster{
+.moviePoster {
   width: 13vw;
 }
 </style>

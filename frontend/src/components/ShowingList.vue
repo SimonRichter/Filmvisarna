@@ -4,7 +4,6 @@
       class="showingItem"
       v-for="movie of movies"
       :key="movie.id"
-      :movieId="movie.id"
       :moviePoster="movie.poster"
       :movieTitle="movie.title"
     />
@@ -27,14 +26,11 @@ export default {
 </script>
 
 <style scoped>
-
 .showingItem {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-
 }
 </style>
