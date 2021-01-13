@@ -3,7 +3,11 @@ import { createStore } from 'vuex'
 const state = {
   movies: [],
   members: [],
-  bookings: []
+  bookings: [],
+  tickets: {
+    type: ["adult", "child(0-12)", "pensioner(65+)"],
+    price: ["250", "150", "170"]
+  }
 }
 
 const mutations = {
