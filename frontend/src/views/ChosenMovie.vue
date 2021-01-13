@@ -1,19 +1,35 @@
 <template>
+  <MovieItem
+      v-for="movie of movies"
+      :key="movie.title"
+      :movieTitle="movie.title"
+      :movieGenres="movie.genre"
+      :imageUrl="movie.poster"
+      :movieLength="movie.runtime"
+      :ageClassification="movie.rated"
+      :moviePlot="movie.plot"
+   />
   <div class="contentGridContainer">
-    <!-- Put all content here in grid container -->
-    
+   <ChosenMovie/>
   </div>
-  <router-link to="/"><li>Movies</li></router-link>
-  <button v-on:click="goBack">Return</button>
+
+
 </template>
 
 <script>
+import MovieItem from '../components/movieItem.vue'
 export default {
-  methods: {
-    goBack: function(){  
-      <router-link to="/"></router-link>
+ components: {
+      MovieItem
+   },
+     computed: {
+    id() {
+      return this.$route.params.id
+    },
+    movies(){
+      return this.$store.state.movies.filter(movies => movies.id == this.id)[0]
     }
-  }
+  },
 }
 </script>
 
