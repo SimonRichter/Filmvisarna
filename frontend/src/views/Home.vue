@@ -1,37 +1,44 @@
 <template>
   <div class="contentGridContainer">
     <!-- Put all content here in grid container -->
-    <div class="carousel">Carousel</div>
-    <div class="movieList">Movie List</div>
+    <CarouselList class="carousel" />
+
+    <ShowingList class="showingList" />
   </div>
 </template>
 
 <script>
+import ShowingList from "../components/ShowingList.vue";
+import CarouselList from "../components/CarouselList.vue";
+
 export default {
-  data() {
-    return {};
+  components: {
+    ShowingList,
+    CarouselList,
   },
-  computed: {
-    movie() {
-      return this.$store.state.movie;
-    },
-  },
+  // data() {
+  //   return {};
+  // },
+  // computed: {
+  //   movies() {
+  //     return this.$store.state.movies;
+  //   },
+  // },
 };
 </script>
 
 <style scoped>
 .carousel {
-  grid-area: 1/1/2/3;
-  height: 80vh;
+  grid-area: 1/1/2/4;
+  /* height: 80vh; */
   background-color: white;
-  margin: 2vh 0 2vh;
+  /* margin: 2vh 0 2vh; */
   color: darkgreen;
 }
-.movieList {
-  grid-area: 2/1/3/3;
-  height: 30vh;
-  background-color: white;
+.showingList {
+  grid-area: 2/1/3/4;
+  height: auto;
   margin: 2vh 0 2vh;
-  color: darkgreen;
+  display: flex;
 }
 </style>
