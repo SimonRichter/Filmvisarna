@@ -1,7 +1,7 @@
 <template>
   <div class="contentGridContainer">
     <!-- Put all content here in grid container -->
-    <!-- <CarouselList class="carousel" /> -->
+    <CarouselList class="carousel" />
 
     <ShowingList class="showingList" />
   </div>
@@ -9,12 +9,12 @@
 
 <script>
 import ShowingList from "../components/ShowingList.vue";
-// import CarouselList from "../components/CarouselList.vue";
+import CarouselList from "../components/CarouselList.vue";
 
 export default {
   components: {
     ShowingList,
-    // CarouselList,
+    CarouselList,
   },
   // data() {
   //   return {};
@@ -29,7 +29,7 @@ export default {
 
 <style scoped>
 .carousel {
-  grid-area: 1/1/2/3;
+  grid-area: 1/1/2/4;
   /* height: 80vh; */
   background-color: white;
   /* margin: 2vh 0 2vh; */
@@ -40,6 +40,5 @@ export default {
   height: auto;
   margin: 2vh 0 2vh;
   display: flex;
-  
 }
 </style>
