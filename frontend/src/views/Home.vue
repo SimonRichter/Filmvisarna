@@ -4,21 +4,17 @@
     <CarouselList class="carousel" />
 
     <ShowingList class="showingList" />
-    <SeatingList class="seatingList" />
   </div>
 </template>
 
 <script>
 import ShowingList from "../components/ShowingList.vue";
 import CarouselList from "../components/CarouselList.vue";
-// for testing
-import SeatingList from "../components/SeatingList.vue";
 
 export default {
   components: {
     ShowingList,
     CarouselList,
-    SeatingList,
   },
   // data() {
   //   return {};
@@ -44,12 +40,5 @@ export default {
   height: auto;
   margin: 2vh 0 2vh;
   display: flex;
-}
-.seatingList {
-  grid-area: 3/1/4/4;
-  height: auto;
-  margin: 2vh 0 2vh;
-  display: flex;
-  background-color: white;
 }
 </style>

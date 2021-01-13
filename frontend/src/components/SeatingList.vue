@@ -1,5 +1,5 @@
 <template>
-  <SeatingItem class="seatingItem" />
+  <SeatingItem />
 </template>
 
 <script>
@@ -13,11 +13,5 @@ export default {
 </script>
 
 <style scoped>
-.seatingItem {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+
 </style>

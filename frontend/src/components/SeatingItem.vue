@@ -1,82 +1,48 @@
 <template>
-  <div>
-    Hello Im Seating Item
-    <div class="ticketTypes">
-      <button onClick="getTicketTypes()" class="dropbtn">
-        Choose ticket type
-      </button>
-      <div id="myDropDown" class="ticketTypes-content">
-        <a href="#adult" onClick="addPrice">Vuxen</a>
-        <a href="#child" onClick="addPrice">Barn</a>
-        <a href="#pensioner" onClick="addPrice">Pensionär</a>
-      </div>
-    </div>
+  <div class="box">
+    <Dropdown title="Choose ticket type" :items="types" />
   </div>
 </template>
 
 <script>
+import Dropdown from "./Dropdown.vue";
 export default {
-  computed: {
-    tickets() {
-      return this.$store.state.tickets;
-    },
-    getTicketTypes() {
-      document.getElementById("myDropDown").classList.toggle("show");
-    },
-    addPrice() {
-      console.log("I have clicked and should show ticket prices");
-    },
+  components: {
+    Dropdown,
+  },
+  data() {
+    return {
+      types: [
+        {
+          title: "Adult",
+          price: "250",
+        },
+        {
+          title: "Child(0-12)",
+          price: "150",
+        },
+        {
+          title: "Pensioner(65+)",
+          price: "170",
+        },
+      ],
+    };
   },
 };
 </script>
 
-<style scoped>
-div {
-  width: 400px;
-  height: 100px;
-  background-color: burlywood;
+<style>
+.box {
+  width: 100px;
+  height: 50px;
+  background-color: cornflowerblue;
 }
-.dropbtn {
-  background-color: #3498db;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-.dropbtn:hover,
-.dropbtn:focus {
-  background-color: #2980b9;
-}
-
-.ticketTypes {
-  position: relative;
-  display: inline-block;
-}
-
-.ticketTypes-content {
-  display: none;
+.sub-menu {
   position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.ticketTypes-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.ticketTypes a:hover {
-  background-color: #ddd;
-}
-
-.show {
-  display: block;
+  background-color: cornsilk;
+  top: calc(100% - 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
 }
 </style>
