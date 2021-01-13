@@ -48,6 +48,8 @@ public class Main {
 
         } );
 
+        //update to an existing member
+
 
         //Delete (cancel membership) member
         app.delete("/rest/members/:id",(req,res)->{
