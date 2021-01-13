@@ -28,12 +28,13 @@ export default {
 
 <style scoped>
 .gridContainer {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
+  /* grid-template-columns: repeat(5, 1fr);
   gap: 10px;
-  grid-template-rows: 1;
+  grid-template-rows: 1; */
 }
 .showingItem {
-  grid-row: 1;
+  flex-grow: 1;
+  /* grid-row: 1; */
 }
 </style>
