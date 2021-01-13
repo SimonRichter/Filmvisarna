@@ -1,11 +1,11 @@
 package com.company;
-import com.company.models.Booking;
+
+//import com.company.models.Booking;
 import com.company.models.Movie;
-import com.company.models.Showing;
+//import com.company.models.Showing;
 import express.Express;
 import static express.database.Database.collection;
 import com.company.models.Member;
-
 
 public class Main {
 
@@ -22,45 +22,37 @@ public class Main {
         });
 
         app.get("/rest/showings", (req, res) -> {
-            var showings = collection(Showing.class).find();
-            res.json(showings);
+
+            // var showings = collection(Showing.class).find();
+
+            // res.json(showings);
         });
 
+        // var bookings = collection(Booking.class).find();
 
-        app.get("/rest/bookings", (req, res) -> {
-            var bookings = collection(Booking.class).find();
-            res.json(bookings);
-        });
+        // res.json(bookings);
 
-
-        //removing/deleting bookings (by selecting its ID)
-        app.delete("/rest/bookings/:id",(req,res)->{
-            var id=(req.params("id"));
+        // removing/deleting bookings (by selecting its ID)
+        app.delete("/rest/bookings/:id", (req, res) -> {
+            var id = (req.params("id"));
             collection(Booking.class).deleteById(id);
         });
 
-
-        //Adding a new member
-        app.post("/rest/members",(req,res) ->{
-            var member=req.body(Member.class);
-            var savedMember=collection(Member.class).save(member);
+        // Adding a new member
+        app.post("/rest/members", (req, res) -> {
+            var member = req.body(Member.class);
+            var savedMember = collection(Member.class).save(member);
             res.json(savedMember);
 
-        } );
+        });
 
-
-        //Delete (cancel membership) member
-        app.delete("/rest/members/:id",(req,res)->{
-            var id=(req.params("id"));
+        // Delete (cancel membership) member
+        app.delete("/rest/members/:id", (req, res) -> {
+            var id = (req.params("id"));
             collection(Member.class).deleteById(id);
         });
 
-
-
-
-
-        //choose another port so it doesn't collide with VUE port
+        // choose another port so it doesn't collide with VUE port
         app.listen(5000);
     }
 }
-
