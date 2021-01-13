@@ -36,12 +36,10 @@ export default {
   color: darkgreen;
 }
 .showingList {
-  /* grid-column: 1 / 3;
-  grid-row: 2; */
   grid-area: 2/1/3/4;
-  /* height: 30vh; */
-  background-color: white;
-  /* margin: 2vh 0 2vh; */
-  color: darkgreen;
+  height: auto;
+  margin: 2vh 0 2vh;
+  display: flex;
+  
 }
 </style>

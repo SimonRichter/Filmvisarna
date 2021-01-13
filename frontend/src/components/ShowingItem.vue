@@ -14,7 +14,11 @@ export default {
 </script>
 
 <style scoped>
-div {
-  
+h3{
+  color: white;
+  padding: 14px 16px;
+}
+.moviePoster{
+  width: 13vw;
 }
 </style>
