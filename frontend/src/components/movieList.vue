@@ -3,10 +3,10 @@
     v-for="movie of movies" 
     :key="movie.title"
     :movieTitle="movie.title"
-    :movieGenres="movie.genres"
-    :imageUrl="movie.imageUrl"
-    :movieLength="movie.length"
-    :ageClassification="movie.ageClassification"
+    :movieGenres="movie.genre"
+    :imageUrl="movie.poster"
+    :movieLength="movie.runtime"
+    :ageClassification="movie.rated"
   />
 </template>
 
