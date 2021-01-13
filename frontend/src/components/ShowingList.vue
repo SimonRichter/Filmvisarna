@@ -6,12 +6,16 @@
 -->
 
 <template>
-  <ShowingItem
-    v-for="movie of movies"
-    :key="movie.id"
-    :movieId="movie.id"
-    :image="movie.poster"
-  />
+  <div class="gridContainer">
+    <ShowingItem
+      class="showingItem"
+      v-for="movie of movies"
+      :key="movie.id"
+      :movieId="movie.id"
+      :moviePoster="movie.poster"
+      :movieTitle="movie.title"
+    />
+  </div>
 </template>
 
 <script>
@@ -30,4 +34,13 @@ export default {
 </script>
 
 <style scoped>
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  grid-template-rows: 1;
+}
+.showingItem {
+  grid-row: 1;
+}
 </style>

@@ -6,20 +6,18 @@
 -->
 <template>
   <div>
+    <h3>{{ movieTitle }}</h3>
     <router-link :to="'/chosen-movie/' + movieId">
-      <img :src="moviePoster" />
+      <img class="moviePoster" :src="moviePoster" />
     </router-link>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["movieId", "moviePoster"],
+  props: ["movieId", "moviePoster", "movieTitle"],
 };
 </script>
 
 <style scoped>
-div {
-  max-width: 200px;
-}
 </style>
