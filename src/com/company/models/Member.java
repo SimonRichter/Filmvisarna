@@ -2,6 +2,8 @@ package com.company.models;
 import express.database.Model;
 import org.dizitart.no2.objects.Id;
 
+import java.util.ArrayList;
+
 
 @Model
 public class Member {
@@ -11,6 +13,8 @@ public class Member {
     private String lastName;
     private String password;
     private String telephone;
+    private String email;
+    private ArrayList<String> bookingsId = new ArrayList<>();
 
     public String getId() {
         return id;
@@ -50,5 +54,21 @@ public class Member {
 
     public void setTelephone(String telephone) {
         this.telephone = telephone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public ArrayList<String> getBookingsId() {
+        return bookingsId;
+    }
+
+    public void setBookingsId(ArrayList<String> bookingsId) {
+        this.bookingsId = bookingsId;
     }
 }

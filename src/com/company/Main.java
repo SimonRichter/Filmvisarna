@@ -33,12 +33,19 @@ public class Main {
         });
 
 
+        app.post("/rest/bookings",(req,res) ->{
+            var booking=req.body(Booking.class);
+            var savedBooking=collection(Member.class).save(booking);
+            res.json(savedBooking);
+
+        } );
+
+
         //removing/deleting bookings (by selecting its ID)
         app.delete("/rest/bookings/:id",(req,res)->{
             var id=(req.params("id"));
             collection(Booking.class).deleteById(id);
         });
-
 
         //Adding a new member
         app.post("/rest/members",(req,res) ->{
