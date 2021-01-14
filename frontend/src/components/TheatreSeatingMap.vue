@@ -5,11 +5,15 @@
   </div> -->
   <div class="grid-container">
     <div class="totalSeats">Total seats left: {{ this.totalSeats }}</div>
-    <button class="add" @click="decrement"><i class="gg-math-minus"></i></button>
+    <button class="add" @click="decrement">
+      <i class="gg-math-minus"></i>
+    </button>
     <div class="counter">{{ this.counter }}</div>
-    <button class="remove" @click="increment"><i class="gg-math-plus"></i></button>
+    <button class="remove" @click="increment">
+      <i class="gg-math-plus"></i>
+    </button>
   </div>
-  <!-- <SeatingList /> -->
+  <SeatingList :counter="counter" class="seatingList" />
 </template>
 
 <script>
@@ -59,25 +63,32 @@ export default {
   display: grid;
   grid-template-columns: minmax(50px, 1fr) 50px 100px 50px;
   gap: 0;
-  height: 30px;
-  background-color:rgb(248, 244, 239);
+  height: 40px;
+  background-color: rgb(105, 120, 151);
+  border-radius: 5px;
+  border: black 2px solid;
 }
 .totalSeats {
   text-align: center;
-  padding-top: 3px;
+  padding-top: 8px;
 }
 .counter {
   text-align: center;
-  padding-top: 3px;
+  padding-top: 8px;
 }
 button {
   text-align: center;
-  padding-left:15px;
-  border: rgb(221, 219, 217) 2px solid;
-  background-color: rgb(233, 220, 206);
+  padding-left: 15px;
+  border: rgb(63, 72, 90) 2px solid;
+  background-color: rgb(85, 97, 122);
   border-radius: 5px;
 }
-.gg-math-plus, .gg-math-minus {
+.seatingList {
+  grid-column: 1 / 4;
+  padding-top: 10px;
+}
+.gg-math-plus,
+.gg-math-minus {
   margin-top: -2px;
   position: relative;
   transform: scale(var(--ggs, 1));
@@ -85,7 +96,8 @@ button {
   height: 2px;
 }
 .gg-math-plus,
-.gg-math-plus::after, .gg-math-minus,
+.gg-math-plus::after,
+.gg-math-minus,
 .gg-math-minus::after {
   display: block;
   box-sizing: border-box;

@@ -1,6 +1,6 @@
 <template>
-  <div class="grid-container">
-    <div class="seat">Ticket {{ counter }}</div>
+  <div class="grid-container-item">
+    <div class="seat">Ticket {{ count }}</div>
     <div class="price">Price: {{ this.ticketPrice }} kr</div>
     <div class="box">
       <Dropdown
@@ -15,7 +15,7 @@
 <script>
 import Dropdown from "./Dropdown.vue";
 export default {
-  props: ["counter"],
+  props: ["count"],
   components: {
     Dropdown,
   },
@@ -49,18 +49,17 @@ export default {
 </script>
 
 <style>
-.grid-container {
+.grid-container-item {
   display: grid;
-  grid-template-columns: minmax(200px, 1fr) minmax(100px, 1fr) 170px;
+  grid-template-columns: 200px minmax(100px, 1fr) 170px;
   grid-template-rows: 30px;
-  gap: 10px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(142, 167, 158);
   text-align: center;
   border-radius: 5px;
   border: black 2px solid;
 }
 .box {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(179, 192, 187);
   cursor: pointer;
   grid-column: 3;
   grid-row: 1;

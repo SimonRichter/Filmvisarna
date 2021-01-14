@@ -40,7 +40,7 @@ export default {
 .sub-menu {
   border: rgb(221, 219, 217) 1px solid;
   position: absolute;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(142, 167, 158);
   width: 165px;
   /* top: 80px;
   left: 16%;
@@ -56,7 +56,7 @@ export default {
   border-radius: 3px;
 }
 .menu-item:hover {
-  background-color: rgb(221, 219, 217);
+  background-color: rgb(179, 192, 187);
 }
 .down {
   transform: rotate(45deg);
