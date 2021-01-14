@@ -51,7 +51,7 @@ export default {
 <style>
 .grid-container-item {
   display: grid;
-  grid-template-columns: 200px minmax(100px, 1fr) 170px;
+  grid-template-columns: minmax(200px, 1fr) minmax(120px, 1fr) 170px;
   grid-template-rows: 30px;
   background-color: rgb(142, 167, 158);
   text-align: center;

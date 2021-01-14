@@ -1,6 +1,6 @@
 <template>
-  <div class="contentGridContainer">
-    <SeatingItem v-for="count in counter" :key="count" :counter="count" class="seatingItem" />
+  <div class="grid-container-list">
+    <SeatingItem v-for="count in counter" :key="count" :count="count" />
   </div>
 </template>
 
@@ -16,7 +16,12 @@ export default {
 </script>
 
 <style scoped>
-.seatingItem {
-  grid-area: 1;
+.grid-container-list {
+  display: grid;
+  grid-template-columns: 1;
+}
+.grid-container-item {
+  grid-column: 1;
+  margin-top: 3px;
 }
 </style>

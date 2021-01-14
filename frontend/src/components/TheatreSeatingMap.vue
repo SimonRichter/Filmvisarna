@@ -13,7 +13,7 @@
       <i class="gg-math-plus"></i>
     </button>
   </div>
-  <SeatingList :counter="counter" class="seatingList" />
+  <SeatingList :counter="counter" />
 </template>
 
 <script>
@@ -63,7 +63,6 @@ export default {
   display: grid;
   grid-template-columns: minmax(50px, 1fr) 50px 100px 50px;
   gap: 0;
-  height: 40px;
   background-color: rgb(105, 120, 151);
   border-radius: 5px;
   border: black 2px solid;
@@ -83,8 +82,8 @@ button {
   background-color: rgb(85, 97, 122);
   border-radius: 5px;
 }
-.seatingList {
-  grid-column: 1 / 4;
+.grid-container-list {
+  grid-column: 1;
   padding-top: 10px;
 }
 .gg-math-plus,

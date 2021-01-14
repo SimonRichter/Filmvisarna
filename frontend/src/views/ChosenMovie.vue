@@ -16,4 +16,7 @@ export default {
 </script>
 
 <style scoped>
+.seatingMap {
+  grid-area: 1 / 1 / 2 / 2;
+}
 </style>
