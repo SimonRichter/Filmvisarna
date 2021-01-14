@@ -35,10 +35,21 @@ export default {
   },
 };
 </script>
-
-
-
-
-<style>
-
+<style scoped>
+* {
+  color: white;
+}
+.movieInfo {
+  grid-area: 1/1/2/3;
+}
+h2 {
+  color: white;
+}
+span {
+  color: lightblue;
+  font-size: 14px;
+}
+h3 {
+  color: lightblue;
+}
 </style>
