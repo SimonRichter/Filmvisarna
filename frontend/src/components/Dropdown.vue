@@ -8,7 +8,7 @@
     <div
       v-for="(item, i) in items"
       :key="i"
-      @click="showPrices(item)"
+      @click="showPrices(item, i)"
       class="menu-item"
     >
       <a>{{ item.title }}</a>
@@ -27,9 +27,9 @@ export default {
     };
   },
   methods: {
-    showPrices(item) {
+    showPrices(item, i) {
       this.isHidden = true;
-      this.$emit("update-price", item.price, item.title);
+      this.$emit("update-price", item.title, item.price,  i);
       console.log("The price for this item is", item.price);
     },
   },

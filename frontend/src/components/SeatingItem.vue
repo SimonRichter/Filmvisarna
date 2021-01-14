@@ -40,9 +40,14 @@ export default {
     };
   },
   methods: {
-    updatePrice(updatedPrice, typeTitle) {
-      this.ticketPrice = updatedPrice;
-      this.placeHolder = typeTitle;
+    updatePrice(title, price, index) {
+      this.ticketPrice = price;
+      this.placeHolder = title;
+      this.sendToList(title, price, index);
+    },
+    sendToList(title, price, index) {
+      let obj = { title, price };
+      this.$emit("update-total", obj, index);
     },
   },
 };

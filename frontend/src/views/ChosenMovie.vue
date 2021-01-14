@@ -1,6 +1,6 @@
 <template>
   <div class="contentGridContainer">
-    <TheatreSeatingMap class="seatingMap" />
+    <TheatreSeatingMap />
 
     <!-- Put all content here in grid container -->
   </div>
@@ -16,7 +16,10 @@ export default {
 </script>
 
 <style scoped>
-.seatingMap {
-  grid-area: 1 / 1 / 2 / 2;
+.grid-container-map {
+  grid-column: 1 / 1 / auto / 2;
+  height: auto;
+  margin: 2vh 0 2vh;
+  display: flex;
 }
 </style>

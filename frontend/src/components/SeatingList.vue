@@ -1,6 +1,11 @@
 <template>
   <div class="grid-container-list">
-    <SeatingItem v-for="count in counter" :key="count" :count="count" />
+    <SeatingItem
+      v-for="count in counter"
+      :key="count"
+      :count="count"
+      @update-total="updateTotal"
+    />
   </div>
 </template>
 
@@ -11,6 +16,11 @@ export default {
   props: ["counter"],
   components: {
     SeatingItem,
+  },
+  methods: {
+    updateTotal(event){
+      this.$emit('update-total', updatedPrice, typeTitle);
+    }
   },
 };
 </script>

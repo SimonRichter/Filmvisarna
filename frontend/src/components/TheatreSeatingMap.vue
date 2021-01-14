@@ -3,7 +3,8 @@
   <div v-if="showing.id == id">
     {{ showing.seats }}
   </div> -->
-  <div class="grid-container">
+
+  <div class="grid-container-map">
     <div class="totalSeats">Total seats left: {{ this.totalSeats }}</div>
     <button class="add" @click="decrement">
       <i class="gg-math-minus"></i>
@@ -13,7 +14,12 @@
       <i class="gg-math-plus"></i>
     </button>
   </div>
-  <SeatingList :counter="counter" />
+  <SeatingList :counter="counter" @update-total="updateTotal" />
+  <div class="totalSum">
+    Ticket types:
+    <div v-for="ticket in this.ticketTypes" :key="ticket">{{ ticket }}</div>
+    Total sum: {{ this.totalSum }} kr
+  </div>
 </template>
 
 <script>
@@ -24,6 +30,8 @@ export default {
     return {
       counter: 1,
       totalSeats: 199,
+      totalSum: 0,
+      ticketTypes: [],
     };
   },
   components: {
@@ -41,6 +49,8 @@ export default {
     increment() {
       if (this.totalSeats <= 0) {
         this.totalSeats = 0;
+      } else if (this.counter > 7) {
+        console.log("You have maxed out");
       } else {
         this.counter++;
         this.totalSeats--;
@@ -54,12 +64,25 @@ export default {
         this.totalSeats++;
       }
     },
+    updateTotal(obj, index) {
+      if (this.ticketTypes.length <= 0) {
+        this.ticketTypes[index] = obj;
+      } else {
+        for (let i = 0; i >= index.length; i++) {
+          this.ticketTypes[i] = obj;
+        }
+      }
+    },
+
+    // updateTotal(updatedPrice, typeTitle) {
+    //   return (this.totalSum += +updatedPrice);
+    // },
   },
 };
 </script>
 
 <style>
-.grid-container {
+.grid-container-map {
   display: grid;
   grid-template-columns: minmax(50px, 1fr) 50px 100px 50px;
   gap: 0;
@@ -69,11 +92,12 @@ export default {
 }
 .totalSeats {
   text-align: center;
-  padding-top: 8px;
+  padding-top: 5px;
+  margin-bottom: 5px;
 }
 .counter {
   text-align: center;
-  padding-top: 8px;
+  padding-top: 5px;
 }
 button {
   text-align: center;
@@ -84,7 +108,14 @@ button {
 }
 .grid-container-list {
   grid-column: 1;
-  padding-top: 10px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+.totalSum {
+  grid-column: 2;
+  max-height: 100px;
+  background-color: crimson;
+  margin-left: 100px;
 }
 .gg-math-plus,
 .gg-math-minus {
