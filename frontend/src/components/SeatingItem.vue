@@ -1,9 +1,13 @@
 <template>
   <div class="grid-container">
     <div class="seat">Seat: 32 C</div>
-    <div class="price">Price: 250kr</div>
+    <div class="price">{{ this.ticketPrice }} kr</div>
     <div class="box">
-      <Dropdown title="Choose ticket type" :items="types" />
+      <Dropdown
+        title="Choose ticket type"
+        :items="types"
+        @update-price="updatePrice"
+      />
     </div>
   </div>
 </template>
@@ -30,7 +34,13 @@ export default {
           price: "170",
         },
       ],
+      ticketPrice: "-",
     };
+  },
+  methods: {
+    updatePrice(updatedPrice) {
+      this.ticketPrice = updatedPrice;
+    },
   },
 };
 </script>

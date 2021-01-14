@@ -10,7 +10,7 @@
     <div
       v-for="(item, i) in items"
       :key="i"
-      v-on:click="showPrices($event, item)"
+      @click="showPrices(item)"
       class="menu-item"
     >
       <a>{{ item.title }}</a>
@@ -21,6 +21,7 @@
 <script>
 export default {
   name: "dropdown",
+  emits: ["update-price"],
   props: ["title", "items"],
   data() {
     return {
@@ -28,8 +29,9 @@ export default {
     };
   },
   methods: {
-    showPrices(ev, item) {
+    showPrices(item) {
       this.isHidden = true;
+      this.$emit("update-price", item.price);
       console.log("The price for this item is", item.price);
     },
   },
