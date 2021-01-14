@@ -37,11 +37,29 @@ export default {
 
 <style scoped>
 .sub-menu {
+  /* grid-template-columns: 1;
+  grid-template-rows: 3; */
+  border: rgb(221, 219, 217) 1px solid;
   position: absolute;
-  background-color: teal;
+  background-color: rgb(255, 255, 255);
   top: 80px;
   left: 16%;
   transform: translateX(-50%);
   width: max-content;
+  border-radius: 5px;
+}
+.menu-item {
+  /* grid-column: 1;
+  grid-row: 1 / 3; */
+  border: rgb(221, 219, 217) 1px solid;
+  padding: 2px;
+  margin: 2px;
+  text-align: left;
+  border-radius: 3px;
+}
+.menu-item:hover {
+  /* grid-column: 1;
+  grid-row: 1 / 3; */
+  background-color: rgb(221, 219, 217);
 }
 </style>

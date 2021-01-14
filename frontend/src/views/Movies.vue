@@ -16,9 +16,5 @@ export default {
 </script>
 
 <style scoped>
-.seatingList {
-  width: 600px;
-  height: 300px;
-  background-color: white;
-}
+
 </style>

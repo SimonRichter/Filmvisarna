@@ -1,6 +1,9 @@
 <template>
-  <div class="box">
-    <Dropdown title="Choose ticket type" :items="types" />
+  <div class="grid-container">
+    <div class="seat">32 C</div>
+    <div class="box">
+      <Dropdown title="Choose ticket type" :items="types" />
+    </div>
   </div>
 </template>
 
@@ -32,14 +35,25 @@ export default {
 </script>
 
 <style>
+.grid-container {
+  grid-template-columns: 4;
+  grid-template-rows: 1;
+  background-color: thistle;
+  border: black 1px solid;
+}
 .box {
-  width: 100px;
-  height: 50px;
   background-color: cornflowerblue;
+  cursor: pointer;
+  grid-column: 3;
+  grid-row: 1;
+}
+.seat {
+  background-color: tomato;
+  grid-column: 1;
+  grid-row: 1;
 }
 .sub-menu {
   position: absolute;
-  background-color: cornsilk;
   top: calc(100% - 10px);
   left: 50%;
   transform: translateX(-50%);

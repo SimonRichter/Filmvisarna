@@ -1,5 +1,5 @@
 <template>
-  <SeatingItem />
+  <SeatingItem class="seatingItem" />
 </template>
 
 <script>
@@ -13,5 +13,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>
