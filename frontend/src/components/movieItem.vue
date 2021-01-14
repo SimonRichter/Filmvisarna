@@ -1,5 +1,5 @@
 <template>
-   <router-link :to="'/chosen-movie/' + movieTitle">
+   <router-link :to="'/chosen-movie/' + movieTitleForLink">
       <div class="movieItemContainer">
          <img :src="imageUrl" />
          <div class="infoContainer">
@@ -22,7 +22,13 @@ export default {
       "movieLength",
       "ageClassification",
       "moviePlot",
+      "movieTitleForLink",
    ],
+   computed: {
+      movieTitleForLink() {
+         return this.movieTitle.replace(/ /g, "-");
+      },
+   },
 };
 </script>
 
