@@ -40,6 +40,7 @@ h2 {
 span {
   color: lightblue;
   font-size: 14px;
+  font-family: 'Bebas Neue', cursive;
 }
 h3 {
   color: lightblue;
