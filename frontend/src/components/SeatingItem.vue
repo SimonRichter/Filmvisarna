@@ -1,6 +1,7 @@
 <template>
   <div class="grid-container">
     <div class="seat">32 C</div>
+    <div class="price">A price</div>
     <div class="box">
       <Dropdown title="Choose ticket type" :items="types" />
     </div>
@@ -36,21 +37,31 @@ export default {
 
 <style>
 .grid-container {
-  grid-template-columns: 4;
-  grid-template-rows: 1;
-  background-color: thistle;
-  border: black 1px solid;
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) 200px 150px;
+  grid-template-rows: 30px;
+  gap: 10px;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  border-radius: 5px;
 }
 .box {
-  background-color: cornflowerblue;
+  background-color: rgb(255, 255, 255);
   cursor: pointer;
   grid-column: 3;
   grid-row: 1;
+  border-radius: 5px;
+  border: rgb(221, 219, 217) 1px solid;
 }
 .seat {
-  background-color: tomato;
   grid-column: 1;
   grid-row: 1;
+  border-radius: 5px;
+}
+.price {
+  grid-column: 2;
+  grid-row: 1;
+  border-radius: 5px;
 }
 .sub-menu {
   position: absolute;
@@ -58,5 +69,6 @@ export default {
   left: 50%;
   transform: translateX(-50%);
   width: max-content;
+  border-radius: 5px;
 }
 </style>
