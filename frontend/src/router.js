@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from './views/Home.vue'
 import Movies from './views/Movies.vue'
 import ChosenMovie from './views/ChosenMovie.vue'
+import Booking from './views/Booking.vue'
 import SignIn from './views/SignIn.vue'
 
 const routes = [
@@ -27,6 +28,11 @@ const routes = [
     name: 'SignIn',
     path: '/sign-in/',
     component: SignIn
+  },
+  {
+    name: 'Booking',
+    path: '/chosen-movie/:title/booking',
+    component: Booking
   }
 ]
 

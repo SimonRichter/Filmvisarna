@@ -1,20 +1,26 @@
+"use strict";
+
 import { createStore } from 'vuex'
 
 const state = {
   movies: [],
   members: [],
   bookings: [],
+  showings: []
 }
 
 const mutations = {
   setMovies(store, moviesList) {
     store.movies = moviesList;
   },
-  setMembers(store, membersList) {
-    store.members = membersList;
-  },
+  // setMembers(store, membersList) {
+  //   store.members = membersList;
+  // },
   setBookings(store, bookingsList) {
     store.bookings = bookingsList;
+  },
+  setShowings(store, showingsList) {
+    store.showings = showingsList;
   },
   // ----------- SPRINT 2 -----------
   // addMemberToState(store, newMember) {
@@ -39,17 +45,24 @@ const actions = {
   async fetchMovies(store) {
     let moviesList = await fetch('/rest/movies')
     moviesList = await moviesList.json()
+    console.log(moviesList);
     store.commit('setMovies', moviesList)
   },
-  async fetchMembers(store) {
-    let membersList = await fetch('/rest/member')
-    membersList = await membersList.json()
-    store.commit('setMembers', membersList)
-  },
+  // async fetchMembers(store) {
+  //   let membersList = await fetch('/rest/member')
+  //   membersList = await membersList.json()
+  //   store.commit('setMembers', membersList)
+  // },
   async fetchBookings(store) {
-    let bookingsList = await fetch('/rest/booking')
+    let bookingsList = await fetch('/rest/bookings')
     bookingsList = await bookingsList.json()
     store.commit('setBookings', bookingsList)
+  },
+  async fetchShowings(store) {
+    let showingsList = await fetch('/rest/showings')
+    showingsList = await showingsList.json()
+    console.log(showingsList)
+    store.commit('setShowings', showingsList)
   },
   // ------------- SPRINT 2 ------------
   // in-parameter is a user object user = {name: Anna, email: anna@gmail.com, password: Hej123}

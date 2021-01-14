@@ -18,9 +18,10 @@ export default {
   },
   created() {
     this.$store.dispatch("fetchMovies");
+    this.$store.dispatch("fetchShowings");
   },
 };
 </script>
 
-<style>
+<style scoped>
 </style>
