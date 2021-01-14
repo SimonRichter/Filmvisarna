@@ -4,7 +4,7 @@
     <div class="price">{{ this.ticketPrice }} kr</div>
     <div class="box">
       <Dropdown
-        title="Choose ticket type"
+        title="Choose ticket type "
         :items="types"
         @update-price="updatePrice"
       />
@@ -48,12 +48,13 @@ export default {
 <style>
 .grid-container {
   display: grid;
-  grid-template-columns: minmax(200px, 1fr) 200px 150px;
+  grid-template-columns: minmax(200px, 1fr) 200px 170px;
   grid-template-rows: 30px;
   gap: 10px;
   background-color: rgb(255, 255, 255);
   text-align: center;
   border-radius: 5px;
+  border: black 2px solid;
 }
 .box {
   background-color: rgb(255, 255, 255);

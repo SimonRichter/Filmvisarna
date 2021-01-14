@@ -1,9 +1,7 @@
 <template>
-  <div id="menu-item">
+  <div v-on:click="isHidden = !isHidden" id="menu-item">
     <!-- <a v-on:click="isHidden = !isHidden"> -->
-    <a v-on:click="isHidden = !isHidden">
-      {{ title }}
-    </a>
+    <a> {{ title }} </a><i class="arrow down"></i>
   </div>
   <svg viewBox="0 0 1030 638" width="10"></svg>
   <div v-if="!isHidden" class="sub-menu">
@@ -58,5 +56,18 @@ export default {
 }
 .menu-item:hover {
   background-color: rgb(221, 219, 217);
+}
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-left: 4px;
+  margin-bottom: 3px;
+  margin-right: 2px;
 }
 </style>
