@@ -1,7 +1,7 @@
-   package com.company.models;
+    package com.company.models;
 
-     import express.database.Model;
-      import org.dizitart.no2.objects.Id;
+    import express.database.Model;
+    import org.dizitart.no2.objects.Id;
 
 @Model
 public class Showing {
@@ -69,4 +69,6 @@ public class Showing {
     public void setSeats(int seats) {
         this.seats = seats;
     }
+
+    public Showing() {  }
 }
