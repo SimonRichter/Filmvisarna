@@ -5,7 +5,8 @@ import { createStore } from 'vuex'
 const state = {
   movies: [],
   members: [],
-  bookings: []
+  bookings: [],
+  showings: []
 }
 
 const mutations = {
@@ -17,6 +18,9 @@ const mutations = {
   // },
   setBookings(store, bookingsList) {
     store.bookings = bookingsList;
+  },
+  setShowings(store, showingsList) {
+    store.showings = showingsList;
   },
   // ----------- SPRINT 2 -----------
   // addMemberToState(store, newMember) {
@@ -50,9 +54,15 @@ const actions = {
   //   store.commit('setMembers', membersList)
   // },
   async fetchBookings(store) {
-    let bookingsList = await fetch('/rest/booking')
+    let bookingsList = await fetch('/rest/bookings')
     bookingsList = await bookingsList.json()
     store.commit('setBookings', bookingsList)
+  },
+  async fetchShowings(store) {
+    let showingsList = await fetch('/rest/showings')
+    showingsList = await showingsList.json()
+    console.log(showingsList)
+    store.commit('setShowings', showingsList)
   },
   // ------------- SPRINT 2 ------------
   // in-parameter is a user object user = {name: Anna, email: anna@gmail.com, password: Hej123}
