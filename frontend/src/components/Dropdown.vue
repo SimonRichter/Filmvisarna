@@ -29,6 +29,7 @@ export default {
   },
   methods: {
     showPrices(ev, item) {
+      this.isHidden = true;
       console.log("The price for this item is", item.price);
     },
   },
@@ -40,10 +41,10 @@ export default {
   border: rgb(221, 219, 217) 1px solid;
   position: absolute;
   background-color: rgb(255, 255, 255);
-  top: 80px;
+  /* top: 80px;
   left: 16%;
   transform: translateX(-50%);
-  width: max-content;
+  width: max-content; */
   border-radius: 5px;
 }
 .menu-item {

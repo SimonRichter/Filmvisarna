@@ -1,7 +1,7 @@
 <template>
   <div class="grid-container">
-    <div class="seat">32 C</div>
-    <div class="price">A price</div>
+    <div class="seat">Seat: 32 C</div>
+    <div class="price">Price: 250kr</div>
     <div class="box">
       <Dropdown title="Choose ticket type" :items="types" />
     </div>
@@ -51,24 +51,31 @@ export default {
   grid-column: 3;
   grid-row: 1;
   border-radius: 5px;
-  border: rgb(221, 219, 217) 1px solid;
+  border: rgb(221, 219, 217) 2px solid;
 }
 .seat {
   grid-column: 1;
   grid-row: 1;
   border-radius: 5px;
+  padding-top: 1.5px;
 }
 .price {
   grid-column: 2;
   grid-row: 1;
   border-radius: 5px;
+  padding-top: 1.5px;
 }
 .sub-menu {
-  position: absolute;
+  grid-column: 3;
+  top: 83px;
+  left: 41%;
+  width: max-content;
+  /* grid-row: 1; */
+  /* position: absolute;
   top: calc(100% - 10px);
   left: 50%;
   transform: translateX(-50%);
-  width: max-content;
+  width: max-content; */
   border-radius: 5px;
 }
 </style>
