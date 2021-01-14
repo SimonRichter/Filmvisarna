@@ -1,10 +1,10 @@
 <template>
   <div class="grid-container">
     <div class="seat">Seat: 32 C</div>
-    <div class="price">{{ this.ticketPrice }} kr</div>
+    <div class="price">Price: {{ this.ticketPrice }} kr</div>
     <div class="box">
       <Dropdown
-        title="Choose ticket type "
+        :title="this.placeHolder"
         :items="types"
         @update-price="updatePrice"
       />
@@ -30,16 +30,18 @@ export default {
           price: "150",
         },
         {
-          title: "Pensioner(65+)",
+          title: "Senior(65+)",
           price: "170",
         },
       ],
       ticketPrice: "-",
+      placeHolder: "Choose ticket type",
     };
   },
   methods: {
-    updatePrice(updatedPrice) {
+    updatePrice(updatedPrice, typeTitle) {
       this.ticketPrice = updatedPrice;
+      this.placeHolder = typeTitle;
     },
   },
 };
@@ -48,7 +50,7 @@ export default {
 <style>
 .grid-container {
   display: grid;
-  grid-template-columns: minmax(200px, 1fr) 200px 170px;
+  grid-template-columns: minmax(200px, 1fr) minmax(100px, 1fr) 170px;
   grid-template-rows: 30px;
   gap: 10px;
   background-color: rgb(255, 255, 255);
@@ -63,6 +65,7 @@ export default {
   grid-row: 1;
   border-radius: 5px;
   border: rgb(221, 219, 217) 2px solid;
+  margin: 1px;
 }
 .seat {
   grid-column: 1;
@@ -78,8 +81,8 @@ export default {
 }
 .sub-menu {
   grid-column: 3;
-  top: 83px;
-  left: 41%;
+  top: 86px;
+  left: 38.4%;
   width: max-content;
   /* grid-row: 1; */
   /* position: absolute;

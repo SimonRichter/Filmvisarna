@@ -29,7 +29,7 @@ export default {
   methods: {
     showPrices(item) {
       this.isHidden = true;
-      this.$emit("update-price", item.price);
+      this.$emit("update-price", item.price, item.title);
       console.log("The price for this item is", item.price);
     },
   },
@@ -41,6 +41,7 @@ export default {
   border: rgb(221, 219, 217) 1px solid;
   position: absolute;
   background-color: rgb(255, 255, 255);
+  width: 165px;
   /* top: 80px;
   left: 16%;
   transform: translateX(-50%);
@@ -66,8 +67,7 @@ export default {
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;
-  margin-left: 4px;
+  margin-left: 10px;
   margin-bottom: 3px;
-  margin-right: 2px;
 }
 </style>
