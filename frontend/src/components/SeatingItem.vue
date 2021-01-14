@@ -1,6 +1,6 @@
 <template>
   <div class="grid-container">
-    <div class="seat">Seat: 32 C</div>
+    <div class="seat">Ticket {{ counter }}</div>
     <div class="price">Price: {{ this.ticketPrice }} kr</div>
     <div class="box">
       <Dropdown
@@ -15,6 +15,7 @@
 <script>
 import Dropdown from "./Dropdown.vue";
 export default {
+  props: ["counter"],
   components: {
     Dropdown,
   },

@@ -1,16 +1,16 @@
 <template>
   <div class="contentGridContainer">
-    <SeatingList class="seatingList" />
+    <TheatreSeatingMap class="seatingMap" />
 
     <!-- Put all content here in grid container -->
   </div>
 </template>
 
 <script>
-import SeatingList from "../components/SeatingList.vue";
+import TheatreSeatingMap from "../components/TheatreSeatingMap.vue";
 export default {
   components: {
-    SeatingList,
+    TheatreSeatingMap,
   },
 };
 </script>
