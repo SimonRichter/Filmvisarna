@@ -16,8 +16,8 @@ const mutations = {
   // setMembers(store, membersList) {
   //   store.members = membersList;
   // },
-  setBookings(store, bookingsList) {
-    store.bookings = bookingsList;
+  setShowings(store, showingsList) {
+    store.showings = showingsList;
   },
   setShowings(store, showingsList) {
     store.showings = showingsList;
