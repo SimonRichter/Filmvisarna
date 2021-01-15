@@ -156,7 +156,7 @@ button {
   grid-column: 1;
   display: grid;
   grid-template-columns: 1;
-  grid-template-rows: 20px minmax(20px, 1fr) 20px;
+  grid-template-rows: 20px minmax(60px, 1fr) 20px;
   gap: 5px;
   max-height: 100px;
   background-color: crimson;
