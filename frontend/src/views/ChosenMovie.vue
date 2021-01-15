@@ -4,7 +4,7 @@
 
     <div class="movieInfo">
         <h2>
-       Filmvisarna:  <span> {{ whichTheater.theatre }}</span>
+      <!-- Filmvisarna:  <span> {{ whichTheater.theatre }}</span>-->
       </h2>
        <img :src="movie.poster" />
         </div>
@@ -24,7 +24,10 @@
    
   
       <div v-for="showing of showings" :key="showing.id">
-        <div class="temp">{{showing.date}} - {{showing.time}} Title: {{showing.title}}  Seats available: {{showing.seats}}  <button class="bookButton" v-on:click="bookingmethod">Book</button> </div>
+        <div class="temp">
+            <button class="bookButton"  v-on:click="bookingmethod">Book</button>
+            {{showing.date}} || {{showing.time}} ||  {{showing.theatre}}, {{showing.salon}}
+        </div>
       </div>
 </div>
 </template>
@@ -105,6 +108,9 @@ h5{
 }
 .bookButton{
    display: flex;
+   float: left;
    margin-bottom: 10px;
+   margin-right: 20px;
 }
+
 </style>
