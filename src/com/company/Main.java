@@ -12,6 +12,7 @@ public class Main {
         var app = new Express();
 
         app.enableCollections("database/temp/db/movies.db");
+        
 
         app.get("/hello", (req, res) -> res.send("<h1>Hello from Java Express!</h1>"));
 
@@ -22,11 +23,10 @@ public class Main {
             res.json(movies);
         });
 
-        app.get("/rest/showings", (req, res) -> {
 
-           var showings = collection(Showing.class).find();
-
-            res.json(showings);
+        app.get("/rest/bookings", (req, res) -> {
+            var bookings = collection(Booking.class).find();
+            res.json(bookings);
         });
 
         app.post("/rest/bookings",(req,res) ->{
@@ -52,8 +52,34 @@ public class Main {
         } );
 
         //update to an existing member
+        app.put("/rest/members/:id",(req,res)->{
+            var update=req.body(Member.class);
+            var savedUpdate = collection(Member.class).save(update);
+            res.json(savedUpdate);
+        });
 
 
+        //Delete (cancel membership) member
+        app.delete("/rest/members/:id",(req,res)->{
+            var id=(req.params("id"));
+            collection(Member.class).deleteById(id);
+        });
+
+
+        //All 168 showings available
+        app.get("/rest/showings", (req, res) -> {
+            var showings = collection(Showing.class).find();
+            res.json(showings);
+        });
+
+
+        //removing/updating seats left
+        app.put("/rest/showings/:id",(req,res)->{
+            var update=req.body(Showing.class);
+            var savedUpdate = collection(Showing.class).save(update);
+            res.json(savedUpdate);
+
+        });
 
 
         //choose another port so it doesn't collide with VUE port
