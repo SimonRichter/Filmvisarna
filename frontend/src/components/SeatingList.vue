@@ -19,6 +19,7 @@ export default {
   },
   methods: {
     updateTotal(type, price, ticketNumber) {
+      console.log("This counter in list", this.counter);
       this.$emit("update-total", type, price, ticketNumber, this.counter);
     },
   },

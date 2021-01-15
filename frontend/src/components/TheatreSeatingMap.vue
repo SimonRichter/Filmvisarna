@@ -38,6 +38,7 @@ export default {
       typeAdult: 0,
       typeChild: 0,
       typeSenior: 0,
+      numberOfTickets: 1,
     };
   },
   components: {
@@ -71,18 +72,19 @@ export default {
       } else {
         this.counter--;
         this.totalSeats++;
+        this.updateSum(this.counter);
       }
     },
-    updateTickets(type, price, ticketNumber, numberOfTickets) {
+    updateTickets(type, price, ticketNumber) {
       this.ticketTypes[ticketNumber - 1] = { ticketType: type, price: price };
-      this.updateSum(numberOfTickets);
+      this.updateSum();
     },
-    updateSum(numberOfTickets) {
+    updateSum() {
       let localTotalSum = 0;
       this.typeAdult = 0;
       this.typeChild = 0;
       this.typeSenior = 0;
-      for (let i = 0; i < numberOfTickets; i++) {
+      for (let i = 0; i < this.counter; i++) {
         console.log(this.ticketTypes[i]);
         if (!this.ticketTypes[i]) {
           console.log("You havent filled in a ticket type on all tickets");
