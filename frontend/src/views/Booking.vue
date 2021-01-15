@@ -2,11 +2,12 @@
   <div class="contentGridContainer">
     <div class="movieInfo">
       <h2>
-        Filmvisarna,<span> {{ showing.theatre }}</span>
+        {{ showing.theatre }}, <span> {{ showing.salon }}</span>
       </h2>
       <br />
-      <h3>{{ movie.title }}</h3>
-      <span>Wed 11/04</span><span> - 20:45</span>
+      <h3>{{ showing.title }}</h3>
+      <span>{{ showing.date }}</span
+      ><span> - {{ showing.time }}</span>
       <!-- Put all content here in grid container -->
     </div>
   </div>
@@ -18,15 +19,6 @@ export default {
     id() {
       // get showing id from url parameter
       return this.$route.params.id;
-    },
-    title() {
-      // get movie title from url parameter
-      return this.$route.params.title;
-    },
-    movie() {
-      return this.$store.state.movies.filter(
-        (obj) => obj.title == this.title
-      )[0];
     },
     showing() {
       return this.$store.state.showings.filter((obj) => obj.id == this.title)[0];
@@ -48,6 +40,7 @@ h2 {
 span {
   color: lightblue;
   font-size: 14px;
+  font-family: 'Bebas Neue', cursive;
 }
 h3 {
   color: lightblue;

@@ -1,3 +1,12 @@
+:root {
+  --font1: 'Bebas Neue', cursive;
+  --font2: 'Oswald', sans-serif;
+  --c1: #000000;
+  --c2: #dc0428;
+  --redBorder: 1px #dc0428 solid;
+}
+
+
 * {
   margin: 0;
   scrollbar-width: thin;
@@ -21,29 +30,37 @@
 }
 
 #app {
-  font-family: 'Oswald', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #e0e5eb;
-  background-color: #2c3e50;;
+  background-color: var(--c1);
   overflow: hidden;
   height: auto;
 }
 
 h1{
-  
-  font-weight: 700;
+  font-family: var(--font1);
+}
+
+h2 {
+  font-family: var(--font1);
 }
 
 h3{
-
-  font-weight: 500;
+  font-family: var(--font1);
 }
 
-p {
+li {
+  font-family: var(--font1);
+  
+}
+
+p, span {
+  font-family: var(--font2);
   font-size: 16px;
   font-weight: 300;
 }
+
 
 .contentGridContainer{
 
@@ -52,6 +69,6 @@ p {
  
   width: 80vw;
   margin: 0 auto 0;
-  color:black;
+  
 
 }
