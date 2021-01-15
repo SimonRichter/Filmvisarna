@@ -14,10 +14,12 @@
       <i class="gg-math-plus"></i>
     </button>
   </div>
-  <SeatingList :counter="counter" @update-total="updateTotal" />
+  <SeatingList :counter="counter" @update-total="updateTickets" />
   <div class="totalSum">
     Ticket types:
-    <div>{{ this.ticketTypes }}</div>
+    <div v-if="this.typeAdult > 0">{{ this.typeAdult }} Adult</div>
+    <div v-if="this.typeChild > 0">{{ this.typeChild }} Child(0-12)</div>
+    <div v-if="this.typeSenior > 0">{{ this.typeSenior }} Senior(65+)</div>
     Total sum: {{ this.totalSum }} kr
   </div>
 </template>
@@ -33,6 +35,9 @@ export default {
       totalSum: 0,
       sizeOfArray: 8,
       ticketTypes: [],
+      typeAdult: 0,
+      typeChild: 0,
+      typeSenior: 0,
     };
   },
   components: {
@@ -68,22 +73,36 @@ export default {
         this.totalSeats++;
       }
     },
-    updateTotal(type, price, ticketNumber, numberOfTickets) {
+    updateTickets(type, price, ticketNumber, numberOfTickets) {
       this.ticketTypes[ticketNumber - 1] = { ticketType: type, price: price };
-      this.checkTickets(numberOfTickets);
+      this.updateSum(numberOfTickets);
     },
-    checkTickets(numberOfTickets) {
-      let totalSum = 0;
+    updateSum(numberOfTickets) {
+      let localTotalSum = 0;
+      this.typeAdult = 0;
+      this.typeChild = 0;
+      this.typeSenior = 0;
       for (let i = 0; i < numberOfTickets; i++) {
         console.log(this.ticketTypes[i]);
         if (!this.ticketTypes[i]) {
           console.log("You havent filled in a ticket type on all tickets");
         } else {
-          totalSum += +this.ticketTypes[i].price;
+          localTotalSum += +this.ticketTypes[i].price;
+          switch (this.ticketTypes[i].ticketType) {
+            case "Adult":
+              this.typeAdult++;
+              break;
+            case "Child(0-12)":
+              this.typeChild++;
+              break;
+            case "Senior(65+)":
+              this.typeSenior++;
+              break;
+          }
           console.log("you can go to the next step");
         }
       }
-      this.totalSum = totalSum;
+      this.totalSum = localTotalSum;
     },
   },
 };
