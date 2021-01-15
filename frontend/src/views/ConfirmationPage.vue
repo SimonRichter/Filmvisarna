@@ -12,7 +12,7 @@
                <h2>{{ showingObj.date }} {{ showingObj.time }}</h2>
                <h2>{{ showingObj.theatre }}</h2>
                <h2>{{ showingObj.salon }}</h2>
-               <h2>Tickets: 4</h2>
+               <h2>{{ bookingObj.seats.length }}</h2>
                <h2>Ticket types: 2 Adult, 1 Child, 1 Senior</h2>
                <h2>Total: 400kr</h2>
                <h2>Booking ID: XxXXxXXXXXXX</h2>
@@ -48,11 +48,21 @@ export default {
    },
 
    computed: {
-      id() {
-         return this.$route.params.id;
+      bookingId() {
+         return this.$route.params.bookingId;
+      },
+      showingId() {
+         return this.$route.params.showingId;
+      },
+      bookingObj() {
+         return this.$store.state.bookings.filter(
+            (x) => x.id === this.bookingId
+         )[0];
       },
       showingObj() {
-         return this.$store.state.showings.filter((x) => x.id === this.id)[0];
+         return this.$store.state.showings.filter(
+            (x) => x.id === this.showingId
+         )[0];
       },
    },
 

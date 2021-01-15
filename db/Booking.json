@@ -1,0 +1,9 @@
+[ {
+  "title": "Blade",
+  "date": "2021-01-12",
+  "time": "21:00",
+  "theatre": "Theatre 1",
+  "salon": "Big room",
+  "seats": [[98, "A"],[99, "S"],[100, "C"]],
+  "total": 260
+} ]

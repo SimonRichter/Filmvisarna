@@ -29,7 +29,7 @@ const routes = [
   },
   {
     name: 'ConfirmationPage',
-    path: '/confirmation-page/:id',
+    path: '/confirmation-page/:showingId/:bookingId',
     component: ConfirmationPage
   },
   {
