@@ -18,9 +18,9 @@ export default {
     SeatingItem,
   },
   methods: {
-    updateTotal(event){
-      this.$emit('update-total', updatedPrice, typeTitle);
-    }
+    updateTotal(type, price, ticketNumber) {
+      this.$emit("update-total", type, price, ticketNumber, this.counter);
+    },
   },
 };
 </script>

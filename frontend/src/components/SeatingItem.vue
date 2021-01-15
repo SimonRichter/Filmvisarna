@@ -40,14 +40,10 @@ export default {
     };
   },
   methods: {
-    updatePrice(title, price, index) {
+    updatePrice(title, price) {
       this.ticketPrice = price;
       this.placeHolder = title;
-      this.sendToList(title, price, index);
-    },
-    sendToList(title, price, index) {
-      let obj = { title, price };
-      this.$emit("update-total", obj, index);
+      this.$emit("update-total", title, price, this.count);
     },
   },
 };
@@ -60,6 +56,7 @@ export default {
   grid-template-rows: 30px;
   background-color: rgb(142, 167, 158);
   text-align: center;
+  padding-left: 10px;
   border-radius: 5px;
   border: black 2px solid;
 }

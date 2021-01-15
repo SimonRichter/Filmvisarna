@@ -17,7 +17,7 @@
   <SeatingList :counter="counter" @update-total="updateTotal" />
   <div class="totalSum">
     Ticket types:
-    <div v-for="ticket in this.ticketTypes" :key="ticket">{{ ticket }}</div>
+    <div>{{ this.ticketTypes }}</div>
     Total sum: {{ this.totalSum }} kr
   </div>
 </template>
@@ -31,6 +31,7 @@ export default {
       counter: 1,
       totalSeats: 199,
       totalSum: 0,
+      sizeOfArray: 8,
       ticketTypes: [],
     };
   },
@@ -46,6 +47,9 @@ export default {
     },
   },
   methods: {
+    setSizeOfArray() {
+      this.ticketTypes.length = this.sizeOfArray;
+    },
     increment() {
       if (this.totalSeats <= 0) {
         this.totalSeats = 0;
@@ -64,19 +68,23 @@ export default {
         this.totalSeats++;
       }
     },
-    updateTotal(obj, index) {
-      if (this.ticketTypes.length <= 0) {
-        this.ticketTypes[index] = obj;
-      } else {
-        for (let i = 0; i >= index.length; i++) {
-          this.ticketTypes[i] = obj;
+    updateTotal(type, price, ticketNumber, numberOfTickets) {
+      this.ticketTypes[ticketNumber - 1] = { ticketType: type, price: price };
+      this.checkTickets(numberOfTickets);
+    },
+    checkTickets(numberOfTickets) {
+      let totalSum = 0;
+      for (let i = 0; i < numberOfTickets; i++) {
+        console.log(this.ticketTypes[i]);
+        if (!this.ticketTypes[i]) {
+          console.log("You havent filled in a ticket type on all tickets");
+        } else {
+          totalSum += +this.ticketTypes[i].price;
+          console.log("you can go to the next step");
         }
       }
+      this.totalSum = totalSum;
     },
-
-    // updateTotal(updatedPrice, typeTitle) {
-    //   return (this.totalSum += +updatedPrice);
-    // },
   },
 };
 </script>
