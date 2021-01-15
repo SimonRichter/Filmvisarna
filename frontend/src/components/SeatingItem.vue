@@ -15,6 +15,7 @@
 <script>
 import Dropdown from "./Dropdown.vue";
 export default {
+  emits: ["update-total"],
   props: ["count"],
   components: {
     Dropdown,

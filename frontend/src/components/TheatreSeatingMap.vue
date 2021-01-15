@@ -6,11 +6,11 @@
 
   <div class="grid-container-map">
     <div class="totalSeats">Total seats left: {{ this.totalSeats }}</div>
-    <button class="add" @click="decrement">
+    <button class="remove" @click="decrement">
       <i class="gg-math-minus"></i>
     </button>
     <div class="counter">{{ this.counter }}</div>
-    <button class="remove" @click="increment">
+    <button class="add" @click="increment">
       <i class="gg-math-plus"></i>
     </button>
   </div>
@@ -35,7 +35,7 @@ export default {
       counter: 1,
       totalSeats: 199,
       totalSum: 0,
-      sizeOfArray: 8,
+      // sizeOfArray: 8,
       ticketTypes: [],
       typeAdult: 0,
       typeChild: 0,
@@ -55,9 +55,6 @@ export default {
     },
   },
   methods: {
-    setSizeOfArray() {
-      this.ticketTypes.length = this.sizeOfArray;
-    },
     increment() {
       if (this.totalSeats <= 0) {
         this.totalSeats = 0;
@@ -66,7 +63,7 @@ export default {
       } else {
         this.counter++;
         this.totalSeats--;
-        console.log("this.ticketTypes", this.ticketTypes);
+        // console.log("this.ticketTypes", this.ticketTypes);
       }
     },
     decrement() {
@@ -76,30 +73,31 @@ export default {
       } else {
         this.counter--;
         this.totalSeats++;
-        // Remove the last ticket type in the arrray
-        this.ticketTypes.pop();
-        console.log("this.ticketTypes", this.ticketTypes);
-        // this.removeTicketsFromArray();
+
+        if (this.counter >= 1 && !!this.ticketTypes[this.counter]) {
+          this.ticketTypes.pop();
+        }
         this.updateSum();
-      }
-    },
-    removeTicketsFromArray() {
-      for (let i = this.counter; i > this.ticketTypes.length; i--) {
-        this.ticketTypes[i] = "";
       }
     },
     updateTickets(type, price, ticketNumber) {
       this.ticketTypes[ticketNumber - 1] = { ticketType: type, price: price };
+      // console.log("this.ticketTypes", this.ticketTypes);
       this.updateSum();
     },
+
     updateSum() {
       let localTotalSum = 0;
       this.typeAdult = 0;
       this.typeChild = 0;
       this.typeSenior = 0;
+      let goToNextStep = 0;
+      // console.log("This.ticketTypes", this.ticketTypes);
+
       for (let i = 0; i < this.counter; i++) {
+        // console.log("this.counter", this.counter);
         if (!this.ticketTypes[i]) {
-          console.log("You havent filled in a ticket type on all tickets");
+          console.log("You havent filled in all ticket types");
         } else {
           localTotalSum += +this.ticketTypes[i].price;
           switch (this.ticketTypes[i].ticketType) {
@@ -113,6 +111,7 @@ export default {
               this.typeSenior++;
               break;
           }
+          goToNextStep++;
           console.log("you can go to the next step");
         }
       }
