@@ -19,33 +19,13 @@
            
             <h4>{{ movie.plot.substring(0, 1000).trimRight() }}...</h4>
          </div>
-        
-      
-      <!-- Put all content here in grid container -->
     </div>
   </div>
 
 </template>
 
 <script>
-/*
-actors: "Wesley Snipes, Stephen Dorff, Kris Kristofferson, N'Bushe Wright"
-awards: "5 wins & 11 nominations."
-country: "USA"
-director: "Stephen Norrington"
-genre: "Action, Horror, Sci-Fi"
-id: "QK_58ppl0-9ZdCjAbatBd"
-language: "English, Russian, Serbian"
-plot: "In a world where vampires walk the earth, Blade has a goal. His goal is to rid the world of all vampire evil. When Blade witnesses a vampire bite Dr. Karen Jenson, he fights away the beast and takes Jenson back to his hideout. Here, alongside Abraham Whistler, Blade attempts to help heal Jenson. The vampire Quinn who was attacked by Blade, reports back to his master Deacon Frost, who is planning a huge surprise for the human population."
-poster: "https://m.media-amazon.com/images/M/MV5BOTk2NDNjZWQtMGY0Mi00YTY2LWE5MzctMGRhZmNlYzljYTg5XkEyXkFqcGdeQXVyMTAyNjg4NjE0._V1_SX300.jpg"
-posterLandscape: "https://www.themoviedb.org/t/p/original/o4vSn07PXtQD0468pplBrCPBppu.jpg"
-rated: "R"
-released: "21 Aug 1998"
-runtime: "120 min"
-title: "Blade"
-writer: "David S. Goyer"
-year: "1998"
-*/
+
 export default {
      computed: {
     title() {
@@ -86,7 +66,7 @@ h3 {
 }
 h4 {
    margin-top: 5px;
-   color: rgb(0, 27, 36);
+   color: rgb(50, 114, 136);
 }
 h5{
    font-size: 20px;
@@ -101,5 +81,9 @@ h5{
 }
 .infoContainer {
    margin: 0 20px 0 20px;
+}
+.contentGridContainer{
+   margin-top: 10vh;
+   margin-bottom: 20vh;
 }
 </style>
