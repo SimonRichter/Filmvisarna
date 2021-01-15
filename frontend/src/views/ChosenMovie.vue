@@ -50,7 +50,7 @@ export default {
      computed: {
     title() {
       // get showing id from url parameter
-      let id =this.$route.params.id;
+      let id =this.$route.params.title;
       console.log(id)
       return id;
     },
