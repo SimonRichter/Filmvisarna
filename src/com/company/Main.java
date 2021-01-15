@@ -28,12 +28,30 @@ public class Main {
             res.json(bookings);
         });
 
+        app.get("/rest/tempBookings", (req, res) -> {
+            var tempBookings = collection(Booking.class).find();
+            res.json(tempBookings);
+        });
+
         app.post("/rest/bookings",(req,res) ->{
             var booking=req.body(Booking.class);
-            var savedBooking=collection(Member.class).save(booking);
+            //var savedBooking=collection(Member.class).save(booking);    // sprint 2
+            var savedBooking=collection(Booking.class).save(booking);
             res.json(savedBooking);
 
         } );
+
+        app.post("/rest/tempBookings",(req,res) ->{
+            var booking=req.body(Booking.class);
+            var savedBooking=collection(Booking.class).save(booking);
+            res.json(savedBooking);
+        } );
+
+        // Delete the temp booking when the Cancel button is pressed (confirmation page)
+        app.delete("/rest/tempBookings/:id",(req,res)->{
+            var id=(req.params("id"));
+            collection(Booking.class).deleteById(id);
+        });
 
 
         //removing/deleting bookings (by selecting its ID)
