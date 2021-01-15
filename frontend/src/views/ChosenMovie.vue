@@ -3,7 +3,9 @@
       <div v-for="movie of showings"
     :key="movie.id"
     >
-      <template v-if="true">
+    {{movie.title.replace(/ /g,'-')}}
+
+      <template v-if="this.$route.path==='/chosen-movie/'+ movie.title.replace(/ /g,'-')">
         {{movie.date}} - {{movie.time}} Title: {{movie.title}}  Seats available: {{movie.seats}}
       </template>
 
