@@ -23,6 +23,10 @@
       <div v-if="this.typeSenior > 0">{{ this.typeSenior }} Senior(65+)</div>
     </div>
     <div class="ticket-sum">Total sum: {{ this.totalSum }} kr</div>
+    <!-- Needs to to have correc route after showings list is done-->
+    <router-link :to="'/chosen-movie/Blade'">
+      <button class="next-btn" @click="sendDataToNextView">Next</button>
+    </router-link>
   </div>
 </template>
 
@@ -35,12 +39,12 @@ export default {
       counter: 1,
       totalSeats: 199,
       totalSum: 0,
-      // sizeOfArray: 8,
       ticketTypes: [],
       typeAdult: 0,
       typeChild: 0,
       typeSenior: 0,
       numberOfTickets: 1,
+      objToSend: [],
     };
   },
   components: {
@@ -53,6 +57,19 @@ export default {
     seatsInTheatre() {
       return this.$store.state.showings;
     },
+    sendDataToNextView() {
+      this.objToSend = {
+        tickets: [
+          {
+            Adult: this.typeAdult,
+            "Child(0-12)": this.typeChild,
+            "Senior(65+": this.typeSenior,
+          },
+        ],
+        totalSum: this.totalSum,
+      };
+      this.$store.commit("setBookingInfo", this.objToSend);
+    },
   },
   methods: {
     increment() {
@@ -63,7 +80,6 @@ export default {
       } else {
         this.counter++;
         this.totalSeats--;
-        // console.log("this.ticketTypes", this.ticketTypes);
       }
     },
     decrement() {
@@ -82,7 +98,6 @@ export default {
     },
     updateTickets(type, price, ticketNumber) {
       this.ticketTypes[ticketNumber - 1] = { ticketType: type, price: price };
-      // console.log("this.ticketTypes", this.ticketTypes);
       this.updateSum();
     },
 
@@ -92,10 +107,8 @@ export default {
       this.typeChild = 0;
       this.typeSenior = 0;
       let goToNextStep = 0;
-      // console.log("This.ticketTypes", this.ticketTypes);
 
       for (let i = 0; i < this.counter; i++) {
-        // console.log("this.counter", this.counter);
         if (!this.ticketTypes[i]) {
           console.log("You havent filled in all ticket types");
         } else {
@@ -147,6 +160,9 @@ button {
   background-color: rgb(85, 97, 122);
   border-radius: 5px;
 }
+button:active {
+  background-color: rgb(120, 130, 153);
+}
 .grid-container-list {
   grid-column: 1;
   padding-top: 15px;
@@ -155,23 +171,33 @@ button {
 .ticket-grid {
   grid-column: 1;
   display: grid;
-  grid-template-columns: 1;
-  grid-template-rows: 20px minmax(60px, 1fr) 20px;
+  grid-template-columns: minmax(100px, 1fr) 50px;
+  grid-template-rows: 20px minmax(60px, 1fr) 30px;
   gap: 5px;
-  max-height: 100px;
+  max-height: 120px;
   background-color: crimson;
   margin-left: 100px;
   padding: 10px;
   margin-bottom: 10px;
 }
-/* .ticket-type {
+.next-btn {
+  grid-column: 2;
+  grid-row: 3;
+  height: 30px;
+  width: 50px;
+  padding-left: 5px;
+}
+.ticket-types {
   grid-column: 1;
+  grid-row: 2;
   text-align: left;
 }
 .ticket-sum {
   grid-column: 1;
+  grid-row: 3;
   text-align: left;
-} */
+  padding-top: 10px;
+}
 .gg-math-plus,
 .gg-math-minus {
   margin-top: -2px;
@@ -196,5 +222,14 @@ button {
   height: 16px;
   top: -7px;
   left: 7px;
+}
+* {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 </style>

@@ -6,7 +6,8 @@ const state = {
   movies: [],
   members: [],
   bookings: [],
-  showings: []
+  showings: [],
+  bookingInfo: []
 }
 
 const mutations = {
@@ -19,8 +20,9 @@ const mutations = {
   setShowings(store, showingsList) {
     store.showings = showingsList;
   },
-  setShowings(store, showingsList) {
-    store.showings = showingsList;
+  setBookingInfo(store, bookingInfo) {
+    store.bookingInfo = bookingInfo;
+    console.log('store.bookingInfo', store.bookingInfo)
   },
   // ----------- SPRINT 2 -----------
   // addMemberToState(store, newMember) {
