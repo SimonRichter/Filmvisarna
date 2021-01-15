@@ -15,12 +15,14 @@
     </button>
   </div>
   <SeatingList :counter="counter" @update-total="updateTickets" />
-  <div class="totalSum">
+  <div class="ticket-grid">
     Ticket types:
-    <div v-if="this.typeAdult > 0">{{ this.typeAdult }} Adult</div>
-    <div v-if="this.typeChild > 0">{{ this.typeChild }} Child(0-12)</div>
-    <div v-if="this.typeSenior > 0">{{ this.typeSenior }} Senior(65+)</div>
-    Total sum: {{ this.totalSum }} kr
+    <div class="ticket-types">
+      <div v-if="this.typeAdult > 0">{{ this.typeAdult }} Adult</div>
+      <div v-if="this.typeChild > 0">{{ this.typeChild }} Child(0-12)</div>
+      <div v-if="this.typeSenior > 0">{{ this.typeSenior }} Senior(65+)</div>
+    </div>
+    <div class="ticket-sum">Total sum: {{ this.totalSum }} kr</div>
   </div>
 </template>
 
@@ -64,15 +66,26 @@ export default {
       } else {
         this.counter++;
         this.totalSeats--;
+        console.log("this.ticketTypes", this.ticketTypes);
       }
     },
     decrement() {
       if (this.totalSeats >= 199) {
         this.totalSeats = 199;
+        this.counter = 1;
       } else {
         this.counter--;
         this.totalSeats++;
-        this.updateSum(this.counter);
+        // Remove the last ticket type in the arrray
+        this.ticketTypes.pop();
+        console.log("this.ticketTypes", this.ticketTypes);
+        // this.removeTicketsFromArray();
+        this.updateSum();
+      }
+    },
+    removeTicketsFromArray() {
+      for (let i = this.counter; i > this.ticketTypes.length; i--) {
+        this.ticketTypes[i] = "";
       }
     },
     updateTickets(type, price, ticketNumber) {
@@ -85,7 +98,6 @@ export default {
       this.typeChild = 0;
       this.typeSenior = 0;
       for (let i = 0; i < this.counter; i++) {
-        console.log(this.ticketTypes[i]);
         if (!this.ticketTypes[i]) {
           console.log("You havent filled in a ticket type on all tickets");
         } else {
@@ -114,6 +126,7 @@ export default {
 .grid-container-map {
   display: grid;
   grid-template-columns: minmax(50px, 1fr) 50px 100px 50px;
+  grid-auto-rows: auto;
   gap: 0;
   background-color: rgb(105, 120, 151);
   border-radius: 5px;
@@ -140,12 +153,26 @@ button {
   padding-top: 15px;
   padding-bottom: 5px;
 }
-.totalSum {
-  grid-column: 2;
+.ticket-grid {
+  grid-column: 1;
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 20px minmax(20px, 1fr) 20px;
+  gap: 5px;
   max-height: 100px;
   background-color: crimson;
   margin-left: 100px;
+  padding: 10px;
+  margin-bottom: 10px;
 }
+/* .ticket-type {
+  grid-column: 1;
+  text-align: left;
+}
+.ticket-sum {
+  grid-column: 1;
+  text-align: left;
+} */
 .gg-math-plus,
 .gg-math-minus {
   margin-top: -2px;
