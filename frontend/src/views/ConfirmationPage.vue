@@ -8,10 +8,10 @@
                alt="Movie poster image"
             />
             <div>
-               <!-- <h2>{{ showingObj.title }}</h2> -->
-               <h2>Date: xx-xx-xx</h2>
-               <h2>Theatre: LuigiStadium</h2>
-               <h2>Salon: TheOneSalon</h2>
+               <h2>{{ showingObj.title }}</h2>
+               <h2>{{ showingObj.date }} {{ showingObj.time }}</h2>
+               <h2>{{ showingObj.theatre }}</h2>
+               <h2>{{ showingObj.salon }}</h2>
                <h2>Tickets: 4</h2>
                <h2>Ticket types: 2 Adult, 1 Child, 1 Senior</h2>
                <h2>Total: 400kr</h2>
@@ -52,7 +52,7 @@ export default {
          return this.$route.params.id;
       },
       showingObj() {
-         return this.$store.state.showings.filter((p) => p.id == this.id)[0];
+         return this.$store.state.showings.filter((x) => x.id === this.id)[0];
       },
    },
 

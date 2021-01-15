@@ -13,12 +13,15 @@
 <script>
 import NavBar from "./components/NavBar.vue";
 export default {
-  components: {
-    NavBar,
-  },
-  created() {
-    this.$store.dispatch("fetchMovies");
-  },
+   components: {
+      NavBar,
+   },
+   created() {
+      this.$store.dispatch("fetchMovies");
+      // this.$store.dispatch("fetchMembers");
+      this.$store.dispatch("fetchBookings");
+      this.$store.dispatch("fetchShowings");
+   },
 };
 </script>
 
