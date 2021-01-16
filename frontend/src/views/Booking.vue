@@ -2,19 +2,23 @@
   <div class="contentGridContainer">
     <div class="movieInfo">
       <h2>
-        {{ showing.theatre }}, <span> {{ showing.salon }}</span>
+        {{ showing.theatre }} <span> {{ showing.salon }}</span>
       </h2>
       <br />
       <h3>{{ showing.title }}</h3>
       <span>{{ showing.date }}</span
-      ><span> - {{ showing.time }}</span>
+      ><span> || {{ showing.time }}</span>
       <!-- Put all content here in grid container -->
     </div>
   </div>
 </template>
 
 <script>
+import TheatreSeatingMap from "../components/TheatreSeatingMap.vue";
 export default {
+  components: {
+    TheatreSeatingMap
+  },
   computed: {
     id() {
       // get showing id from url parameter
