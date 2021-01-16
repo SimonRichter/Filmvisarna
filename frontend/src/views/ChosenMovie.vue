@@ -25,7 +25,8 @@
   
       <div v-for="showing of showings" :key="showing.id">
         <div class="temp">
-            <button class="bookButton"  v-on:click="bookingmethod">Book</button>
+           
+           <button class="bookButton"  @click="$router.push('/chosen-movie/' + showing.title + '/booking/' + showing.id)">Book</button>
             {{showing.date}} || {{showing.time}} ||  {{showing.theatre}} || {{showing.salon}}
         </div>
       </div>
@@ -75,20 +76,14 @@ export default {
 
     title() {
       // get showing id from url parameter
-      let id =this.$route.params.title.replace('-', ' ');
-      console.log(id, "id")
-      return id;
+      return this.$route.params.title.replace('-', ' ');
     },
     
    movie(){
-      let movie = this.$store.state.movies.filter(movie => movie.title == this.title)[0]
-      console.log(movie)
-      return movie
+      return this.$store.state.movies.filter(movie => movie.title == this.title)[0]
     },
     whichTheater() {
-      let showing = this.$store.state.showings.filter((obj) => obj.title == this.title)[0];
-      console.log(showing);
-      return showing;
+      return this.$store.state.showings.filter((obj) => obj.title == this.title)[0];
     },
      showings() {
       return this.$store.state.showings
@@ -151,6 +146,7 @@ h5{
    float: left;
    margin-bottom: 10px;
    margin-right: 20px;
+   cursor: pointer;
 }
 
 </style>
