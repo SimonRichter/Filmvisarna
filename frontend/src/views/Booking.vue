@@ -21,7 +21,7 @@ export default {
       return this.$route.params.id;
     },
     showing() {
-      return this.$store.state.showings.filter((obj) => obj.id == this.title)[0];
+      return this.$store.state.showings.filter((obj) => obj.id == this.id)[0];
     },
   },
 };

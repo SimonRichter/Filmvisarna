@@ -61,6 +61,7 @@ const actions = {
   async fetchShowings(store) {
     let showingsList = await fetch('/rest/showings')
     showingsList = await showingsList.json()
+    console.log(showingsList)
     store.commit('setShowings', showingsList)
   },
   // ------------- SPRINT 2 ------------
