@@ -1,285 +1,61 @@
 [ {
-  "id" : "Ej1BshlH6Y91WWWmAPGOz",
+  "id" : "sKwLfzUCnRLIh7a-9D3Ys",
   "title" : "Soul",
-  "date" : "2021-01-12",
+  "date" : "2021-01-16",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "JImeYvkkU7zFXQG5F6EKq",
-  "title" : "Pulp Fiction",
-  "date" : "2021-01-12",
+  "id" : "pjrQYh9grExzDalywQgWo",
+  "title" : "Interstellar",
+  "date" : "2021-01-16",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "RBdpfdVfTJ5c--oY5WOIr",
+  "id" : "EaaI-QbHB_6WeSp0Hcvhx",
   "title" : "Blade",
-  "date" : "2021-01-12",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "xYKi6yxevSE5JovEw9uLF",
-  "title" : "Interstellar",
-  "date" : "2021-01-12",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "17:00",
-  "seats" : 50
-}, {
-  "id" : "sBYDc8_r3BI70jL2xWUiE",
-  "title" : "Interstellar",
-  "date" : "2021-01-12",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "XddpVusBDiJi1GRQUT1WD",
-  "title" : "Soul",
-  "date" : "2021-01-12",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "19:00",
-  "seats" : 50
-}, {
-  "id" : "rNJrKS63B4GJs1cMNg-Es",
-  "title" : "Soul",
-  "date" : "2021-01-13",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "17:00",
-  "seats" : 100
-}, {
-  "id" : "ZcIBX4U9cdQNK6zzddDfa",
-  "title" : "Soul",
-  "date" : "2021-01-13",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "19:00",
-  "seats" : 50
-}, {
-  "id" : "stWm8z33n7IV9cldI3YkK",
-  "title" : "Blade",
-  "date" : "2021-01-13",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "XAJezvUEEcdPiLNGcBdJA",
-  "title" : "It",
-  "date" : "2021-01-13",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "17:00",
-  "seats" : 50
-}, {
-  "id" : "T7n23mHImFVPMRRJqc8Jy",
-  "title" : "Interstellar",
-  "date" : "2021-01-13",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "XZIUNZ8k7QGnStn6BG_yo",
-  "title" : "Blade",
-  "date" : "2021-01-13",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "19:00",
-  "seats" : 50
-}, {
-  "id" : "k8N6BqTf53fheAzT5NBZN",
-  "title" : "Interstellar",
-  "date" : "2021-01-14",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "17:00",
-  "seats" : 100
-}, {
-  "id" : "ErjlHTUsHF5fZlXcbKPfr",
-  "title" : "Interstellar",
-  "date" : "2021-01-14",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "19:00",
-  "seats" : 50
-}, {
-  "id" : "rXDsv1pY6n7GgYNfAVnW3",
-  "title" : "Interstellar",
-  "date" : "2021-01-14",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "xbfoBlUfbF2siHh7pwtIE",
-  "title" : "Pulp Fiction",
-  "date" : "2021-01-14",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "17:00",
-  "seats" : 50
-}, {
-  "id" : "dfqLUPBETWBw5KUV_YFWH",
-  "title" : "Soul",
-  "date" : "2021-01-14",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "vgkjq7Ghd5GUDCFmzdz8p",
-  "title" : "Interstellar",
-  "date" : "2021-01-14",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "19:00",
-  "seats" : 50
-}, {
-  "id" : "3iOQUZTNBZ-8STHdKkwN_",
-  "title" : "Pulp Fiction",
-  "date" : "2021-01-15",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "17:00",
-  "seats" : 100
-}, {
-  "id" : "dr0yWDrSHWzgySY0u7XKd",
-  "title" : "Soul",
-  "date" : "2021-01-15",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "19:00",
-  "seats" : 50
-}, {
-  "id" : "VOSrLEPbUxoftSr6EwQUz",
-  "title" : "Pulp Fiction",
-  "date" : "2021-01-15",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "6zLTAsJBqlWRDHZCEyyDm",
-  "title" : "Pulp Fiction",
-  "date" : "2021-01-15",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "17:00",
-  "seats" : 50
-}, {
-  "id" : "bfaGyl4loKJUGJvDMgGTj",
-  "title" : "Pulp Fiction",
-  "date" : "2021-01-15",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "hK1DGlxqeOvNyYY-kO0PK",
-  "title" : "Interstellar",
-  "date" : "2021-01-15",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "19:00",
-  "seats" : 50
-}, {
-  "id" : "PyNCY6CeJfQSJUpmI-TUf",
-  "title" : "Pulp Fiction",
-  "date" : "2021-01-16",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "17:00",
-  "seats" : 100
-}, {
-  "id" : "d1K7gj6HdadB9M4A4twba",
-  "title" : "Soul",
-  "date" : "2021-01-16",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "19:00",
-  "seats" : 50
-}, {
-  "id" : "A9wvN6VwDjCoiOC29-zl2",
-  "title" : "It",
   "date" : "2021-01-16",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "vS1ldWEgGfOZLcpdqWNo0",
-  "title" : "Soul",
-  "date" : "2021-01-16",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "17:00",
-  "seats" : 50
-}, {
-  "id" : "SxuyDb3IJMIfS8qEZPCyL",
-  "title" : "It",
-  "date" : "2021-01-16",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "tqDBcfrFPYglg3L38_kwY",
+  "id" : "1c4d6nMQGGVU_ZRHmXRLH",
   "title" : "It",
   "date" : "2021-01-16",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
-  "time" : "19:00",
+  "time" : "17:00",
   "seats" : 50
 }, {
-  "id" : "iwn5KByxcTupYEU3RKT5C",
-  "title" : "Blade",
+  "id" : "CggbBXM72OdtQZJbQYKBr",
+  "title" : "Interstellar",
+  "date" : "2021-01-16",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "NpTPbAcJustaYRUI4TKzt",
+  "title" : "Soul",
+  "date" : "2021-01-16",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "SWfcop4SgSJ15m0hzIJ3V",
+  "title" : "Interstellar",
   "date" : "2021-01-17",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "h9pyQyidrcUu1YAdwxQ44",
-  "title" : "Blade",
-  "date" : "2021-01-17",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "19:00",
-  "seats" : 50
-}, {
-  "id" : "USsUtCFKaT5eFyOfZv_0j",
-  "title" : "It",
-  "date" : "2021-01-17",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "u50PlVPXYb9lxOLjGUjmZ",
-  "title" : "Blade",
-  "date" : "2021-01-17",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "17:00",
-  "seats" : 50
-}, {
-  "id" : "TEH_3_ZyHmDWMwYwiQTct",
-  "title" : "Interstellar",
-  "date" : "2021-01-17",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "gbQyLdkj8IBeR_0ffyQyh",
+  "id" : "0gZjcaWCb5T6woNKcc9l6",
   "title" : "Interstellar",
   "date" : "2021-01-17",
   "theatre" : "Theatre 2",
@@ -287,63 +63,95 @@
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "MydmrTLJaf_BLFA2xz-oF",
-  "title" : "Blade",
-  "date" : "2021-01-18",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "17:00",
-  "seats" : 100
-}, {
-  "id" : "j50i4QN6sjLK4VehH4ziF",
-  "title" : "Blade",
-  "date" : "2021-01-18",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "19:00",
-  "seats" : 50
-}, {
-  "id" : "Vrcbnjh3aXnQqaDqZKvTU",
-  "title" : "It",
-  "date" : "2021-01-18",
+  "id" : "menoIJeO00PSDwHPsINfF",
+  "title" : "Soul",
+  "date" : "2021-01-17",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "5BxjjDeVHs8sDl1CPoT-Y",
-  "title" : "Blade",
-  "date" : "2021-01-18",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "17:00",
-  "seats" : 50
-}, {
-  "id" : "tkLc_IssTxONu7nfwzuEk",
+  "id" : "nqV-fhztpsa_quXowwQqm",
   "title" : "Pulp Fiction",
+  "date" : "2021-01-17",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "kWUCSHFzf9b_dpiJA59yr",
+  "title" : "Soul",
+  "date" : "2021-01-17",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "QGbTsIWhNj3XLLtIS_LaR",
+  "title" : "Interstellar",
+  "date" : "2021-01-17",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "a5r_rYl0CG3FtBt1NFECJ",
+  "title" : "Soul",
+  "date" : "2021-01-18",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "XBGRDpBZEauR0BKtQi426",
+  "title" : "It",
+  "date" : "2021-01-18",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "M6GHw4hozCvzHNCgXIs2t",
+  "title" : "Interstellar",
   "date" : "2021-01-18",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "uW445qpEJJa7Oksk-QoKD",
-  "title" : "Soul",
+  "id" : "ebGLuOoVk596zEsf3ARao",
+  "title" : "Interstellar",
   "date" : "2021-01-18",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
-  "time" : "19:00",
+  "time" : "17:00",
   "seats" : 50
 }, {
-  "id" : "wU0YEAWeqG2Tb_YgmXDdA",
-  "title" : "It",
+  "id" : "hobipLlNVRLBTz-mzQfcE",
+  "title" : "Blade",
+  "date" : "2021-01-18",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "kN3heDxJo1MH3d614b6sw",
+  "title" : "Interstellar",
+  "date" : "2021-01-18",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "UGVp5TNRSTAy050HVNJ1F",
+  "title" : "Interstellar",
   "date" : "2021-01-19",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "TxXR0LGheciXznR4LClIT",
+  "id" : "HJw9V2uPPVzGzlc0e6wLl",
   "title" : "Soul",
   "date" : "2021-01-19",
   "theatre" : "Theatre 2",
@@ -351,39 +159,39 @@
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "Nij4SwryiMyibBxqwReRX",
-  "title" : "Soul",
+  "id" : "BT4e6w2xVF_xJL7hO6VVP",
+  "title" : "It",
   "date" : "2021-01-19",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "auDq7_uAPea-_oT766MuB",
-  "title" : "It",
+  "id" : "jXlXmQ0JQXeQeNM7G37SN",
+  "title" : "Blade",
   "date" : "2021-01-19",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "17:00",
   "seats" : 50
 }, {
-  "id" : "Rw2oQ_pW76NZS1jXE3DaC",
-  "title" : "It",
+  "id" : "D77wVUvucnqIuygrHI8HR",
+  "title" : "Interstellar",
   "date" : "2021-01-19",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
-  "time" : "21:00",
+  "time" : "19:00",
   "seats" : 100
 }, {
-  "id" : "ItBU4TZsXTwUWYqSkoE9s",
-  "title" : "Pulp Fiction",
+  "id" : "mT7WR3vcjS6PZFryAGdQr",
+  "title" : "Blade",
   "date" : "2021-01-19",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
-  "time" : "19:00",
+  "time" : "21:00",
   "seats" : 50
 }, {
-  "id" : "RukgohyO1GgXB2KbkgqLT",
+  "id" : "O1rCPbfNxZuDhGF73X2aL",
   "title" : "It",
   "date" : "2021-01-20",
   "theatre" : "Theatre 1",
@@ -391,31 +199,15 @@
   "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "Q_oae2aceeQtb8toxn38o",
-  "title" : "Pulp Fiction",
+  "id" : "EuwP0yift9yYM3CJpqMzJ",
+  "title" : "Interstellar",
   "date" : "2021-01-20",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "56W2HMZqlveU7FGGX11_2",
-  "title" : "Pulp Fiction",
-  "date" : "2021-01-20",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "o6YxnOT6Ez_80mCqyN5K0",
-  "title" : "It",
-  "date" : "2021-01-20",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "17:00",
-  "seats" : 50
-}, {
-  "id" : "3UJ06REaTqkoU0rb5qncy",
+  "id" : "O6YMKWs9Kb4g2pRVyM558",
   "title" : "Pulp Fiction",
   "date" : "2021-01-20",
   "theatre" : "Theatre 1",
@@ -423,23 +215,39 @@
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "6rN1d7KrEaT7rDie-LIJl",
-  "title" : "Pulp Fiction",
+  "id" : "ENEz4kEEmQBDjcO1s3qKN",
+  "title" : "Soul",
   "date" : "2021-01-20",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
-  "time" : "19:00",
+  "time" : "17:00",
   "seats" : 50
 }, {
-  "id" : "SRUfiowqLN0H1KF-WZqtZ",
-  "title" : "Blade",
+  "id" : "AHk0nwZqOc4l8iaLt6MO4",
+  "title" : "It",
+  "date" : "2021-01-20",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "ObwSkOmonnaXYjACfAZyU",
+  "title" : "It",
+  "date" : "2021-01-20",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "shQlsWlfQn9RQqeT4ktB3",
+  "title" : "Interstellar",
   "date" : "2021-01-21",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "nYvJE2rwU2w0WqB-q7D9y",
+  "id" : "WH2F6XbexuDCDGfrxcUZh",
   "title" : "It",
   "date" : "2021-01-21",
   "theatre" : "Theatre 2",
@@ -447,87 +255,87 @@
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "hcHdNhKFYnqak_lRZJDfP",
+  "id" : "QTW6b-Bg7oH_ChZkhSLsu",
+  "title" : "It",
+  "date" : "2021-01-21",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "CSgWgfZk91qKvcI4XX1h8",
+  "title" : "Pulp Fiction",
+  "date" : "2021-01-21",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "6U46Ldxwb209LiL3OpuYf",
+  "title" : "Interstellar",
+  "date" : "2021-01-21",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "GJrodZ2zEpLUES-hZsjwG",
+  "title" : "Blade",
+  "date" : "2021-01-21",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "pDbHzQdQV_f03nmMbpmbQ",
+  "title" : "Blade",
+  "date" : "2021-01-22",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "fKZPLYzhMvi41cr23mPRj",
+  "title" : "It",
+  "date" : "2021-01-22",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "kt6qUf6QHfACaSvJvQgtD",
   "title" : "Soul",
-  "date" : "2021-01-21",
+  "date" : "2021-01-22",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "9sdblopWjM7tgbNmaDJzh",
-  "title" : "Interstellar",
-  "date" : "2021-01-21",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "17:00",
-  "seats" : 50
-}, {
-  "id" : "KTXvDUkVMKo53n0bzSlpc",
-  "title" : "It",
-  "date" : "2021-01-21",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "2F-dxeTHV85wjUOA22dfg",
-  "title" : "Blade",
-  "date" : "2021-01-21",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "19:00",
-  "seats" : 50
-}, {
-  "id" : "zrmutmINn9IXnzsbnRQdE",
-  "title" : "Interstellar",
-  "date" : "2021-01-22",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "17:00",
-  "seats" : 100
-}, {
-  "id" : "kFL4qbnyNQHyZ897QF66D",
-  "title" : "Interstellar",
-  "date" : "2021-01-22",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "19:00",
-  "seats" : 50
-}, {
-  "id" : "9Lx8Ne__SWNMvz4OClRSe",
+  "id" : "FH5g2XWU-3notpg25Kby9",
   "title" : "Blade",
   "date" : "2021-01-22",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "x_bwaZBU5nTj1wPfA4fYs",
-  "title" : "Interstellar",
-  "date" : "2021-01-22",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "17:00",
   "seats" : 50
 }, {
-  "id" : "3s5K0kYwMDvHAS4lNdAjo",
+  "id" : "YNp6Odmq9G6G5N4MDpQZ9",
   "title" : "Pulp Fiction",
   "date" : "2021-01-22",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
-  "time" : "21:00",
+  "time" : "19:00",
   "seats" : 100
 }, {
-  "id" : "nlov6ZD7l3VyMzEpJuWjw",
-  "title" : "Pulp Fiction",
+  "id" : "gWme45o_sovXEdyfRqzLS",
+  "title" : "Blade",
   "date" : "2021-01-22",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
-  "time" : "19:00",
+  "time" : "21:00",
   "seats" : 50
 }, {
-  "id" : "_Gq-2_tM3EOZuCBBgTJuX",
+  "id" : "xpOK2Vj26Y2wgwSRLWDEx",
   "title" : "Soul",
   "date" : "2021-01-23",
   "theatre" : "Theatre 1",
@@ -535,31 +343,15 @@
   "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "41_qGsu1MzFlRNBU7MpDF",
-  "title" : "Blade",
+  "id" : "BB8v_Yn7wV8TTVG4_J9ud",
+  "title" : "Soul",
   "date" : "2021-01-23",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "FgC1l1z6bbZBFgh1l674j",
-  "title" : "Blade",
-  "date" : "2021-01-23",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "p-ZrYWadO5DSudAr9PW7v",
-  "title" : "Soul",
-  "date" : "2021-01-23",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "17:00",
-  "seats" : 50
-}, {
-  "id" : "Vw9AjJ_BubOZOFNDizDQL",
+  "id" : "jbSwLWOeG9vUt4jIHBIaa",
   "title" : "Interstellar",
   "date" : "2021-01-23",
   "theatre" : "Theatre 1",
@@ -567,23 +359,39 @@
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "eo0nC0Vd_lAR8rCWME6wH",
+  "id" : "lyMm0Yefy20qzGDmZuR8E",
   "title" : "Blade",
   "date" : "2021-01-23",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
-  "time" : "19:00",
+  "time" : "17:00",
   "seats" : 50
 }, {
-  "id" : "AeG5Ky0DKv8qDi3gfWMbY",
+  "id" : "YiKmeCVjdUgDT8T0kWrMF",
+  "title" : "Interstellar",
+  "date" : "2021-01-23",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "sYXnhH4E3sDE-wqD6I0zR",
   "title" : "Pulp Fiction",
+  "date" : "2021-01-23",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "yKF-GKFjw4tfx2jn9snyH",
+  "title" : "Soul",
   "date" : "2021-01-24",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "29YG7f4HY1ZZSHys8CDj7",
+  "id" : "9MtdLMzqjtNUoz46APCzM",
   "title" : "Interstellar",
   "date" : "2021-01-24",
   "theatre" : "Theatre 2",
@@ -591,103 +399,103 @@
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "2GWa_FG9T5x4hfUKY1rZV",
-  "title" : "Blade",
+  "id" : "DjIQzkqMoWwaAeARrDGVJ",
+  "title" : "Pulp Fiction",
   "date" : "2021-01-24",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "LjiJE1aO52Kk6Ma_bxRqz",
-  "title" : "It",
+  "id" : "__Maq8EBozOv0fc4tGiYB",
+  "title" : "Pulp Fiction",
   "date" : "2021-01-24",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "17:00",
   "seats" : 50
 }, {
-  "id" : "uUf1kRrQ7AYL3yoFyAXUc",
-  "title" : "Blade",
+  "id" : "80PZD4N-nDfeyDl5qUA_r",
+  "title" : "Soul",
   "date" : "2021-01-24",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
-  "time" : "21:00",
+  "time" : "19:00",
   "seats" : 100
 }, {
-  "id" : "e2JK21CZXfXkZ2TjV9NLP",
+  "id" : "PNrceH8tSpEWKp5IM075P",
   "title" : "Soul",
   "date" : "2021-01-24",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
-  "time" : "19:00",
+  "time" : "21:00",
   "seats" : 50
 }, {
-  "id" : "FcA2jdlMpU32XdZtjA-Dx",
-  "title" : "It",
+  "id" : "N4kmol1zCIvzMCsoSJQJx",
+  "title" : "Interstellar",
   "date" : "2021-01-25",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "ewEdcJ4Bn4_NH1SyTUqM_",
-  "title" : "Pulp Fiction",
+  "id" : "VvS7paaBFvyP6vrtpgC82",
+  "title" : "It",
   "date" : "2021-01-25",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "Av61F94eUgYVB4ACLHA4s",
-  "title" : "It",
+  "id" : "HRqOewpJhPgrx3NXh0CyX",
+  "title" : "Pulp Fiction",
   "date" : "2021-01-25",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "q9vSLG70hNDdDJUOjAyNo",
-  "title" : "Pulp Fiction",
+  "id" : "jQP48jr2d51WUMLc3aNyE",
+  "title" : "It",
   "date" : "2021-01-25",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "17:00",
   "seats" : 50
 }, {
-  "id" : "UG-CGSiRQ6yZCf2qZQ0_l",
-  "title" : "Blade",
+  "id" : "UZIbhHTlhPbs39k5QXAw5",
+  "title" : "Interstellar",
   "date" : "2021-01-25",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
-  "time" : "21:00",
+  "time" : "19:00",
   "seats" : 100
 }, {
-  "id" : "OFykRswyjSW3lDJHG81Qo",
-  "title" : "Soul",
+  "id" : "tR8ke8pz3Ku2WIC84TGdS",
+  "title" : "It",
   "date" : "2021-01-25",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
-  "time" : "19:00",
+  "time" : "21:00",
   "seats" : 50
 }, {
-  "id" : "AL8nzaK62w5ZZwtMDLfo8",
+  "id" : "_R8g7C_w-BVeRL3NdjSxB",
+  "title" : "Pulp Fiction",
+  "date" : "2021-01-26",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "osUtqptGTctpH1cTO77Le",
   "title" : "Interstellar",
   "date" : "2021-01-26",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "17:00",
-  "seats" : 100
-}, {
-  "id" : "jOshbGgS2A8sobSCNfGW5",
-  "title" : "Pulp Fiction",
-  "date" : "2021-01-26",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "dOUmtIqNH6QQPPnfYv9z5",
+  "id" : "v5a75nF5eLiK258tZ7QqY",
   "title" : "It",
   "date" : "2021-01-26",
   "theatre" : "Theatre 1",
@@ -695,31 +503,31 @@
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "GxClGuRo1btYRc7U_UEPJ",
-  "title" : "It",
+  "id" : "7K_9WVrKMCed5vfcX4nA4",
+  "title" : "Blade",
   "date" : "2021-01-26",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "17:00",
   "seats" : 50
 }, {
-  "id" : "hH82N7Irp9iddd-1dWb7l",
+  "id" : "VZpVvWIn_DlpJDenFYQPy",
   "title" : "Blade",
   "date" : "2021-01-26",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
-  "time" : "21:00",
+  "time" : "19:00",
   "seats" : 100
 }, {
-  "id" : "QakdtmO6Y-0RWSs8dO7id",
-  "title" : "It",
+  "id" : "SFYAkaksIY_pbkDvZP_Fz",
+  "title" : "Pulp Fiction",
   "date" : "2021-01-26",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
-  "time" : "19:00",
+  "time" : "21:00",
   "seats" : 50
 }, {
-  "id" : "rTOi4UZ1Ehq1mEIGYPfZ_",
+  "id" : "gvJCiLPEi68GSBTMhY-lb",
   "title" : "Blade",
   "date" : "2021-01-27",
   "theatre" : "Theatre 1",
@@ -727,39 +535,7 @@
   "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "-oiSg6NkwIbfGn_PgAVOE",
-  "title" : "It",
-  "date" : "2021-01-27",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "19:00",
-  "seats" : 50
-}, {
-  "id" : "p3td3JgtHrykmwgZYUyZh",
-  "title" : "Blade",
-  "date" : "2021-01-27",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "BMTeAvSVF9XtOg-gwC5Dy",
-  "title" : "Interstellar",
-  "date" : "2021-01-27",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "17:00",
-  "seats" : 50
-}, {
-  "id" : "QGAAslyvVO42ibWPZBwAi",
-  "title" : "Pulp Fiction",
-  "date" : "2021-01-27",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "qxcYo4YmPM42a4bgaVghX",
+  "id" : "tRgRWxavocXNCYiv3mcsC",
   "title" : "Pulp Fiction",
   "date" : "2021-01-27",
   "theatre" : "Theatre 2",
@@ -767,7 +543,39 @@
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "rfxkOgZMRH0YdOpK_NhNu",
+  "id" : "rXDf_dIbzFrtnqPdL921D",
+  "title" : "Blade",
+  "date" : "2021-01-27",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "0HUGdDgzX9FC7A6EH7fyj",
+  "title" : "It",
+  "date" : "2021-01-27",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "g_6Mhz6WClQh2hPl8EWLM",
+  "title" : "Interstellar",
+  "date" : "2021-01-27",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "MT0c0A4CrZtoEaELJW1YG",
+  "title" : "Pulp Fiction",
+  "date" : "2021-01-27",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "gcl2X3fjsPxrNrLtArD-Z",
   "title" : "It",
   "date" : "2021-01-28",
   "theatre" : "Theatre 1",
@@ -775,31 +583,15 @@
   "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "NTISWGMlgOIsXyRSTjMYd",
-  "title" : "Blade",
+  "id" : "PD4Fqfw69NgZRDIbBHfRm",
+  "title" : "Pulp Fiction",
   "date" : "2021-01-28",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "NMrsqtfJb6cI5A_atu29k",
-  "title" : "It",
-  "date" : "2021-01-28",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "LcNeHJMd6_qkP3p_ac4fv",
-  "title" : "Pulp Fiction",
-  "date" : "2021-01-28",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "17:00",
-  "seats" : 50
-}, {
-  "id" : "ENkxktLxQMKItGpt2HVmP",
+  "id" : "IoOKt1K4KlCDiZsjH7HQA",
   "title" : "Pulp Fiction",
   "date" : "2021-01-28",
   "theatre" : "Theatre 1",
@@ -807,47 +599,47 @@
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "04nL9HbjRaetkK42QVfVC",
+  "id" : "lKFKYlKncdl_daa0CpDp4",
+  "title" : "Interstellar",
+  "date" : "2021-01-28",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "CmogKyXTRKiDs8LdSI92N",
+  "title" : "It",
+  "date" : "2021-01-28",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "_VJiHvzKmPK5vw_fOnMzM",
   "title" : "It",
   "date" : "2021-01-28",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
-  "time" : "19:00",
-  "seats" : 50
-}, {
-  "id" : "ai1EtIwbrs4IFihIDt8_H",
-  "title" : "Blade",
-  "date" : "2021-01-29",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "17:00",
-  "seats" : 100
-}, {
-  "id" : "Wi2NE7Q_6Lkf63oSivJZD",
-  "title" : "Soul",
-  "date" : "2021-01-29",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "19:00",
-  "seats" : 50
-}, {
-  "id" : "n4ebazBIpWREU1UesLu9Y",
-  "title" : "Soul",
-  "date" : "2021-01-29",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
   "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "pAKCe_Ate3i9ZuoNumCE2",
+  "title" : "Soul",
+  "date" : "2021-01-29",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "AoHiCCt9tBelhLsB1qK3P",
-  "title" : "It",
+  "id" : "qL5wen2F4KCMTD_SRSAhC",
+  "title" : "Pulp Fiction",
   "date" : "2021-01-29",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
-  "time" : "17:00",
+  "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "ukvkHRpyFQxXflDBMpY76",
+  "id" : "2aHBYPU3VpfNkkGoQIfGV",
   "title" : "Soul",
   "date" : "2021-01-29",
   "theatre" : "Theatre 1",
@@ -855,87 +647,103 @@
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "LMlhE_4lW1Fu6t_4c4zK7",
+  "id" : "5Lf-OwQ87XeA3X-ttxDnG",
+  "title" : "Pulp Fiction",
+  "date" : "2021-01-29",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "Pa1L4YNJdsWN6ah9NAOS6",
+  "title" : "Soul",
+  "date" : "2021-01-29",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "DVhQUld9zTel9x4jWeflf",
   "title" : "Interstellar",
   "date" : "2021-01-29",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
-  "time" : "19:00",
+  "time" : "21:00",
   "seats" : 50
 }, {
-  "id" : "taXzBizl2KbDGEGF19PC_",
-  "title" : "Blade",
+  "id" : "OCkyfr8qXW98Y2u6DfOZz",
+  "title" : "It",
   "date" : "2021-01-30",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "WRwyAYXnDu6ylOFAzcEx3",
-  "title" : "Pulp Fiction",
+  "id" : "2AToIY_HrlDyHXWXuFwmk",
+  "title" : "It",
   "date" : "2021-01-30",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "BvKamotG8nmoq7IxVXC8i",
-  "title" : "Soul",
+  "id" : "WhaqEJCMfzCkR_GdvVY-Z",
+  "title" : "It",
   "date" : "2021-01-30",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "UxuYe-XaWHPmrJZWS6iNu",
-  "title" : "Pulp Fiction",
+  "id" : "XMvpfJMZyAPLDbaCKWONz",
+  "title" : "Interstellar",
   "date" : "2021-01-30",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "17:00",
   "seats" : 50
 }, {
-  "id" : "QiayRv7GGnJiG4lmPzfMz",
-  "title" : "Blade",
+  "id" : "qnjkYYC52kychzNzMwIz8",
+  "title" : "Interstellar",
   "date" : "2021-01-30",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "ezX4om8fSZcY4Bv1Ws20w",
-  "title" : "Blade",
-  "date" : "2021-01-30",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
   "time" : "19:00",
-  "seats" : 50
-}, {
-  "id" : "LR8hyHlXCGYD4UH2aLqY0",
-  "title" : "Blade",
-  "date" : "2021-01-31",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "XVB2GpyGtGbKsl8ibmp7v",
+  "id" : "GNfxCeMQ-oohl_Bzcvgft",
+  "title" : "Interstellar",
+  "date" : "2021-01-30",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "qabTGF2sg6kNywGezg_13",
   "title" : "It",
   "date" : "2021-01-31",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "s4w2PwrrSrK5eaSyu1b7B",
+  "title" : "Pulp Fiction",
+  "date" : "2021-01-31",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "w208loO8wfOKU19Ln2dhd",
-  "title" : "Blade",
+  "id" : "GrC1jfDQ7D7NGjyIzCo32",
+  "title" : "It",
   "date" : "2021-01-31",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "GaooClIiCpq1mz6E9C6Up",
+  "id" : "T5bksDtPeUO3ADIUTOC7R",
   "title" : "Interstellar",
   "date" : "2021-01-31",
   "theatre" : "Theatre 2",
@@ -943,55 +751,39 @@
   "time" : "17:00",
   "seats" : 50
 }, {
-  "id" : "N_7tyNItdL1aQGy_fdyVk",
+  "id" : "iANoAdz5s7RdaNieeSOCX",
   "title" : "Pulp Fiction",
   "date" : "2021-01-31",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
-  "time" : "21:00",
+  "time" : "19:00",
   "seats" : 100
 }, {
-  "id" : "N9mHL2oJrHTQR9yfdwWFL",
-  "title" : "Blade",
+  "id" : "yqiCWH4KHt1JBiITYdCeE",
+  "title" : "Pulp Fiction",
   "date" : "2021-01-31",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
-  "time" : "19:00",
+  "time" : "21:00",
   "seats" : 50
 }, {
-  "id" : "GafNHU0AJSP778zVBDOf0",
-  "title" : "Blade",
-  "date" : "2021-02-01",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "17:00",
-  "seats" : 100
-}, {
-  "id" : "mzwydxBBGObwnaZ6PbbFU",
+  "id" : "87-fsjWEGp32qOxdwPmeC",
   "title" : "It",
   "date" : "2021-02-01",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "eOP4lrh61aJHKHEKSmReg",
+  "title" : "Soul",
+  "date" : "2021-02-01",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "Abew4KRtIsa9DCAPCq1yg",
-  "title" : "Soul",
-  "date" : "2021-02-01",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "dV9_x4cqBGUULXOrI66M8",
-  "title" : "Pulp Fiction",
-  "date" : "2021-02-01",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "17:00",
-  "seats" : 50
-}, {
-  "id" : "MIn6_JolnxYI5vkOy4NNw",
+  "id" : "uOaqKKyw8jBuKOpSN8Fo0",
   "title" : "It",
   "date" : "2021-02-01",
   "theatre" : "Theatre 1",
@@ -999,151 +791,135 @@
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "QO_ja_CklFUPz6o6TVMnV",
-  "title" : "Interstellar",
+  "id" : "n9iapOgZ-apLwspJqOb7o",
+  "title" : "It",
   "date" : "2021-02-01",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
-  "time" : "19:00",
-  "seats" : 50
-}, {
-  "id" : "epRTtdXNGzMsibVDom9Y7",
-  "title" : "Blade",
-  "date" : "2021-02-02",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "17:00",
-  "seats" : 100
-}, {
-  "id" : "PqZGqPB5lOWDsQTkdMHDn",
-  "title" : "Pulp Fiction",
-  "date" : "2021-02-02",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "19:00",
-  "seats" : 50
-}, {
-  "id" : "bPaUv8cOcGGW-esP0ly9O",
-  "title" : "Pulp Fiction",
-  "date" : "2021-02-02",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "GaB3JqB_NN3w75BGPbzzG",
-  "title" : "It",
-  "date" : "2021-02-02",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
   "time" : "17:00",
   "seats" : 50
 }, {
-  "id" : "R0ooiNxgr2wZ51Ipxo0yh",
-  "title" : "It",
-  "date" : "2021-02-02",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "0y4xBFYz2X1vAwP2Ax30b",
-  "title" : "Pulp Fiction",
-  "date" : "2021-02-02",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "19:00",
-  "seats" : 50
-}, {
-  "id" : "UWjgVP1_WLTM6gJjwkJIk",
-  "title" : "It",
-  "date" : "2021-02-03",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "17:00",
-  "seats" : 100
-}, {
-  "id" : "2OyGs9PjPtt09ozaVf7_g",
-  "title" : "Blade",
-  "date" : "2021-02-03",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "19:00",
-  "seats" : 50
-}, {
-  "id" : "WOncROC29IsAfDWFICwn8",
-  "title" : "Blade",
-  "date" : "2021-02-03",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "wUokSwd4Gvev2pUQ5Fvnd",
+  "id" : "-E1E-Ve7deesvywxivksS",
   "title" : "Interstellar",
-  "date" : "2021-02-03",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "17:00",
-  "seats" : 50
-}, {
-  "id" : "Hvy5McAcX8b5DCYf93qq_",
-  "title" : "Blade",
-  "date" : "2021-02-03",
+  "date" : "2021-02-01",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "2h2uz485pf_BmYPH4RCtH",
-  "title" : "Blade",
-  "date" : "2021-02-03",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
   "time" : "19:00",
-  "seats" : 50
-}, {
-  "id" : "D52W11OhiMRxiG7krGPwY",
-  "title" : "Pulp Fiction",
-  "date" : "2021-02-04",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "KTUFQdmDdKszxUobfuk1-",
+  "id" : "-vSZRtB5g7k5xZKvu-PYU",
   "title" : "Blade",
-  "date" : "2021-02-04",
+  "date" : "2021-02-01",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
-  "time" : "19:00",
-  "seats" : 50
-}, {
-  "id" : "offyoh5y0Lsc0M1Dmm-kx",
-  "title" : "Blade",
-  "date" : "2021-02-04",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
   "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "c52qB9u1nfMiIzalIq1dw",
-  "title" : "Pulp Fiction",
-  "date" : "2021-02-04",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "17:00",
   "seats" : 50
 }, {
-  "id" : "Nme_iItD00O7zs7yLdbEZ",
+  "id" : "z1htYdoujo2DMVAEQtSk8",
   "title" : "Soul",
-  "date" : "2021-02-04",
+  "date" : "2021-02-02",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "ip65wvBQ7IogVFcp3bbSP",
+  "title" : "Soul",
+  "date" : "2021-02-02",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "tBClb7jNbzb1E8HI_QKNq",
+  "title" : "Interstellar",
+  "date" : "2021-02-02",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "iwXcFsJzUDJTuihBJQlyq",
+  "id" : "CAutmM-ZCN-zegJYjIVIv",
+  "title" : "Soul",
+  "date" : "2021-02-02",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "-GmmlAASZHjfNy8c_P7gz",
+  "title" : "Interstellar",
+  "date" : "2021-02-02",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "QLPpKcsjr_OBBO-WRSnhC",
+  "title" : "It",
+  "date" : "2021-02-02",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "tNYUEO0BASqfK9pHCeI3i",
+  "title" : "Soul",
+  "date" : "2021-02-03",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "uaUpi_mknOd9e8935qI9e",
+  "title" : "It",
+  "date" : "2021-02-03",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "gkD6De6TBrBgrUgJs8KoF",
+  "title" : "Soul",
+  "date" : "2021-02-03",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "JoIcGdrCzQGGkXWlG9WIV",
+  "title" : "Pulp Fiction",
+  "date" : "2021-02-03",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "WNgiQvPWg8g0ZZ4JBqqbv",
+  "title" : "It",
+  "date" : "2021-02-03",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "XowcvXvYIh9EnY2M3BwPX",
+  "title" : "It",
+  "date" : "2021-02-03",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "Dtu1CPOcJUuF4eR4OaaOk",
+  "title" : "Blade",
+  "date" : "2021-02-04",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "K5T8rEY8q2SkXhVOTuywG",
   "title" : "It",
   "date" : "2021-02-04",
   "theatre" : "Theatre 2",
@@ -1151,39 +927,55 @@
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "0qHkIAFKO4wkAdlrgCzO8",
-  "title" : "Pulp Fiction",
+  "id" : "Tov6WmhvfFsc_6OotKI4j",
+  "title" : "Blade",
+  "date" : "2021-02-04",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "l1Ed2DGU7PjfZwaoYO2Zh",
+  "title" : "It",
+  "date" : "2021-02-04",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "Lw4BJJv2wRcieqsLt8uqa",
+  "title" : "Soul",
+  "date" : "2021-02-04",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "K0w2V47CR8cb9WSCdhzbQ",
+  "title" : "Interstellar",
+  "date" : "2021-02-04",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "8-fSlw4ehSg810wri4hcg",
+  "title" : "It",
   "date" : "2021-02-05",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "kDa7qcIOLVPKAyWnHthTj",
-  "title" : "Soul",
+  "id" : "9GpttoOOasFFVZRSKSRCM",
+  "title" : "Pulp Fiction",
   "date" : "2021-02-05",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "j5vVlh-URnDSVfvl5gfMl",
-  "title" : "Soul",
-  "date" : "2021-02-05",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "kijBKrurTiSaTq0PJ-UKn",
-  "title" : "Soul",
-  "date" : "2021-02-05",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "17:00",
-  "seats" : 50
-}, {
-  "id" : "e1aLcxIrD7gA8QYA7-5_7",
+  "id" : "LXF7MhpiX1JVCoR0-aicL",
   "title" : "Blade",
   "date" : "2021-02-05",
   "theatre" : "Theatre 1",
@@ -1191,135 +983,151 @@
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "7bZSS7NISReZ2GmX99bR0",
+  "id" : "GvQQce6S8xJ1L_epYebEm",
+  "title" : "Pulp Fiction",
+  "date" : "2021-02-05",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "T1TLr-4_e-_a1sd0IQAch",
+  "title" : "It",
+  "date" : "2021-02-05",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "iOi5jYsz2wWAAKY3leWcW",
   "title" : "Interstellar",
   "date" : "2021-02-05",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
-  "time" : "19:00",
+  "time" : "21:00",
   "seats" : 50
 }, {
-  "id" : "1TFXewLq5IdrVh6wVxyC8",
-  "title" : "Interstellar",
+  "id" : "VZmbSirHxv43gIEGfkPph",
+  "title" : "Pulp Fiction",
   "date" : "2021-02-06",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "JhlS2aD9HkTJMglYNfbt4",
+  "id" : "HCBCvvfzjx6zC9yAenOrz",
+  "title" : "Soul",
+  "date" : "2021-02-06",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "pIMf9w-FcVYaOkFldhKOS",
+  "title" : "It",
+  "date" : "2021-02-06",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "0AyK4RFq200M27VkmTozo",
   "title" : "Pulp Fiction",
   "date" : "2021-02-06",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
-  "time" : "19:00",
-  "seats" : 50
-}, {
-  "id" : "KIyJF8AwZ6RjLuYFhK58r",
-  "title" : "It",
-  "date" : "2021-02-06",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "rPhXN75xmjoaGq4AMC9BR",
-  "title" : "It",
-  "date" : "2021-02-06",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
   "time" : "17:00",
   "seats" : 50
 }, {
-  "id" : "n2vPjABVCRfLcBkGfmDEj",
-  "title" : "Interstellar",
+  "id" : "JdocjRzg0Th0NmsLPoUeV",
+  "title" : "Soul",
   "date" : "2021-02-06",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
-  "time" : "21:00",
+  "time" : "19:00",
   "seats" : 100
 }, {
-  "id" : "rF4D8k8nuyHep9woFVeSU",
+  "id" : "kuA2CQ2e4LKA4IFWorkLd",
   "title" : "Interstellar",
   "date" : "2021-02-06",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
-  "time" : "19:00",
+  "time" : "21:00",
   "seats" : 50
 }, {
-  "id" : "BdQKZtE8G7sotLXRF9rB0",
+  "id" : "2Dmy58FgC2MskrbAP_f8K",
+  "title" : "It",
+  "date" : "2021-02-07",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "Fuq0ryxnNkT7E5cggSpFn",
   "title" : "Soul",
   "date" : "2021-02-07",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "17:00",
-  "seats" : 100
-}, {
-  "id" : "upUGCdC92qm7WaA8o8lw3",
-  "title" : "Interstellar",
-  "date" : "2021-02-07",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "jZzYqlgvvWCyLYQlGSFU1",
-  "title" : "Soul",
+  "id" : "5LTD69P8xi_TWMhaU1X-E",
+  "title" : "Interstellar",
   "date" : "2021-02-07",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "PlTl4HWmO0l87a_fwm00O",
-  "title" : "Interstellar",
+  "id" : "bancXgFcz0ZiAGepI9iN9",
+  "title" : "It",
   "date" : "2021-02-07",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "17:00",
   "seats" : 50
 }, {
-  "id" : "LIaXMXK2nsC629DbCXt4D",
-  "title" : "It",
-  "date" : "2021-02-07",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "W65H_i2jGzJj25Bxg-Z7y",
+  "id" : "_SzfuKRG3jfw3RB_qOXZM",
   "title" : "Blade",
   "date" : "2021-02-07",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "DSkYAPTgjWVYCkokH8Uui",
+  "title" : "Pulp Fiction",
+  "date" : "2021-02-07",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "o3BNDxTcz4qgVUqiqNKnu",
+  "title" : "It",
+  "date" : "2021-02-08",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "OwG_baVIZCFGrQWeh_4jt",
+  "title" : "Interstellar",
+  "date" : "2021-02-08",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "XS7R7DOIKaX340qsbhzhc",
+  "id" : "sLxITEJ-TRJRkg0OJp32M",
   "title" : "Blade",
   "date" : "2021-02-08",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
-  "time" : "17:00",
-  "seats" : 100
-}, {
-  "id" : "Z9AIbrZrBRS8F6KiIpRGP",
-  "title" : "Soul",
-  "date" : "2021-02-08",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "19:00",
-  "seats" : 50
-}, {
-  "id" : "Bgwnfj2EROulAX0udsCOC",
-  "title" : "Pulp Fiction",
-  "date" : "2021-02-08",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "hG0BNqFtqaDCTWjTSLZXm",
+  "id" : "BE29d7HSn5h745uWoA_OM",
   "title" : "Soul",
   "date" : "2021-02-08",
   "theatre" : "Theatre 2",
@@ -1327,19 +1135,211 @@
   "time" : "17:00",
   "seats" : 50
 }, {
-  "id" : "4WT07HgmvVws55qxztV3z",
+  "id" : "uEyR-lnrEJeGj3-JlHC76",
   "title" : "Pulp Fiction",
   "date" : "2021-02-08",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "BnDuO1ebii8d2kPvtWpQf",
+  "title" : "It",
+  "date" : "2021-02-08",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "dWw97OfKHYzdPNvmpYTOT",
+  "title" : "Interstellar",
+  "date" : "2021-02-09",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "wbxXtjLPflQm9HaqzZpRW",
+  "title" : "Soul",
+  "date" : "2021-02-09",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "AXJENy5c2NFLrBfTgW_AP",
+  "title" : "Blade",
+  "date" : "2021-02-09",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "GHFnPNUHUMI1CkUYkDdnz",
+  "id" : "O-wFvTFSDOteVgYFvkzR-",
   "title" : "Pulp Fiction",
-  "date" : "2021-02-08",
+  "date" : "2021-02-09",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "srAjgtHo0Ir1XWDW4d_Px",
+  "title" : "Soul",
+  "date" : "2021-02-09",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "Kizxjra3gbzVocZbY6pb4",
+  "title" : "Blade",
+  "date" : "2021-02-09",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "CzdQatq6avTxgJ4nQJplF",
+  "title" : "Soul",
+  "date" : "2021-02-10",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "k0XlVaE6R4FXmOKjBNA3X",
+  "title" : "Pulp Fiction",
+  "date" : "2021-02-10",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "hFpWsqDWIu_VSwTbtJp_u",
+  "title" : "Blade",
+  "date" : "2021-02-10",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "3Lipw362wHNgZPQ8EhBhB",
+  "title" : "Pulp Fiction",
+  "date" : "2021-02-10",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "1_x66M3-CFVwE5_ItMM1o",
+  "title" : "It",
+  "date" : "2021-02-10",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "UiyFXLT48WHLkphIP2dCe",
+  "title" : "Soul",
+  "date" : "2021-02-10",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "5JpLPSxrA3LNEYECxlfZE",
+  "title" : "It",
+  "date" : "2021-02-11",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "H6e4lds8ZtsjKCV3IPowJ",
+  "title" : "Interstellar",
+  "date" : "2021-02-11",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "buf7zKQPQsbFfeGUQhjSj",
+  "title" : "Interstellar",
+  "date" : "2021-02-11",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "OvroqveR8jZ8cMKubCKNL",
+  "title" : "Blade",
+  "date" : "2021-02-11",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "ps7iQJtxTuSCzm2F3j7s6",
+  "title" : "Soul",
+  "date" : "2021-02-11",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "gix3sjGGAY1cQ_VbiT2eX",
+  "title" : "Blade",
+  "date" : "2021-02-11",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "uljCWlNYEkmlRcGlW2dii",
+  "title" : "Interstellar",
+  "date" : "2021-02-12",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "zVm4vXOCCR8vL29dUs_e4",
+  "title" : "Blade",
+  "date" : "2021-02-12",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "0lCHJ-omjA_aU6Lu_Uq9q",
+  "title" : "Interstellar",
+  "date" : "2021-02-12",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "F2sFbjk6lyubobpqUYD9H",
+  "title" : "Soul",
+  "date" : "2021-02-12",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "OQpn9t4GIFiTGu_DQV5TU",
+  "title" : "It",
+  "date" : "2021-02-12",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "GjmQCQxx-q4G89rWnt9nF",
+  "title" : "Blade",
+  "date" : "2021-02-12",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
   "seats" : 50
 } ]
