@@ -26,7 +26,7 @@
       <div v-for="showing of showings" :key="showing.id">
         <div class="temp">
             <button class="bookButton"  v-on:click="bookingmethod">Book</button>
-            {{showing.date}} || {{showing.time}} ||  {{showing.theatre}}, {{showing.salon}}
+            {{showing.date}} || {{showing.time}} ||  {{showing.theatre}} || {{showing.salon}}
         </div>
       </div>
 </div>
@@ -36,10 +36,47 @@
 
 export default {
      computed: {
+
+    today() {
+      const x = new Date();
+      const year = x.getFullYear()
+      const month = (x.getMonth()+1)
+      const day = x.getDate()
+
+      const date = year+'-'+(month<10?'0':'')+month+'-'+(day<10?'0':'')+day;
+      return date
+    },
+    
+    tomorrow() {
+      const today = new Date()
+      const x = new Date(today)
+      x.setDate(x.getDate() + 1)
+      const year = x.getFullYear()
+      const month = (x.getMonth()+1)
+      const day = x.getDate()
+       
+      const tomorrow = year+'-'+(month<10?'0':'')+month+'-'+(day<10?'0':'')+day;
+      
+      return tomorrow
+    },
+
+    dayAfterTomorrow() {
+       const today = new Date()
+      const x = new Date(today)
+      x.setDate(x.getDate() + 2)
+      const year = x.getFullYear()
+      const month = (x.getMonth()+1)
+      const day = x.getDate()
+       
+      const dayAfterTomorrow = year+'-'+(month<10?'0':'')+month+'-'+(day<10?'0':'')+day;
+      
+      return dayAfterTomorrow
+    },
+
     title() {
       // get showing id from url parameter
-      let id =this.$route.params.title.replace('-', '');;
-      console.log(id)
+      let id =this.$route.params.title.replace('-', ' ');
+      console.log(id, "id")
       return id;
     },
     
@@ -54,7 +91,10 @@ export default {
       return showing;
     },
      showings() {
-      return this.$store.state.showings.filter((obj) => obj.title == this.title);
+      return this.$store.state.showings
+      .filter((obj) => obj.title == this.title)
+      .filter((obj) => obj.date == this.today || obj.date == this.tomorrow || obj.date == this.dayAfterTomorrow)
+      
     },
     allMovies(){
       return this.$store.state.movies;
