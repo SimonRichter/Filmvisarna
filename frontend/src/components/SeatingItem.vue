@@ -1,10 +1,10 @@
 <template>
   <div class="grid-container-item">
     <h3 class="seat">Ticket {{ count }}</h3>
-    <h3 class="price">Price: {{ this.ticketPrice }} kr</h3>
+    <h3 class="price">Price: {{ ticketPrice }} kr</h3>
     <div class="box">
       <Dropdown
-        :title="this.placeHolder"
+        :title="placeHolder"
         :items="types"
         @update-price="updatePrice"
       />
@@ -51,7 +51,7 @@ export default {
 </script>
 
 <style scoped>
-h3{
+h3 {
   color: black;
 }
 .grid-container-item {
@@ -66,7 +66,7 @@ h3{
   /* border: black 2px solid; */
 }
 .box {
-  background-color: rgb(179, 192, 187);
+  background-color: rgb(255, 255, 255);
   cursor: pointer;
   grid-column: 3;
   grid-row: 1;

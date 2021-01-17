@@ -1,15 +1,12 @@
 <template>
-  <!-- <div v-for="showing in showings" :key="showing.id"></div>
-  <div v-if="showing.id == id">
-    {{ showing.seats }}
-  </div> -->
-
   <div class="grid-container-map">
-    <h3 class="totalSeats">Total seats left: {{ this.showing.seats }}</h3>
+    <h3 class="totalSeats">Total seats left: {{ totalSeats }}</h3>
     <button class="remove" @click="increment">
       <i class="gg-math-minus"></i>
     </button>
-    <h3 class="counter">{{ this.counter }}</h3>
+    <div class="counter">
+      <h3>{{ counter }}</h3>
+    </div>
     <button class="add" @click="decrement">
       <i class="gg-math-plus"></i>
     </button>
@@ -19,13 +16,13 @@
     <h2>Ticket types</h2>
     <div class="ticket-types">
       <h3>
-        <div v-if="this.typeAdult > 0">{{ this.typeAdult }} Adult</div>
-        <div v-if="this.typeChild > 0">{{ this.typeChild }} Child (0-12)</div>
-        <div v-if="this.typeSenior > 0">{{ this.typeSenior }} Senior (65+)</div>
+        <div v-if="typeAdult > 0">{{ typeAdult }} Adult</div>
+        <div v-if="typeChild > 0">{{ typeChild }} Child (0-12)</div>
+        <div v-if="typeSenior > 0">{{ typeSenior }} Senior (65+)</div>
       </h3>
     </div>
     <div class="ticket-sum">
-      <h3>Total sum: {{ this.totalSum }} kr</h3>
+      <h3>Total sum: {{ totalSum }} kr</h3>
     </div>
     <!-- Needs to to have correc route after confirmation page is done-->
     <router-link
@@ -47,11 +44,16 @@ import SeatingList from "./SeatingList.vue";
 
 export default {
   props: ["showing"],
+  // data: function () {
+  //   return {
+  //     totalSeats: this.showing.seats,
+  //   };
+  // },
   data() {
     return {
       counter: 1,
-      totalSeats: this.showing.seats,
       totalSum: 0,
+      totalSeats: this.showing.seats - 1,
       ticketTypes: [],
       typeAdult: 0,
       typeChild: 0,
@@ -79,6 +81,10 @@ export default {
     },
   },
   methods: {
+    // totalSeats() {
+    //   this.totalSeats = +this.showing.seats;
+    //   return this.totalSeats;
+    // },
     increment() {
       if (this.totalSeats <= 0) {
         this.totalSeats = 0;
@@ -90,8 +96,8 @@ export default {
       }
     },
     decrement() {
-      if (this.totalSeats >= this.showing.seats) {
-        this.totalSeats = this.showing.seats;
+      if (this.totalSeats >= this.showing.seats - 1) {
+        this.totalSeats = this.showing.seats - 1;
         this.counter = 1;
       } else {
         this.counter--;
@@ -107,7 +113,6 @@ export default {
       this.ticketTypes[ticketNumber - 1] = { ticketType: type, price: price };
       this.updateSum();
     },
-
     updateSum() {
       let localTotalSum = 0;
       this.typeAdult = 0;
@@ -180,6 +185,7 @@ button {
   border: #dc0428 1px solid;
   background-color: rgb(0, 0, 0);
   border-radius: 5px;
+  color: white;
 }
 button:active {
   background-color: rgb(46, 46, 46);

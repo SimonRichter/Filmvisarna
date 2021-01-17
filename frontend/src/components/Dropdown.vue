@@ -3,7 +3,6 @@
     <!-- <a v-on:click="isHidden = !isHidden"> -->
     <h3>{{ title }} <i class="arrow down"></i></h3>
   </div>
-  <svg viewBox="0 0 1030 638" width="10"></svg>
   <div v-if="!isHidden" class="sub-menu">
     <div
       v-for="(item, i) in items"
@@ -38,29 +37,28 @@ export default {
 
 <style scoped>
 h3 {
-  padding-top: 2px;
+  padding-top: 5px;
   color: black;
+  font-size: medium;
 }
 .sub-menu {
-  border: rgb(221, 219, 217) 1px solid;
+  border: #dc0428 1px solid;
   position: absolute;
-  background-color: rgb(142, 167, 158);
-  width: 165px;
-  /* top: 80px;
-  left: 16%;
-  transform: translateX(-50%);
-  width: max-content; */
+  background-color: black;
+  width: 131px;
   border-radius: 5px;
+  margin-top: 10px;
 }
 .menu-item {
-  border: rgb(221, 219, 217) 1px solid;
+  font-size: 18px;
+  font-family: "Bebas Neue", cursive;
   padding: 2px;
   margin: 2px;
   text-align: left;
   border-radius: 3px;
 }
 .menu-item:hover {
-  background-color: rgb(179, 192, 187);
+  background-color: rgb(46, 46, 46);
 }
 .down {
   transform: rotate(45deg);

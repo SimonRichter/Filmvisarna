@@ -10,7 +10,7 @@
       ><span> - {{ showing.time }}</span>
       <!-- Put all content here in grid container -->
     </div>
-    <TheatreSeatingMap :showing="showing" />
+    <TheatreSeatingMap v-bind:showing="showing" />
   </div>
 </template>
 
@@ -25,7 +25,6 @@ export default {
       // get showing id from url parameter
       return this.$route.params.id;
     },
-
     showing() {
       return this.$store.state.showings.filter((obj) => obj.id == this.id)[0];
     },
