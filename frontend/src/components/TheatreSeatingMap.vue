@@ -1,5 +1,6 @@
 <template>
   <div class="grid-container-map">
+
     <h3 class="totalSeats">Total seats left: {{ totalSeats }}</h3>
     <button class="remove" @click="increment">
       <i class="gg-math-minus"></i>
@@ -34,7 +35,8 @@
         '/confirmation/'
       "
     >
-      <button class="next-btn" @click="sendDataToNextView">Next</button>
+              
+      <button class="next-btn" @click="removeSeatsBackend(); sendDataToNextView">Next</button>
     </router-link>
   </div>
 </template>
@@ -66,7 +68,7 @@ export default {
     SeatingList,
   },
   computed: {
-    sendDataToNextView() {
+      sendDataToNextView() {
       this.objToSend = {
         tickets: [
           {
@@ -141,6 +143,10 @@ export default {
         }
       }
       this.totalSum = localTotalSum;
+    },
+    removeSeatsBackend() {
+      this.showing.seats= this.totalSeats
+      this.$store.dispatch("updateSeatsInBackend", this.showing);
     },
   },
 };

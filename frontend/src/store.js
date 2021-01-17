@@ -7,7 +7,7 @@ const state = {
   members: [],
   bookings: [],
   showings: [],
-  bookingInfo: []
+  bookingInfo: [],
 }
 
 const mutations = {
@@ -65,6 +65,21 @@ const actions = {
     showingsList = await showingsList.json()
     store.commit('setShowings', showingsList)
   },
+  async updateSeatsInBackend(store, showingObj) {
+    let showing = {
+      id: showingObj.id,
+      title: showingObj.title,
+      date: showingObj.date,
+      theatre: showingObj.theatre,
+      salon: showingObj.salon,
+      time: showingObj.time,
+      seats: showingObj.seats
+    }
+    let response = await fetch('/rest/showings/' + showingObj.id, {
+      method: 'PUT',
+      body: JSON.stringify(showing)
+    })
+  }
   // ------------- SPRINT 2 ------------
   // in-parameter is a user object user = {name: Anna, email: anna@gmail.com, password: Hej123}
   // Backend: need to use collection('Klass').insert(Object) to add a new 

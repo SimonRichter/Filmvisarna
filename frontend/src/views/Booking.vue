@@ -6,10 +6,12 @@
       </h2>
       <br />
       <h3>{{ showing.title }}</h3>
-      <span>{{ showing.date }}</span
-      ><span> - {{ showing.time }}</span>
+      <span>{{ showing.date }}</span>
+      <span> - {{ showing.time }}</span>
+      <hr>
       <!-- Put all content here in grid container -->
     </div>
+   
     <TheatreSeatingMap v-bind:showing="showing" />
   </div>
 </template>
