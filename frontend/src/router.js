@@ -5,6 +5,7 @@ import Movies from './views/Movies.vue'
 import ChosenMovie from './views/ChosenMovie.vue'
 import Booking from './views/Booking.vue'
 import SignIn from './views/SignIn.vue'
+import About from './views/About.vue'
 
 const routes = [
   {
@@ -33,6 +34,12 @@ const routes = [
     name: 'Booking',
     path: '/chosen-movie/:title/booking/:id',
     component: Booking
+  },
+
+  {
+    name: 'About',
+    path: '/about',
+    component: About
   }
 ]
 
