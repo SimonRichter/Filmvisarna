@@ -8,11 +8,9 @@
       <h3>{{ showing.title }}</h3>
       <span>{{ showing.date }}</span
       ><span> - {{ showing.time }}</span>
-      <TheatreSeatingMap :showing="showing" />
-
-      <!-- Put all content here in grid container -->
       <!-- Put all content here in grid container -->
     </div>
+    <TheatreSeatingMap :showing="showing" />
   </div>
 </template>
 
@@ -52,11 +50,5 @@ span {
 }
 h3 {
   color: lightblue;
-}
-.grid-container-map {
-  grid-column: 1 / 1 / auto / 2;
-  height: auto;
-  margin: 2vh 0 2vh;
-  display: flex;
 }
 </style>

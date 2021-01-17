@@ -1,7 +1,8 @@
 <template>
   <div v-on:click="isHidden = !isHidden" id="menu-item">
     <!-- <a v-on:click="isHidden = !isHidden"> -->
-    <a> {{ title }} </a><i class="arrow down"></i>
+    <h3>{{ title }} <i class="arrow down"></i></h3>
+    
   </div>
   <svg viewBox="0 0 1030 638" width="10"></svg>
   <div v-if="!isHidden" class="sub-menu">
@@ -67,7 +68,8 @@ export default {
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;
-  margin-left: 10px;
+  /* margin-right: 5px; */
+  margin-left: 5px;
   margin-bottom: 3px;
 }
 </style>

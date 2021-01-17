@@ -5,12 +5,12 @@
   </div> -->
 
   <div class="grid-container-map">
-    <div class="totalSeats">Total seats left: {{ this.showing.seats }}</div>
-    <button class="remove" @click="decrement">
+    <h3 class="totalSeats">Total seats left: {{ this.totalSeats }}</h3>
+    <button class="remove" @click="increment">
       <i class="gg-math-minus"></i>
     </button>
-    <div class="counter">{{ this.counter }}</div>
-    <button class="add" @click="increment">
+    <h3 class="counter">{{ this.counter }}</h3>
+    <button class="add" @click="decrement">
       <i class="gg-math-plus"></i>
     </button>
   </div>
@@ -23,8 +23,16 @@
       <div v-if="this.typeSenior > 0">{{ this.typeSenior }} Senior(65+)</div>
     </div>
     <div class="ticket-sum">Total sum: {{ this.totalSum }} kr</div>
-    <!-- Needs to to have correc route after showings list is done-->
-    <router-link :to="'/chosen-movie/Blade'">
+    <!-- Needs to to have correc route after confirmation page is done-->
+    <router-link
+      :to="
+        '/chosen-movie/' +
+        showing.title +
+        '/booking/' +
+        showing.id +
+        '/confirmation/'
+      "
+    >
       <button class="next-btn" @click="sendDataToNextView">Next</button>
     </router-link>
   </div>
@@ -38,7 +46,7 @@ export default {
   data() {
     return {
       counter: 1,
-      totalSeats: 199,
+      totalSeats: this.showing.seats,
       totalSum: 0,
       ticketTypes: [],
       typeAdult: 0,
@@ -52,12 +60,6 @@ export default {
     SeatingList,
   },
   computed: {
-    // id() {
-    //   return this.$route.params.id;
-    // },
-    // seatsInTheatre() {
-    //   return this.$store.state.showings;
-    // },
     sendDataToNextView() {
       this.objToSend = {
         tickets: [
@@ -84,8 +86,8 @@ export default {
       }
     },
     decrement() {
-      if (this.totalSeats >= 199) {
-        this.totalSeats = 199;
+      if (this.totalSeats >= this.showing.seats) {
+        this.totalSeats = this.showing.seats;
         this.counter = 1;
       } else {
         this.counter--;
@@ -137,26 +139,40 @@ export default {
 
 <style>
 .grid-container-map {
+  margin-top: 20px;
   display: grid;
   grid-template-columns: minmax(50px, 1fr) 50px 100px 50px;
-  grid-auto-rows: auto;
+  grid-template-rows: 30px;
   gap: 0;
   background-color: rgb(105, 120, 151);
   border-radius: 5px;
   border: black 2px solid;
 }
 .totalSeats {
-  text-align: center;
+  grid-column: 1;
+  grid-row: 1;
+  text-align: left;
+  margin-left: 10px;
   padding-top: 5px;
   margin-bottom: 5px;
 }
 .counter {
+  grid-column: 3;
+  grid-row: 1;
   text-align: center;
   padding-top: 5px;
 }
+.add {
+  grid-column: 2;
+  grid-row: 1;
+}
+.remove {
+  grid-column: 4;
+  grid-row: 1;
+}
 button {
   text-align: center;
-  padding-left: 15px;
+  /* padding-left: 15px; */
   border: rgb(63, 72, 90) 2px solid;
   background-color: rgb(85, 97, 122);
   border-radius: 5px;
@@ -201,6 +217,7 @@ button:active {
 }
 .gg-math-plus,
 .gg-math-minus {
+  margin-left: 10px;
   margin-top: -2px;
   position: relative;
   transform: scale(var(--ggs, 1));
@@ -216,7 +233,7 @@ button:active {
   background: currentColor;
   border-radius: 10px;
 }
-.gg-math-plus::after {
+.gg-math-minus::after {
   content: "";
   position: absolute;
   width: 2px;

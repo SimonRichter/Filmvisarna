@@ -1,7 +1,7 @@
 <template>
   <div class="grid-container-item">
-    <div class="seat">Ticket {{ count }}</div>
-    <div class="price">Price: {{ this.ticketPrice }} kr</div>
+    <h3 class="seat">Ticket {{ count }}</h3>
+    <h3 class="price">Price: {{ this.ticketPrice }} kr</h3>
     <div class="box">
       <Dropdown
         :title="this.placeHolder"
@@ -53,7 +53,7 @@ export default {
 <style>
 .grid-container-item {
   display: grid;
-  grid-template-columns: minmax(200px, 1fr) minmax(120px, 1fr) 170px;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 30px;
   background-color: rgb(142, 167, 158);
   text-align: center;
@@ -75,12 +75,14 @@ export default {
   grid-row: 1;
   border-radius: 5px;
   padding-top: 1.5px;
+  text-align: left;
 }
 .price {
   grid-column: 2;
   grid-row: 1;
   border-radius: 5px;
   padding-top: 1.5px;
+  text-align: left;
 }
 .sub-menu {
   grid-column: 3;
