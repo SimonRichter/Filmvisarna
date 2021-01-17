@@ -5,7 +5,7 @@
   </div> -->
 
   <div class="grid-container-map">
-    <div class="totalSeats">Total seats left: {{ this.totalSeats }}</div>
+    <div class="totalSeats">Total seats left: {{ this.showing.seats }}</div>
     <button class="remove" @click="decrement">
       <i class="gg-math-minus"></i>
     </button>
@@ -34,6 +34,7 @@
 import SeatingList from "./SeatingList.vue";
 
 export default {
+  props: ["showing"],
   data() {
     return {
       counter: 1,
@@ -51,12 +52,12 @@ export default {
     SeatingList,
   },
   computed: {
-    id() {
-      return this.$route.params.id;
-    },
-    seatsInTheatre() {
-      return this.$store.state.showings;
-    },
+    // id() {
+    //   return this.$route.params.id;
+    // },
+    // seatsInTheatre() {
+    //   return this.$store.state.showings;
+    // },
     sendDataToNextView() {
       this.objToSend = {
         tickets: [

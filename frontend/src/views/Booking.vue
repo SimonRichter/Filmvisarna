@@ -8,13 +8,20 @@
       <h3>{{ showing.title }}</h3>
       <span>{{ showing.date }}</span
       ><span> - {{ showing.time }}</span>
+      <TheatreSeatingMap :showing="showing" />
+
+      <!-- Put all content here in grid container -->
       <!-- Put all content here in grid container -->
     </div>
   </div>
 </template>
 
 <script>
+import TheatreSeatingMap from "../components/TheatreSeatingMap.vue";
 export default {
+  components: {
+    TheatreSeatingMap,
+  },
   computed: {
     id() {
       // get showing id from url parameter
@@ -40,9 +47,15 @@ h2 {
 span {
   color: lightblue;
   font-size: 14px;
-  font-family: 'Bebas Neue', cursive;
+  font-family: "Bebas Neue", cursive;
 }
 h3 {
   color: lightblue;
+}
+.grid-container-map {
+  grid-column: 1 / 1 / auto / 2;
+  height: auto;
+  margin: 2vh 0 2vh;
+  display: flex;
 }
 </style>
