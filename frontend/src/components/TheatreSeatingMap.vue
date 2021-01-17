@@ -187,7 +187,7 @@ button {
   border-radius: 5px;
   color: white;
 }
-button:active {
+button:active, button:disabled {
   background-color: rgb(46, 46, 46);
 }
 .grid-container-list {
