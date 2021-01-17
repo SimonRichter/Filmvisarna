@@ -51,4 +51,7 @@ span {
 h3 {
   color: lightblue;
 }
+.grid-container-map {
+  grid-area: 2/1/3/2;
+}
 </style>

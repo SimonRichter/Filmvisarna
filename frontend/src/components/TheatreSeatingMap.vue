@@ -5,7 +5,7 @@
   </div> -->
 
   <div class="grid-container-map">
-    <h3 class="totalSeats">Total seats left: {{ this.totalSeats }}</h3>
+    <h3 class="totalSeats">Total seats left: {{ this.showing.seats }}</h3>
     <button class="remove" @click="increment">
       <i class="gg-math-minus"></i>
     </button>
@@ -17,13 +17,16 @@
   <SeatingList :counter="counter" @update-total="updateTickets" />
   <div class="ticket-grid">
     <h2>Ticket types</h2>
-    <div class="ticket-types"><h3>
-      <div v-if="this.typeAdult > 0">{{ this.typeAdult }} Adult</div>
-      <div v-if="this.typeChild > 0">{{ this.typeChild }} Child (0-12)</div>
-      <div v-if="this.typeSenior > 0">{{ this.typeSenior }} Senior (65+)</div>
+    <div class="ticket-types">
+      <h3>
+        <div v-if="this.typeAdult > 0">{{ this.typeAdult }} Adult</div>
+        <div v-if="this.typeChild > 0">{{ this.typeChild }} Child (0-12)</div>
+        <div v-if="this.typeSenior > 0">{{ this.typeSenior }} Senior (65+)</div>
       </h3>
     </div>
-    <div class="ticket-sum"><h3>Total sum: {{ this.totalSum }} kr</h3></div>
+    <div class="ticket-sum">
+      <h3>Total sum: {{ this.totalSum }} kr</h3>
+    </div>
     <!-- Needs to to have correc route after confirmation page is done-->
     <router-link
       :to="
@@ -138,7 +141,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .grid-container-map {
   margin-top: 20px;
   display: grid;
