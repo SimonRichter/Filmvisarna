@@ -28,7 +28,7 @@
     <div class="if-disabled-btn" v-if="!(counter === goToNextStep)">
       <h3>Choose ticket types</h3>
     </div>
-    <!-- <router-link
+    <router-link
       :to="
         '/chosen-movie/' +
         showing.title +
@@ -36,15 +36,22 @@
         showing.id +
         '/confirmation/'
       "
-    > -->
+    >
     <button
       :disabled="!(counter === goToNextStep)"
       class="next-btn"
       @click="sendDataToNextView"
+      to="
+        '/chosen-movie/' +
+        showing.title +
+        '/booking/' +
+        showing.id +
+        '/confirmation/'
+      "
     >
       Next
     </button>
-    <!-- </router-link> -->
+    </router-link>
   </div>
 </template>
 
@@ -187,7 +194,8 @@ button {
   border-radius: 5px;
   color: white;
 }
-button:active, button:disabled {
+button:active,
+button:disabled {
   background-color: rgb(46, 46, 46);
 }
 .grid-container-list {
