@@ -35,6 +35,7 @@
       "
     >
       <button class="next-btn" @click="sendDataToNextView">Next</button>
+      <!-- <div v-if="isDisabled">Choose ticket types</div> -->
     </router-link>
   </div>
 </template>
@@ -44,11 +45,6 @@ import SeatingList from "./SeatingList.vue";
 
 export default {
   props: ["showing"],
-  // data: function () {
-  //   return {
-  //     totalSeats: this.showing.seats,
-  //   };
-  // },
   data() {
     return {
       counter: 1,
@@ -60,6 +56,7 @@ export default {
       typeSenior: 0,
       numberOfTickets: 1,
       objToSend: [],
+      goToNextStep: 0,
     };
   },
   components: {
@@ -81,10 +78,6 @@ export default {
     },
   },
   methods: {
-    // totalSeats() {
-    //   this.totalSeats = +this.showing.seats;
-    //   return this.totalSeats;
-    // },
     increment() {
       if (this.totalSeats <= 0) {
         this.totalSeats = 0;
@@ -118,7 +111,7 @@ export default {
       this.typeAdult = 0;
       this.typeChild = 0;
       this.typeSenior = 0;
-      let goToNextStep = 0;
+      this.goToNextStep = 0;
 
       for (let i = 0; i < this.counter; i++) {
         if (!this.ticketTypes[i]) {
@@ -136,11 +129,17 @@ export default {
               this.typeSenior++;
               break;
           }
-          goToNextStep++;
+          this.goToNextStep++;
           console.log("you can go to the next step");
         }
       }
       this.totalSum = localTotalSum;
+    },
+    isDisabled() {
+      if (this.goToNextStep === this.counter) {
+        return false;
+      }
+      return true;
     },
   },
 };
