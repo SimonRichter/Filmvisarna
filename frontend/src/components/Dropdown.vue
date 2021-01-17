@@ -2,7 +2,6 @@
   <div v-on:click="isHidden = !isHidden" id="menu-item">
     <!-- <a v-on:click="isHidden = !isHidden"> -->
     <h3>{{ title }} <i class="arrow down"></i></h3>
-    
   </div>
   <svg viewBox="0 0 1030 638" width="10"></svg>
   <div v-if="!isHidden" class="sub-menu">
@@ -38,6 +37,10 @@ export default {
 </script>
 
 <style scoped>
+h3 {
+  padding-top: 2px;
+  color: black;
+}
 .sub-menu {
   border: rgb(221, 219, 217) 1px solid;
   position: absolute;

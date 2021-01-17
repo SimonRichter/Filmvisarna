@@ -16,13 +16,14 @@
   </div>
   <SeatingList :counter="counter" @update-total="updateTickets" />
   <div class="ticket-grid">
-    Ticket types:
-    <div class="ticket-types">
+    <h2>Ticket types</h2>
+    <div class="ticket-types"><h3>
       <div v-if="this.typeAdult > 0">{{ this.typeAdult }} Adult</div>
-      <div v-if="this.typeChild > 0">{{ this.typeChild }} Child(0-12)</div>
-      <div v-if="this.typeSenior > 0">{{ this.typeSenior }} Senior(65+)</div>
+      <div v-if="this.typeChild > 0">{{ this.typeChild }} Child (0-12)</div>
+      <div v-if="this.typeSenior > 0">{{ this.typeSenior }} Senior (65+)</div>
+      </h3>
     </div>
-    <div class="ticket-sum">Total sum: {{ this.totalSum }} kr</div>
+    <div class="ticket-sum"><h3>Total sum: {{ this.totalSum }} kr</h3></div>
     <!-- Needs to to have correc route after confirmation page is done-->
     <router-link
       :to="
@@ -144,9 +145,9 @@ export default {
   grid-template-columns: minmax(50px, 1fr) 50px 100px 50px;
   grid-template-rows: 30px;
   gap: 0;
-  background-color: rgb(105, 120, 151);
+  background-color: rgb(0, 0, 0);
   border-radius: 5px;
-  border: black 2px solid;
+  border: #dc0428 1px solid;
 }
 .totalSeats {
   grid-column: 1;
@@ -173,12 +174,12 @@ export default {
 button {
   text-align: center;
   /* padding-left: 15px; */
-  border: rgb(63, 72, 90) 2px solid;
-  background-color: rgb(85, 97, 122);
+  border: #dc0428 1px solid;
+  background-color: rgb(0, 0, 0);
   border-radius: 5px;
 }
 button:active {
-  background-color: rgb(120, 130, 153);
+  background-color: rgb(46, 46, 46);
 }
 .grid-container-list {
   grid-column: 1;
@@ -189,12 +190,13 @@ button:active {
   grid-column: 1;
   display: grid;
   grid-template-columns: minmax(100px, 1fr) 50px;
-  grid-template-rows: 20px minmax(60px, 1fr) 30px;
+  grid-template-rows: 20px minmax(80px, 1fr) 30px;
   gap: 5px;
-  max-height: 120px;
-  background-color: crimson;
-  margin-left: 100px;
-  padding: 10px;
+  /* border: #474747 2px solid; */
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0);
+  /* padding: 10px; */
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 .next-btn {
@@ -208,6 +210,7 @@ button:active {
   grid-column: 1;
   grid-row: 2;
   text-align: left;
+  margin-top: 10px;
 }
 .ticket-sum {
   grid-column: 1;

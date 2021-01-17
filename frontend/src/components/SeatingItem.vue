@@ -51,15 +51,19 @@ export default {
 </script>
 
 <style>
+h3{
+  color: black;
+}
 .grid-container-item {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 30px;
-  background-color: rgb(142, 167, 158);
+  background-color: #dc0428;
   text-align: center;
   padding-left: 10px;
+  margin-top: 10px;
   border-radius: 5px;
-  border: black 2px solid;
+  /* border: black 2px solid; */
 }
 .box {
   background-color: rgb(179, 192, 187);
@@ -68,21 +72,20 @@ export default {
   grid-row: 1;
   border-radius: 5px;
   border: rgb(221, 219, 217) 2px solid;
-  margin: 1px;
 }
 .seat {
   grid-column: 1;
   grid-row: 1;
   border-radius: 5px;
-  padding-top: 1.5px;
   text-align: left;
+  padding-top: 4px;
 }
 .price {
   grid-column: 2;
   grid-row: 1;
   border-radius: 5px;
-  padding-top: 1.5px;
   text-align: left;
+  padding-top: 4px;
 }
 .sub-menu {
   grid-column: 3;
