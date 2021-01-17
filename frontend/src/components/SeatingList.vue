@@ -33,12 +33,4 @@ export default {
 </script>
 
 <style scoped>
-/* .grid-container-list {
-  display: grid;
-  grid-template-columns: 1;
-}
-.grid-container-item {
-  grid-column: 1;
-  margin-top: 3px;
-} */
 </style>

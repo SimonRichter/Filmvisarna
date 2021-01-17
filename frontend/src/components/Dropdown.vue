@@ -69,7 +69,6 @@ h3 {
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;
-  /* margin-right: 5px; */
   margin-left: 5px;
   margin-bottom: 3px;
 }
