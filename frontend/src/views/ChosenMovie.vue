@@ -133,8 +133,8 @@ export default {
 <style scoped>
 iframe {
    border: none;
-   margin-top: 70px;
-   margin-bottom: 10px;
+   margin-top: 140px;
+   margin-bottom: 20px;
 }
 button {
    text-align: center;
@@ -187,11 +187,12 @@ h5 {
    justify-content: center;
 }
 .showingList {
-
   grid-column-start: 1;
   grid-column-end: 3;
    border-bottom: 1px solid #6e1020;
    padding: 10px 16px;
+   width: 60vw;
+   
 }
 .bookButton {
    margin-bottom: 10px;
@@ -205,7 +206,7 @@ h5 {
    align-items: center;
 }
 .setWidth {
-   width: 80vw;
+   width:60vw;
    margin: 0 auto;
 }
 </style>
