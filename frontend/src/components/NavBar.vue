@@ -3,6 +3,8 @@
     <!-- Logo - link to Home view -->
     <router-link to="/"><li>Logo</li></router-link>
     <router-link to="/movies"><li>Movies</li></router-link>
+    <router-link to="/about"><li>About</li></router-link>
+
     <router-link to="/sign-in"><li>Sign in</li></router-link>
   </ul>
 </template>

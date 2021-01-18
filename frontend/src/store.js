@@ -11,18 +11,20 @@ const state = {
 }
 
 const mutations = {
-  setMovies(store, moviesList) {
-    store.movies = moviesList;
+  setMovies(state, moviesList) {
+    state.movies = moviesList;
   },
   // setMembers(store, membersList) {
   //   store.members = membersList;
   // },
-  setShowings(store, showingsList) {
-    store.showings = showingsList;
+  setBookings(state, bookingsList) {
+    state.bookings = bookingsList;
   },
   setBookingInfo(store, bookingInfo) {
     store.bookingInfo = bookingInfo;
     console.log('store.bookingInfo', store.bookingInfo)
+  setShowings(state, showingsList) {
+    state.showings = showingsList;
   },
   // ----------- SPRINT 2 -----------
   // addMemberToState(store, newMember) {
