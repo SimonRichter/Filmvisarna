@@ -1,5 +1,5 @@
 [ {
-  "id" : "PvnDBuz1mGJfQONmcl_Ro",
+  "id" : "UNiRF2QVuw-C_JRQrrt8V",
   "title" : "Blade",
   "year" : "1998",
   "rated" : "R",
@@ -14,9 +14,10 @@
   "country" : "USA",
   "awards" : "5 wins & 11 nominations.",
   "poster" : "https://m.media-amazon.com/images/M/MV5BOTk2NDNjZWQtMGY0Mi00YTY2LWE5MzctMGRhZmNlYzljYTg5XkEyXkFqcGdeQXVyMTAyNjg4NjE0._V1_SX300.jpg",
-  "posterLandscape" : "https://www.themoviedb.org/t/p/original/o4vSn07PXtQD0468pplBrCPBppu.jpg"
+  "posterLandscape" : "https://www.themoviedb.org/t/p/original/o4vSn07PXtQD0468pplBrCPBppu.jpg",
+  "trailer" : "kaU2A7KyOu4"
 }, {
-  "id" : "sTgSpE2gDRLnIRIpvhxmw",
+  "id" : "-F6eQzRG7_V7MbsTNfzis",
   "title" : "Pulp Fiction",
   "year" : "1994",
   "rated" : "R",
@@ -31,9 +32,10 @@
   "country" : "USA",
   "awards" : "Won 1 Oscar. Another 69 wins & 75 nominations.",
   "poster" : "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
-  "posterLandscape" : "https://www.themoviedb.org/t/p/original/x7n68dlDNwS8TjuqKme4gbBbiH4.jpg"
+  "posterLandscape" : "https://www.themoviedb.org/t/p/original/x7n68dlDNwS8TjuqKme4gbBbiH4.jpg",
+  "trailer" : "tGpTpVyI_OQ"
 }, {
-  "id" : "gwqILEDmTgxcmFWFxeord",
+  "id" : "pqL4GB75CI74uBrz-TDrP",
   "title" : "Soul",
   "year" : "2020",
   "rated" : "PG",
@@ -48,9 +50,10 @@
   "country" : "USA",
   "awards" : "5 wins & 18 nominations.",
   "poster" : "https://m.media-amazon.com/images/M/MV5BZGE1MDg5M2MtNTkyZS00MTY5LTg1YzUtZTlhZmM1Y2EwNmFmXkEyXkFqcGdeQXVyNjA3OTI0MDc@._V1_SX300.jpg",
-  "posterLandscape" : "https://www.themoviedb.org/t/p/original/rz5lcqYPm5818n62GNaQvirbIh3.jpg"
+  "posterLandscape" : "https://www.themoviedb.org/t/p/original/rz5lcqYPm5818n62GNaQvirbIh3.jpg",
+  "trailer" : "xOsLIiBStEs"
 }, {
-  "id" : "sKKm8r0hVgsVwY3gb7ljX",
+  "id" : "j22wIFQp9iA0y1BWSQfky",
   "title" : "It",
   "year" : "2017",
   "rated" : "R",
@@ -65,9 +68,10 @@
   "country" : "USA, Canada",
   "awards" : "8 wins & 49 nominations.",
   "poster" : "https://m.media-amazon.com/images/M/MV5BZDVkZmI0YzAtNzdjYi00ZjhhLWE1ODEtMWMzMWMzNDA0NmQ4XkEyXkFqcGdeQXVyNzYzODM3Mzg@._V1_SX300.jpg",
-  "posterLandscape" : "https://www.themoviedb.org/t/p/original/AqkavSN7zSPip4UQ5IpGuATqiwN.jpg"
+  "posterLandscape" : "https://www.themoviedb.org/t/p/original/AqkavSN7zSPip4UQ5IpGuATqiwN.jpg",
+  "trailer" : "hAUTdjf9rko"
 }, {
-  "id" : "ZyqrUdD5cvVxgF-TfAkuc",
+  "id" : "1uLksfitLXEMitIP1HPLS",
   "title" : "Interstellar",
   "year" : "2014",
   "rated" : "PG-13",
@@ -82,5 +86,6 @@
   "country" : "USA, UK, Canada",
   "awards" : "Won 1 Oscar. Another 43 wins & 148 nominations.",
   "poster" : "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
-  "posterLandscape" : "https://www.themoviedb.org/t/p/original/huD4cMhHtLkxcdM6PbKBcivBZuE.jpg"
+  "posterLandscape" : "https://www.themoviedb.org/t/p/original/huD4cMhHtLkxcdM6PbKBcivBZuE.jpg",
+  "trailer" : "zSWdZVtXT7E"
 } ]
