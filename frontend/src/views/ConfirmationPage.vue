@@ -20,7 +20,7 @@
           <br><h4>Total:</h4>
           <h3>{{ bookingObj.totalSum }} kr</h3>
           <!-- Bookin ID will be changed after a booking id is uniqely created in Sprint 2-->
-          <h4>Booking ID: <a>{{ showing.id }}</a></h3>
+          <h4>Booking ID: <a>{{ showing.id }}</a></h4>
         </div>
       </div>
       <h2 v-if="showToggle" class="emailSentNotification">
