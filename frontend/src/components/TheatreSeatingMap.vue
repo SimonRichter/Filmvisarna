@@ -26,6 +26,9 @@
       <h3>Total sum: {{ totalSum }} kr</h3>
     </div>
     <!-- Needs to to have correc route after confirmation page is done-->
+    <div class="if-disabled-btn" v-if="!(counter === goToNextStep)">
+      <h3>Choose ticket types</h3>
+    </div>
     <router-link
       :to="
         '/chosen-movie/' +
@@ -37,6 +40,14 @@
     >
               
       <button class="next-btn" @click="removeSeatsBackend(); sendDataToNextView">Next</button>
+      <button
+        :disabled="!(counter === goToNextStep)"
+        class="next-btn"
+        @click="sendDataToNextView"
+        :to="'/chosen-movie/' + showing.title + '/booking/' + showing.id"
+      >
+        Next
+      </button>
     </router-link>
   </div>
 </template>
@@ -46,11 +57,6 @@ import SeatingList from "./SeatingList.vue";
 
 export default {
   props: ["showing"],
-  // data: function () {
-  //   return {
-  //     totalSeats: this.showing.seats,
-  //   };
-  // },
   data() {
     return {
       counter: 1,
@@ -62,6 +68,7 @@ export default {
       typeSenior: 0,
       numberOfTickets: 1,
       objToSend: [],
+      goToNextStep: 0,
     };
   },
   components: {
@@ -78,15 +85,12 @@ export default {
           },
         ],
         totalSum: this.totalSum,
+        showing: this.showing,
       };
       this.$store.commit("setBookingInfo", this.objToSend);
     },
   },
   methods: {
-    // totalSeats() {
-    //   this.totalSeats = +this.showing.seats;
-    //   return this.totalSeats;
-    // },
     increment() {
       if (this.totalSeats <= 0) {
         this.totalSeats = 0;
@@ -120,7 +124,7 @@ export default {
       this.typeAdult = 0;
       this.typeChild = 0;
       this.typeSenior = 0;
-      let goToNextStep = 0;
+      this.goToNextStep = 0;
 
       for (let i = 0; i < this.counter; i++) {
         if (!this.ticketTypes[i]) {
@@ -138,7 +142,7 @@ export default {
               this.typeSenior++;
               break;
           }
-          goToNextStep++;
+          this.goToNextStep++;
           console.log("you can go to the next step");
         }
       }
@@ -187,13 +191,13 @@ export default {
 }
 button {
   text-align: center;
-  /* padding-left: 15px; */
   border: #dc0428 1px solid;
   background-color: rgb(0, 0, 0);
   border-radius: 5px;
   color: white;
 }
-button:active {
+button:active,
+button:disabled {
   background-color: rgb(46, 46, 46);
 }
 .grid-container-list {
@@ -204,22 +208,21 @@ button:active {
 .ticket-grid {
   grid-column: 1;
   display: grid;
-  grid-template-columns: minmax(100px, 1fr) 50px;
-  grid-template-rows: 20px minmax(80px, 1fr) 30px;
+  grid-template-columns: minmax(100px, 1fr) 100px;
+  grid-template-rows: 20px minmax(30px, 1fr) 10px;
   gap: 5px;
-  /* border: #474747 2px solid; */
   border-radius: 5px;
   background-color: rgb(0, 0, 0);
-  /* padding: 10px; */
   margin-top: 10px;
   margin-bottom: 10px;
 }
 .next-btn {
   grid-column: 2;
-  grid-row: 3;
+  grid-row: 4;
   height: 30px;
   width: 50px;
   padding-left: 5px;
+  margin-left: 50px;
 }
 .ticket-types {
   grid-column: 1;
@@ -229,9 +232,21 @@ button:active {
 }
 .ticket-sum {
   grid-column: 1;
-  grid-row: 3;
+  grid-row: 4;
   text-align: left;
   padding-top: 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.if-disabled-btn {
+  grid-column: 2;
+  grid-row: 2;
+  text-align: right;
+  font-size: 10px;
+  color: #dc0428;
+  margin-bottom: 2px;
+  margin-top: 10px;
 }
 .gg-math-plus,
 .gg-math-minus {

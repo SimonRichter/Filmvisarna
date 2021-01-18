@@ -63,7 +63,6 @@ h3 {
   padding-left: 10px;
   margin-top: 10px;
   border-radius: 5px;
-  /* border: black 2px solid; */
 }
 .box {
   background-color: rgb(255, 255, 255);
@@ -92,12 +91,6 @@ h3 {
   top: 86px;
   left: 38.4%;
   width: max-content;
-  /* grid-row: 1; */
-  /* position: absolute;
-  top: calc(100% - 10px);
-  left: 50%;
-  transform: translateX(-50%);
-  width: max-content; */
   border-radius: 5px;
 }
 </style>
