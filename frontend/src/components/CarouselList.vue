@@ -283,6 +283,11 @@ li {
   outline: 0;
 }
 
+img {
+ 
+  width: 100%;
+}
+
 .carousel::before,
 .carousel__prev {
   left: 1rem;
