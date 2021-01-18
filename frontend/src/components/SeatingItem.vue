@@ -28,11 +28,11 @@ export default {
           price: "250",
         },
         {
-          title: "Child(0-12)",
+          title: "Child (0-12)",
           price: "150",
         },
         {
-          title: "Senior(65+)",
+          title: "Senior (65+)",
           price: "170",
         },
       ],

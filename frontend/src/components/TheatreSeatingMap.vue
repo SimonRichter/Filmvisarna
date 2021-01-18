@@ -133,10 +133,10 @@ export default {
             case "Adult":
               this.typeAdult++;
               break;
-            case "Child(0-12)":
+            case "Child (0-12)":
               this.typeChild++;
               break;
-            case "Senior(65+)":
+            case "Senior (65+)":
               this.typeSenior++;
               break;
           }
@@ -195,6 +195,9 @@ button:active,
 button:disabled {
   background-color: rgb(46, 46, 46);
 }
+button:disabled{
+  cursor: default;
+}
 .grid-container-list {
   grid-column: 1;
   padding-top: 15px;
@@ -218,6 +221,7 @@ button:disabled {
   width: 50px;
   padding-left: 5px;
   margin-left: 50px;
+  cursor: pointer;
 }
 .ticket-types {
   grid-column: 1;
