@@ -134,10 +134,10 @@ export default {
             case "Adult":
               this.typeAdult++;
               break;
-            case "Child(0-12)":
+            case "Child (0-12)":
               this.typeChild++;
               break;
-            case "Senior(65+)":
+            case "Senior (65+)":
               this.typeSenior++;
               break;
           }
