@@ -163,17 +163,21 @@ h5 {
 }
 .movieInfoContainer {
   grid-area: 2/1/3/3;
+  margin-bottom: 10vh;
 }
 .contentGridContainer {
   margin-top: 10vh;
-  margin-bottom: 20vh;
+  
 }
 .temp {
   color: beige;
 }
 .showingList {
-  margin-top: 8vh;
-  grid-area: 3/1/4/3;
+
+  grid-column-start: 1;
+  grid-column-end: 3;
+   border-bottom: 1px solid red;
+   padding: 10px 16px;
 }
 .bookButton {
   display: flex;
