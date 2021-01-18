@@ -40,7 +40,7 @@ export default {
   background-color: #131313;
   /* TEST 2 */
   /* TEST 3 */
-  margin: 2vw 0 7vw;
+  margin: 2vw 0 2vw;
   color: darkgreen;
 }
 .inCinemas {
