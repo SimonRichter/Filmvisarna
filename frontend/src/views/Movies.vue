@@ -1,5 +1,5 @@
 <template>
-   <img src="../pictures/Banner.jpg" alt="Banner picture with movie theme" />
+   <img  src="../pictures/Banner.jpg" alt="Banner picture with movie theme" />
    <div class="contentGridContainer">
       <MovieList />
    </div>
@@ -16,6 +16,7 @@ export default {
 
 <style scoped>
 img {
+   margin-top:58px;
    margin-bottom: 30px;
 }
 .contentGridContainer {

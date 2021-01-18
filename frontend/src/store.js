@@ -6,21 +6,27 @@ const state = {
   movies: [],
   members: [],
   bookings: [],
-  showings: []
+  showings: [],
+  bookingInfo: [],
 }
 
 const mutations = {
-  setMovies(store, moviesList) {
-    store.movies = moviesList;
+  setMovies(state, moviesList) {
+    state.movies = moviesList;
   },
   // setMembers(store, membersList) {
   //   store.members = membersList;
   // },
-  setBookings(store, bookingsList) {
-    store.bookings = bookingsList;
+  setBookings(state, bookingsList) {
+    state.bookings = bookingsList;
   },
-  setShowings(store, showingsList) {
-    store.showings = showingsList;
+  setBookingInfo(store, bookingInfo) {
+    store.bookingInfo = bookingInfo;
+    console.log('store.bookingInfo', store.bookingInfo)
+
+  },
+  setShowings(state, showingsList) {
+    state.showings = showingsList;
   },
   // ----------- SPRINT 2 -----------
   // addMemberToState(store, newMember) {
@@ -61,9 +67,23 @@ const actions = {
   async fetchShowings(store) {
     let showingsList = await fetch('/rest/showings')
     showingsList = await showingsList.json()
-    console.log(showingsList)
     store.commit('setShowings', showingsList)
   },
+  async updateSeatsInBackend(store, showingObj) {
+    let showing = {
+      id: showingObj.id,
+      title: showingObj.title,
+      date: showingObj.date,
+      theatre: showingObj.theatre,
+      salon: showingObj.salon,
+      time: showingObj.time,
+      seats: showingObj.seats
+    }
+    let response = await fetch('/rest/showings/' + showingObj.id, {
+      method: 'PUT',
+      body: JSON.stringify(showing)
+    })
+  }
   // ------------- SPRINT 2 ------------
   // in-parameter is a user object user = {name: Anna, email: anna@gmail.com, password: Hej123}
   // Backend: need to use collection('Klass').insert(Object) to add a new 

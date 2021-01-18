@@ -1,25 +1,34 @@
 <template>
   <div class="contentGridContainer">
     <div class="movieInfo">
-      <h2>Filmvisarna,<span> Stora Salongen</span></h2><br>
-      <h3>{{ movie.title }}</h3>
-      <span>Wed 11/04</span><span> - 20:45</span>
+      <h2>
+        {{ showing.theatre }}, <span> {{ showing.salon }}</span>
+      </h2>
+      <br />
+      <h3>{{ showing.title }}</h3>
+      <span>{{ showing.date }}</span>
+      <span> - {{ showing.time }}</span>
+      <hr>
       <!-- Put all content here in grid container -->
     </div>
+   
+    <TheatreSeatingMap v-bind:showing="showing" />
   </div>
 </template>
 
 <script>
+import TheatreSeatingMap from "../components/TheatreSeatingMap.vue";
 export default {
+  components: {
+    TheatreSeatingMap,
+  },
   computed: {
-    title() {
-      // get movie title from url parameter
-      return this.$route.params.title;
+    id() {
+      // get showing id from url parameter
+      return this.$route.params.id;
     },
-    movie() {
-      return this.$store.state.movies.filter(
-        (obj) => obj.title == this.title
-      )[0];
+    showing() {
+      return this.$store.state.showings.filter((obj) => obj.id == this.id)[0];
     },
   },
 };
@@ -38,8 +47,12 @@ h2 {
 span {
   color: lightblue;
   font-size: 14px;
+  font-family: "Bebas Neue", cursive;
 }
 h3 {
   color: lightblue;
+}
+.grid-container-map {
+  grid-area: 2/1/3/2;
 }
 </style>

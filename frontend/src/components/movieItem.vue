@@ -48,7 +48,7 @@ h3 {
 }
 h4 {
    margin-top: 5px;
-   color: rgb(0, 27, 36);
+   color: wheat;
 }
 img {
    border-radius: 5px;
