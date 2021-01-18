@@ -208,7 +208,7 @@ button:disabled {
   grid-column: 1;
   display: grid;
   grid-template-columns: minmax(100px, 1fr) 100px;
-  grid-template-rows: 20px minmax(50px, 1fr) 35px;
+  grid-template-rows: 20px minmax(30px, 1fr) 10px;
   gap: 5px;
   border-radius: 5px;
   background-color: rgb(0, 0, 0);
