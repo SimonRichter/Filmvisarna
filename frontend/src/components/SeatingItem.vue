@@ -51,9 +51,9 @@ export default {
 </script>
 
 <style scoped>
-h3 {
+/* h3 {
   color: black;
-}
+} */
 .grid-container-item {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -65,7 +65,7 @@ h3 {
   border-radius: 5px;
 }
 .box {
-  background-color: rgb(116, 109, 98);
+  background-color: rgb(94, 91, 87);
   cursor: pointer;
   grid-column: 3;
   grid-row: 1;

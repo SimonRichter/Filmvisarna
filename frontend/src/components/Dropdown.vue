@@ -10,7 +10,7 @@
       @click="showPrices(item)"
       class="menu-item"
     >
-      <h5>{{ item.title }}</h5>
+      <h3>{{ item.title }}</h3>
     </div>
   </div>
 </template>
@@ -38,7 +38,7 @@ export default {
 <style scoped>
 h3 {
   padding-top: 3px;
-  color: black;
+  /* color: black; */
   font-size: medium;
 }
 .sub-menu {
@@ -50,8 +50,8 @@ h3 {
   margin-top: 10px;
 }
 .menu-item {
-  font-size: 18px;
-  font-family: "Bebas Neue", cursive;
+  /* font-size: 18px; */
+  /* font-family: "Bebas Neue", cursive; */
   padding: 2px;
   margin: 2px;
   text-align: left;

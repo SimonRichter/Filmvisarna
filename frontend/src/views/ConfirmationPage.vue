@@ -97,9 +97,9 @@ h1 {
   padding: 3vh 0 0 0;
   margin-bottom: 4vh;
 }
-h3 {
+/* h3 {
   color: rgb(248, 240, 223);
-}
+} */
 
 button {
   cursor: pointer;
@@ -107,13 +107,13 @@ button {
   margin: 20px;
   background-color: #4caf50; /* Green */
   border: none;
-  color: wheat;
+  /* color: wheat; */
   padding: 6px 16px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 28px;
-  font-family: Oswald, sans-serif;
+  /* font-family: Oswald, sans-serif; */
   letter-spacing: 0.5px;
   font-weight: bold;
   border-radius: 5px;
@@ -148,7 +148,7 @@ img {
   margin: 6vh auto;
   max-width: 65vw;
   background-color: rgba(51, 51, 51, 0.664);
-  box-shadow: rgb(59, 81, 105) 0px 0px 5px 0px;
+  box-shadow: #6e1020 0px 0px 5px 0px;
   border-radius: 5px;
 }
 
