@@ -37,20 +37,20 @@
         '/confirmation/'
       "
     >
-    <button
-      :disabled="!(counter === goToNextStep)"
-      class="next-btn"
-      @click="sendDataToNextView"
-      to="
+      <button
+        :disabled="!(counter === goToNextStep)"
+        class="next-btn"
+        @click="sendDataToNextView"
+        to="
         '/chosen-movie/' +
         showing.title +
         '/booking/' +
         showing.id +
         '/confirmation/'
       "
-    >
-      Next
-    </button>
+      >
+        Next
+      </button>
     </router-link>
   </div>
 </template>
@@ -88,6 +88,7 @@ export default {
           },
         ],
         totalSum: this.totalSum,
+        showing: this.showing,
       };
       this.$store.commit("setBookingInfo", this.objToSend);
     },
@@ -207,7 +208,7 @@ button:disabled {
   grid-column: 1;
   display: grid;
   grid-template-columns: minmax(100px, 1fr) 100px;
-  grid-template-rows: 20px minmax(80px, 1fr) 15px 35px;
+  grid-template-rows: 20px minmax(50px, 1fr) 35px;
   gap: 5px;
   border-radius: 5px;
   background-color: rgb(0, 0, 0);
@@ -239,11 +240,12 @@ button:disabled {
 }
 .if-disabled-btn {
   grid-column: 2;
-  grid-row: 3;
+  grid-row: 2;
   text-align: right;
   font-size: 10px;
   color: #dc0428;
   margin-bottom: 2px;
+  margin-top: 10px;
 }
 .gg-math-plus,
 .gg-math-minus {
