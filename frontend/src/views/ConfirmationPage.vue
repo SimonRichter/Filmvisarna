@@ -3,7 +3,7 @@
       <div id="backgroundDiv">
          <h1>Your booking</h1>
          <div id="pictureSeparatorDiv">
-            <img :src="bookingObj.poster" alt="Movie poster image" />
+            <img :src="bookingObj.showingPoster" alt="Movie poster image" />
             <div>
                <h2>{{ showingObj.title }}</h2>
                <h2>{{ showingObj.date }} {{ showingObj.time }}</h2>
@@ -12,7 +12,7 @@
                <!-- <h2>{{ bookingObj.tickets.length }}</h2> -->
                <h2>Ticket types: {{ bookingObj.tickets }}</h2>
                <h2>Total: {{ bookingObj.totalSum }}</h2>
-               <!-- <h2>Booking ID: {{ bookingObj.showing.id }}</h2> -->
+               <h2>Booking ID: {{ bookingObj.showingId }}</h2>
             </div>
          </div>
          <h2 v-if="showToggle" class="emailSentNotification">
