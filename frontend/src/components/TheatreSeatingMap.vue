@@ -28,12 +28,7 @@
     <div class="if-disabled-btn" v-if="!(counter === goToNextStep)">
       <h3>Choose ticket types</h3>
     </div>
-    <router-link
-      :to="
-        '/confirmation-page/' +
-        showing.id
-      "
-    >
+    <router-link :to="'/confirmation-page/' + showing.id">
       <button
         :disabled="!(counter === goToNextStep)"
         class="next-btn"
@@ -75,16 +70,21 @@ export default {
     sendDataToNextView() {
       this.objToSend = {
         tickets: [
-          {
-            Adult: this.typeAdult,
-            "Child(0-12)": this.typeChild,
-            "Senior(65+": this.typeSenior,
+          { 
+            title: "Adult",
+            value: this.typeAdult
           },
+          {
+            title: "Child (0-12)",
+            value: this.typeChild
+            },
+            {
+            title: "Senior (65+)",
+            value: this.typeSenior
+            }
         ],
         totalSum: this.totalSum,
-        showingTitle: this.showing.title,
-        showingPoster: this.showing.poster,
-        showingId: this.showing.id,
+        showing: this.showing
       };
       this.$store.commit("setBookingInfo", this.objToSend);
     },
