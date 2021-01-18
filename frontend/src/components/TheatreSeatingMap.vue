@@ -41,13 +41,7 @@
         :disabled="!(counter === goToNextStep)"
         class="next-btn"
         @click="sendDataToNextView"
-        to="
-        '/chosen-movie/' +
-        showing.title +
-        '/booking/' +
-        showing.id +
-        '/confirmation/'
-      "
+        :to="'/chosen-movie/' + showing.title + '/booking/' + showing.id"
       >
         Next
       </button>
