@@ -1,9 +1,24 @@
 :root {
   --font1: 'Bebas Neue', cursive;
   --font2: 'Oswald', sans-serif;
-  --c1: #000000;
+  /* TEST 1 - GREY-BLACK RED AND BEIGE*/
+  --c1: #202020;
+  --c2: rgb(116, 109, 98);
+  --c3: rgb(238, 220, 192);
+  --c4: rgb(197, 189, 176);
+  --c5: rgb(94, 91, 87);
+  --c6: rgb(238, 220, 192);
+  --redBorder:#dc0428 1px solid;
+
+  /* TEST 2 - GREYBLACK, RED AND */
+  /* --c1: #000000;
   --c2: #dc0428;
-  --redBorder: 1px #dc0428 solid;
+  --redBorder: 1px #dc0428 solid;  */
+
+  /*TEST 3 - GREYBLACK, BLUE AND PURPLE*/
+  /* --c1: #202020;
+  --c2: #c09b55;
+  --redBorder: 1px #cfad4f solid; */
 }
 
 
@@ -36,26 +51,36 @@ body {
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: wheat;
+  /*TEST 1*/
+  color: #c09b55;
+  /*TEST 2*/
+  /*TEST 3*/
   background-color: var(--c1);
   overflow: hidden;
   height: auto;
 }
 
+
 h1{
   font-family: var(--font1);
+  color: var(--c6);
 }
 h2 {
   font-family: var(--font1);
+  color: var(--c2);
 }
 h3{
   font-family: var(--font1);
+  color: var(--c3);
 }
 h4{
   font-family: var(--font1);
+  color: var(--c4);
 }
 h5{
-  font-family: var(--font1);
+  font-family: var(--font2);
+  font-weight: 200;
+  color: var(--c5);
 }
 button{
   font-family: var(--font1);

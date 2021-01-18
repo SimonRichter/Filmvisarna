@@ -33,14 +33,23 @@ export default {
 .carousel {
   grid-area: 1/1/2/3;
   /* height: 80vh; */
-  background-color: white;
+  /* background-color: white; */
+  /* TEST 1 */
+  background-color:#202020;
+  /* TEST 2 */
+  /* TEST 3 */
   margin: 2vw 0 7vw;
   color: darkgreen;
 }
 .inCinemas {
   grid-area: 2/1/3/3;
-  color: white;
-  border-bottom: 1px #dc0428 solid;
+  /* color: white;
+  border-bottom: 1px #dc0428 solid; */
+  /* TEST 1 */
+  /* color: #c09b55; */
+  border-bottom: #dc0428 1px solid;
+  /* TEST 2 */
+  /* TEST 3 */
 }
 .showingList {
   grid-area: 3/1/4/3;

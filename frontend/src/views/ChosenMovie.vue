@@ -9,10 +9,10 @@
     <div class="movieInfoContainer">
       <h1>{{ movie.title }}</h1>
       <h3>{{ movie.genre }}</h3>
-      <h3><span></span> | {{ movie.length }}</h3>
+      <h3><span></span> {{ movie.length }}</h3>
       <h3><span></span> | {{ movie.runtime }}</h3>
       <h3><span></span> | {{ movie.rated }}</h3>
-      <h4>Language: {{ movie.language }}</h4>
+      <h5>Language: {{ movie.language }}</h5>
       <h5><span></span> Director: {{ movie.director }}</h5>
       <h5><span></span> Actors: {{ movie.actors }}</h5>
 
@@ -30,9 +30,9 @@
           "
         >
           Book
-        </button>
-        {{ showing.date }} || {{ showing.time }} || {{ showing.theatre }} ||
-        {{ showing.salon }}
+        </button><h3>
+        {{ showing.date }} | {{ showing.time }} | {{ showing.theatre }} |
+        {{ showing.salon }}</h3>
       </div>
     </div>
   </div>
@@ -141,17 +141,22 @@ h1 {
 }
 h3 {
   display: inline;
-  color: rgba(245, 222, 179, 0.432);
+  font-weight:normal;
+  font-size: 17px;
+  /* color: rgba(245, 222, 179, 0.432); */
 }
 h4 {
-  margin-top: 7px;
+  margin-top: 15px;
   margin-bottom: 7px;
-  color: wheat;
+  /* color: wheat; */
   font-size: 20px;
   margin-right: 35vh;
+  font-weight: lighter;
 }
 h5 {
-  font-size: 20px;
+  font-size: 17px;
+  /* font-weight: lighter; */
+  margin-top: 3px;
 }
 
 .movieiInfo {

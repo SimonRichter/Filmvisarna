@@ -19,7 +19,11 @@ export default {};
 <style scoped>
 .navBarContainer {
   display: flex;
-  border-bottom: 1px #dc0428 solid;
+  /* border-bottom: 1px #dc0428 solid; */
+  /* TEST 1 */
+  border-bottom: #dc0428 1px solid;
+  /* TEST 2 */
+  /* TEST 3 */
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -31,7 +35,12 @@ export default {};
   display: flex;
   align-items: center;
   list-style-type: none;
-  background-color: #000000;
+  /* background-color: black; */
+  /* TEST 1 */
+  background-color: #202020;
+  /* TEST 2 */
+  /* TEST 3 */
+  
   text-decoration: none;
   padding: 0;
 }
@@ -46,9 +55,14 @@ export default {};
 }
 
 li {
-  color: white;
+  /* color: white; */
+  /* TEST 1 */
+  color: rgb(116, 109, 98);
+  /* TEST 2 */
+  /* TEST 3 */
+  
   padding: 16px 18px;
-  font-size: 19px;
+  font-size: 20px;
 }
 
 a {

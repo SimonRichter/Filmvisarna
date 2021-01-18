@@ -20,7 +20,7 @@ export default {
 
 <style scoped>
 h3 {
-   color: wheat;
+   /* color: wheat; */
    padding: 14px 16px;
 }
 .moviePoster {
