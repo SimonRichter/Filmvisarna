@@ -9,6 +9,7 @@ import SignIn from './views/SignIn.vue'
 import About from './views/About.vue'
 import MyPage from './views/MyPage.vue'
 
+
 const routes = [
   {
     name: 'Home',
