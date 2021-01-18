@@ -6,19 +6,21 @@
         <img :src="moviePoster" />
         <div>
           <h2>{{ showing.title }}</h2>
+          <h4>{{ showing.theatre }}, {{ showing.salon }}</h4>
           <h3>{{ showing.date }} {{ showing.time }}</h3>
-          <h2>{{ showing.theatre }}</h2>
-          <h2>{{ showing.salon }}</h2>
+
+          <!-- <h4>{{ showing.salon }}</h4> -->
           <!-- <h2>{{ bookingObj.tickets.length }}</h2> -->
-          <h2>Ticket types:</h2>
+          <br><h4>Ticket types:</h4>
           <div v-for="ticket in bookingObj.tickets" :key="ticket">
             <div v-if="ticket.value > 0">
               <h3>{{ ticket.value }} {{ ticket.title }}</h3>
             </div>
           </div>
-          <h2>Total: {{ bookingObj.totalSum }} kr</h2>
+          <br><h4>Total:</h4>
+          <h3>{{ bookingObj.totalSum }} kr</h3>
           <!-- Bookin ID will be changed after a booking id is uniqely created in Sprint 2-->
-          <h2>Booking ID: {{ showing.id }}</h2>
+          <h4>Booking ID: <a>{{ showing.id }}</a></h3>
         </div>
       </div>
       <h2 v-if="showToggle" class="emailSentNotification">
@@ -97,10 +99,9 @@ h1 {
   padding: 3vh 0 0 0;
   margin-bottom: 4vh;
 }
-/* h3 {
-  color: rgb(248, 240, 223);
-} */
-
+a{
+   font-family: 'Open Sans Condensed', sans-serif;;
+}
 button {
   cursor: pointer;
   display: inline;
