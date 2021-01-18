@@ -35,7 +35,7 @@ export default {
   /* height: 80vh; */
   /* background-color: white; */
   /* TEST 1 */
-  background-color:#202020;
+  background-color:#131313;;
   /* TEST 2 */
   /* TEST 3 */
   margin: 2vw 0 7vw;
@@ -47,7 +47,7 @@ export default {
   border-bottom: 1px #dc0428 solid; */
   /* TEST 1 */
   /* color: #c09b55; */
-  border-bottom: #dc0428 1px solid;
+  border-bottom: #6e1020 1px solid;
   /* TEST 2 */
   /* TEST 3 */
 }

@@ -1,14 +1,17 @@
 :root {
   --font1: 'Bebas Neue', cursive;
   --font2: 'Oswald', sans-serif;
+  --font3: 'Lato', sans-serif;
+  --font4: 'Roboto Condensed', sans-serif;
+  --font5: 'Open Sans Condensed', sans-serif;
   /* TEST 1 - GREY-BLACK RED AND BEIGE*/
-  --c1: #202020;
+  --c1: #131313;
   --c2: rgb(116, 109, 98);
   --c3: rgb(238, 220, 192);
-  --c4: rgb(197, 189, 176);
+  --c4: rgb(238, 220, 192);
   --c5: rgb(94, 91, 87);
   --c6: rgb(238, 220, 192);
-  --redBorder:#dc0428 1px solid;
+  --redBorder:#6e1020 1px solid;
 
   /* TEST 2 - GREYBLACK, RED AND */
   /* --c1: #000000;
@@ -19,6 +22,11 @@
   /* --c1: #202020;
   --c2: #c09b55;
   --redBorder: 1px #cfad4f solid; */
+
+  /* ORIGINAL COLORS */
+  /* --c1: #000000;
+  --c2: #dc0428;
+  --redBorder: 1px #dc0428 solid;  */
 }
 
 
@@ -70,7 +78,7 @@ h2 {
   color: var(--c2);
 }
 h3{
-  font-family: var(--font1);
+  font-family: var(--font5);
   color: var(--c3);
 }
 h4{
@@ -78,8 +86,7 @@ h4{
   color: var(--c4);
 }
 h5{
-  font-family: var(--font2);
-  font-weight: 200;
+  font-family: var(--font5);
   color: var(--c5);
 }
 button{
@@ -92,9 +99,10 @@ li {
 }
 
 p, span {
-  font-family: var(--font2);
+  font-family: var(--font1);
   font-size: 16px;
   font-weight: 300;
+  color: var(--c5);
 }
 
 

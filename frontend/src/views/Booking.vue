@@ -1,14 +1,14 @@
 <template>
   <div class="contentGridContainer">
     <div class="movieInfo">
-      <h2>
+      <h1>
         {{ showing.theatre }}, <span> {{ showing.salon }}</span>
-      </h2>
+      </h1>
       <br />
       <h3>{{ showing.title }}</h3>
       <span>{{ showing.date }}</span>
       <span> - {{ showing.time }}</span>
-      <hr>
+      <!-- <hr> -->
       <!-- Put all content here in grid container -->
     </div>
    
@@ -35,24 +35,28 @@ export default {
 </script>
 
 <style scoped>
-* {
+/* * {
   color: white;
-}
+} */
 .movieInfo {
   grid-area: 1/1/2/3;
 }
-h2 {
+/* h2 {
   color: white;
-}
+} */
 span {
-  color: lightblue;
+  /* color: lightblue;
   font-size: 14px;
-  font-family: "Bebas Neue", cursive;
+  font-family: "Bebas Neue", cursive; */
+  border-bottom: 1px solid #6e1020;
 }
-h3 {
+/* h3 {
   color: lightblue;
-}
+} */
 .grid-container-map {
   grid-area: 2/1/3/2;
 }
+/* hr{
+  color: #6e1020;
+} */
 </style>

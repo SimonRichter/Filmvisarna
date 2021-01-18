@@ -21,7 +21,7 @@ export default {};
   display: flex;
   /* border-bottom: 1px #dc0428 solid; */
   /* TEST 1 */
-  border-bottom: #dc0428 1px solid;
+  border-bottom: #96162b 1px solid;
   /* TEST 2 */
   /* TEST 3 */
   margin: 0;
@@ -37,7 +37,7 @@ export default {};
   list-style-type: none;
   /* background-color: black; */
   /* TEST 1 */
-  background-color: #202020;
+  background-color: #131313;
   /* TEST 2 */
   /* TEST 3 */
   

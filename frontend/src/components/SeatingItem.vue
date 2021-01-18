@@ -58,33 +58,33 @@ h3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 30px;
-  background-color: #dc0428;
+  background-color: #6e1020;
   text-align: center;
   padding-left: 10px;
   margin-top: 10px;
   border-radius: 5px;
 }
 .box {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(116, 109, 98);
   cursor: pointer;
   grid-column: 3;
   grid-row: 1;
   border-radius: 5px;
-  border: rgb(221, 219, 217) 2px solid;
+  border: rgb(116, 109, 98);
 }
 .seat {
   grid-column: 1;
   grid-row: 1;
   border-radius: 5px;
   text-align: left;
-  padding-top: 4px;
+  padding-top: 2px;
 }
 .price {
   grid-column: 2;
   grid-row: 1;
   border-radius: 5px;
   text-align: left;
-  padding-top: 4px;
+  padding-top: 2px;
 }
 .sub-menu {
   grid-column: 3;

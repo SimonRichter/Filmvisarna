@@ -181,7 +181,7 @@ h5 {
 
   grid-column-start: 1;
   grid-column-end: 3;
-   border-bottom: 1px solid red;
+   border-bottom: 1px solid #6e1020;
    padding: 10px 16px;
 }
 .bookButton {

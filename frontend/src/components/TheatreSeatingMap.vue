@@ -158,23 +158,23 @@ export default {
   grid-template-columns: minmax(50px, 1fr) 50px 100px 50px;
   grid-template-rows: 30px;
   gap: 0;
-  background-color: rgb(0, 0, 0);
+  background-color: #131313;
   border-radius: 5px;
-  border: #dc0428 1px solid;
+  border: #6e1020 1px solid;
 }
 .totalSeats {
   grid-column: 1;
   grid-row: 1;
   text-align: left;
   margin-left: 10px;
-  padding-top: 5px;
+  padding-top: 2px;
   margin-bottom: 5px;
 }
 .counter {
   grid-column: 3;
   grid-row: 1;
   text-align: center;
-  padding-top: 5px;
+  padding-top: 2px;
 }
 .add {
   grid-column: 2;
@@ -186,14 +186,14 @@ export default {
 }
 button {
   text-align: center;
-  border: #dc0428 1px solid;
-  background-color: rgb(0, 0, 0);
+  border: #6e1020 1px solid;
+  background-color: #131313;
   border-radius: 5px;
-  color: white;
+  color: rgb(238, 220, 192);
 }
 button:active,
 button:disabled {
-  background-color: rgb(46, 46, 46);
+  background-color: #222222;
 }
 button:disabled{
   cursor: default;
@@ -210,7 +210,7 @@ button:disabled{
   grid-template-rows: 20px minmax(30px, 1fr) 10px;
   gap: 5px;
   border-radius: 5px;
-  background-color: rgb(0, 0, 0);
+  background-color: #131313;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -238,14 +238,14 @@ button:disabled{
   align-items: flex-end;
   justify-content: flex-start;
 }
-.if-disabled-btn {
+.if-disabled-btn, .if-disabled-btn h3 {
   grid-column: 2;
   grid-row: 2;
   text-align: right;
-  font-size: 10px;
-  color: #dc0428;
+  font-size: 12px;
+  color: #6e1020;
   margin-bottom: 2px;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 .gg-math-plus,
 .gg-math-minus {

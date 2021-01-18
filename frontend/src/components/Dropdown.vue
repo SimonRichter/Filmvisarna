@@ -10,7 +10,7 @@
       @click="showPrices(item)"
       class="menu-item"
     >
-      <a>{{ item.title }}</a>
+      <h5>{{ item.title }}</h5>
     </div>
   </div>
 </template>
@@ -37,14 +37,14 @@ export default {
 
 <style scoped>
 h3 {
-  padding-top: 5px;
+  padding-top: 3px;
   color: black;
   font-size: medium;
 }
 .sub-menu {
-  border: #dc0428 1px solid;
+  border: #6e1020 1px solid;
   position: absolute;
-  background-color: black;
+  background-color: #202020;;
   width: 131px;
   border-radius: 5px;
   margin-top: 10px;
@@ -58,7 +58,7 @@ h3 {
   border-radius: 3px;
 }
 .menu-item:hover {
-  background-color: rgb(46, 46, 46);
+  background-color: rgb(70, 70, 70);
 }
 .down {
   transform: rotate(45deg);
