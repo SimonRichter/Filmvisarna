@@ -40,6 +40,7 @@ export default {
 } */
 .movieInfo {
   grid-area: 1/1/2/3;
+  margin-top: 10vh;
 }
 /* h2 {
   color: white;
