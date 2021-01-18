@@ -162,7 +162,7 @@ img {
 }
 
 #backgroundDiv {
-  margin: 6vh auto;
+  margin: 15vh auto;
   max-width: 65vw;
   background-color: rgba(51, 51, 51, 0.664);
   box-shadow: #6e1020 0px 0px 5px 0px;
