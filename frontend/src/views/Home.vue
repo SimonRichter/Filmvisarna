@@ -13,18 +13,18 @@ import ShowingList from "../components/ShowingList.vue";
 import CarouselList from "../components/CarouselList.vue";
 
 export default {
-  components: {
-    ShowingList,
-    CarouselList,
-  },
-  // data() {
-  //   return {};
-  // },
-  // computed: {
-  //   movies() {
-  //     return this.$store.state.movies;
-  //   },
-  // },
+   components: {
+      ShowingList,
+      CarouselList,
+   },
+   // data() {
+   //   return {};
+   // },
+   // computed: {
+   //   movies() {
+   //     return this.$store.state.movies;
+   //   },
+   // },
 };
 </script>
 

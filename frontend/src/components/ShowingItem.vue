@@ -9,7 +9,7 @@
 
 <script>
 export default {
-   props: ["moviePoster", "movieTitle", "movieTitleForLink"],
+   props: ["moviePoster", "movieTitle"],
    computed: {
       movieTitleForLink() {
          return this.movieTitle.replace(/ /g, "-");
@@ -20,7 +20,7 @@ export default {
 
 <style scoped>
 h3 {
-   color: white;
+   color: wheat;
    padding: 14px 16px;
 }
 .moviePoster {

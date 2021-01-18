@@ -36,7 +36,7 @@ body {
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #e0e5eb;
+  color: wheat;
   background-color: var(--c1);
   overflow: hidden;
   height: auto;
