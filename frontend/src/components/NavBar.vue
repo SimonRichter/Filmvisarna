@@ -1,17 +1,19 @@
 <template>
-  <div class="navBarContainer">    
-    <ul class="navBar floatLeft">
-      <router-link to="/" class="floatLeft">
-      <li><img src="../pictures/logoSmall.png" id="logo" /></li>
-      </router-link>
-    </ul>
-    <ul class="navBar floatRight">
-      <router-link to="/movies"><li>Movies</li></router-link>
-      <router-link to="/about"><li>About</li></router-link>
+   <div class="navBarContainer">
+      <ul class="navBar floatLeft">
+         <router-link to="/" class="floatLeft">
+            <li class="firstListItem">
+               <img src="../pictures/logoSmall.png" id="logo" />
+            </li>
+         </router-link>
+      </ul>
+      <ul class="navBar floatRight">
+         <router-link to="/movies"><li>Movies</li></router-link>
+         <router-link to="/about"><li>About</li></router-link>
 
-      <router-link to="/sign-in"><li>Sign in</li></router-link>
-    </ul>
-  </div>
+         <router-link to="/sign-in"><li>Sign in</li></router-link>
+      </ul>
+   </div>
 </template>
 
 <script>
@@ -20,47 +22,52 @@ export default {};
 
 <style scoped>
 .navBarContainer {
-  display: flex;
-  border-bottom: 1px #dc0428 solid;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
-  z-index: 1;
+   display: flex;
+   border-bottom: 1px #dc0428 solid;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   position: fixed;
+   width: 100%;
+   z-index: 1;
 }
 .navBar {
-  display: flex;
-  align-items: center;
-  list-style-type: none;
-  background-color: #000000;
-  text-decoration: none;
-  padding: 0;
+   display: flex;
+   align-items: center;
+   list-style-type: none;
+   background-color: #000000;
+   text-decoration: none;
+   padding: 0;
 }
 
 .floatRight {
-  width: 50%;
-  justify-content: flex-end;
+   width: 50%;
+   justify-content: flex-end;
 }
 .floatLeft {
-  width: 50%;
-  justify-content: flex-start;
+   width: 50%;
+   justify-content: flex-start;
+}
+.firstListItem {
+   padding: 0;
+   padding-top: 5px;
+   padding-left: 5px;
 }
 
 li {
-  color: white;
-  padding: 16px 18px;
-  font-size: 19px;
+   color: white;
+   padding: 16px 18px;
+   font-size: 19px;
 }
 
 a {
-  text-decoration: none;
+   text-decoration: none;
 }
 #id {
-  background-color: white;
+   background-color: white;
 }
 img {
-  height: 70px;
-  width: auto;
+   height: 70px;
+   width: auto;
 }
 </style>
