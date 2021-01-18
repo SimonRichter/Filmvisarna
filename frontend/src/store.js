@@ -23,6 +23,8 @@ const mutations = {
   setBookingInfo(store, bookingInfo) {
     store.bookingInfo = bookingInfo;
     console.log('store.bookingInfo', store.bookingInfo)
+
+  },
   setShowings(state, showingsList) {
     state.showings = showingsList;
   },
