@@ -1,10 +1,9 @@
 <template>
-  <div class="navBarContainer">
-
-      <router-link to="/" class="floatLeft"><img src="../pictures/logoSmall.png" id="logo" /></router-link>
-    
+  <div class="navBarContainer">    
     <ul class="navBar floatLeft">
-      <router-link to="/" class="floatLeft"><li ></li>
+      <router-link to="/" class="floatLeft">
+      <li><img src="../pictures/logoSmall.png" id="logo" /></li>
+      </router-link>
     </ul>
     <ul class="navBar floatRight">
       <router-link to="/movies"><li>Movies</li></router-link>
@@ -60,8 +59,8 @@ a {
 #id {
   background-color: white;
 }
-img{
-  height:70px;
+img {
+  height: 70px;
   width: auto;
 }
 </style>
