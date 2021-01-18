@@ -10,7 +10,6 @@
       <ul class="navBar floatRight">
          <router-link to="/movies"><li>Movies</li></router-link>
          <router-link to="/about"><li>About</li></router-link>
-
          <router-link to="/sign-in"><li>Sign in</li></router-link>
       </ul>
    </div>
@@ -62,9 +61,6 @@ li {
 
 a {
    text-decoration: none;
-}
-#id {
-   background-color: white;
 }
 img {
    height: 70px;
