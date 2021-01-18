@@ -1,85 +1,98 @@
 <template>
-  <section class="carousel" aria-label="Gallery">
-    <ol class="carousel__viewport">
-      <li id="carousel__slide1" tabindex="0" class="carousel__slide">
-        <img
-          src="https://www.themoviedb.org/t/p/original/gIR61o4awBHCNHUOrBcjyZa22BZ.jpg"
-        />
-        <div class="carousel__snapper">
-          <a href="#carousel__slide4" class="carousel__prev"
-            >Go to last slide</a
-          >
-          <a href="#carousel__slide2" class="carousel__next"
-            >Go to next slide</a
-          >
-        </div>
-      </li>
-      <li id="carousel__slide2" tabindex="0" class="carousel__slide">
-        <img
-          src="https://www.themoviedb.org/t/p/original/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg"
-        />
-        <div class="carousel__snapper"></div>
-        <a href="#carousel__slide1" class="carousel__prev"
-          >Go to previous slide</a
-        >
-        <a href="#carousel__slide3" class="carousel__next">Go to next slide</a>
-      </li>
-      <li id="carousel__slide3" tabindex="0" class="carousel__slide">
-        <img
-          src="https://www.themoviedb.org/t/p/original/4HcgqYARkfkkdP4zUcfOXN7yNmv.jpg"
-        />
-        <div class="carousel__snapper"></div>
-        <a href="#carousel__slide2" class="carousel__prev"
-          >Go to previous slide</a
-        >
-        <a href="#carousel__slide4" class="carousel__next">Go to next slide</a>
-      </li>
-      <li id="carousel__slide4" tabindex="0" class="carousel__slide">
-        <img
-          src="https://www.themoviedb.org/t/p/original/rAQcPrEaPzDRVNX7XX5TWyxCGFN.jpg"
-        />
-        <div class="carousel__snapper"></div>
-        <a href="#carousel__slide3" class="carousel__prev"
-          >Go to previous slide</a
-        >
-        <a href="#carousel__slide5" class="carousel__next">Go to first slide</a>
-      </li>
-      <li id="carousel__slide5" tabindex="0" class="carousel__slide">
-        <img
-          src="https://www.themoviedb.org/t/p/original/xJHokMbljvjADYdit5fK5VQsXEG.jpg"
-        />
-        <div class="carousel__snapper"></div>
-        <a href="#carousel__slide4" class="carousel__prev"
-          >Go to previous slide</a
-        >
-        <a href="#carousel__slide1" class="carousel__next">Go to first slide</a>
-      </li>
-    </ol>
-    <aside class="carousel__navigation">
-      <ol class="carousel__navigation-list">
-        <li class="carousel__navigation-item">
-          <a href="#carousel__slide1" class="carousel__navigation-button"
-            >Go to slide 1</a
-          >
-        </li>
-        <li class="carousel__navigation-item">
-          <a href="#carousel__slide2" class="carousel__navigation-button"
-            >Go to slide 2</a
-          >
-        </li>
-        <li class="carousel__navigation-item">
-          <a href="#carousel__slide3" class="carousel__navigation-button"
-            >Go to slide 3</a
-          >
-        </li>
-        <li class="carousel__navigation-item">
-          <a href="#carousel__slide4" class="carousel__navigation-button"
-            >Go to slide 4</a
-          >
-        </li>
+<section class="carousel" aria-label="Gallery">
+      <ol class="carousel__viewport">
+         <li id="carousel__slide1" tabindex="0" class="carousel__slide">
+            <img
+               src="https://www.themoviedb.org/t/p/original/gIR61o4awBHCNHUOrBcjyZa22BZ.jpg"
+            />
+            <div class="carousel__snapper">
+               <a href="#carousel__slide5" class="carousel__prev"
+                  >Go to last slide</a
+               >
+               <a href="#carousel__slide2" class="carousel__next"
+                  >Go to next slide</a
+               >
+            </div>
+         </li>
+         <li id="carousel__slide2" tabindex="0" class="carousel__slide">
+            <img
+               src="https://www.themoviedb.org/t/p/original/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg"
+            />
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide1" class="carousel__prev"
+               >Go to previous slide</a
+            >
+            <a href="#carousel__slide3" class="carousel__next"
+               >Go to next slide</a
+            >
+         </li>
+         <li id="carousel__slide3" tabindex="0" class="carousel__slide">
+            <img
+               src="https://www.themoviedb.org/t/p/original/4HcgqYARkfkkdP4zUcfOXN7yNmv.jpg"
+            />
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide2" class="carousel__prev"
+               >Go to previous slide</a
+            >
+            <a href="#carousel__slide4" class="carousel__next"
+               >Go to next slide</a
+            >
+         </li>
+         <li id="carousel__slide4" tabindex="0" class="carousel__slide">
+            <img
+               src="https://www.themoviedb.org/t/p/original/rAQcPrEaPzDRVNX7XX5TWyxCGFN.jpg"
+            />
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide3" class="carousel__prev"
+               >Go to previous slide</a
+            >
+            <a href="#carousel__slide5" class="carousel__next"
+               >Go to next slide</a
+            >
+         </li>
+         <li id="carousel__slide5" tabindex="0" class="carousel__slide">
+            <img
+               src="https://www.themoviedb.org/t/p/original/xJHokMbljvjADYdit5fK5VQsXEG.jpg"
+            />
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide4" class="carousel__prev"
+               >Go to previous slide</a
+            >
+            <a href="#carousel__slide1" class="carousel__next"
+               >Go to first slide</a
+            >
+         </li>
       </ol>
-    </aside>
-  </section>
+      <aside class="carousel__navigation">
+         <ol class="carousel__navigation-list">
+            <li class="carousel__navigation-item">
+               <a href="#carousel__slide1" class="carousel__navigation-button"
+                  >Go to slide 1</a
+               >
+            </li>
+            <li class="carousel__navigation-item">
+               <a href="#carousel__slide2" class="carousel__navigation-button"
+                  >Go to slide 2</a
+               >
+            </li>
+            <li class="carousel__navigation-item">
+               <a href="#carousel__slide3" class="carousel__navigation-button"
+                  >Go to slide 3</a
+               >
+            </li>
+            <li class="carousel__navigation-item">
+               <a href="#carousel__slide4" class="carousel__navigation-button"
+                  >Go to slide 4</a
+               >
+            </li>
+            <li class="carousel__navigation-item">
+               <a href="#carousel__slide5" class="carousel__navigation-button"
+                  >Go to slide 5</a
+               >
+            </li>
+         </ol>
+      </aside>
+   </section>
 </template>
 
 <script>
@@ -267,7 +280,7 @@ li {
   display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
-  background-color: #333;
+  background-color: rgba(187, 0, 0, 0.678);
   background-clip: content-box;
   border: 0.25rem solid transparent;
   border-radius: 50%;
