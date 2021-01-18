@@ -173,6 +173,9 @@ li {
   padding-top: 50%;
   filter: drop-shadow(0 0 10px #0003);
   perspective: 100px;
+
+
+
 }
 
 .carousel__viewport {
@@ -186,6 +189,9 @@ li {
   counter-reset: item;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
+  overflow:hidden;
+
+
 }
 
 .carousel__slide {
@@ -194,6 +200,7 @@ li {
   width: 100%;
   background-color: #f99;
   counter-increment: item;
+
 }
 
 .carousel__slide:nth-child(even) {
