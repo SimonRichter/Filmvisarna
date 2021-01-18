@@ -201,7 +201,7 @@ li {
 }
 
 .carousel__slide:before {
-  content: counter(item);
+  /* content: counter(item); */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -284,7 +284,6 @@ li {
 }
 
 img {
- 
   width: 100%;
 }
 
