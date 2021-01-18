@@ -2,8 +2,8 @@
   <div class="contentGridContainer">
     <!-- Put all content here in grid container -->
     <CarouselList class="carousel" />
-    <h2 class="inCinemas">In cinemas</h2>
-    
+    <h2 class="inCinemas">Now in vue <span class="x"> X </span> cinemas</h2>
+
     <ShowingList class="showingList" />
   </div>
 </template>
@@ -13,23 +13,23 @@ import ShowingList from "../components/ShowingList.vue";
 import CarouselList from "../components/CarouselList.vue";
 
 export default {
-   components: {
-      ShowingList,
-      CarouselList,
-   },
-   // data() {
-   //   return {};
-   // },
-   // computed: {
-   //   movies() {
-   //     return this.$store.state.movies;
-   //   },
-   // },
+  components: {
+    ShowingList,
+    CarouselList,
+  },
+
+  // data() {
+  //   return {};
+  // },
+  // computed: {
+  //   movies() {
+  //     return this.$store.state.movies;
+  //   },
+  // },
 };
 </script>
 
 <style scoped>
-
 .carousel {
   grid-area: 1/1/2/3;
   /* height: 80vh; */
@@ -48,5 +48,10 @@ export default {
   margin: 1vw 0 5vw;
   display: flex;
   font-weight: 800;
+}
+.x {
+  font-family: "Bebas Neue", cursive;
+  font-size: 30px;
+  color: red;
 }
 </style>
