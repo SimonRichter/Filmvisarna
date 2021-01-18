@@ -3,7 +3,7 @@
       <div class="movieItemContainer">
          <img :src="imageUrl" />
          <div class="infoContainer">
-            <h1>{{ movieTitle }}</h1>
+            <h2>{{ movieTitle }}</h2>
             <h3>{{ movieGenres }}</h3>
             <h3><span></span> | {{ movieLength }}</h3>
             <h3><span></span> | {{ ageClassification }}</h3>
@@ -39,16 +39,16 @@ a {
    margin: 0;
    padding: 0;
 }
-h1 {
+h2 {
    margin-top: 10px;
 }
 h3 {
    display: inline;
-   color: rgba(245, 222, 179, 0.432);
+   /* color: rgba(245, 222, 179, 0.432); */
 }
 h4 {
    margin-top: 5px;
-   color: wheat;
+   /* color: wheat; */
 }
 img {
    border-radius: 5px;
@@ -60,7 +60,7 @@ img {
    display: flex;
    background-color: rgba(51, 51, 51, 0.39);
    margin: 0 20px 20px 20px;
-   box-shadow: 0 0 5px 0 rgb(59, 81, 105);
+   box-shadow: 0 0 5px 0 #6e1020;
 }
 .infoContainer {
    margin: 0 20px 0 20px;

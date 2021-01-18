@@ -63,6 +63,6 @@ export default {
 .x {
   font-family: "Bebas Neue", cursive;
   font-size: 30px;
-  color: red;
+  color: #6e1020 
 }
 </style>

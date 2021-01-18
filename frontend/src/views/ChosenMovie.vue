@@ -138,13 +138,14 @@ iframe {
 }
 button {
    text-align: center;
-   border: #dc0428 1px solid;
-   background-color: rgb(0, 0, 0);
+   border: #6e1020 1px solid;
+   background-color: #131313;
    border-radius: 5px;
-   color: white;
+   color: rgb(238, 220, 192);
    font-family: "Bebas Neue", cursive;
    width: 60px;
-   padding-left: 10px;
+   padding-left: 9px;
+   padding-top: 2px;
    margin-top: 7px;
    margin-bottom: 7px;
    font-size: 20px;

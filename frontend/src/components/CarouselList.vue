@@ -275,7 +275,7 @@ li {
    display: inline-block;
    width: 1.5rem;
    height: 1.5rem;
-   background-color: rgb(220, 4, 40);
+   background-color: #6e1020;
    background-clip: content-box;
    border: 0.25rem solid transparent;
    border-radius: 50%;
