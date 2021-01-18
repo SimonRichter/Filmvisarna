@@ -298,6 +298,7 @@ li {
 
 img {
    width: 100%;
+   height: -webkit-fill-available;
 }
 
 .carousel::before,
