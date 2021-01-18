@@ -39,11 +39,10 @@
       "
     >
               
-      <button class="next-btn" @click="removeSeatsBackend(); sendDataToNextView">Next</button>
       <button
         :disabled="!(counter === goToNextStep)"
         class="next-btn"
-        @click="sendDataToNextView"
+        @click="sendDataToNextView;removeSeatsBackend();"
         :to="'/chosen-movie/' + showing.title + '/booking/' + showing.id"
       >
         Next
