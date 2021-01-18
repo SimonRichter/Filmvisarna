@@ -5,7 +5,7 @@
          <iframe
             width="1220"
             height="400"
-            src="https://www.youtube.com/embed/kaU2A7KyOu4"
+            :src="'https://www.youtube.com/embed/' + movie.trailer"
          >
          </iframe>
       </div>
