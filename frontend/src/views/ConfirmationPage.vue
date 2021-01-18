@@ -25,7 +25,7 @@
         An email with your booking information was sent to your mail
       </h2>
       <div class="buttonsDiv">
-        <button v-if="!showToggle" @click.prevent="cancelBooking">
+        <button class="cancelBtn" v-if="!showToggle" @click.prevent="cancelBooking">
           Cancel
         </button>
         <button v-if="!showToggle" @click.prevent="confirmBooking">
@@ -83,6 +83,10 @@ export default {
       window.print();
       return false;
     },
+       removeSeatsBackend() {
+      this.showing.seats = this.totalSeats;
+      this.$store.dispatch("updateSeatsInBackend", this.showing);
+    },
   },
 };
 </script>
@@ -125,6 +129,10 @@ img {
 .buttonsDiv {
   max-width: fit-content;
   margin: 0 auto;
+}
+
+.cancelBtn{
+  background-color:#940000;
 }
 
 .emailSentNotification {

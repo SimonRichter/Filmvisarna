@@ -33,8 +33,7 @@
         :disabled="!(counter === goToNextStep)"
         class="next-btn"
         @click="
-          removeSeatsBackend();
-          sendDataToNextView;
+               sendDataToNextView
         "
         :to="'/chosen-movie/' + showing.title + '/booking/' + showing.id"
       >
@@ -147,10 +146,7 @@ export default {
       }
       this.totalSum = localTotalSum;
     },
-    removeSeatsBackend() {
-      this.showing.seats = this.totalSeats;
-      this.$store.dispatch("updateSeatsInBackend", this.showing);
-    },
+ 
   },
 };
 </script>
