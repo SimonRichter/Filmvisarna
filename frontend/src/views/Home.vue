@@ -1,5 +1,5 @@
 <template>
-  <div class="contentGridContainer">
+  <div class="contentGridContainer" id="test">
     <!-- Put all content here in grid container -->
     <CarouselList class="carousel" />
     <h2 class="inCinemas">Now in vue <span class="x"> X </span> cinemas</h2>
@@ -64,5 +64,34 @@ export default {
   font-family: "Bebas Neue", cursive;
   font-size: 30px;
   color: #6e1020 
+}
+#test  {
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
 }
 </style>
