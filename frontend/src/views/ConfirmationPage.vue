@@ -11,16 +11,20 @@
 
           <!-- <h4>{{ showing.salon }}</h4> -->
           <!-- <h2>{{ bookingObj.tickets.length }}</h2> -->
-          <br><h4>Ticket types:</h4>
+          <br />
+          <h4>Ticket types:</h4>
           <div v-for="ticket in bookingObj.tickets" :key="ticket">
             <div v-if="ticket.value > 0">
               <h3>{{ ticket.value }} {{ ticket.title }}</h3>
             </div>
           </div>
-          <br><h4>Total:</h4>
+          <br />
+          <h4>Total:</h4>
           <h3>{{ bookingObj.totalSum }} kr</h3>
           <!-- Bookin ID will be changed after a booking id is uniqely created in Sprint 2-->
-          <h4>Booking ID: <a>{{ showing.id }}</a></h4>
+          <h4>
+            Booking ID: <a>{{ showing.id }}</a>
+          </h4>
         </div>
       </div>
       <h2 v-if="showToggle" class="emailSentNotification">
@@ -28,19 +32,15 @@
       </h2>
       <div class="buttonsDiv">
         <router-link :to="'/'">
-          <button
-            class="cancelBtn"
-            v-if="!showToggle"
-            @click="cancelBooking()"
-          >
+          <button class="cancelBtn" v-if="!showToggle" @click="cancelBooking()">
             Cancel
           </button>
         </router-link>
 
         <button
           v-if="!showToggle"
-          @click.prevent="
-            confirmBooking;
+          @click="
+            confirmBooking();
             removeSeatsBackend();
           "
         >
@@ -99,8 +99,8 @@ export default {
       return false;
     },
 
-    cancelBooking(){
-            this.$store.dispatch("fetchShowings");
+    cancelBooking() {
+      this.$store.dispatch("fetchShowings");
     },
     removeSeatsBackend() {
       this.$store.dispatch("updateSeatsInBackend", this.showing);
@@ -115,8 +115,8 @@ h1 {
   padding: 3vh 0 0 0;
   margin-bottom: 4vh;
 }
-a{
-   font-family: 'Open Sans Condensed', sans-serif;;
+a {
+  font-family: "Open Sans Condensed", sans-serif;
 }
 button {
   cursor: pointer;
