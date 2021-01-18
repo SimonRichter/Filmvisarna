@@ -199,6 +199,7 @@ li {
    counter-reset: item;
    scroll-behavior: smooth;
    scroll-snap-type: x mandatory;
+   background-color: black;
 }
 
 .carousel__slide {
@@ -259,7 +260,7 @@ li {
 .carousel__navigation {
    position: absolute;
    right: 0;
-   bottom: 0;
+   bottom: 18px;
    left: 0;
    text-align: center;
 }
@@ -273,7 +274,7 @@ li {
    display: inline-block;
    width: 1.5rem;
    height: 1.5rem;
-   background-color: #333;
+   background-color: rgb(220, 4, 40);
    background-clip: content-box;
    border: 0.25rem solid transparent;
    border-radius: 50%;
