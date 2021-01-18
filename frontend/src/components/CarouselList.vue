@@ -3,7 +3,7 @@
     <ol class="carousel__viewport">
       <li id="carousel__slide1" tabindex="0" class="carousel__slide">
         <img
-          src="https://www.themoviedb.org/t/p/original/o4vSn07PXtQD0468pplBrCPBppu.jpg"
+          src="https://www.themoviedb.org/t/p/original/gIR61o4awBHCNHUOrBcjyZa22BZ.jpg"
         />
         <div class="carousel__snapper">
           <a href="#carousel__slide4" class="carousel__prev"
@@ -16,7 +16,7 @@
       </li>
       <li id="carousel__slide2" tabindex="0" class="carousel__slide">
         <img
-          src="https://www.themoviedb.org/t/p/original/x7n68dlDNwS8TjuqKme4gbBbiH4.jpg"
+          src="https://www.themoviedb.org/t/p/original/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg"
         />
         <div class="carousel__snapper"></div>
         <a href="#carousel__slide1" class="carousel__prev"
@@ -26,7 +26,7 @@
       </li>
       <li id="carousel__slide3" tabindex="0" class="carousel__slide">
         <img
-          src="https://www.themoviedb.org/t/p/original/rz5lcqYPm5818n62GNaQvirbIh3.jpg"
+          src="https://www.themoviedb.org/t/p/original/4HcgqYARkfkkdP4zUcfOXN7yNmv.jpg"
         />
         <div class="carousel__snapper"></div>
         <a href="#carousel__slide2" class="carousel__prev"
@@ -36,7 +36,7 @@
       </li>
       <li id="carousel__slide4" tabindex="0" class="carousel__slide">
         <img
-          src="https://www.themoviedb.org/t/p/original/AqkavSN7zSPip4UQ5IpGuATqiwN.jpg"
+          src="https://www.themoviedb.org/t/p/original/rAQcPrEaPzDRVNX7XX5TWyxCGFN.jpg"
         />
         <div class="carousel__snapper"></div>
         <a href="#carousel__slide3" class="carousel__prev"
@@ -46,7 +46,7 @@
       </li>
       <li id="carousel__slide5" tabindex="0" class="carousel__slide">
         <img
-          src="https://www.themoviedb.org/t/p/original/huD4cMhHtLkxcdM6PbKBcivBZuE.jpg"
+          src="https://www.themoviedb.org/t/p/original/xJHokMbljvjADYdit5fK5VQsXEG.jpg"
         />
         <div class="carousel__snapper"></div>
         <a href="#carousel__slide4" class="carousel__prev"

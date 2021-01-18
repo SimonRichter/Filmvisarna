@@ -32,9 +32,7 @@
       <button
         :disabled="!(counter === goToNextStep)"
         class="next-btn"
-        @click="
-               sendDataToNextView
-        "
+        @click="sendDataToNextView,x()"
         :to="'/chosen-movie/' + showing.title + '/booking/' + showing.id"
       >
         Next
@@ -69,26 +67,30 @@ export default {
     sendDataToNextView() {
       this.objToSend = {
         tickets: [
-          { 
+          {
             title: "Adult",
-            value: this.typeAdult
+            value: this.typeAdult,
           },
           {
             title: "Child (0-12)",
-            value: this.typeChild
-            },
-            {
+            value: this.typeChild,
+          },
+          {
             title: "Senior (65+)",
-            value: this.typeSenior
-            }
+            value: this.typeSenior,
+          },
         ],
         totalSum: this.totalSum,
-        showing: this.showing
+        showing: this.showing,
       };
       this.$store.commit("setBookingInfo", this.objToSend);
     },
   },
   methods: {
+    x() {
+      this.showing.seats = this.totalSeats;
+    },
+
     increment() {
       if (this.totalSeats <= 0) {
         this.totalSeats = 0;
@@ -146,7 +148,6 @@ export default {
       }
       this.totalSum = localTotalSum;
     },
- 
   },
 };
 </script>
@@ -195,7 +196,7 @@ button:active,
 button:disabled {
   background-color: rgb(46, 46, 46);
 }
-button:disabled{
+button:disabled {
   cursor: default;
 }
 .grid-container-list {
