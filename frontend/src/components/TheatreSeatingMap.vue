@@ -1,6 +1,5 @@
 <template>
   <div class="grid-container-map">
-
     <h3 class="totalSeats">Total seats left: {{ totalSeats }}</h3>
     <button class="remove" @click="increment">
       <i class="gg-math-minus"></i>
@@ -38,11 +37,13 @@
         '/confirmation/'
       "
     >
-              
       <button
         :disabled="!(counter === goToNextStep)"
         class="next-btn"
-        @click="removeSeatsBackend();sendDataToNextView"
+        @click="
+          removeSeatsBackend();
+          sendDataToNextView;
+        "
         :to="'/chosen-movie/' + showing.title + '/booking/' + showing.id"
       >
         Next
@@ -74,7 +75,7 @@ export default {
     SeatingList,
   },
   computed: {
-      sendDataToNextView() {
+    sendDataToNextView() {
       this.objToSend = {
         tickets: [
           {
@@ -84,7 +85,9 @@ export default {
           },
         ],
         totalSum: this.totalSum,
-        showing: this.showing,
+        showingTitle: this.showing.title,
+        showingPoster: this.showing.poster,
+        showingId: this.showing.id,
       };
       this.$store.commit("setBookingInfo", this.objToSend);
     },
@@ -148,7 +151,7 @@ export default {
       this.totalSum = localTotalSum;
     },
     removeSeatsBackend() {
-      this.showing.seats= this.totalSeats
+      this.showing.seats = this.totalSeats;
       this.$store.dispatch("updateSeatsInBackend", this.showing);
     },
   },
