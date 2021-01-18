@@ -25,10 +25,23 @@
         An email with your booking information was sent to your mail
       </h2>
       <div class="buttonsDiv">
-        <button class="cancelBtn" v-if="!showToggle" @click.prevent="cancelBooking">
-          Cancel
-        </button>
-        <button v-if="!showToggle" @click.prevent="confirmBooking">
+        <router-link :to="'/'">
+          <button
+            class="cancelBtn"
+            v-if="!showToggle"
+            @click="cancelBooking()"
+          >
+            Cancel
+          </button>
+        </router-link>
+
+        <button
+          v-if="!showToggle"
+          @click.prevent="
+            confirmBooking;
+            removeSeatsBackend();
+          "
+        >
           Confirm
         </button>
         <button v-if="showToggle" @click="printBookingDetails">Print</button>
@@ -38,6 +51,7 @@
         <router-link :to="'/my-page/'">
           <button v-if="showToggle">My page</button>
         </router-link>
+        {{ showing.seats }}
       </div>
     </div>
   </div>
@@ -83,8 +97,11 @@ export default {
       window.print();
       return false;
     },
-       removeSeatsBackend() {
-      this.showing.seats = this.totalSeats;
+
+    cancelBooking(){
+            this.$store.dispatch("fetchShowings");
+    },
+    removeSeatsBackend() {
       this.$store.dispatch("updateSeatsInBackend", this.showing);
     },
   },
@@ -131,8 +148,8 @@ img {
   margin: 0 auto;
 }
 
-.cancelBtn{
-  background-color:#940000;
+.cancelBtn {
+  background-color: #940000;
 }
 
 .emailSentNotification {
