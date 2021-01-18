@@ -51,7 +51,6 @@
         <router-link :to="'/my-page/'">
           <button v-if="showToggle">My page</button>
         </router-link>
-        {{ showing.seats }}
       </div>
     </div>
   </div>
