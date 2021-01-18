@@ -190,8 +190,8 @@ h5 {
   grid-column-start: 1;
   grid-column-end: 3;
    border-bottom: 1px solid #6e1020;
-   padding: 10px 16px;
-   width: 60vw;
+   padding: 10px 0px 16px 0px;
+   margin:0px 20vw 0px 20vw;
    
 }
 .bookButton {
@@ -203,7 +203,6 @@ h5 {
    padding-top: 5px;
    padding-bottom: 2px;
    display: flex;
-   align-items: center;
 }
 .setWidth {
    width:60vw;
