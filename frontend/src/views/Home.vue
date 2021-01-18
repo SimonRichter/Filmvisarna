@@ -35,8 +35,8 @@ export default {
 .carousel {
    grid-area: 1/1/2/3;
    /* height: 80vh; */
-   background-color: white;
-   margin: 2vw 0 7vw;
+   background-color: black;
+   margin: 2vw 0 1vw;
    color: darkgreen;
 }
 .inCinemas {
@@ -51,8 +51,8 @@ export default {
    display: flex;
    font-weight: 800;
 }
-.x{
-   font-family:'Bebas Neue', cursive;
+.x {
+   font-family: "Bebas Neue", cursive;
    font-size: 30px;
    color: red;
 }

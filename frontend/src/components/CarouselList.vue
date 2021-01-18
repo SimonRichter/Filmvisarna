@@ -159,6 +159,7 @@ body {
 
 *::-webkit-scrollbar {
    width: 0;
+   height: 0;
 }
 
 *::-webkit-scrollbar-track {
@@ -206,12 +207,12 @@ li {
    position: relative;
    flex: 0 0 100%;
    width: 100%;
-   background-color: #f99;
+   background-color: transparent;
    counter-increment: item;
 }
 
 .carousel__slide:nth-child(even) {
-   background-color: #99f;
+   background-color: transparent;
 }
 
 .carousel__slide:before {
@@ -260,7 +261,7 @@ li {
 .carousel__navigation {
    position: absolute;
    right: 0;
-   bottom: 18px;
+   bottom: 5px;
    left: 0;
    text-align: center;
 }
@@ -299,7 +300,7 @@ li {
 
 img {
    width: 100%;
-   height: -webkit-fill-available;
+   height: 85vh;
 }
 
 .carousel::before,
