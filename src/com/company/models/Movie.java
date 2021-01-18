@@ -21,7 +21,15 @@ public class Movie {
     private String awards;
     private String poster;
     private String posterLandscape;
+    private String trailer;
 
+    public String getTrailer() {
+        return trailer;
+    }
+
+    public void setTrailer(String trailer) {
+        this.trailer = trailer;
+    }
 
     public String getId() {
         return id;
