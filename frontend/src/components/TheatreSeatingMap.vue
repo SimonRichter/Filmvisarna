@@ -42,7 +42,7 @@
       <button
         :disabled="!(counter === goToNextStep)"
         class="next-btn"
-        @click="sendDataToNextView;removeSeatsBackend();"
+        @click="removeSeatsBackend();sendDataToNextView"
         :to="'/chosen-movie/' + showing.title + '/booking/' + showing.id"
       >
         Next
