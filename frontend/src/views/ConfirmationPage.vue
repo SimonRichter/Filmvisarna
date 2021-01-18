@@ -3,19 +3,16 @@
       <div id="backgroundDiv">
          <h1>Your booking</h1>
          <div id="pictureSeparatorDiv">
-            <img
-               src="https://m.media-amazon.com/images/M/MV5BOTk2NDNjZWQtMGY0Mi00YTY2LWE5MzctMGRhZmNlYzljYTg5XkEyXkFqcGdeQXVyMTAyNjg4NjE0._V1_SX300.jpg"
-               alt="Movie poster image"
-            />
+            <!-- <img :src="bookingObj.showingPoster" alt="Movie poster image" /> -->
             <div>
                <h2>{{ showingObj.title }}</h2>
                <h2>{{ showingObj.date }} {{ showingObj.time }}</h2>
                <h2>{{ showingObj.theatre }}</h2>
                <h2>{{ showingObj.salon }}</h2>
-               <h2>{{ bookingObj.seats.length }}</h2>
-               <h2>Ticket types: 2 Adult, 1 Child, 1 Senior</h2>
-               <h2>Total: 400kr</h2>
-               <h2>Booking ID: XxXXxXXXXXXX</h2>
+               <!-- <h2>{{ bookingObj.tickets.length }}</h2> -->
+               <h2>Ticket types: {{ bookingObj.tickets }}</h2>
+               <h2>Total: {{ bookingObj.totalSum }}</h2>
+               <h2>Booking ID: {{ bookingObj.showingId }}</h2>
             </div>
          </div>
          <h2 v-if="showToggle" class="emailSentNotification">
@@ -54,10 +51,11 @@ export default {
       showingId() {
          return this.$route.params.showingId;
       },
+      bookingObjPicture() {
+         return this;
+      },
       bookingObj() {
-         return this.$store.state.bookings.filter(
-            (x) => x.id === this.bookingId
-         )[0];
+         return this.$store.state.bookingInfo;
       },
       showingObj() {
          return this.$store.state.showings.filter(

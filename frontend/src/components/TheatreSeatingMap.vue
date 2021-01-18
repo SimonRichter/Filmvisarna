@@ -30,11 +30,8 @@
     </div>
     <router-link
       :to="
-        '/chosen-movie/' +
-        showing.title +
-        '/booking/' +
-        showing.id +
-        '/confirmation/'
+        '/confirmation-page/' +
+        showing.id
       "
     >
       <button
