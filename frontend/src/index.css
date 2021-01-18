@@ -45,12 +45,19 @@ body {
 h1{
   font-family: var(--font1);
 }
-
 h2 {
   font-family: var(--font1);
 }
-
 h3{
+  font-family: var(--font1);
+}
+h4{
+  font-family: var(--font1);
+}
+h5{
+  font-family: var(--font1);
+}
+button{
   font-family: var(--font1);
 }
 
