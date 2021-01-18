@@ -29,6 +29,10 @@
   border: 2px solid rgb(46, 46, 46);
 }
 
+body {
+  background-color: var(--c1);
+}
+
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -41,12 +45,19 @@
 h1{
   font-family: var(--font1);
 }
-
 h2 {
   font-family: var(--font1);
 }
-
 h3{
+  font-family: var(--font1);
+}
+h4{
+  font-family: var(--font1);
+}
+h5{
+  font-family: var(--font1);
+}
+button{
   font-family: var(--font1);
 }
 
@@ -69,6 +80,7 @@ p, span {
  
   width: 80vw;
   margin: 0 auto 0;
+  padding-top:10vh;
   
 
 }
