@@ -30,7 +30,7 @@ export default {
 
 <style scoped>
 .contentGridContainer {
-  padding-top: 8vh;
+  padding-top: 15vh;
 }
 .carousel {
   grid-area: 1/1/2/3;

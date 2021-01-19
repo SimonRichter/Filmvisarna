@@ -52,7 +52,7 @@ h4 {
 }
 img {
    border-radius: 5px;
-   width: 10vw;
+   /* width: 10vw; */
    height: 30vh;
 }
 .movieItemContainer {

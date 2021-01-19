@@ -21,5 +21,6 @@ img {
 }
 .contentGridContainer {
    width: 93vw;
+   padding-top: 1vh;
 }
 </style>
