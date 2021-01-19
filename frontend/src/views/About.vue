@@ -1,5 +1,5 @@
 <template>
-   <p class="about">
+   <p class="about pFirst">
       Xorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quia.
       Tempore deleniti in deserunt consequuntur excepturi. Sed nobis soluta
       facilis fugiat. Consequatur, est exercitationem. Labore nobis repellendus
@@ -72,6 +72,10 @@ export default {};
 .about {
    margin: 13vh;
    font-family: Arial, Helvetica, sans-serif;
+}
+
+.pFirst{
+   margin: 20vh 13vh 13vh;
 }
 .map {
    -webkit-filter: grayscale(100%);
