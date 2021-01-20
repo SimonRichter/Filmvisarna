@@ -191,9 +191,12 @@ export default {
 
 <style scoped>
 .grid-seating-map {
-  grid-column: 1;
+  grid-column: 2;
+  grid-row-start: 2;
+  grid-row-end: 4;
   padding-top: 15px;
   padding-bottom: 5px;
+  margin-left: 50px;
 }
 .grid-container-map {
   margin-top: 20px;
@@ -243,6 +246,7 @@ button:disabled {
 }
 .grid-container-list {
   grid-column: 1;
+  min-height: 80px;
   padding-top: 15px;
   padding-bottom: 5px;
 }
