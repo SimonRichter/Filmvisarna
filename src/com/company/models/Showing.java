@@ -3,10 +3,7 @@
     import express.database.Model;
     import org.dizitart.no2.objects.Id;
 
-    import java.util.ArrayList;
     import java.util.Arrays;
-    import java.util.Collections;
-    import java.util.List;
 
     @Model
 public class Showing {

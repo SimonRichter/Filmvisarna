@@ -32,17 +32,19 @@
       <button
         :disabled="!(counter === goToNextStep)"
         class="next-btn"
-        @click="sendDataToNextView,x()"
+        @click="sendDataToNextView, x()"
         :to="'/chosen-movie/' + showing.title + '/booking/' + showing.id"
       >
         Next
       </button>
     </router-link>
   </div>
+  <SeatingMapList v-bind:showing="showing"/>
 </template>
 
 <script>
 import SeatingList from "./SeatingList.vue";
+import SeatingMapList from "./SeatingMapList.vue";
 
 export default {
   props: ["showing"],
@@ -62,6 +64,7 @@ export default {
   },
   components: {
     SeatingList,
+    SeatingMapList,
   },
   computed: {
     sendDataToNextView() {
@@ -239,7 +242,8 @@ button:disabled {
   align-items: flex-end;
   justify-content: flex-start;
 }
-.if-disabled-btn, .if-disabled-btn h3 {
+.if-disabled-btn,
+.if-disabled-btn h3 {
   grid-column: 2;
   grid-row: 2;
   text-align: right;

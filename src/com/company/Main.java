@@ -16,10 +16,6 @@ public class Main {
 
         app.enableCollections("database/temp/db/movies.db");
 
-
-
-        
-
         app.get("/hello", (req, res) -> res.send("<h1>Hello from Java Express!</h1>"));
 
         app.get("/rest/movies", (req, res) -> {
