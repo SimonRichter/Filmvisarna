@@ -57,7 +57,7 @@ export default {
       typeAdult: 0,
       typeChild: 0,
       typeSenior: 0,
-      numberOfTickets: 1,
+      // numberOfTickets: 1,
       objToSend: [],
       goToNextStep: 0,
       seatIndexes: [],
@@ -128,30 +128,30 @@ export default {
       //   this.increment();
       // }
     },
-    increment() {
-      if (this.totalSeats <= 0) {
-        this.totalSeats = 0;
-      } else if (this.counter > 7) {
-        console.log("You have maxed out");
-      } else {
-        this.counter++;
-        this.totalSeats--;
-      }
-    },
-    decrement() {
-      if (this.totalSeats >= this.showing.seats - 1) {
-        this.totalSeats = this.showing.seats - 1;
-        this.counter = 1;
-      } else {
-        this.counter--;
-        this.totalSeats++;
+    // increment() {
+    //   if (this.totalSeats <= 0) {
+    //     this.totalSeats = 0;
+    //   } else if (this.counter > 7) {
+    //     console.log("You have maxed out");
+    //   } else {
+    //     this.counter++;
+    //     this.totalSeats--;
+    //   }
+    // },
+    // decrement() {
+    //   if (this.totalSeats >= this.showing.seats - 1) {
+    //     this.totalSeats = this.showing.seats - 1;
+    //     this.counter = 1;
+    //   } else {
+    //     this.counter--;
+    //     this.totalSeats++;
 
-        if (this.counter >= 1 && !!this.ticketTypes[this.counter]) {
-          this.ticketTypes.pop();
-        }
-        this.updateSum();
-      }
-    },
+    //     if (this.counter >= 1 && !!this.ticketTypes[this.counter]) {
+    //       this.ticketTypes.pop();
+    //     }
+    //     this.updateSum();
+    //   }
+    // },
     updateTickets(type, price, ticketNumber) {
       this.ticketTypes[ticketNumber - 1] = { ticketType: type, price: price };
       this.updateSum();

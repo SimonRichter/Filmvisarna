@@ -1,12 +1,11 @@
 <template>
-  <div class="chair">
+  <div @click="clicked = !clicked">
     <div
-      class="available"
-      @click="setContent"
+      class="chair available"
+      v-bind:class="[clicked == true ? ' reserved' : '']"
       v-if="availableSeat == null || availableSeat == false"
-    >{{ content }}
-    </div>
-    <div class="taken" v-else>Taken</div>
+    ></div>
+    <div class="chair taken" v-else></div>
   </div>
 </template>
 
@@ -14,11 +13,10 @@
 export default {
   // emits: ["changeTicket"],
   props: ["showing", "seatIndex"],
-  data(){
-    return{
-      content: "Available",
-      clicked: false
-    }
+  data() {
+    return {
+      clicked: false,
+    };
   },
   computed: {
     availableSeat() {
@@ -38,18 +36,18 @@ export default {
     // },
   },
   methods: {
-    setContent(){
-      this.clicked = !this.clicked;
-      this.content = this.clicked == true ? "Reserved" : "Available";
-    }
-  }
+    // setContent() {
+    //   this.clicked = !this.clicked;
+    //   this.content = this.clicked == true ? "Reserved" : "Available";
+    // },
+  },
 };
 </script>
 
 <style scoped>
 .chair {
-  width: fit-content;
-  height: fit-content;
+  width: 30px;
+  height: 30px;
   border: rgb(167, 151, 151) 2px solid;
   border-radius: 5px;
   color: black;
@@ -58,12 +56,17 @@ export default {
   margin-left: 5px;
   margin-top: 5px;
 }
-.available{
-  background-color: rgb(228, 220, 220); 
-  
+.available {
+  background-color: rgb(228, 220, 220);
 }
 .available:hover {
   background-color: rgb(49, 172, 86);
 }
-
+.taken {
+  background-color: rgb(58, 58, 58);
+  cursor: default;
+}
+.reserved {
+  background-color: rgb(241, 206, 46);
+}
 </style>
