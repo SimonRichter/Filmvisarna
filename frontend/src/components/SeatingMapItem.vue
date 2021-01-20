@@ -1,12 +1,15 @@
 <template>
   <div class="chair">
-    {{ seatIndex + 1 }}
+    {{ seatIndex }}
     <div
-      @click="addTicket"
+      @click="
+        changeTickets;
+        clicked = !clicked;
+      "
       class="available"
       v-if="availableSeat == null || availableSeat == false"
     >
-      Available
+      {{ content }}
     </div>
     <div class="taken" v-else>Taken</div>
   </div>
@@ -16,12 +19,27 @@
 export default {
   emits: ["addTicket"],
   props: ["showing", "seatIndex"],
+  data() {
+    return {
+      content: "Available",
+      clicked: true,
+    };
+  },
   computed: {
     availableSeat() {
       return this.showing.seats[this.seatIndex];
     },
-    addTicket() {
-      this.$emit("addTicket", this.seatIndex);
+    changeTickets() {
+      console.log("this.clicked", this.clicked);
+      this.content = this.clicked == false ? "Available" : "Reserved";
+      console.log("this.content", this.content);
+      if (this.clicked == true) {
+        console.log("should add a ticket");
+        this.$emit("addTicket", this.seatIndex);
+      } else {
+        console.log("should remove a ticket");
+        this.$emit("addTicket", null);
+      }
     },
   },
 };
@@ -34,6 +52,7 @@ export default {
   border: black 1px solid;
   background-color: blue;
   cursor: pointer;
+  float: left;
 }
 .available:hover {
   background-color: rgb(115, 115, 238);

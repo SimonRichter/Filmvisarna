@@ -1,6 +1,6 @@
 <template>
   <!-- <div class="grid-container-map"> -->
-    <!-- <h3 class="totalSeats">Total seats left: {{ totalSeats }}</h3>
+  <!-- <h3 class="totalSeats">Total seats left: {{ totalSeats }}</h3>
     <button class="remove" @click="increment">
       <i class="gg-math-minus"></i>
     </button>
@@ -11,7 +11,7 @@
       <i class="gg-math-plus"></i>
     </button>
   </div> -->
-  
+
   <SeatingList :counter="counter" @update-total="updateTickets" />
   <div class="ticket-grid">
     <h2>Ticket types</h2>
@@ -65,7 +65,7 @@ export default {
   },
   components: {
     SeatingList,
-    SeatingMapList
+    SeatingMapList,
   },
   computed: {
     sendDataToNextView() {
@@ -95,8 +95,13 @@ export default {
       this.showing.seats = this.totalSeats;
     },
     addTicket(seatIndex) {
-      console.log("I have added a ticket");
-      this.increment();
+      if (seatIndex == null) {
+        console.log("Remove ticket");
+        this.decrement();
+      } else {
+        console.log("I have added a ticket");
+        this.increment();
+      }
     },
     increment() {
       if (this.totalSeats <= 0) {
