@@ -32,7 +32,7 @@ export default {
         this.$emit("changeTicket", seatIndex);
       } else {
         console.log("I dont want this seat anymore", seatIndex);
-        this.$emit("changeTicket", null);
+        this.$emit("changeTicket", seatIndex);
       }
     },
     // changeTicket(seatIndex) {

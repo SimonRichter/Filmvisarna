@@ -51,9 +51,8 @@ export default {
   props: ["showing"],
   data() {
     return {
-      counter: 1,
+      counter: 0,
       totalSum: 0,
-      totalSeats: this.showing.seats - 1,
       ticketTypes: [],
       typeAdult: 0,
       typeChild: 0,
@@ -61,6 +60,7 @@ export default {
       numberOfTickets: 1,
       objToSend: [],
       goToNextStep: 0,
+      seatIndexes: [],
     };
   },
   components: {
@@ -96,6 +96,21 @@ export default {
     },
     changeTicket(seatIndex) {
       console.log("I have arrived in theatre seating map");
+      console.log(
+        "this.seatIndexes.indexOf(seatIndex)",
+        this.seatIndexes.indexOf(seatIndex)
+      );
+      if (
+        this.seatIndexes.length <= 0 ||
+        this.seatIndexes.indexOf(seatIndex) < 0
+      ) {
+        this.seatIndexes.push(seatIndex);
+        this.counter++;
+      } else {
+        let i = this.seatIndexes.indexOf(seatIndex);
+        this.seatIndexes.splice(i, 1);
+        this.counter--;
+      }
       // if (seatIndex == null) {
       //   console.log("Remove ticket");
       //   this.decrement();
