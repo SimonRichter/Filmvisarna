@@ -8,6 +8,9 @@
           <h2>{{ showing.title }}</h2>
           <h4>{{ showing.theatre }}, {{ showing.salon }}</h4>
           <h3>{{ showing.date }} {{ showing.time }}</h3>
+
+          <!-- <h4>{{ showing.salon }}</h4> -->
+          <!-- <h2>{{ bookingObj.tickets.length }}</h2> -->
           <br />
           <h4>Ticket types:</h4>
           <div v-for="ticket in bookingObj.tickets" :key="ticket">
@@ -64,6 +67,10 @@ export default {
   },
 
   computed: {
+    // bookingId() {
+    //    return this.$route.params.bookingId;
+    // },
+
     moviePoster() {
       return this.$store.state.movies.filter(
         (x) => x.title === this.showing.title
@@ -75,10 +82,16 @@ export default {
     showing() {
       return this.$store.state.bookingInfo.showing;
     },
+    // showingObj() {
+    //    return this.$store.state.showings.filter(
+    //       (x) => x.id === this.showingId
+    //    )[0];
+    // },
   },
 
   methods: {
     confirmBooking() {
+      //console.log("Confirming booking: ", this.itemName);
       this.showToggle = true;
     },
     printBookingDetails() {
@@ -109,13 +122,15 @@ button {
   cursor: pointer;
   display: inline;
   margin: 20px;
-  background-color: #4caf50;
+  background-color: #4caf50; /* Green */
   border: none;
+  /* color: wheat; */
   padding: 6px 16px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 28px;
+  /* font-family: Oswald, sans-serif; */
   letter-spacing: 0.5px;
   font-weight: bold;
   border-radius: 5px;

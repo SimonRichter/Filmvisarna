@@ -22,7 +22,7 @@
       </h3>
     </div>
     <div class="ticket-sum">
-      <h3>Total:   {{ totalSum }} kr</h3>
+      <h3>Total sum: {{ totalSum }} kr</h3>
     </div>
     <!-- Needs to to have correc route after confirmation page is done-->
     <div class="if-disabled-btn" v-if="!(counter === goToNextStep)">
