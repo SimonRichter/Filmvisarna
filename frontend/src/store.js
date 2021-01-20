@@ -77,7 +77,8 @@ const actions = {
       theatre: showingObj.theatre,
       salon: showingObj.salon,
       time: showingObj.time,
-      seats: showingObj.seats
+      seats: showingObj.seats,
+      totalSeats: showingObj.totalSeats
     }
     let response = await fetch('/rest/showings/' + showingObj.id, {
       method: 'PUT',

@@ -92,7 +92,16 @@ export default {
   },
   methods: {
     x() {
-      this.showing.seats = this.totalSeats;
+      for (let i = 0; i < this.seatIndexes.length; i++) {
+        for (let j = 0; j < this.showing.totalSeats; j++) {
+          if (this.seatIndexes[i] == j) {
+            this.showing.seats[j] = true;
+          } else if (this.showing.seats[j] == false) {
+            this.showing.seats[j] = false;
+          }
+        }
+      }
+      // this.showing.seats = this.totalSeats;
     },
     changeTicket(seatIndex) {
       console.log("I have arrived in theatre seating map");
