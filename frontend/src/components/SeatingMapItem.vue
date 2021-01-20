@@ -1,6 +1,5 @@
 <template>
   <div class="chair">
-    {{ seatIndex }}
     <div
       class="available"
       @click="setContent"
@@ -51,12 +50,20 @@ export default {
 .chair {
   width: fit-content;
   height: fit-content;
-  border: black 1px solid;
-  background-color: blue;
+  border: rgb(167, 151, 151) 2px solid;
+  border-radius: 5px;
+  color: black;
   cursor: pointer;
   float: left;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+.available{
+  background-color: rgb(228, 220, 220); 
+  
 }
 .available:hover {
-  background-color: rgb(115, 115, 238);
+  background-color: rgb(49, 172, 86);
 }
+
 </style>
