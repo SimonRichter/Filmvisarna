@@ -102,7 +102,7 @@ export default {
 
       title() {
          // get showing id from url parameter
-         return this.$route.params.title.replace("-", " ");
+         return this.$route.params.title.replaceAll("-", " ");
       },
 
       movie() {
