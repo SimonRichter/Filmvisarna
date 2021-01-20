@@ -46,9 +46,9 @@ export default {
 
 <style scoped>
 .chair {
-  width: 30px;
-  height: 30px;
-  border: rgb(167, 151, 151) 2px solid;
+  width: 25px;
+  height: 25px;
+  border: rgb(238, 220, 192) 1px solid;
   border-radius: 5px;
   color: black;
   cursor: pointer;
@@ -57,16 +57,16 @@ export default {
   margin-top: 5px;
 }
 .available {
-  background-color: rgb(228, 220, 220);
+  background-color: rgb(94, 91, 87);
 }
 .available:hover {
-  background-color: rgb(49, 172, 86);
+  background-color: #6e1020;
 }
 .taken {
-  background-color: rgb(58, 58, 58);
+  background-color: #131313;
   cursor: default;
 }
 .reserved {
-  background-color: rgb(241, 206, 46);
+  background-color: #6e1020;
 }
 </style>
