@@ -11,7 +11,7 @@
       <!-- <hr> -->
       <!-- Put all content here in grid container -->
     </div>
-   
+
     <TheatreSeatingMap v-bind:showing="showing" />
   </div>
 </template>
@@ -28,6 +28,9 @@ export default {
       return this.$route.params.id;
     },
     showing() {
+      console.log(
+        this.$store.state.showings.filter((obj) => obj.id == this.id)[0]
+      );
       return this.$store.state.showings.filter((obj) => obj.id == this.id)[0];
     },
   },
