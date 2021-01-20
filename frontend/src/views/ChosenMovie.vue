@@ -17,23 +17,25 @@
       <h5><span></span> Director: {{ movie.director }}</h5>
       <h5><span></span> Actors: {{ movie.actors }}</h5>
 
-      <h4>{{ movie.plot.substring(0, 1000).trimRight() }}...</h4>
-    </div>
+      <p class="plotText">{{ movie.plot.substring(0, 1000).trimRight() }}...</p>
+   </div>
 
-    <div class="showingList" v-for="showing of showings" :key="showing.id">
+   <div class="showingList" v-for="showing of showings" :key="showing.id">
       <div class="anotherFormattingDiv">
-        <button
-          class="bookButton"
-          @click="
-            $router.push(
-              '/chosen-movie/' + showing.title + '/booking/' + showing.id
-            )
-          "
-        >
-          Book
-        </button><h3>
-        {{ showing.date }} - {{ showing.time }} | {{ showing.theatre }} |
-        {{ showing.salon }}</h3>
+         <button
+            class="bookButton"
+            @click="
+               $router.push(
+                  '/chosen-movie/' + showing.title + '/booking/' + showing.id
+               )
+            "
+         >
+            Book
+         </button>
+         <h3>
+            {{ showing.date }} - {{ showing.time }} | {{ showing.theatre }} |
+            {{ showing.salon }}
+         </h3>
       </div>
    </div>
 </template>
@@ -100,7 +102,7 @@ export default {
 
       title() {
          // get showing id from url parameter
-         return this.$route.params.title.replace("-", " ");
+         return this.$route.params.title.replaceAll("-", " ");
       },
 
       movie() {
@@ -133,7 +135,7 @@ export default {
 <style scoped>
 iframe {
    border: none;
-   margin-top: 140px;
+   margin-top: 86px;
    margin-bottom: 20px;
 }
 button {
@@ -162,23 +164,22 @@ h1 {
    margin-bottom: 10px;
 }
 h3 {
-  display: inline;
-  font-weight:normal;
-  font-size: 17px;
-  /* color: rgba(245, 222, 179, 0.432); */
+   display: inline;
+   font-weight: normal;
+   font-size: 17px;
+   /* color: rgba(245, 222, 179, 0.432); */
 }
 h4 {
-  margin-top: 15px;
-  margin-bottom: 7px;
-  /* color: wheat; */
-  font-size: 20px;
-  margin-right: 35vh;
-  font-weight: lighter;
+   margin-top: 15px;
+   margin-bottom: 7px;
+   font-family: "Bebas Neue", cursive !important;
+   font-size: 20px;
+   font-weight: lighter;
 }
 h5 {
-  font-size: 17px;
-  /* font-weight: lighter; */
-  margin-top: 3px;
+   font-size: 17px;
+   /* font-weight: lighter; */
+   margin-top: 3px;
 }
 
 .movieInfo {
@@ -187,15 +188,13 @@ h5 {
    justify-content: center;
 }
 .showingList {
-  grid-column-start: 1;
-  grid-column-end: 3;
-   border-bottom: 1px solid #6e1020;
-   padding: 10px 0px 16px 0px;
-   margin:0px 20vw 0px 20vw;
-   
+   grid-column-start: 1;
+   grid-column-end: 3;
+   border-top: 1px solid #6e1020;
+   padding: 5px 0px 8px 0px;
+   margin: 0px 15vw 0px 15vw;
 }
 .bookButton {
-   margin-bottom: 10px;
    margin-right: 20px;
    cursor: pointer;
 }
@@ -203,9 +202,14 @@ h5 {
    padding-top: 5px;
    padding-bottom: 2px;
    display: flex;
+   align-items: center;
 }
 .setWidth {
-   width:60vw;
+   width: 69vw;
    margin: 0 auto;
+}
+.plotText {
+   margin-top: 10px;
+   margin-bottom: 20px;
 }
 </style>
