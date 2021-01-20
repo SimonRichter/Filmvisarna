@@ -7,7 +7,7 @@
             <h3>{{ movieGenres }}</h3>
             <h3><span></span> | {{ movieLength }}</h3>
             <h3><span></span> | {{ ageClassification }}</h3>
-            <h4>{{ moviePlot.substring(0, 200).trimRight() }}...</h4>
+            <p>{{ moviePlot.substring(0, 200).trimRight() }}...</p>
          </div>
       </div>
    </router-link>
@@ -46,7 +46,7 @@ h3 {
    display: inline;
    /* color: rgba(245, 222, 179, 0.432); */
 }
-h4 {
+p {
    margin-top: 5px;
    /* color: wheat; */
 }

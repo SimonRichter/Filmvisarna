@@ -6,6 +6,11 @@
 
       <ShowingList class="showingList" />
    </div>
+   <div class="centerMe">
+      <router-link to="/movies">
+         <button>See all movies</button>
+      </router-link>
+   </div>
 </template>
 
 <script>
@@ -29,6 +34,22 @@ export default {
 </script>
 
 <style scoped>
+button {
+   border: #6e1020 1px solid;
+   background-color: #131313;
+   border-radius: 5px;
+   color: rgb(238, 220, 192);
+   height: 36px;
+   width: 150px;
+   cursor: pointer;
+   margin-bottom: 2vh;
+   font-size: 18px;
+}
+button:active,
+button:disabled {
+   background-color: #222222;
+}
+
 .contentGridContainer {
    padding-top: 9vh;
 }
@@ -56,7 +77,7 @@ export default {
 .showingList {
    grid-area: 3/1/4/3;
    height: auto;
-   margin: 1vw 0 5vw;
+   margin: 1vw 0 1vw;
    display: flex;
    font-weight: 800;
 }
@@ -64,6 +85,12 @@ export default {
    font-family: "Bebas Neue", cursive;
    font-size: 30px;
    color: #6e1020;
+}
+.centerMe {
+   width: 100vw;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 #test {
    animation: fadein 2s;

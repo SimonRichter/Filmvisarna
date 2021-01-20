@@ -100,7 +100,7 @@ li {
 p, span {
   font-family: var(--font5);
   font-size: 16px;
-  font-weight: 300;
+  font-weight: bold;
   color: var(--c5);
   letter-spacing: 0.7px;
 }

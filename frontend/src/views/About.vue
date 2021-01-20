@@ -16,7 +16,7 @@
       ea.
    </p>
    <p class="about">
-   Corem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quia.
+      Corem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quia.
       Tempore deleniti in deserunt consequuntur excepturi. Sed nobis soluta
       facilis fugiat. Consequatur, est exercitationem. Labore nobis repellendus
       ipsum impedit amet? Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -71,10 +71,9 @@ export default {};
 <style scoped>
 .about {
    margin: 13vh;
-   font-family: Arial, Helvetica, sans-serif;
 }
 
-.pFirst{
+.pFirst {
    margin: 20vh 13vh 13vh;
 }
 .map {

@@ -9,13 +9,13 @@
          >
          </iframe>
       </div>
-      <h3>{{ movie.genre }}</h3>
-      <h3><span></span> {{ movie.length }}</h3>
-      <h3><span></span> | {{ movie.runtime }}</h3>
-      <h3><span></span> | {{ movie.rated }}</h3>
-      <h5>Language: {{ movie.language }}</h5>
-      <h5><span></span> Director: {{ movie.director }}</h5>
-      <h5><span></span> Actors: {{ movie.actors }}</h5>
+      <h2>{{ movie.genre }}</h2>
+      <h2><span></span> {{ movie.length }}</h2>
+      <h2><span></span> | {{ movie.runtime }}</h2>
+      <h2><span></span> | {{ movie.rated }}</h2>
+      <h3>Language: {{ movie.language }}</h3>
+      <h3><span></span> Director: {{ movie.director }}</h3>
+      <h3><span></span> Actors: {{ movie.actors }}</h3>
 
       <p class="plotText">{{ movie.plot.substring(0, 1000).trimRight() }}...</p>
    </div>
@@ -163,10 +163,9 @@ h1 {
    margin-top: 5px;
    margin-bottom: 10px;
 }
-h3 {
+h2 {
    display: inline;
-   font-weight: normal;
-   font-size: 17px;
+   font-size: 24px;
    /* color: rgba(245, 222, 179, 0.432); */
 }
 h4 {
@@ -176,10 +175,11 @@ h4 {
    font-size: 20px;
    font-weight: lighter;
 }
-h5 {
+h3 {
+   color: rgb(206, 191, 168);
    font-size: 17px;
    /* font-weight: lighter; */
-   margin-top: 3px;
+   margin-top: 2px;
 }
 
 .movieInfo {
@@ -191,7 +191,7 @@ h5 {
    grid-column-start: 1;
    grid-column-end: 3;
    border-top: 1px solid #6e1020;
-   padding: 5px 0px 8px 0px;
+   padding: 5px 0px 5px 0px;
    margin: 0px 15vw 0px 15vw;
 }
 .bookButton {
@@ -199,8 +199,6 @@ h5 {
    cursor: pointer;
 }
 .anotherFormattingDiv {
-   padding-top: 5px;
-   padding-bottom: 2px;
    display: flex;
    align-items: center;
 }

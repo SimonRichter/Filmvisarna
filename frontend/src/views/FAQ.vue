@@ -12,6 +12,14 @@
          in your phone so that you can identify yourself when buying your ticket
          at the cinema.
       </p>
+
+      <h2>Q: Why do you have so few movies to choose from?</h2>
+
+      <p class="answer">
+         A: We are a small independent movie theatre company that focuses on
+         showing quality movies instead of having a large quantity of movies to
+         show.
+      </p>
    </div>
 </template>
 
