@@ -1,6 +1,6 @@
 <template>
-  <div class="grid-container-map">
-    <h3 class="totalSeats">Total seats left: {{ totalSeats }}</h3>
+  <!-- <div class="grid-container-map"> -->
+    <!-- <h3 class="totalSeats">Total seats left: {{ totalSeats }}</h3>
     <button class="remove" @click="increment">
       <i class="gg-math-minus"></i>
     </button>
@@ -10,7 +10,8 @@
     <button class="add" @click="decrement">
       <i class="gg-math-plus"></i>
     </button>
-  </div>
+  </div> -->
+  
   <SeatingList :counter="counter" @update-total="updateTickets" />
   <div class="ticket-grid">
     <h2>Ticket types</h2>
@@ -39,7 +40,7 @@
       </button>
     </router-link>
   </div>
-  <SeatingMapList v-bind:showing="showing"/>
+  <SeatingMapList v-bind:showing="showing" />
 </template>
 
 <script>
@@ -64,7 +65,7 @@ export default {
   },
   components: {
     SeatingList,
-    SeatingMapList,
+    SeatingMapList
   },
   computed: {
     sendDataToNextView() {
@@ -93,7 +94,10 @@ export default {
     x() {
       this.showing.seats = this.totalSeats;
     },
-
+    addTicket(seatIndex) {
+      console.log("I have added a ticket");
+      this.increment();
+    },
     increment() {
       if (this.totalSeats <= 0) {
         this.totalSeats = 0;
@@ -156,6 +160,11 @@ export default {
 </script>
 
 <style scoped>
+.grid-seating-map {
+  grid-column: 1;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
 .grid-container-map {
   margin-top: 20px;
   display: grid;
