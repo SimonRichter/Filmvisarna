@@ -1,205 +1,61 @@
 [ {
-  "id" : "sKwLfzUCnRLIh7a-9D3Ys",
-  "title" : "Soul",
-  "date" : "2021-01-16",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "17:00",
-  "seats" : 100
-}, {
-  "id" : "pjrQYh9grExzDalywQgWo",
-  "title" : "Interstellar",
-  "date" : "2021-01-16",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "19:00",
-  "seats" : 50
-}, {
-  "id" : "EaaI-QbHB_6WeSp0Hcvhx",
+  "id" : "G-7HqBFnYmiQ0ytthrOYK",
   "title" : "Blade",
-  "date" : "2021-01-16",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "1c4d6nMQGGVU_ZRHmXRLH",
-  "title" : "It",
-  "date" : "2021-01-16",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "17:00",
-  "seats" : 50
-}, {
-  "id" : "CggbBXM72OdtQZJbQYKBr",
-  "title" : "Interstellar",
-  "date" : "2021-01-16",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "19:00",
-  "seats" : 100
-}, {
-  "id" : "NpTPbAcJustaYRUI4TKzt",
-  "title" : "Soul",
-  "date" : "2021-01-16",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "21:00",
-  "seats" : 50
-}, {
-  "id" : "SWfcop4SgSJ15m0hzIJ3V",
-  "title" : "Interstellar",
-  "date" : "2021-01-17",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "17:00",
-  "seats" : 100
-}, {
-  "id" : "0gZjcaWCb5T6woNKcc9l6",
-  "title" : "Interstellar",
-  "date" : "2021-01-17",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "19:00",
-  "seats" : 50
-}, {
-  "id" : "menoIJeO00PSDwHPsINfF",
-  "title" : "Soul",
-  "date" : "2021-01-17",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "nqV-fhztpsa_quXowwQqm",
-  "title" : "Pulp Fiction",
-  "date" : "2021-01-17",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "17:00",
-  "seats" : 50
-}, {
-  "id" : "kWUCSHFzf9b_dpiJA59yr",
-  "title" : "Soul",
-  "date" : "2021-01-17",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "19:00",
-  "seats" : 100
-}, {
-  "id" : "QGbTsIWhNj3XLLtIS_LaR",
-  "title" : "Interstellar",
-  "date" : "2021-01-17",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "21:00",
-  "seats" : 50
-}, {
-  "id" : "a5r_rYl0CG3FtBt1NFECJ",
-  "title" : "Soul",
-  "date" : "2021-01-18",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "17:00",
-  "seats" : 100
-}, {
-  "id" : "XBGRDpBZEauR0BKtQi426",
-  "title" : "It",
-  "date" : "2021-01-18",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "19:00",
-  "seats" : 50
-}, {
-  "id" : "M6GHw4hozCvzHNCgXIs2t",
-  "title" : "Interstellar",
-  "date" : "2021-01-18",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "ebGLuOoVk596zEsf3ARao",
-  "title" : "Interstellar",
-  "date" : "2021-01-18",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "17:00",
-  "seats" : 50
-}, {
-  "id" : "hobipLlNVRLBTz-mzQfcE",
-  "title" : "Blade",
-  "date" : "2021-01-18",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "19:00",
-  "seats" : 100
-}, {
-  "id" : "kN3heDxJo1MH3d614b6sw",
-  "title" : "Interstellar",
-  "date" : "2021-01-18",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "21:00",
-  "seats" : 50
-}, {
-  "id" : "UGVp5TNRSTAy050HVNJ1F",
-  "title" : "Interstellar",
-  "date" : "2021-01-19",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "17:00",
-  "seats" : 100
-}, {
-  "id" : "HJw9V2uPPVzGzlc0e6wLl",
-  "title" : "Soul",
-  "date" : "2021-01-19",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "19:00",
-  "seats" : 50
-}, {
-  "id" : "BT4e6w2xVF_xJL7hO6VVP",
-  "title" : "It",
-  "date" : "2021-01-19",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "jXlXmQ0JQXeQeNM7G37SN",
-  "title" : "Blade",
-  "date" : "2021-01-19",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "17:00",
-  "seats" : 50
-}, {
-  "id" : "D77wVUvucnqIuygrHI8HR",
-  "title" : "Interstellar",
-  "date" : "2021-01-19",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "19:00",
-  "seats" : 100
-}, {
-  "id" : "mT7WR3vcjS6PZFryAGdQr",
-  "title" : "Blade",
-  "date" : "2021-01-19",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "21:00",
-  "seats" : 50
-}, {
-  "id" : "O1rCPbfNxZuDhGF73X2aL",
-  "title" : "It",
   "date" : "2021-01-20",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "EuwP0yift9yYM3CJpqMzJ",
+  "id" : "7QNa0TbGYLdeo7GoiLQqj",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
+  "date" : "2021-01-20",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "f0OGQimmFo5LK1D91FB2x",
+  "title" : "Fight Club",
+  "date" : "2021-01-20",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "sAIJS3qMp57r5FXxR5Dct",
+  "title" : "It",
+  "date" : "2021-01-20",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "Ret49yOMC6mitcDtZqqlK",
+  "title" : "Pulp Fiction",
+  "date" : "2021-01-20",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "TVg7SXgJc6gSk1X0l1zhQ",
+  "title" : "The Shawshank Redemption",
+  "date" : "2021-01-20",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "ZkqOu2ZThrLB9qpofhf_M",
+  "title" : "Interstellar",
+  "date" : "2021-01-20",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "uNvgWpkw2lDY-VmUZ9NA6",
   "title" : "Interstellar",
   "date" : "2021-01-20",
   "theatre" : "Theatre 2",
@@ -207,263 +63,455 @@
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "O6YMKWs9Kb4g2pRVyM558",
-  "title" : "Pulp Fiction",
+  "id" : "reAXblBLS69L3mK_xLuTw",
+  "title" : "Sin City",
   "date" : "2021-01-20",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "ENEz4kEEmQBDjcO1s3qKN",
-  "title" : "Soul",
+  "id" : "JiejAl5873gmGvhNTf2DV",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
   "date" : "2021-01-20",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "17:00",
   "seats" : 50
 }, {
-  "id" : "AHk0nwZqOc4l8iaLt6MO4",
-  "title" : "It",
+  "id" : "U12SkyWUulbAoRk86RVoP",
+  "title" : "Interstellar",
   "date" : "2021-01-20",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "19:00",
   "seats" : 100
 }, {
-  "id" : "ObwSkOmonnaXYjACfAZyU",
-  "title" : "It",
+  "id" : "rMP3RwDtSAzryS5VrG9tv",
+  "title" : "Blade",
   "date" : "2021-01-20",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "21:00",
   "seats" : 50
 }, {
-  "id" : "shQlsWlfQn9RQqeT4ktB3",
+  "id" : "3iw6X68-QhVz4BfSNMdCm",
+  "title" : "Blade",
+  "date" : "2021-01-21",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "8irt3Nx3qGVTi_Qm5rvrH",
+  "title" : "Soul",
+  "date" : "2021-01-21",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "Sbtw3gO_anvnM1CzzLFiQ",
   "title" : "Interstellar",
+  "date" : "2021-01-21",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "Q3EjYVm7YpYtT9aOAyPIi",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
+  "date" : "2021-01-21",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "VDm5wyhyn1yPtgn29avmr",
+  "title" : "Blade",
+  "date" : "2021-01-21",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "rq8BO-5z2kRcVgt-gSIZd",
+  "title" : "Blade",
+  "date" : "2021-01-21",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "qi3TfLv6XiUzFwcucRBqs",
+  "title" : "Pulp Fiction",
   "date" : "2021-01-21",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "WH2F6XbexuDCDGfrxcUZh",
-  "title" : "It",
+  "id" : "7T63NgLRd5cayNQLzkX7l",
+  "title" : "Sin City",
   "date" : "2021-01-21",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "QTW6b-Bg7oH_ChZkhSLsu",
-  "title" : "It",
-  "date" : "2021-01-21",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "CSgWgfZk91qKvcI4XX1h8",
-  "title" : "Pulp Fiction",
-  "date" : "2021-01-21",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "17:00",
-  "seats" : 50
-}, {
-  "id" : "6U46Ldxwb209LiL3OpuYf",
+  "id" : "918aDOegJfg6AHXH5V_tw",
   "title" : "Interstellar",
   "date" : "2021-01-21",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "LSdGuUe2rbWuYSSA4HAuN",
+  "title" : "The Intouchables",
+  "date" : "2021-01-21",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "yHm0_EqrHYSuKVlSmIeEH",
+  "title" : "Interstellar",
+  "date" : "2021-01-21",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
   "time" : "19:00",
   "seats" : 100
 }, {
-  "id" : "GJrodZ2zEpLUES-hZsjwG",
-  "title" : "Blade",
+  "id" : "6TP6K8hPwTwtX0Su1YkO9",
+  "title" : "The Shawshank Redemption",
   "date" : "2021-01-21",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "21:00",
   "seats" : 50
 }, {
-  "id" : "pDbHzQdQV_f03nmMbpmbQ",
-  "title" : "Blade",
+  "id" : "54v0dvYM9iFMfHSDMDFXq",
+  "title" : "Interstellar",
   "date" : "2021-01-22",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "fKZPLYzhMvi41cr23mPRj",
-  "title" : "It",
+  "id" : "2thwY6gQQkPuZOTA_4vew",
+  "title" : "Pulp Fiction",
+  "date" : "2021-01-22",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "_BIQIbKAK4fjL28NUgjRo",
+  "title" : "Interstellar",
+  "date" : "2021-01-22",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "0FiuwkHER89iu3Sl2jVDS",
+  "title" : "Blade",
+  "date" : "2021-01-22",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "fdGoZEtp03yTj2AI_TafI",
+  "title" : "The Shawshank Redemption",
+  "date" : "2021-01-22",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "sRZb8A14DbclfX0tWMZDf",
+  "title" : "The Shawshank Redemption",
+  "date" : "2021-01-22",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "g4rZIM-VAerk89ktLilMK",
+  "title" : "Soul",
+  "date" : "2021-01-22",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "H4htLSEoGGK6Nq-co1JJu",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
   "date" : "2021-01-22",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "kt6qUf6QHfACaSvJvQgtD",
-  "title" : "Soul",
+  "id" : "FkZa4UdYRW7jD-x_ChiQq",
+  "title" : "The Shawshank Redemption",
   "date" : "2021-01-22",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "FH5g2XWU-3notpg25Kby9",
-  "title" : "Blade",
+  "id" : "PmkbkMG2EdiRZWoFmLBWX",
+  "title" : "Soul",
   "date" : "2021-01-22",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "17:00",
   "seats" : 50
 }, {
-  "id" : "YNp6Odmq9G6G5N4MDpQZ9",
-  "title" : "Pulp Fiction",
+  "id" : "ZP8nE21YYedz6e4r5SOp0",
+  "title" : "The Intouchables",
   "date" : "2021-01-22",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "19:00",
   "seats" : 100
 }, {
-  "id" : "gWme45o_sovXEdyfRqzLS",
-  "title" : "Blade",
+  "id" : "RuII8d7fEauzglYdIcVpU",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
   "date" : "2021-01-22",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "21:00",
   "seats" : 50
 }, {
-  "id" : "xpOK2Vj26Y2wgwSRLWDEx",
-  "title" : "Soul",
+  "id" : "6BtygmYeJ4BhydkoN8hG2",
+  "title" : "Interstellar",
+  "date" : "2021-01-23",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "SrovMkELS_wCrqptI1F3A",
+  "title" : "The Shawshank Redemption",
+  "date" : "2021-01-23",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "_Kqfe5jehdY9AH7iy7HAJ",
+  "title" : "Blade",
+  "date" : "2021-01-23",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "iRVKkMHaxaxlj7NP6CCDv",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
+  "date" : "2021-01-23",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "5A79bUiEK3HjTuHpU7Iwa",
+  "title" : "Blade",
+  "date" : "2021-01-23",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "4m7r71meRLhAsNEv_9Plb",
+  "title" : "The Intouchables",
+  "date" : "2021-01-23",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "vnLqnXnVkiv9pL7hwIpO2",
+  "title" : "The Shawshank Redemption",
   "date" : "2021-01-23",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "BB8v_Yn7wV8TTVG4_J9ud",
-  "title" : "Soul",
+  "id" : "hoaYsRrRIZjw6BSscuIiv",
+  "title" : "The Intouchables",
   "date" : "2021-01-23",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "jbSwLWOeG9vUt4jIHBIaa",
-  "title" : "Interstellar",
+  "id" : "TO4IIITrSrF6wBZKc5Mjm",
+  "title" : "Blade",
   "date" : "2021-01-23",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "lyMm0Yefy20qzGDmZuR8E",
-  "title" : "Blade",
-  "date" : "2021-01-23",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "17:00",
-  "seats" : 50
-}, {
-  "id" : "YiKmeCVjdUgDT8T0kWrMF",
-  "title" : "Interstellar",
-  "date" : "2021-01-23",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "19:00",
-  "seats" : 100
-}, {
-  "id" : "sYXnhH4E3sDE-wqD6I0zR",
+  "id" : "Hvtaj2HzmduEZV4zfixm6",
   "title" : "Pulp Fiction",
   "date" : "2021-01-23",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "ZiaiUaPbxAGEfG16Kc2U2",
+  "title" : "The Intouchables",
+  "date" : "2021-01-23",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "lP0k8yB2kTjOI87NTa2w-",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
+  "date" : "2021-01-23",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
   "time" : "21:00",
   "seats" : 50
 }, {
-  "id" : "yKF-GKFjw4tfx2jn9snyH",
-  "title" : "Soul",
+  "id" : "mAzwYTaEHLv3USKD_fPGd",
+  "title" : "The Shawshank Redemption",
   "date" : "2021-01-24",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "9MtdLMzqjtNUoz46APCzM",
-  "title" : "Interstellar",
+  "id" : "Eurkz34RSDKZquDtflcDV",
+  "title" : "The Shawshank Redemption",
   "date" : "2021-01-24",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "DjIQzkqMoWwaAeARrDGVJ",
-  "title" : "Pulp Fiction",
+  "id" : "i6vBw0X_D_kTqfoieadR2",
+  "title" : "Soul",
+  "date" : "2021-01-24",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "PyUahKSuzory50CSo8mUr",
+  "title" : "Soul",
+  "date" : "2021-01-24",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "oMa_6W3lrDH5CSnZ3LMMJ",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
+  "date" : "2021-01-24",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "9uoUOjVlGS42RM6YmDzsq",
+  "title" : "The Intouchables",
+  "date" : "2021-01-24",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "UrxjsV4ltrtcizg8GWY24",
+  "title" : "Blade",
+  "date" : "2021-01-24",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "N8hU8x_oQHAjKqwVpfs3C",
+  "title" : "Soul",
+  "date" : "2021-01-24",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "DYsAwt2i5RTHZvCsbJDSd",
+  "title" : "Interstellar",
   "date" : "2021-01-24",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "__Maq8EBozOv0fc4tGiYB",
-  "title" : "Pulp Fiction",
+  "id" : "b33qT7DkNE8lIkTR5iiGZ",
+  "title" : "Blade",
   "date" : "2021-01-24",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "17:00",
   "seats" : 50
 }, {
-  "id" : "80PZD4N-nDfeyDl5qUA_r",
-  "title" : "Soul",
+  "id" : "8S1I6CfzRr8a8xV1P1xx8",
+  "title" : "Fight Club",
   "date" : "2021-01-24",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "19:00",
   "seats" : 100
 }, {
-  "id" : "PNrceH8tSpEWKp5IM075P",
-  "title" : "Soul",
+  "id" : "rkRyyWZ6EEGUR2w2Zdj6z",
+  "title" : "Pulp Fiction",
   "date" : "2021-01-24",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "21:00",
   "seats" : 50
 }, {
-  "id" : "N4kmol1zCIvzMCsoSJQJx",
-  "title" : "Interstellar",
+  "id" : "az7CklLoVKH0Np88xhD7J",
+  "title" : "Blade",
   "date" : "2021-01-25",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "VvS7paaBFvyP6vrtpgC82",
-  "title" : "It",
+  "id" : "SF3y-Wbzhtqf4ocM15o7i",
+  "title" : "Sin City",
   "date" : "2021-01-25",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "HRqOewpJhPgrx3NXh0CyX",
-  "title" : "Pulp Fiction",
+  "id" : "0V6aeEW-vv1UbyylfOG2H",
+  "title" : "The Intouchables",
   "date" : "2021-01-25",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "jQP48jr2d51WUMLc3aNyE",
-  "title" : "It",
+  "id" : "_651QwgGe8RAMjo_Aofdb",
+  "title" : "Pulp Fiction",
   "date" : "2021-01-25",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "17:00",
   "seats" : 50
 }, {
-  "id" : "UZIbhHTlhPbs39k5QXAw5",
+  "id" : "86WBBPQeTB0G-vEwYbrJt",
   "title" : "Interstellar",
   "date" : "2021-01-25",
   "theatre" : "Theatre 1",
@@ -471,7 +519,7 @@
   "time" : "19:00",
   "seats" : 100
 }, {
-  "id" : "tR8ke8pz3Ku2WIC84TGdS",
+  "id" : "64BvCybTv2oXMSXo0CxbA",
   "title" : "It",
   "date" : "2021-01-25",
   "theatre" : "Theatre 2",
@@ -479,399 +527,879 @@
   "time" : "21:00",
   "seats" : 50
 }, {
-  "id" : "_R8g7C_w-BVeRL3NdjSxB",
-  "title" : "Pulp Fiction",
+  "id" : "YOk9k82W2JP4kC9XWW3wG",
+  "title" : "It",
+  "date" : "2021-01-25",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "NjZxNFfvq3Ts5CdVkurKv",
+  "title" : "Soul",
+  "date" : "2021-01-25",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "w_lWxvpv35xYT_tv2QRvq",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
+  "date" : "2021-01-25",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "VJZM0rsuhHCAeFRSwKlEB",
+  "title" : "Interstellar",
+  "date" : "2021-01-25",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "zYcNJR9qDR2QTF2DL02JF",
+  "title" : "Blade",
+  "date" : "2021-01-25",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "Q1g0uPCcq7eUopqkw4_fR",
+  "title" : "Sin City",
+  "date" : "2021-01-25",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "XbGgdkorJdoIcY2jLLOoT",
+  "title" : "Fight Club",
   "date" : "2021-01-26",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "osUtqptGTctpH1cTO77Le",
+  "id" : "5YQfX4AmT-ORDjWVDDiAU",
+  "title" : "Pulp Fiction",
+  "date" : "2021-01-26",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "YGsN6T0ZSl1q1WIYpI6Lr",
+  "title" : "Sin City",
+  "date" : "2021-01-26",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "8lqs0BoNobZV6EhDkshwx",
+  "title" : "The Intouchables",
+  "date" : "2021-01-26",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "AzkMto8t1ikfDVkCnfh0g",
+  "title" : "Sin City",
+  "date" : "2021-01-26",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "7y4KYs_y6rj84fVV_K091",
+  "title" : "The Intouchables",
+  "date" : "2021-01-26",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "Hz2YdhrlLBIsktF00OjEM",
   "title" : "Interstellar",
+  "date" : "2021-01-26",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "2501eDX7GaotM2UVi0fR7",
+  "title" : "Sin City",
   "date" : "2021-01-26",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "v5a75nF5eLiK258tZ7QqY",
-  "title" : "It",
+  "id" : "Me7u4Z7-vChUk3Us1m_5n",
+  "title" : "The Shawshank Redemption",
   "date" : "2021-01-26",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "7K_9WVrKMCed5vfcX4nA4",
-  "title" : "Blade",
+  "id" : "SdkBylLfhKFK_p5Ihk1ic",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
   "date" : "2021-01-26",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "17:00",
   "seats" : 50
 }, {
-  "id" : "VZpVvWIn_DlpJDenFYQPy",
-  "title" : "Blade",
+  "id" : "ihraGDIXSVWJv3s2ikREO",
+  "title" : "Sin City",
   "date" : "2021-01-26",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "19:00",
   "seats" : 100
 }, {
-  "id" : "SFYAkaksIY_pbkDvZP_Fz",
-  "title" : "Pulp Fiction",
+  "id" : "gI4oeFmGxZqIKIVNJ1GZc",
+  "title" : "Blade",
   "date" : "2021-01-26",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "21:00",
   "seats" : 50
 }, {
-  "id" : "gvJCiLPEi68GSBTMhY-lb",
+  "id" : "t8MV_0D8_mksr6wDLydSn",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
+  "date" : "2021-01-27",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "Be7OY8O62xAUHWIgrmByH",
+  "title" : "It",
+  "date" : "2021-01-27",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "s67dfQX8xFq_iv3cFMs-i",
+  "title" : "Interstellar",
+  "date" : "2021-01-27",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "DzemlSarrIPMXWcSX_orG",
+  "title" : "Pulp Fiction",
+  "date" : "2021-01-27",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "Lwec0Ac06ok7pAc4Oy-XJ",
+  "title" : "Pulp Fiction",
+  "date" : "2021-01-27",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "G99z3jo6fSajHddPrtKnG",
+  "title" : "Interstellar",
+  "date" : "2021-01-27",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "aRFBi9dPjdAPNJAr_4Mxw",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
+  "date" : "2021-01-27",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "5Djl8cJP2V_4_8EtBuaNh",
+  "title" : "Fight Club",
+  "date" : "2021-01-27",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "ouFBO00TzvV4NwmS1tgAq",
+  "title" : "Interstellar",
+  "date" : "2021-01-27",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "AWXBt7pNpcCva81lOBB7k",
+  "title" : "It",
+  "date" : "2021-01-27",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "Tz6gshjb1ZUU_w7JnZgeu",
+  "title" : "It",
+  "date" : "2021-01-27",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "X750vpZBwac5I_y9dVLRN",
+  "title" : "Sin City",
+  "date" : "2021-01-27",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "Bagix7wXZDM7SkL9bvqjU",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
+  "date" : "2021-01-28",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "fyRMOndREVVNXZz47ySUy",
+  "title" : "The Intouchables",
+  "date" : "2021-01-28",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "lAFC7oBZgfZwpBtsSR-9j",
+  "title" : "The Shawshank Redemption",
+  "date" : "2021-01-28",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "uFlFJwYTaXv254afdPQz7",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
+  "date" : "2021-01-28",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "7tc2m_yPgkE0wkOnHkoyS",
+  "title" : "Fight Club",
+  "date" : "2021-01-28",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "QjFLDkcC6oxp-OumWV2Ey",
+  "title" : "The Intouchables",
+  "date" : "2021-01-28",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "93C30n9UwUh4geyF3XiJ_",
+  "title" : "Fight Club",
+  "date" : "2021-01-28",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "WtIYPWuQwgFUnWcJbQilK",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
+  "date" : "2021-01-28",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "jgsMHVJcK2E7Af-1XqRov",
+  "title" : "Fight Club",
+  "date" : "2021-01-28",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "ii-Ie3nFhOXPMMMvJI4Gn",
+  "title" : "Soul",
+  "date" : "2021-01-28",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "GHc7xouF2bJeFQWZWElMG",
+  "title" : "Interstellar",
+  "date" : "2021-01-28",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "nvD-MT2Hw7DLQg5HuVkOR",
+  "title" : "It",
+  "date" : "2021-01-28",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "4xB8jROJhMuJjBSvDMrRw",
+  "title" : "Fight Club",
+  "date" : "2021-01-29",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "LC7IUtVI4BoJotqKgoJE7",
+  "title" : "Fight Club",
+  "date" : "2021-01-29",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "5IkW4fUN474I9jHWZ4O9D",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
+  "date" : "2021-01-29",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "lBU40mq_EodDxwTPBGJvS",
   "title" : "Blade",
-  "date" : "2021-01-27",
+  "date" : "2021-01-29",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "rcQ3NjtmMj5nBjFlXp9RE",
+  "title" : "The Shawshank Redemption",
+  "date" : "2021-01-29",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "6_JDy-fTN_Xk61dHB8wtY",
+  "title" : "Fight Club",
+  "date" : "2021-01-29",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "jwJlaxbZVFo_wBTn4MafG",
+  "title" : "Fight Club",
+  "date" : "2021-01-29",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "tRgRWxavocXNCYiv3mcsC",
-  "title" : "Pulp Fiction",
-  "date" : "2021-01-27",
+  "id" : "6oh-1Y5OALtrCM_8XGXhP",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
+  "date" : "2021-01-29",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "rXDf_dIbzFrtnqPdL921D",
+  "id" : "IRZ-75FFR4lX3KvpsBP3O",
+  "title" : "Sin City",
+  "date" : "2021-01-29",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "z0Q5pI0KpaKozISqoUSwK",
+  "title" : "The Shawshank Redemption",
+  "date" : "2021-01-29",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "Ny95fHXalDSberc97PaAr",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
+  "date" : "2021-01-29",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "VTxQSXmlLLOlKHreY0wnw",
   "title" : "Blade",
-  "date" : "2021-01-27",
+  "date" : "2021-01-29",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "_w_N0OgoaUgzaJVisczGD",
+  "title" : "Sin City",
+  "date" : "2021-01-30",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "hoUSWPIuxtTwGLcTRaC3X",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
+  "date" : "2021-01-30",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "EeXhU18Lr5ne2-CUHZEsb",
+  "title" : "The Intouchables",
+  "date" : "2021-01-30",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "0HUGdDgzX9FC7A6EH7fyj",
-  "title" : "It",
-  "date" : "2021-01-27",
+  "id" : "DYDihmvsRgCO276tcNSp-",
+  "title" : "The Intouchables",
+  "date" : "2021-01-30",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "17:00",
   "seats" : 50
 }, {
-  "id" : "g_6Mhz6WClQh2hPl8EWLM",
+  "id" : "zdrNlT4DH550a-KSzxnyk",
+  "title" : "Fight Club",
+  "date" : "2021-01-30",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "ZXNZ-Mx-H5JZbz4hxKjjH",
+  "title" : "Pulp Fiction",
+  "date" : "2021-01-30",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "-1YA40w0O4sIlqrIE5pD9",
   "title" : "Interstellar",
-  "date" : "2021-01-27",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "19:00",
-  "seats" : 100
-}, {
-  "id" : "MT0c0A4CrZtoEaELJW1YG",
-  "title" : "Pulp Fiction",
-  "date" : "2021-01-27",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "21:00",
-  "seats" : 50
-}, {
-  "id" : "gcl2X3fjsPxrNrLtArD-Z",
-  "title" : "It",
-  "date" : "2021-01-28",
+  "date" : "2021-01-30",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "PD4Fqfw69NgZRDIbBHfRm",
-  "title" : "Pulp Fiction",
-  "date" : "2021-01-28",
+  "id" : "7pOTC3tIl_0SruFza9Qee",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
+  "date" : "2021-01-30",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "IoOKt1K4KlCDiZsjH7HQA",
-  "title" : "Pulp Fiction",
-  "date" : "2021-01-28",
+  "id" : "UkORiAdsbZ_xkIZ5wrkpE",
+  "title" : "It",
+  "date" : "2021-01-30",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "lKFKYlKncdl_daa0CpDp4",
+  "id" : "2XWsrkjklHbd8SrIioLa7",
+  "title" : "Blade",
+  "date" : "2021-01-30",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "fZKSlqgHJC3L5Dwrp_TM1",
+  "title" : "Pulp Fiction",
+  "date" : "2021-01-30",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "k1gCrk6BxISx4tKOuIsUc",
+  "title" : "Blade",
+  "date" : "2021-01-30",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "H9PaSCQGyaeq2BCiGyDz-",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
+  "date" : "2021-01-31",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "iBaGDRyBXrTFnHbpLi4B3",
+  "title" : "Fight Club",
+  "date" : "2021-01-31",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "GAJDvvrehBmowsYoECHtA",
+  "title" : "It",
+  "date" : "2021-01-31",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "142TUdbBDvDi3aKbnitl9",
+  "title" : "Sin City",
+  "date" : "2021-01-31",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "4qoo2iu1HeRK6LUEvzoCI",
+  "title" : "Fight Club",
+  "date" : "2021-01-31",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "xbQMyUCslTy5RZcBuutQl",
+  "title" : "Fight Club",
+  "date" : "2021-01-31",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "lYIU6NTN1PmXVhRyOQJY8",
+  "title" : "Pulp Fiction",
+  "date" : "2021-01-31",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "fKjXFZnwAIznUaTz8N75j",
   "title" : "Interstellar",
-  "date" : "2021-01-28",
+  "date" : "2021-01-31",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "vBtBmMHgSylI9JANf4kMY",
+  "title" : "It",
+  "date" : "2021-01-31",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "OV045x5I0-CiF576I-xJT",
+  "title" : "Interstellar",
+  "date" : "2021-01-31",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "17:00",
   "seats" : 50
 }, {
-  "id" : "CmogKyXTRKiDs8LdSI92N",
-  "title" : "It",
-  "date" : "2021-01-28",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "19:00",
-  "seats" : 100
-}, {
-  "id" : "_VJiHvzKmPK5vw_fOnMzM",
-  "title" : "It",
-  "date" : "2021-01-28",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "21:00",
-  "seats" : 50
-}, {
-  "id" : "pAKCe_Ate3i9ZuoNumCE2",
+  "id" : "d9bctsFMDAipb-3AluIRK",
   "title" : "Soul",
-  "date" : "2021-01-29",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "17:00",
-  "seats" : 100
-}, {
-  "id" : "qL5wen2F4KCMTD_SRSAhC",
-  "title" : "Pulp Fiction",
-  "date" : "2021-01-29",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "19:00",
-  "seats" : 50
-}, {
-  "id" : "2aHBYPU3VpfNkkGoQIfGV",
-  "title" : "Soul",
-  "date" : "2021-01-29",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "5Lf-OwQ87XeA3X-ttxDnG",
-  "title" : "Pulp Fiction",
-  "date" : "2021-01-29",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "17:00",
-  "seats" : 50
-}, {
-  "id" : "Pa1L4YNJdsWN6ah9NAOS6",
-  "title" : "Soul",
-  "date" : "2021-01-29",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "19:00",
-  "seats" : 100
-}, {
-  "id" : "DVhQUld9zTel9x4jWeflf",
-  "title" : "Interstellar",
-  "date" : "2021-01-29",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "21:00",
-  "seats" : 50
-}, {
-  "id" : "OCkyfr8qXW98Y2u6DfOZz",
-  "title" : "It",
-  "date" : "2021-01-30",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "17:00",
-  "seats" : 100
-}, {
-  "id" : "2AToIY_HrlDyHXWXuFwmk",
-  "title" : "It",
-  "date" : "2021-01-30",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "19:00",
-  "seats" : 50
-}, {
-  "id" : "WhaqEJCMfzCkR_GdvVY-Z",
-  "title" : "It",
-  "date" : "2021-01-30",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "XMvpfJMZyAPLDbaCKWONz",
-  "title" : "Interstellar",
-  "date" : "2021-01-30",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "17:00",
-  "seats" : 50
-}, {
-  "id" : "qnjkYYC52kychzNzMwIz8",
-  "title" : "Interstellar",
-  "date" : "2021-01-30",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "19:00",
-  "seats" : 100
-}, {
-  "id" : "GNfxCeMQ-oohl_Bzcvgft",
-  "title" : "Interstellar",
-  "date" : "2021-01-30",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "21:00",
-  "seats" : 50
-}, {
-  "id" : "qabTGF2sg6kNywGezg_13",
-  "title" : "It",
-  "date" : "2021-01-31",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "17:00",
-  "seats" : 100
-}, {
-  "id" : "s4w2PwrrSrK5eaSyu1b7B",
-  "title" : "Pulp Fiction",
-  "date" : "2021-01-31",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "19:00",
-  "seats" : 50
-}, {
-  "id" : "GrC1jfDQ7D7NGjyIzCo32",
-  "title" : "It",
-  "date" : "2021-01-31",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "T5bksDtPeUO3ADIUTOC7R",
-  "title" : "Interstellar",
-  "date" : "2021-01-31",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "17:00",
-  "seats" : 50
-}, {
-  "id" : "iANoAdz5s7RdaNieeSOCX",
-  "title" : "Pulp Fiction",
   "date" : "2021-01-31",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "19:00",
   "seats" : 100
 }, {
-  "id" : "yqiCWH4KHt1JBiITYdCeE",
-  "title" : "Pulp Fiction",
+  "id" : "w-EBcFRnhOQpP8BzE9_XH",
+  "title" : "It",
   "date" : "2021-01-31",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "21:00",
   "seats" : 50
 }, {
-  "id" : "87-fsjWEGp32qOxdwPmeC",
-  "title" : "It",
-  "date" : "2021-02-01",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "17:00",
-  "seats" : 100
-}, {
-  "id" : "eOP4lrh61aJHKHEKSmReg",
-  "title" : "Soul",
-  "date" : "2021-02-01",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "19:00",
-  "seats" : 50
-}, {
-  "id" : "uOaqKKyw8jBuKOpSN8Fo0",
-  "title" : "It",
-  "date" : "2021-02-01",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "n9iapOgZ-apLwspJqOb7o",
-  "title" : "It",
-  "date" : "2021-02-01",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "17:00",
-  "seats" : 50
-}, {
-  "id" : "-E1E-Ve7deesvywxivksS",
-  "title" : "Interstellar",
-  "date" : "2021-02-01",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "19:00",
-  "seats" : 100
-}, {
-  "id" : "-vSZRtB5g7k5xZKvu-PYU",
+  "id" : "4ywFQAqwtdoelqwkr5EOz",
   "title" : "Blade",
   "date" : "2021-02-01",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "21:00",
-  "seats" : 50
-}, {
-  "id" : "z1htYdoujo2DMVAEQtSk8",
-  "title" : "Soul",
-  "date" : "2021-02-02",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "ip65wvBQ7IogVFcp3bbSP",
-  "title" : "Soul",
-  "date" : "2021-02-02",
+  "id" : "WDphq7Hdyg67iWvh5IVUn",
+  "title" : "Pulp Fiction",
+  "date" : "2021-02-01",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "tBClb7jNbzb1E8HI_QKNq",
+  "id" : "G2tBEjfP8CsHKHaV5Qk1R",
+  "title" : "Fight Club",
+  "date" : "2021-02-01",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "RyHfk5YVclw2JZaSkEuCa",
+  "title" : "The Intouchables",
+  "date" : "2021-02-01",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "CHl8dlUO4UQu8wCP5-koP",
+  "title" : "Interstellar",
+  "date" : "2021-02-01",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "wxoJ8GMxmvQw_CbsE6qDu",
+  "title" : "The Intouchables",
+  "date" : "2021-02-01",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "ojU9r30Dz53X_iP_PMg7-",
+  "title" : "The Shawshank Redemption",
+  "date" : "2021-02-01",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "-NQC7ijzxvNIYk3IngPe5",
+  "title" : "Pulp Fiction",
+  "date" : "2021-02-01",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "hmEZEKIBa8aYybjULx_Qg",
+  "title" : "The Shawshank Redemption",
+  "date" : "2021-02-01",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "vB0hkYjJ7ejNEcjjpS3Rd",
+  "title" : "Blade",
+  "date" : "2021-02-01",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "JjRJDk_ZEFeAWNRQhJf3E",
+  "title" : "Pulp Fiction",
+  "date" : "2021-02-01",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "y54SyPlPUBWvnu-sUSMTs",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
+  "date" : "2021-02-01",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "KdtMr0DVTLr8jQt4ELnl_",
   "title" : "Interstellar",
   "date" : "2021-02-02",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "s-6Vxq4pcWrIXthUsD_bT",
+  "title" : "Pulp Fiction",
+  "date" : "2021-02-02",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "hln6GoWUBNLq6ZcXMZCa9",
+  "title" : "The Intouchables",
+  "date" : "2021-02-02",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "CAutmM-ZCN-zegJYjIVIv",
-  "title" : "Soul",
+  "id" : "u6j_CcXtxSF4zC0VNAzRf",
+  "title" : "The Intouchables",
   "date" : "2021-02-02",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "17:00",
   "seats" : 50
 }, {
-  "id" : "-GmmlAASZHjfNy8c_P7gz",
+  "id" : "QEbxE2sBt79OClbkxOZiD",
+  "title" : "Soul",
+  "date" : "2021-02-02",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "IBux55vMu3gq208k6SbOR",
   "title" : "Interstellar",
   "date" : "2021-02-02",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "v3848aDJbXJxCz5Z_iOVz",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
+  "date" : "2021-02-02",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "7uXVfRu-bPqOILvpy1-q4",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
+  "date" : "2021-02-02",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "gHJbTtp-itXE0EbMhvaQG",
+  "title" : "It",
+  "date" : "2021-02-02",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "mjPaGxPefCCkgaKEtaOuJ",
+  "title" : "Sin City",
+  "date" : "2021-02-02",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "slqFe-j3KxmcARAnlP-2u",
+  "title" : "Pulp Fiction",
+  "date" : "2021-02-02",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "19:00",
   "seats" : 100
 }, {
-  "id" : "QLPpKcsjr_OBBO-WRSnhC",
-  "title" : "It",
+  "id" : "k6omlnD05xJcC92ZWr4vQ",
+  "title" : "Interstellar",
   "date" : "2021-02-02",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "21:00",
   "seats" : 50
 }, {
-  "id" : "tNYUEO0BASqfK9pHCeI3i",
-  "title" : "Soul",
+  "id" : "CPoJtiypZdOVZFvSJXATS",
+  "title" : "It",
   "date" : "2021-02-03",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "uaUpi_mknOd9e8935qI9e",
+  "id" : "sFoW1z1MqnKAkyc-7Kd9J",
+  "title" : "Blade",
+  "date" : "2021-02-03",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "r-tDAPSHU3pa6xkcVdzEL",
+  "title" : "Fight Club",
+  "date" : "2021-02-03",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "7rx4dNcG7gd9JAoLmE_tx",
+  "title" : "The Shawshank Redemption",
+  "date" : "2021-02-03",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "UrtPC1k1RYbxwHTFimbiP",
+  "title" : "It",
+  "date" : "2021-02-03",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "kkB90MSLnTfl21FzM5DXz",
+  "title" : "The Intouchables",
+  "date" : "2021-02-03",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "1WDfCKYjNyyvpVfiw936m",
+  "title" : "The Intouchables",
+  "date" : "2021-02-03",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "Q7_T0CBgMctNmsZ3Liux5",
   "title" : "It",
   "date" : "2021-02-03",
   "theatre" : "Theatre 2",
@@ -879,87 +1407,135 @@
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "gkD6De6TBrBgrUgJs8KoF",
-  "title" : "Soul",
-  "date" : "2021-02-03",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "JoIcGdrCzQGGkXWlG9WIV",
+  "id" : "KOfnkT_RCxJZaQpHZBKfT",
   "title" : "Pulp Fiction",
   "date" : "2021-02-03",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "QFAXw8c6hBpQdU4e6NJCb",
+  "title" : "Fight Club",
+  "date" : "2021-02-03",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "17:00",
   "seats" : 50
 }, {
-  "id" : "WNgiQvPWg8g0ZZ4JBqqbv",
-  "title" : "It",
+  "id" : "38IekwlC8tnFwQG_o5wSK",
+  "title" : "Interstellar",
   "date" : "2021-02-03",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "19:00",
   "seats" : 100
 }, {
-  "id" : "XowcvXvYIh9EnY2M3BwPX",
-  "title" : "It",
+  "id" : "NbXlrBBGA-IhqTDclboav",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
   "date" : "2021-02-03",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "21:00",
   "seats" : 50
 }, {
-  "id" : "Dtu1CPOcJUuF4eR4OaaOk",
-  "title" : "Blade",
+  "id" : "Cj_zqnY9mRrfZYs9Lm0us",
+  "title" : "The Shawshank Redemption",
   "date" : "2021-02-04",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "K5T8rEY8q2SkXhVOTuywG",
-  "title" : "It",
+  "id" : "jniWtab6nAT5B-YveMYCv",
+  "title" : "Pulp Fiction",
   "date" : "2021-02-04",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "Tov6WmhvfFsc_6OotKI4j",
-  "title" : "Blade",
+  "id" : "lLP1ZJJREARhIAL90oOoY",
+  "title" : "Fight Club",
   "date" : "2021-02-04",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "l1Ed2DGU7PjfZwaoYO2Zh",
-  "title" : "It",
+  "id" : "8dbXbiJJ2Sjgq9CTX-4-o",
+  "title" : "The Intouchables",
   "date" : "2021-02-04",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "17:00",
   "seats" : 50
 }, {
-  "id" : "Lw4BJJv2wRcieqsLt8uqa",
+  "id" : "ss0_s4zIsCknpXN61h6mj",
+  "title" : "The Intouchables",
+  "date" : "2021-02-04",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "C-iumSORPNZP7r-m7x_U-",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
+  "date" : "2021-02-04",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "TXiQJltcKACZ-BW3QAG03",
+  "title" : "Fight Club",
+  "date" : "2021-02-04",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "rjg0RRVfAPJ4bXCLGBfbS",
+  "title" : "Pulp Fiction",
+  "date" : "2021-02-04",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "A8Vd-AAH2P1GLWjqt_GMs",
   "title" : "Soul",
   "date" : "2021-02-04",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "RhJLHBuAaNK5STKfuP3VB",
+  "title" : "Fight Club",
+  "date" : "2021-02-04",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "0Nm0u3pwpkee7KW4fgAAM",
+  "title" : "Pulp Fiction",
+  "date" : "2021-02-04",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
   "time" : "19:00",
   "seats" : 100
 }, {
-  "id" : "K0w2V47CR8cb9WSCdhzbQ",
-  "title" : "Interstellar",
+  "id" : "FYxW-1lwZeJIHch8eXM6p",
+  "title" : "It",
   "date" : "2021-02-04",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "21:00",
   "seats" : 50
 }, {
-  "id" : "8-fSlw4ehSg810wri4hcg",
+  "id" : "x9899CTEg9WfWcAwHY1K9",
   "title" : "It",
   "date" : "2021-02-05",
   "theatre" : "Theatre 1",
@@ -967,15 +1543,15 @@
   "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "9GpttoOOasFFVZRSKSRCM",
-  "title" : "Pulp Fiction",
+  "id" : "ebksYTJtA2NW0HOYxczQj",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
   "date" : "2021-02-05",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "LXF7MhpiX1JVCoR0-aicL",
+  "id" : "RhJUl8ikhjJiRuVJ9h8FQ",
   "title" : "Blade",
   "date" : "2021-02-05",
   "theatre" : "Theatre 1",
@@ -983,15 +1559,63 @@
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "GvQQce6S8xJ1L_epYebEm",
-  "title" : "Pulp Fiction",
+  "id" : "C9jwAZpMwh3OnFHJ4JkyV",
+  "title" : "It",
+  "date" : "2021-02-05",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "CTrYaNEKrH0pEvz4cTjKY",
+  "title" : "Fight Club",
+  "date" : "2021-02-05",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "l6u_2fXqUTaJ5KKYCWw6T",
+  "title" : "The Shawshank Redemption",
+  "date" : "2021-02-05",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "yAiDKjRl0FbKf7I7TOuVF",
+  "title" : "The Intouchables",
+  "date" : "2021-02-05",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "J2pUzsAd8272Bg36Xjvuq",
+  "title" : "Sin City",
+  "date" : "2021-02-05",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "I3Z28qywNZARY7U0y5TjX",
+  "title" : "It",
+  "date" : "2021-02-05",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "3q4xK6--8oi7vXVfUgJn5",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
   "date" : "2021-02-05",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "17:00",
   "seats" : 50
 }, {
-  "id" : "T1TLr-4_e-_a1sd0IQAch",
+  "id" : "Y_Cmqby9zJ_Oulvr0ObTY",
   "title" : "It",
   "date" : "2021-02-05",
   "theatre" : "Theatre 1",
@@ -999,79 +1623,175 @@
   "time" : "19:00",
   "seats" : 100
 }, {
-  "id" : "iOi5jYsz2wWAAKY3leWcW",
-  "title" : "Interstellar",
+  "id" : "B7lrxzN5QEw__Uhd0EBDV",
+  "title" : "The Intouchables",
   "date" : "2021-02-05",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "21:00",
   "seats" : 50
 }, {
-  "id" : "VZmbSirHxv43gIEGfkPph",
+  "id" : "i0iWNACZpLQbNVm3QmMQk",
+  "title" : "The Intouchables",
+  "date" : "2021-02-06",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "yP-nW7qOe7Ttb4-fVb_Z1",
+  "title" : "The Intouchables",
+  "date" : "2021-02-06",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "jriCTokL50q5EKes_VtVu",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
+  "date" : "2021-02-06",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "7MlrqYCVKFXzfxsxoJxp_",
+  "title" : "Fight Club",
+  "date" : "2021-02-06",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "JSfRD-Xn-KfQI1Mddv3dy",
   "title" : "Pulp Fiction",
   "date" : "2021-02-06",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "vET_ywP_PSgtW2tfJsu7m",
+  "title" : "Soul",
+  "date" : "2021-02-06",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "Y5BM3zFWbp6_aSRT69Jpo",
+  "title" : "It",
+  "date" : "2021-02-06",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
   "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "HCBCvvfzjx6zC9yAenOrz",
-  "title" : "Soul",
+  "id" : "Fl1AcD7C-ehKxaP4CoaLi",
+  "title" : "Fight Club",
   "date" : "2021-02-06",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "pIMf9w-FcVYaOkFldhKOS",
-  "title" : "It",
+  "id" : "0ON2sUvNE8HNhNBol4s5U",
+  "title" : "Soul",
   "date" : "2021-02-06",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "0AyK4RFq200M27VkmTozo",
+  "id" : "q2gh3yWFx9iyXOIHCFuUT",
+  "title" : "The Intouchables",
+  "date" : "2021-02-06",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "9fbA8u0wDMJLD7UrlIIJu",
+  "title" : "Fight Club",
+  "date" : "2021-02-06",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "12slu2G6uhYVC5tmu3Bch",
+  "title" : "The Shawshank Redemption",
+  "date" : "2021-02-06",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "iOQAHFkIuJ7siYeJlxD7M",
+  "title" : "Sin City",
+  "date" : "2021-02-07",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "ezO5WaleQdN_j0cx2S1p2",
+  "title" : "The Intouchables",
+  "date" : "2021-02-07",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "ZnzhMAGgdGogOcnkSixvx",
+  "title" : "Soul",
+  "date" : "2021-02-07",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "Gqi0wQL8g45OlrMv2ftK2",
+  "title" : "Fight Club",
+  "date" : "2021-02-07",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "6Q_ZHajrabKRybnsQGV7y",
+  "title" : "The Intouchables",
+  "date" : "2021-02-07",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "DHXKWVfP1xHxa3PKOWzfk",
+  "title" : "The Shawshank Redemption",
+  "date" : "2021-02-07",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "qWZ-LFLkcPDxuilHoRsnO",
   "title" : "Pulp Fiction",
-  "date" : "2021-02-06",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "17:00",
-  "seats" : 50
-}, {
-  "id" : "JdocjRzg0Th0NmsLPoUeV",
-  "title" : "Soul",
-  "date" : "2021-02-06",
+  "date" : "2021-02-07",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
-  "time" : "19:00",
+  "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "kuA2CQ2e4LKA4IFWorkLd",
+  "id" : "tGJ61OYlS_Sdolal5_AwA",
   "title" : "Interstellar",
-  "date" : "2021-02-06",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "21:00",
-  "seats" : 50
-}, {
-  "id" : "2Dmy58FgC2MskrbAP_f8K",
-  "title" : "It",
-  "date" : "2021-02-07",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "17:00",
-  "seats" : 100
-}, {
-  "id" : "Fuq0ryxnNkT7E5cggSpFn",
-  "title" : "Soul",
   "date" : "2021-02-07",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "5LTD69P8xi_TWMhaU1X-E",
+  "id" : "kQqmn7guyg_b8qI7bPFaf",
   "title" : "Interstellar",
   "date" : "2021-02-07",
   "theatre" : "Theatre 1",
@@ -1079,71 +1799,119 @@
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "bancXgFcz0ZiAGepI9iN9",
-  "title" : "It",
+  "id" : "5ayJTRI-qXfi-OM078APd",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
   "date" : "2021-02-07",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "17:00",
   "seats" : 50
 }, {
-  "id" : "_SzfuKRG3jfw3RB_qOXZM",
+  "id" : "MHrjt5wdf9VYAPOQZD_1T",
+  "title" : "Interstellar",
+  "date" : "2021-02-07",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "qN9O8hTLELwPCSVK7291s",
+  "title" : "Pulp Fiction",
+  "date" : "2021-02-07",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "0OgRAbFiakhCYj5BJ-N21",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
+  "date" : "2021-02-08",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "rW9-R0GncWphLJ7yU5154",
+  "title" : "The Shawshank Redemption",
+  "date" : "2021-02-08",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "RvYw1VvvN_yFM3tM0YEyH",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
+  "date" : "2021-02-08",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "lSkWuXkr8FMVkuVcPaaSO",
+  "title" : "Fight Club",
+  "date" : "2021-02-08",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "XdCIFO2fT51i1tJAeeheB",
   "title" : "Blade",
-  "date" : "2021-02-07",
+  "date" : "2021-02-08",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "19:00",
   "seats" : 100
 }, {
-  "id" : "DSkYAPTgjWVYCkokH8Uui",
-  "title" : "Pulp Fiction",
-  "date" : "2021-02-07",
+  "id" : "2OmSBeO9tTIZ3UQ7HeQ8m",
+  "title" : "Sin City",
+  "date" : "2021-02-08",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "21:00",
   "seats" : 50
 }, {
-  "id" : "o3BNDxTcz4qgVUqiqNKnu",
-  "title" : "It",
+  "id" : "UA1Pz1mFvvg8Jq3SHvHwr",
+  "title" : "Sin City",
   "date" : "2021-02-08",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "OwG_baVIZCFGrQWeh_4jt",
-  "title" : "Interstellar",
+  "id" : "xN7GN7tFt1J5mEeplq1pL",
+  "title" : "The Shawshank Redemption",
   "date" : "2021-02-08",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "sLxITEJ-TRJRkg0OJp32M",
-  "title" : "Blade",
-  "date" : "2021-02-08",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "21:00",
-  "seats" : 100
-}, {
-  "id" : "BE29d7HSn5h745uWoA_OM",
+  "id" : "039ewunMgLsyGLcIgkFuo",
   "title" : "Soul",
   "date" : "2021-02-08",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "nbjDp43nKt6xq6JDuWh_2",
+  "title" : "Pulp Fiction",
+  "date" : "2021-02-08",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "17:00",
   "seats" : 50
 }, {
-  "id" : "uEyR-lnrEJeGj3-JlHC76",
-  "title" : "Pulp Fiction",
+  "id" : "s3fDf1O8Edor4Cin_ke56",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
   "date" : "2021-02-08",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "19:00",
   "seats" : 100
 }, {
-  "id" : "BnDuO1ebii8d2kPvtWpQf",
+  "id" : "bGji5Cf16snUcHCLy3Duw",
   "title" : "It",
   "date" : "2021-02-08",
   "theatre" : "Theatre 2",
@@ -1151,7 +1919,55 @@
   "time" : "21:00",
   "seats" : 50
 }, {
-  "id" : "dWw97OfKHYzdPNvmpYTOT",
+  "id" : "lJkMNPsWiC8ydm4FtDDLs",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
+  "date" : "2021-02-09",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "a2wAd6l3fGTNYt-1mK_0M",
+  "title" : "The Shawshank Redemption",
+  "date" : "2021-02-09",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "Yo1pmG0B5RLaJH033qLrx",
+  "title" : "Pulp Fiction",
+  "date" : "2021-02-09",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "addo0QI4luHJ2jlNai7tW",
+  "title" : "The Shawshank Redemption",
+  "date" : "2021-02-09",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "K_c75SCNaRQ3PMy-0nO5b",
+  "title" : "Soul",
+  "date" : "2021-02-09",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "eVjbw5XlLaNeIQ4ySsH1h",
+  "title" : "The Shawshank Redemption",
+  "date" : "2021-02-09",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "Lb9S4GR5uVUDWvoj69vhj",
   "title" : "Interstellar",
   "date" : "2021-02-09",
   "theatre" : "Theatre 1",
@@ -1159,39 +1975,39 @@
   "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "wbxXtjLPflQm9HaqzZpRW",
-  "title" : "Soul",
+  "id" : "mA-0Ehc9BFl-P5qj_e1RN",
+  "title" : "Interstellar",
   "date" : "2021-02-09",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "AXJENy5c2NFLrBfTgW_AP",
-  "title" : "Blade",
+  "id" : "-zRWPQFFmm8e2pddmtnjC",
+  "title" : "The Intouchables",
   "date" : "2021-02-09",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "O-wFvTFSDOteVgYFvkzR-",
-  "title" : "Pulp Fiction",
+  "id" : "sPeeOGs9mUuqBhNnE7qVK",
+  "title" : "Sin City",
   "date" : "2021-02-09",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "17:00",
   "seats" : 50
 }, {
-  "id" : "srAjgtHo0Ir1XWDW4d_Px",
-  "title" : "Soul",
+  "id" : "4TpSWPfvJr0LB6KhzxjAd",
+  "title" : "The Shawshank Redemption",
   "date" : "2021-02-09",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "19:00",
   "seats" : 100
 }, {
-  "id" : "Kizxjra3gbzVocZbY6pb4",
+  "id" : "8CN78gO-uQVF4iXpnq0fb",
   "title" : "Blade",
   "date" : "2021-02-09",
   "theatre" : "Theatre 2",
@@ -1199,23 +2015,71 @@
   "time" : "21:00",
   "seats" : 50
 }, {
-  "id" : "CzdQatq6avTxgJ4nQJplF",
-  "title" : "Soul",
-  "date" : "2021-02-10",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room",
-  "time" : "17:00",
-  "seats" : 100
-}, {
-  "id" : "k0XlVaE6R4FXmOKjBNA3X",
+  "id" : "9BP-6fE0dHOekWYLpNH5t",
   "title" : "Pulp Fiction",
   "date" : "2021-02-10",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "CmzhUIEt62KLhBr-BBSzr",
+  "title" : "The Intouchables",
+  "date" : "2021-02-10",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "hFpWsqDWIu_VSwTbtJp_u",
+  "id" : "GIuw6wMG_NMSdYZv7EPaB",
+  "title" : "The Intouchables",
+  "date" : "2021-02-10",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "9Kacm7mUhNGqQNzYdck0-",
+  "title" : "Sin City",
+  "date" : "2021-02-10",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "aJVaNkEWf3YSg7eTEMDZz",
+  "title" : "The Intouchables",
+  "date" : "2021-02-10",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "NkfY47FcGGhWnYNGmsKyP",
+  "title" : "Sin City",
+  "date" : "2021-02-10",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "tot31yME4ScBLwpramqrY",
+  "title" : "The Intouchables",
+  "date" : "2021-02-10",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "H67pE6fpWk8KFlweFEjri",
+  "title" : "It",
+  "date" : "2021-02-10",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "iH5-CYMDQuFhMvs2912tD",
   "title" : "Blade",
   "date" : "2021-02-10",
   "theatre" : "Theatre 1",
@@ -1223,55 +2087,55 @@
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "3Lipw362wHNgZPQ8EhBhB",
+  "id" : "9UG8PWOHGx94d5lc3m-wJ",
+  "title" : "Fight Club",
+  "date" : "2021-02-10",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "dTvXOTetZWR0TRFlaUn6n",
   "title" : "Pulp Fiction",
   "date" : "2021-02-10",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room",
-  "time" : "17:00",
-  "seats" : 50
-}, {
-  "id" : "1_x66M3-CFVwE5_ItMM1o",
-  "title" : "It",
-  "date" : "2021-02-10",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "19:00",
   "seats" : 100
 }, {
-  "id" : "UiyFXLT48WHLkphIP2dCe",
-  "title" : "Soul",
+  "id" : "hy6aVgzufS4o1H0KHTS86",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
   "date" : "2021-02-10",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "21:00",
   "seats" : 50
 }, {
-  "id" : "5JpLPSxrA3LNEYECxlfZE",
-  "title" : "It",
+  "id" : "K84MryEuNQSbYYXGUGYOQ",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
   "date" : "2021-02-11",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "H6e4lds8ZtsjKCV3IPowJ",
-  "title" : "Interstellar",
+  "id" : "UwtwSuIQU6IzjtaRt_OVr",
+  "title" : "Blade",
   "date" : "2021-02-11",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "buf7zKQPQsbFfeGUQhjSj",
-  "title" : "Interstellar",
+  "id" : "gR9fqH0SAlN3Dmn1GHdqg",
+  "title" : "It",
   "date" : "2021-02-11",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "OvroqveR8jZ8cMKubCKNL",
+  "id" : "3bo0V72rksLpqwSYFM1uN",
   "title" : "Blade",
   "date" : "2021-02-11",
   "theatre" : "Theatre 2",
@@ -1279,7 +2143,7 @@
   "time" : "17:00",
   "seats" : 50
 }, {
-  "id" : "ps7iQJtxTuSCzm2F3j7s6",
+  "id" : "hCO_W3RMUy3Ugxl3dFwkQ",
   "title" : "Soul",
   "date" : "2021-02-11",
   "theatre" : "Theatre 1",
@@ -1287,57 +2151,537 @@
   "time" : "19:00",
   "seats" : 100
 }, {
-  "id" : "gix3sjGGAY1cQ_VbiT2eX",
-  "title" : "Blade",
+  "id" : "PbbTG6agLqc9FhZzIqQ6c",
+  "title" : "Interstellar",
   "date" : "2021-02-11",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "21:00",
   "seats" : 50
 }, {
-  "id" : "uljCWlNYEkmlRcGlW2dii",
+  "id" : "4mBYY1goXlh_jiurbfBZv",
+  "title" : "Blade",
+  "date" : "2021-02-11",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "SHo811U3ZDl4_xDrBlirI",
+  "title" : "Pulp Fiction",
+  "date" : "2021-02-11",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "bePm9iXsu8p3Esa3bOWdk",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
+  "date" : "2021-02-11",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "v6-w_m_sgcYMF-_OyxSlJ",
   "title" : "Interstellar",
+  "date" : "2021-02-11",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "dkhd2X_PMKOwmAr8m27RN",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
+  "date" : "2021-02-11",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "upE1HvNYMoL6a65q9E_sT",
+  "title" : "Interstellar",
+  "date" : "2021-02-11",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "30K5D0Ljw4B3uRqv5Mnnc",
+  "title" : "It",
   "date" : "2021-02-12",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "17:00",
   "seats" : 100
 }, {
-  "id" : "zVm4vXOCCR8vL29dUs_e4",
-  "title" : "Blade",
+  "id" : "MoTUPXhBbMrRZKXVUK50O",
+  "title" : "Soul",
   "date" : "2021-02-12",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "19:00",
   "seats" : 50
 }, {
-  "id" : "0lCHJ-omjA_aU6Lu_Uq9q",
-  "title" : "Interstellar",
+  "id" : "kV2-Z1RpYleuru36ZkUdj",
+  "title" : "Fight Club",
   "date" : "2021-02-12",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "21:00",
   "seats" : 100
 }, {
-  "id" : "F2sFbjk6lyubobpqUYD9H",
-  "title" : "Soul",
+  "id" : "ppaxDIyvlkL12Y9Hi5ssK",
+  "title" : "Pulp Fiction",
   "date" : "2021-02-12",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "17:00",
   "seats" : 50
 }, {
-  "id" : "OQpn9t4GIFiTGu_DQV5TU",
-  "title" : "It",
+  "id" : "xQByarwHnrzDCLY4_W0R2",
+  "title" : "Soul",
   "date" : "2021-02-12",
   "theatre" : "Theatre 1",
   "salon" : "Big room",
   "time" : "19:00",
   "seats" : 100
 }, {
-  "id" : "GjmQCQxx-q4G89rWnt9nF",
+  "id" : "zaoJMD5XYy8zczR9rBarC",
+  "title" : "Sin City",
+  "date" : "2021-02-12",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "PUQaNDqKc4aP8ZJOiEbRZ",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
+  "date" : "2021-02-12",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "YeLMUSL-C9U-HES8mApu8",
+  "title" : "It",
+  "date" : "2021-02-12",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "6PBnT8zb0aKCditw_QVi-",
   "title" : "Blade",
   "date" : "2021-02-12",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "Z-y-CZdIDZKKEij4lOaaq",
+  "title" : "Fight Club",
+  "date" : "2021-02-12",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "JaY1buGJ3VmMG05trgm5G",
+  "title" : "Pulp Fiction",
+  "date" : "2021-02-12",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "XgEiqEbdbsTYCUnrv1thb",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
+  "date" : "2021-02-12",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "gRbtDe-gJqJ4xUHf2jVEL",
+  "title" : "Blade",
+  "date" : "2021-02-13",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "ZTkY3qRmigPgN2W94gNO1",
+  "title" : "It",
+  "date" : "2021-02-13",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "S_KvBTI5oJBAHAAoBQ0E5",
+  "title" : "It",
+  "date" : "2021-02-13",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "UAB4KvHh-K8nGHNArgH8H",
+  "title" : "Fight Club",
+  "date" : "2021-02-13",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "lioWM4BcEt-uKBi0ufzZU",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
+  "date" : "2021-02-13",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "62wntzLTVwEKvi-fmdSYd",
+  "title" : "Interstellar",
+  "date" : "2021-02-13",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "ic00KfdyetRNesAu617BI",
+  "title" : "It",
+  "date" : "2021-02-13",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "gKrQOFwHh4OGyFpWxEVai",
+  "title" : "The Shawshank Redemption",
+  "date" : "2021-02-13",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "PaZSsIAY4rf5qXjJ89PjG",
+  "title" : "Sin City",
+  "date" : "2021-02-13",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "Ok-MpICtuT_s50kIpV6QZ",
+  "title" : "Blade",
+  "date" : "2021-02-13",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "VCmFASr8fHFd_N_KHrZBk",
+  "title" : "Pulp Fiction",
+  "date" : "2021-02-13",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "EMMTEhGO6n9hy5NCmHW-8",
+  "title" : "Interstellar",
+  "date" : "2021-02-13",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "At9MoKzNEk9G3eS63GQJ0",
+  "title" : "Interstellar",
+  "date" : "2021-02-14",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "D6mnp5TZL8Qoj5ZXcuieB",
+  "title" : "Pulp Fiction",
+  "date" : "2021-02-14",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "B3i5CyQ7FtjylLdzn7rv1",
+  "title" : "Soul",
+  "date" : "2021-02-14",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "VrQrrk6ebvPu3t6EmQkA4",
+  "title" : "Sin City",
+  "date" : "2021-02-14",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "aen5SxxrU6Cfz-qV1mID8",
+  "title" : "It",
+  "date" : "2021-02-14",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "kgBMjk5lp8YX_nO3dYhPw",
+  "title" : "Blade",
+  "date" : "2021-02-14",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "2O7-BAjam8wvXVma_gM0u",
+  "title" : "Interstellar",
+  "date" : "2021-02-14",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "V3TKSyDLAywkD6425Ascg",
+  "title" : "Pulp Fiction",
+  "date" : "2021-02-14",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "ZAmrvZKfehhGFVASIaops",
+  "title" : "Blade",
+  "date" : "2021-02-14",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "X9MBVb_oD4q21evCnsIG3",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
+  "date" : "2021-02-14",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "Rwcmgh9hDE8nT2bftj8vD",
+  "title" : "Pulp Fiction",
+  "date" : "2021-02-14",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "aJC_DdcqtKkUywa_HOtAg",
+  "title" : "The Intouchables",
+  "date" : "2021-02-14",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "nzj-0rkth3cU4x1sDK5mp",
+  "title" : "The Shawshank Redemption",
+  "date" : "2021-02-15",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "BiHs6c43WlONn7avomJmG",
+  "title" : "Interstellar",
+  "date" : "2021-02-15",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "VR-K71jjrv3P-lk71rems",
+  "title" : "It",
+  "date" : "2021-02-15",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "QdhKlb4brDIH_ONALMvYB",
+  "title" : "Pulp Fiction",
+  "date" : "2021-02-15",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "1Pup-n57_p6zWR-F1aCf8",
+  "title" : "The Shawshank Redemption",
+  "date" : "2021-02-15",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "MbLoC9yHD-395rCZWI745",
+  "title" : "Fight Club",
+  "date" : "2021-02-15",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "X_bsSSFAQrRvT93GWItkk",
+  "title" : "Blade",
+  "date" : "2021-02-15",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "HU17oe2e3m1iFVyxJCBK8",
+  "title" : "Interstellar",
+  "date" : "2021-02-15",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "g3m7VF7-NLxp9uHvNv6l9",
+  "title" : "Interstellar",
+  "date" : "2021-02-15",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "A_HaBO62AijLJJon6UJ9H",
+  "title" : "Blade",
+  "date" : "2021-02-15",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "g67Ud6CG8U8fbXs5op-5Q",
+  "title" : "The Intouchables",
+  "date" : "2021-02-15",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "r-r1iWzfi_JLl5_k9hX3K",
+  "title" : "It",
+  "date" : "2021-02-15",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "bmjjQTd_2BEy6vWtWh8pJ",
+  "title" : "Fight Club",
+  "date" : "2021-02-16",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "7MeGltXs8RGQJLuaWNgfS",
+  "title" : "Blade",
+  "date" : "2021-02-16",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "zezRkBn7m1621ndxjztPN",
+  "title" : "It",
+  "date" : "2021-02-16",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "gP9yPNd_iauxjOc1ssHP2",
+  "title" : "The Shawshank Redemption",
+  "date" : "2021-02-16",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "YPFzRrBbzCgG-dIsAhkc1",
+  "title" : "Pulp Fiction",
+  "date" : "2021-02-16",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "-yjt5UY98TT6ooU8jCswk",
+  "title" : "Interstellar",
+  "date" : "2021-02-16",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "21:00",
+  "seats" : 50
+}, {
+  "id" : "mLygIli6EhXFMAyfx_cxI",
+  "title" : "Fight Club",
+  "date" : "2021-02-16",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "17:00",
+  "seats" : 100
+}, {
+  "id" : "fe9ibKgBggWeY4IrrbU8C",
+  "title" : "Interstellar",
+  "date" : "2021-02-16",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "19:00",
+  "seats" : 50
+}, {
+  "id" : "CjaWXuGZP4Rgua1pRW8KX",
+  "title" : "The Hitchhiker's Guide to the Galaxy",
+  "date" : "2021-02-16",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "21:00",
+  "seats" : 100
+}, {
+  "id" : "yN9uAJ2IMVYz7ZW7iuv1W",
+  "title" : "Pulp Fiction",
+  "date" : "2021-02-16",
+  "theatre" : "Theatre 2",
+  "salon" : "Small room",
+  "time" : "17:00",
+  "seats" : 50
+}, {
+  "id" : "D9M1wNr2SU6sbfKJVJ2LC",
+  "title" : "Sin City",
+  "date" : "2021-02-16",
+  "theatre" : "Theatre 1",
+  "salon" : "Big room",
+  "time" : "19:00",
+  "seats" : 100
+}, {
+  "id" : "ykVqCq5eAVOBToVZ5z2B4",
+  "title" : "Pulp Fiction",
+  "date" : "2021-02-16",
   "theatre" : "Theatre 2",
   "salon" : "Small room",
   "time" : "21:00",
