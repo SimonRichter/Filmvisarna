@@ -40,7 +40,7 @@
       </button>
     </router-link>
   </div>
-  <SeatingMapList v-bind:showing="showing" />
+  <SeatingMapList v-bind:showing="showing" @changeTicket="changeTicket" />
 </template>
 
 <script>
@@ -94,14 +94,15 @@ export default {
     x() {
       this.showing.seats = this.totalSeats;
     },
-    addTicket(seatIndex) {
-      if (seatIndex == null) {
-        console.log("Remove ticket");
-        this.decrement();
-      } else {
-        console.log("I have added a ticket");
-        this.increment();
-      }
+    changeTicket(seatIndex) {
+      console.log("I have arrived in theatre seating map");
+      // if (seatIndex == null) {
+      //   console.log("Remove ticket");
+      //   this.decrement();
+      // } else {
+      //   console.log("I have added a ticket");
+      //   this.increment();
+      // }
     },
     increment() {
       if (this.totalSeats <= 0) {

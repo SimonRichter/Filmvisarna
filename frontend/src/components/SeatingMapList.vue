@@ -5,7 +5,7 @@
       :key="seat"
       :seatIndex="i"
       v-bind:showing="showing"
-      @addTicket="addTicket"
+      @click="changeTicket(i)"
     />
   </div>
 </template>
@@ -14,15 +14,32 @@
 import SeatingMapItem from "./SeatingMapItem.vue";
 
 export default {
-  emits: ["addTicket"],
+  emits: ["changeTicket"],
   props: ["showing"],
+  data() {
+    return {
+      clicked: false,
+    };
+  },
   components: {
     SeatingMapItem,
   },
-  computed: {
-    addTicket(seatIndex) {
-      this.$emit("addTicket", seatIndex);
+  methods: {
+    changeTicket(seatIndex) {
+      this.clicked = !this.clicked;
+      if (this.clicked == true) {
+        console.log("I have clicked in map list at seat index", seatIndex);
+        this.$emit("changeTicket", seatIndex);
+      } else {
+        console.log("I dont want this seat anymore", seatIndex);
+        this.$emit("changeTicket", null);
+      }
     },
+    // changeTicket(seatIndex) {
+    //   console.log("I am in change ticket - seat list");
+    //   console.log("seatIndex", seatIndex);
+    //   this.$emit("changeTicket", seatIndex);
+    // },
   },
 };
 </script>

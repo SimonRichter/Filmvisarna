@@ -2,14 +2,10 @@
   <div class="chair">
     {{ seatIndex }}
     <div
-      @click="
-        changeTickets;
-        clicked = !clicked;
-      "
       class="available"
+      @click="setContent"
       v-if="availableSeat == null || availableSeat == false"
-    >
-      {{ content }}
+    >{{ content }}
     </div>
     <div class="taken" v-else>Taken</div>
   </div>
@@ -17,31 +13,37 @@
 
 <script>
 export default {
-  emits: ["addTicket"],
+  // emits: ["changeTicket"],
   props: ["showing", "seatIndex"],
-  data() {
-    return {
+  data(){
+    return{
       content: "Available",
-      clicked: true,
-    };
+      clicked: false
+    }
   },
   computed: {
     availableSeat() {
       return this.showing.seats[this.seatIndex];
     },
-    changeTickets() {
-      console.log("this.clicked", this.clicked);
-      this.content = this.clicked == false ? "Available" : "Reserved";
-      console.log("this.content", this.content);
-      if (this.clicked == true) {
-        console.log("should add a ticket");
-        this.$emit("addTicket", this.seatIndex);
-      } else {
-        console.log("should remove a ticket");
-        this.$emit("addTicket", null);
-      }
-    },
+    // content() {
+    //   return this.clicked == true ? "Reserved" : "Available";
+    // },
+    // changeTicket() {
+    //   this.content = this.clicked == false ? "Available" : "Reserved";
+    //   if (this.clicked == true) {
+    //     console.log('I have clicked in map item');
+    //     this.$emit("changeTicket", this.seatIndex);
+    //   } else {
+    //     this.$emit("changeTicket", null);
+    //   }
+    // },
   },
+  methods: {
+    setContent(){
+      this.clicked = !this.clicked;
+      this.content = this.clicked == true ? "Reserved" : "Available";
+    }
+  }
 };
 </script>
 
