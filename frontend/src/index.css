@@ -34,7 +34,7 @@
   margin: 0;
   scrollbar-width: thin;
   scrollbar-color: rgb(51, 51, 51) #2c3e50;
-  letter-spacing: .5px;
+  letter-spacing: .8px;
 }
 
 /* Works on Chrome, Edge, and Safari */
@@ -98,10 +98,11 @@ li {
 }
 
 p, span {
-  font-family: var(--font1);
+  font-family: var(--font5);
   font-size: 16px;
   font-weight: 300;
   color: var(--c5);
+  letter-spacing: 0.7px;
 }
 
 
