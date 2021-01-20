@@ -8,7 +8,6 @@
     <ul class="navBar floatRight">
       <router-link to="/movies"><li>Movies</li></router-link>
       <router-link to="/about"><li>About</li></router-link>
-    
       <Button class="signInButton" @click= "showModal = true">Sign in</Button>
     </ul>
     
@@ -21,9 +20,7 @@
           <SignInComp class="signInComp" />
           <button class= "closeModalButton" @click= "showModal = false">X</button>
           </div>
-    
         </transition>
-     
 </template>
 <script>
 import SignInComp from "../components/SignInComp.vue";
