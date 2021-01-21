@@ -2,7 +2,7 @@
   <div>
     <div class="signInInfo">
         
-        <h1>{{ 'Nigger' }} </h1>
+        <h1>{{ 'Sign in' }} </h1>
         
         <input class="emailInputSignIn" type="email" name="" id="" placeholder="E-mail">
         <h3></h3>
