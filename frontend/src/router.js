@@ -5,7 +5,6 @@ import Movies from './views/Movies.vue'
 import ChosenMovie from './views/ChosenMovie.vue'
 import ConfirmationPage from './views/ConfirmationPage.vue'
 import Booking from './views/Booking.vue'
-import SignIn from './views/SignIn.vue'
 import About from './views/About.vue'
 import MyPage from './views/MyPage.vue'
 import Faq from './views/FAQ.vue'
@@ -32,11 +31,6 @@ const routes = [
     name: 'ConfirmationPage',
     path: '/confirmation-page/:showingId',
     component: ConfirmationPage
-  },
-  {
-    name: 'SignIn',
-    path: '/sign-in/',
-    component: SignIn
   },
   {
     name: 'MyPage',
