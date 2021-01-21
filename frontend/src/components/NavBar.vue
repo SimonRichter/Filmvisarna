@@ -8,60 +8,75 @@
     <ul class="navBar floatRight">
       <router-link to="/movies"><li>Movies</li></router-link>
       <router-link to="/about"><li>About</li></router-link>
-      <Button class="signInButton" @click= "showModal = true">Sign in</Button>
+
+      <Button class="signInButton" @click="showModal = true">Sign in</Button>
+      <Button class="nav_dropbtn" @click="show_navDropDown = true">@User</Button><i class="arrow down"></i>
     </ul>
-    
   </div>
-      <transition name="fade" appear>
-        <div class="modal-overlay" v-if= "showModal" @click= "showModal = false"></div>
-      </transition>
-      <transition name="slide" appear>
-        <div class="modal" v-if= "showModal">
-          <SignInComp class="signInComp" />
-          <button class= "closeModalButton" @click= "showModal = false">X</button>
-          </div>
-        </transition>
+  <div class="navDropdown" v-if="show_navDropdown">
+    <NavLogIn/>
+  </div>
+
+  <transition name="fade" appear>
+    <div
+      class="modal-overlay"
+      v-if="showModal"
+      @click="showModal = false"
+    ></div>
+  </transition>
+  <transition name="slide" appear>
+    <div class="modal" v-if="showModal">
+      <SignInComp class="signInComp" />
+      <button class="closeModalButton" @click="showModal = false">X</button>
+    </div>
+  </transition>
 </template>
 <script>
 import SignInComp from "../components/SignInComp.vue";
+import NavLogIn from "../components/NavLogIn.vue";
 export default {
-  components: { SignInComp },
-  data (){
-    return{
-      showModal: false
-    }
-  }
+  components: {
+    SignInComp,
+    NavLogIn,
+  },
+  data() {
+    return {
+      showModal: false,
+      show_navDropdown: false,
+      
+    };
+  },
 };
 </script>
 
 <style scoped>
 .navBarContainer {
-   display: flex;
-   /* border-bottom: 1px #dc0428 solid; */
-   /* TEST 1 */
-   border-bottom: #96162b 1px solid;
-   /* TEST 2 */
-   /* TEST 3 */
-   margin: 0;
-   padding: 0;
-   overflow: hidden;
-   position: fixed;
-   width: 100%;
-   z-index: 1;
+  display: flex;
+  /* border-bottom: 1px #dc0428 solid; */
+  /* TEST 1 */
+  border-bottom: #96162b 1px solid;
+  /* TEST 2 */
+  /* TEST 3 */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 .navBar {
-   display: flex;
-   align-items: center;
-   list-style-type: none;
-   /* background-color: black; */
-   /* TEST 1 */
-   background-color: #131313;
-   /* TEST 2 */
-   /* TEST 3 */
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  /* background-color: black; */
+  /* TEST 1 */
+  background-color: #131313;
+  /* TEST 2 */
+  /* TEST 3 */
 
-   text-decoration: none;
-   padding: 0;
-   /* display: flex;
+  text-decoration: none;
+  padding: 0;
+  /* display: flex;
    border-bottom: 1px #dc0428 solid; */
 }
 /* .navBar {
@@ -74,38 +89,38 @@ export default {
 } */
 
 .floatRight {
-   width: 50%;
-   justify-content: flex-end;
+  width: 50%;
+  justify-content: flex-end;
 }
 .floatLeft {
-   width: 50%;
-   justify-content: flex-start;
+  width: 50%;
+  justify-content: flex-start;
 }
 .firstListItem {
-   padding: 0;
-   padding-top: 7px;
+  padding: 0;
+  padding-top: 7px;
 }
 
 li {
-   /* color: white; */
-   /* TEST 1 */
-   color: rgb(116, 109, 98);
-   /* TEST 2 */
-   /* TEST 3 */
+  /* color: white; */
+  /* TEST 1 */
+  color: rgb(116, 109, 98);
+  /* TEST 2 */
+  /* TEST 3 */
 
-   padding: 16px 18px;
-   font-size: 20px;
+  padding: 16px 18px;
+  font-size: 20px;
 }
 
 a {
-   text-decoration: none;
+  text-decoration: none;
 }
 img {
-   margin-left: 20px;
-   height: 70px;
-   width: auto;
+  margin-left: 20px;
+  height: 70px;
+  width: auto;
 }
-.signInButton{
+.signInButton {
   appearance: none;
   outline: none;
   border: none;
@@ -115,7 +130,7 @@ img {
   padding: 16px 18px;
   font-size: 20px;
 }
-.modal-overlay{
+.modal-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -146,7 +161,7 @@ img {
 }
 */
 
-.modal{
+.modal {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -159,7 +174,7 @@ img {
   border-radius: 16px;
   padding: 25px;
 }
-.closeModalButton{
+.closeModalButton {
   font-size: 35px;
   border: #6e1020 1px solid;
   background-color: #131313;
@@ -167,9 +182,9 @@ img {
   color: rgb(238, 220, 192);
   font-family: "Bebas Neue", cursive;
   width: 60px;
-  position:absolute;
-  top:0;
-  right:0;
+  position: absolute;
+  top: 0;
+  right: 0;
   cursor: pointer;
-  }
+}
 </style>
