@@ -82,6 +82,14 @@
          make sure to wear a mask for Your safety and the safety of your fellow
          guests.
       </p>
+      <br />
+      <h3>
+         Do you have any more questions? Please contact us at
+         <a href="mailto:info@vuexcinemas.com">info@vuexcinemas.com</a> or
+         <a href="tel:+4646007007">+46-46-007007</a>
+      </h3>
+      <br />
+      <br />
    </div>
 </template>
 
