@@ -84,6 +84,8 @@ const actions = {
       method: 'PUT',
       body: JSON.stringify(showing)
     })
+    showingObj = await response.json()
+    store.commit('setShowings', showingObj)
   }
   // ------------- SPRINT 2 ------------
   // in-parameter is a user object user = {name: Anna, email: anna@gmail.com, password: Hej123}
