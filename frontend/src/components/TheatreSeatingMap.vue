@@ -33,7 +33,7 @@
       <button
         :disabled="!(counter === goToNextStep)"
         class="next-btn"
-        @click="sendDataToNextView, x()"
+        @click="sendDataToNextView, setSeats()"
         :to="'/chosen-movie/' + showing.title + '/booking/' + showing.id"
       >
         Next
@@ -57,7 +57,6 @@ export default {
       typeAdult: 0,
       typeChild: 0,
       typeSenior: 0,
-      // numberOfTickets: 1,
       objToSend: [],
       goToNextStep: 0,
       seatIndexes: [],
@@ -91,7 +90,7 @@ export default {
     },
   },
   methods: {
-    x() {
+    setSeats() {
       for (let i = 0; i < this.seatIndexes.length; i++) {
         for (let j = 0; j < this.showing.totalSeats; j++) {
           if (this.seatIndexes[i] == j) {
@@ -101,7 +100,6 @@ export default {
           }
         }
       }
-      // this.showing.seats = this.totalSeats;
     },
     changeTicket(seatIndex) {
       console.log("I have arrived in theatre seating map");

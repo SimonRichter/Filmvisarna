@@ -29,6 +29,7 @@ const mutations = {
     state.showings = showingsList;
   },
   // Updates the show that has been changed so another user can get 'live updates' if seats are taken or not
+  // after the tickets has been 'confirmed'
   updateShow(state, showObj) {
     const index = state.showings.indexOf(state.showings.filter(show => show.id == showObj.id)[0]);
     state.showings.splice(index, 1, showObj);

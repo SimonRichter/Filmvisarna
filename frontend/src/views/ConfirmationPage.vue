@@ -98,7 +98,6 @@ export default {
       window.print();
       return false;
     },
-
     cancelBooking() {
       this.$store.dispatch("fetchShowings");
     },
