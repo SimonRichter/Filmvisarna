@@ -28,6 +28,13 @@ const mutations = {
   setShowings(state, showingsList) {
     state.showings = showingsList;
   },
+  updateShow(state, showObj) {
+    const index = state.showings.indexOf(state.showings.filter(show => show.id == showObj.id)[0]);
+    console.log('index of show in mutations', index);
+    console.log('showing obj', showObj);
+    state.showings.splice(index, 1, showObj);
+    console.log('state.showings UPDATED', state.showings);
+  }
   // ----------- SPRINT 2 -----------
   // addMemberToState(store, newMember) {
   //   store.members.push(newMember)
@@ -80,12 +87,10 @@ const actions = {
       seats: showingObj.seats,
       totalSeats: showingObj.totalSeats
     }
-    let response = await fetch('/rest/showings/' + showingObj.id, {
+    await fetch('/rest/showings/' + showingObj.id, {
       method: 'PUT',
       body: JSON.stringify(showing)
     })
-    showingObj = await response.json()
-    store.commit('setShowings', showingObj)
   }
   // ------------- SPRINT 2 ------------
   // in-parameter is a user object user = {name: Anna, email: anna@gmail.com, password: Hej123}

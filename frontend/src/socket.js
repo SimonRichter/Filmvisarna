@@ -22,14 +22,16 @@ function connect() {
     console.log('data', data);
 
     if (model == 'Showing') {
-      store.commit('setShowings', data[0]);
+      if (event == 'update') {
+        store.commit('updateShow', data[0]);
+      }
     }
   }
 
-    ws.onclose = () => {
-      console.log('Disconnected');
+  ws.onclose = () => {
+    console.log('Disconnected');
 
-      setTimeout(() => { connect }, 2000);
-    }
-
+    setTimeout(() => { connect }, 2000);
   }
+
+}

@@ -26,17 +26,9 @@ export default {
   computed: {
     id() {
       // get showing id from url parameter
-      console.log("id", this.$route.params.id);
       return this.$route.params.id;
     },
     showing() {
-      // console.log(
-      //   this.$store.state.showings.filter((obj) => obj.id == this.id)[0]
-      // );
-      this.$store.state.showings.filter((obj) => {
-        console.log("obj.id", obj.id);
-        console.log("this.id", this.id);
-      });
       return this.$store.state.showings.filter((obj) => obj.id == this.id)[0];
     },
   },
