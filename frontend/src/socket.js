@@ -17,12 +17,13 @@ function connect() {
     const watchData = JSON.parse(MessageEvent.data);
 
     const { model, event, data } = watchData;
-    console.log('model', model);
-    console.log('event', event);
-    console.log('data', data);
+    // model is the model('class' in Java) that we want to listen to for changes
+    // event is either insert, update or delete
+    // data is the list of objects that has changed
 
     if (model == 'Showing') {
       if (event == 'update') {
+        // Updates only the show that has been changed and not the entire list
         store.commit('updateShow', data[0]);
       }
     }

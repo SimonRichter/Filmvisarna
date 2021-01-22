@@ -28,12 +28,10 @@ const mutations = {
   setShowings(state, showingsList) {
     state.showings = showingsList;
   },
+  // Updates the show that has been changed so another user can get 'live updates' if seats are taken or not
   updateShow(state, showObj) {
     const index = state.showings.indexOf(state.showings.filter(show => show.id == showObj.id)[0]);
-    console.log('index of show in mutations', index);
-    console.log('showing obj', showObj);
     state.showings.splice(index, 1, showObj);
-    console.log('state.showings UPDATED', state.showings);
   }
   // ----------- SPRINT 2 -----------
   // addMemberToState(store, newMember) {
