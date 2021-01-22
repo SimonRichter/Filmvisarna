@@ -13,7 +13,6 @@
     </div>
 
     <TheatreSeatingMap v-bind:showing="showing" />
-    
   </div>
 </template>
 
@@ -23,17 +22,21 @@ import TheatreSeatingMap from "../components/TheatreSeatingMap.vue";
 export default {
   components: {
     TheatreSeatingMap,
-    
   },
   computed: {
     id() {
       // get showing id from url parameter
+      console.log("id", this.$route.params.id);
       return this.$route.params.id;
     },
     showing() {
-      console.log(
-        this.$store.state.showings.filter((obj) => obj.id == this.id)[0]
-      );
+      // console.log(
+      //   this.$store.state.showings.filter((obj) => obj.id == this.id)[0]
+      // );
+      this.$store.state.showings.filter((obj) => {
+        console.log("obj.id", obj.id);
+        console.log("this.id", this.id);
+      });
       return this.$store.state.showings.filter((obj) => obj.id == this.id)[0];
     },
   },

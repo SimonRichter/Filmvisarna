@@ -4,6 +4,7 @@ import com.company.models.Member;
 import com.company.models.Movie;
 import com.company.models.Showing;
 import express.Express;
+import express.database.CollectionOptions;
 
 import java.util.Arrays;
 
@@ -14,7 +15,7 @@ public class Main {
     public static void main(String[] args) {
         var app = new Express();
 
-        app.enableCollections("database/temp/db/movies.db");
+        app.enableCollections("database/temp/db/movies.db", CollectionOptions.ENABLE_WATCHER);
 
         app.get("/hello", (req, res) -> res.send("<h1>Hello from Java Express!</h1>"));
 
