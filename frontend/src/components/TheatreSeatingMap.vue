@@ -190,11 +190,11 @@ export default {
 <style scoped>
 .grid-seating-map {
   grid-column: 2;
-  grid-row-start: 2;
-  grid-row-end: 4;
+  grid-row: 1 / 4;
   padding-top: 15px;
   padding-bottom: 5px;
-  margin-left: 50px;
+  margin-top: 10vh;
+  margin-left: 10vh;
 }
 .grid-container-map {
   margin-top: 20px;
