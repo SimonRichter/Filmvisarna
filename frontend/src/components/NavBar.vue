@@ -8,13 +8,9 @@
     <ul class="navBar floatRight">
       <router-link to="/movies"><li>Movies</li></router-link>
       <router-link to="/about"><li>About</li></router-link>
-
-      <Button class="signInButton" @click="showModal = true">Sign in</Button>
-      <Button class="nav_dropbtn" @click="show_navDropDown = true">@User</Button><i class="arrow down"></i>
+      <Button class="signInButton" v-if="!loggedIn" @click="showModal = true">Sign in</Button>
+      <NavLogIn v-if="loggedIn" />
     </ul>
-  </div>
-  <div class="navDropdown" v-if="show_navDropdown">
-    <NavLogIn/>
   </div>
 
   <transition name="fade" appear>
@@ -32,18 +28,17 @@
   </transition>
 </template>
 <script>
-import SignInComp from "../components/SignInComp.vue";
 import NavLogIn from "../components/NavLogIn.vue";
+import SignInComp from "../components/SignInComp.vue";
 export default {
   components: {
-    SignInComp,
     NavLogIn,
+    SignInComp,
   },
   data() {
     return {
       showModal: false,
-      show_navDropdown: false,
-      
+      loggedIn: true,
     };
   },
 };
