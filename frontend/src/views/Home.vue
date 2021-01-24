@@ -5,11 +5,11 @@
       <h2 class="inCinemas">Now in vue <span class="x"> X </span> cinemas</h2>
 
       <ShowingList class="showingList" />
-   </div>
-   <div class="centerMe">
+      <div class="centerMe">
       <router-link to="/movies">
          <button>See all movies</button>
       </router-link>
+   </div>
    </div>
 </template>
 
@@ -49,10 +49,6 @@ button:active,
 button:disabled {
    background-color: #222222;
 }
-
-.contentGridContainer {
-   padding-top: 9vh;
-}
 .carousel {
    grid-area: 1/1/2/3;
    /* height: 80vh; */
@@ -87,7 +83,10 @@ button:disabled {
    color: #6e1020;
 }
 .centerMe {
-   width: 100vw;
+   padding-top: 2vw;
+   grid-column-start: 1;
+   grid-column-end: 3;
+   width: 100%;
    display: flex;
    align-items: center;
    justify-content: center;

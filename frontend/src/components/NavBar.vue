@@ -1,8 +1,8 @@
 <template>
   <div class="navBarContainer">
     <ul class="navBar floatLeft">
-      <router-link to="/" class="floatLeft">
-        <li><img src="../pictures/logoSmall.png" id="logo" /></li>
+      <router-link to="/">
+        <img src="../pictures/logoSmall.png" id="logo" />
       </router-link>
     </ul>
     <ul class="navBar floatRight">
@@ -56,7 +56,7 @@ export default {
   padding: 0;
   overflow: hidden;
   position: fixed;
-  width: 100%;
+  width:100%;
   z-index: 1;
 }
 .navBar {
@@ -84,10 +84,12 @@ export default {
 } */
 
 .floatRight {
+  padding-right: 30px;
   width: 50%;
   justify-content: flex-end;
 }
 .floatLeft {
+  padding-left: 30px;
   width: 50%;
   justify-content: flex-start;
 }
@@ -97,9 +99,10 @@ export default {
 }
 
 li {
+  color: rgb(116, 109, 98);
   /* color: white; */
   /* TEST 1 */
-  color: rgb(116, 109, 98);
+  
   /* TEST 2 */
   /* TEST 3 */
 
@@ -107,12 +110,18 @@ li {
   font-size: 20px;
 }
 
+li:hover{
+  color: rgb(238, 220, 192);
+}
+
 a {
   text-decoration: none;
 }
 img {
-  margin-left: 20px;
-  height: 70px;
+  padding: 18px 0 18px;
+ height:60px;
+
+  
   width: auto;
 }
 .signInButton {
