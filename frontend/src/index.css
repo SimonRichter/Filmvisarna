@@ -105,6 +105,9 @@ p, span {
   letter-spacing: 0.7px;
 }
 
+a {
+  color: darkslateblue;
+}
 
 .contentGridContainer{
   display: grid;
