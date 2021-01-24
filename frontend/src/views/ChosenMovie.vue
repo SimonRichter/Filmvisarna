@@ -37,11 +37,20 @@
             {{ showing.salon }}
          </h3>
       </div>
+
    </div>
+   <Calendar />
+
 </template>
 
 <script>
+import Calendar from"../components/Calendar.vue"
+
 export default {
+   components:{
+      Calendar
+
+   },
    computed: {
       today() {
          const x = new Date();

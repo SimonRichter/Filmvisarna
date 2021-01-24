@@ -14,13 +14,14 @@
 
       <TheatreSeatingMap v-bind:showing="showing" />
    </div>
+   <Calendar />
 </template>
 
 <script>
 import TheatreSeatingMap from "../components/TheatreSeatingMap.vue";
 export default {
    components: {
-      TheatreSeatingMap,
+      TheatreSeatingMap
    },
    computed: {
       id() {
