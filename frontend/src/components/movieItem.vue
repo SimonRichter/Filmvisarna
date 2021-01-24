@@ -48,18 +48,18 @@ h3 {
 }
 p {
   margin-top: 5px;
+  margin-bottom: 5px;
   /* color: wheat; */
 }
 img {
   border-radius: 5px;
   /* width: 10vw; */
-  height: 20vw;
+  height: 16vw;
 }
 .movieItemContainer {
   border-radius: 5px;
   display: flex;
   background-color: rgba(51, 51, 51, 0.39);
-  margin: 0 20px 20px 20px;
   box-shadow: 0 0 5px 0 #6e1020;
 }
 .infoContainer {

@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import MovieList from "../components/MovieList.vue";
+import MovieList from "../components/movieList.vue";
 export default {
    components: {
       MovieList,
@@ -16,6 +16,9 @@ export default {
 </script>
 
 <style scoped>
+.contentGridContainer{
+   grid-gap: 3vw;
+}
 .bannerImg {
    background-image: url("../pictures/Banner.jpg") ;
    background-repeat: no-repeat;
