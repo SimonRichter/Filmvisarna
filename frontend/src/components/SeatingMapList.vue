@@ -50,10 +50,10 @@ export default {
 <style scoped>
 .grid-seating-map {
   display: block;
-  min-width: 350px;
+  min-width: 400px;
   max-width: 400px;
 }
-.seats{
+.seats {
   padding-left: 60px;
 }
 hr {
