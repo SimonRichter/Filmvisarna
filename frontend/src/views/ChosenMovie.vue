@@ -203,6 +203,7 @@ h3 {
    align-items: center;
 }
 .setWidth {
+   padding-top:50px;
    width: 69vw;
    margin: 0 auto;
 }
