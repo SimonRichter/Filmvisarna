@@ -22,6 +22,7 @@
       @input="addFilterItem($event)"
    />
    <div class="contentGridContainer">
+      <div class="bannerImg"></div>
       <MovieList />
    </div>
 </template>
@@ -45,12 +46,17 @@ export default {
 </script>
 
 <style scoped>
-img {
-   margin-top: 85px;
+.contentGridContainer{
+   grid-gap: 3vw;
+}
+.bannerImg {
+   background-image: url("../pictures/Banner.jpg") ;
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 10vw;
+   grid-column-start: 1;
+   grid-column-end: 3;
    margin-bottom: 10px;
 }
-.contentGridContainer {
-   width: 93vw;
-   padding-top: 1vh;
-}
+
 </style>

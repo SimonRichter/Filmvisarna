@@ -1,9 +1,10 @@
 :root {
   --font1: 'Bebas Neue', cursive;
-  --font2: 'Oswald', sans-serif;
+  --font2: 'Open Sans Condensed', sans-serif;
   --font3: 'Lato', sans-serif;
   --font4: 'Roboto Condensed', sans-serif;
-  --font5: 'Open Sans Condensed', sans-serif;
+  --font5: 'Oswald', sans-serif;
+  
   /* TEST 1 - GREY-BLACK RED AND BEIGE*/
   --c1: #131313;
   --c2: rgb(116, 109, 98);
@@ -114,5 +115,5 @@ a {
   grid-template-columns: 50% 50%;
   width: 80vw;
   margin: 0 auto 0;
-  padding-top:15vh;
+  padding:110px 0 8vw;
 }

@@ -1,7 +1,6 @@
 <template>
    <div class="setWidth">
       <div class="movieInfo">
-         <!-- <img :src="movie.posterLandscape" /> -->
          <iframe
             width="1220"
             height="400"
@@ -203,6 +202,7 @@ h3 {
    align-items: center;
 }
 .setWidth {
+   padding-top:50px;
    width: 69vw;
    margin: 0 auto;
 }
