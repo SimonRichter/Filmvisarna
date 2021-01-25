@@ -26,7 +26,7 @@ export default {
   ],
   computed: {
     movieTitleForLink() {
-      return this.movieTitle.replace(/ /g, "-");
+      return this.movieTitle.replaceAll(/ /g, "-");
     },
   },
 };
@@ -44,16 +44,13 @@ h2 {
 }
 h3 {
   display: inline;
-  /* color: rgba(245, 222, 179, 0.432); */
 }
 p {
   margin-top: 5px;
   margin-bottom: 5px;
-  /* color: wheat; */
 }
 img {
   border-radius: 5px;
-  /* width: 10vw; */
   height: 16vw;
 }
 .movieItemContainer {

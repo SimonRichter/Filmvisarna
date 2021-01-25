@@ -1,7 +1,6 @@
 <template>
    <div class="setWidth">
       <div class="movieInfo">
-         <!-- <img :src="movie.posterLandscape" /> -->
          <iframe
             width="1220"
             height="400"
