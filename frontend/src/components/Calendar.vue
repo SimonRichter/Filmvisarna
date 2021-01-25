@@ -2,12 +2,12 @@
   <div class="container">
     <div class="calendar">
       <div class="month">
-        <div class="arrow" @click="prevMonth()"> &#8678;</div>
+        <div class="arrow" @click="callMeBackBaby()"> &#8678;</div>
         <div class="date">
           <h1>{{ testmonth }}</h1>
           <p>{{ testtoday }}</p>
         </div>
-        <div class="arrow"  @click="nextMonth()"> &#x21E8;</div>
+        <div class="arrow"  @click="callMeBaby()"> &#x21E8;</div>
       </div>
       <div class="weekdays">
         <div>Mon</div>
@@ -29,9 +29,10 @@
 
 <script>
 export default {
+
   data() {
     const date = new Date();
-    
+   // date.setMonth(date.getMonth()+counter)
     const months = [
       "Jan",
       "Feb",
@@ -48,10 +49,7 @@ export default {
     ];
     const lastDay = new Date(date.getFullYear(),date.getMonth()+1,0).getDate();
     date.setDate(1)
-    console.log("??",lastDay)
     const prevDays=new Date(date.getFullYear(),date.getMonth(),0).getDate();
-    console.log("??",prevDays)
-
     const firstDayNum = date.getDay();
     const testmonth = months[date.getMonth()];
     const testtoday = new Date().toDateString();
@@ -60,19 +58,47 @@ export default {
     return { testmonth, testtoday,lastDay ,firstDayNum,prevDays,nextMonthDays};
   },
 
-  methods: {
+  methods: {    
 
-    prevMonth(){
-    this.$date.setMonth(date.getMonth()-1)
-
+    newMethod(){
+           this.months = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+     
+     this.lastDay = new Date(this.date.getFullYear(),this.date.getMonth()+1,0).getDate();
+     this.date.setDate(1)
+     this.prevDays=new Date(this.date.getFullYear(),this.date.getMonth(),0).getDate();
+     this.firstDayNum = this.date.getDay();
+     this.testmonth = this.months[this.date.getMonth()];
+     this.testtoday = new Date().toDateString();
+     this.lastDayNum= new Date(this.date.getFullYear(),this.date.getMonth()+1,0).getDay();
+     this.nextMonthDays=7-this.lastDayNum
 
     },
-    nextMonth(){
-     date.setMonth(date.getMonth()+1)
-    }
-  },
+    callMeBaby(){
+    this.date= new Date()
+    this.date.setMonth(this.date.getMonth()+1)
+    this.newMethod()
 
-  
+    },
+     callMeBackBaby(){
+     this.date= new Date()
+     this.date.setMonth(this.date.getMonth())
+     this.newMethod()
+    
+    }  
+  },
 };
 </script>
 
@@ -176,7 +202,7 @@ export default {
 
 .prev-date,
 .next-date {
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 .today {
