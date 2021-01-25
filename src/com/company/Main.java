@@ -12,7 +12,7 @@ public class Main {
         var app = new Express();
 
         app.enableCollections("database/temp/db/movies.db");
-        
+        new Authentication(app);
 
         app.get("/hello", (req, res) -> res.send("<h1>Hello from Java Express!</h1>"));
 
