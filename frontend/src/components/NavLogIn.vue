@@ -1,7 +1,7 @@
 <template>
-  <li class="nav_dropbtn" @click="show = !show">@Stefan.And@gmail.com</li>
+  <li class="nav_dropbtn" @click="show = !show">@abc@gmail.com</li>
   <div class="sub-menu" v-if="show">
-    <h3 @click="myPage($event)" class="myPage_btn">Bookings</h3>
+    <router-link to="/my-page"><h3 @click="myPage($event)" class="myPage_btn">Bookings</h3></router-link>
     <h3 @click="logOut($event)" class="logOut_btn">Log out</h3>
   </div>
 </template>
