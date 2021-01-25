@@ -2,12 +2,12 @@
   <div class="container">
     <div class="calendar">
       <div class="month">
-        <div class="arrow" @click="callMeBackBaby()"> &#8678;</div>
+        <div class="arrow" @click="callMeBackBaby()" v-bind:class="{ inactivate: testmonth==thisMonth }"> &#8678;</div>
         <div class="date">
           <h1>{{ testmonth }}</h1>
           <p>{{ testtoday }}</p>
         </div>
-        <div class="arrow"  @click="callMeBaby()"> &#x21E8;</div>
+        <div class="arrow"  @click="callMeBaby()" v-bind:class="{ inactivate: testmonth!=thisMonth }" > &#x21E8;</div>
       </div>
       <div class="weekdays">
         <div>Mon</div>
@@ -20,7 +20,8 @@
       </div>
       <div class="days">
         <div v-for="index in firstDayNum-1" :key="index" class="prev-date">{{ prevDays -( firstDayNum -index)+1 }}</div>
-        <div v-for="index in lastDay" :key="index">{{ index }} </div>
+        <div v-for="index in lastDay" :key="index">
+          <div v-bind:class="{ today: new Date().getDate()==index }">{{ index }}</div> </div>
         <div v-for="index in nextMonthDays" :key="index" class="prev-date">{{index}}</div>
       </div>
     </div>
@@ -32,7 +33,6 @@ export default {
 
   data() {
     const date = new Date();
-   // date.setMonth(date.getMonth()+counter)
     const months = [
       "Jan",
       "Feb",
@@ -47,6 +47,7 @@ export default {
       "Nov",
       "Dec",
     ];
+    const thisMonth=months[date.getMonth()];
     const lastDay = new Date(date.getFullYear(),date.getMonth()+1,0).getDate();
     date.setDate(1)
     const prevDays=new Date(date.getFullYear(),date.getMonth(),0).getDate();
@@ -55,13 +56,13 @@ export default {
     const testtoday = new Date().toDateString();
     const lastDayNum= new Date(date.getFullYear(),date.getMonth()+1,0).getDay();
     const nextMonthDays=7-lastDayNum
-    return { testmonth, testtoday,lastDay ,firstDayNum,prevDays,nextMonthDays};
+    return { testmonth, testtoday,lastDay ,firstDayNum,prevDays,nextMonthDays,thisMonth};
   },
 
   methods: {    
 
     newMethod(){
-           this.months = [
+      this.months = [
       "Jan",
       "Feb",
       "Mar",
@@ -139,15 +140,12 @@ export default {
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-
-
 }
 
 .arrow{
  font-size: 30px;
  cursor: pointer;
 }
-
 
 .month h1 {
   font-size: 20px;
@@ -195,17 +193,17 @@ export default {
 
 .days div:hover:not(.today) {
   background-color: #b69503;
-  border: 2px solid rgb(138, 8, 8);
   border-radius: 45px;
   cursor: pointer;
 }
 
 .prev-date,
-.next-date {
+.next-date,
+.inactivate {
   opacity: 0.3;
 }
 
 .today {
-  background-color: #167e56;
+  background-color: #700a0a;
 }
 </style>
