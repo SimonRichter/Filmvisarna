@@ -1,6 +1,7 @@
 <template>
-  <div @click="clicked = !clicked">
+  <div>
     <div
+      @click="clicked = !clicked"
       class="chair available"
       v-bind:class="[clicked == true ? ' reserved' : '']"
       v-if="availableSeat == null || availableSeat == false"

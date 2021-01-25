@@ -33,7 +33,10 @@
       <button
         :disabled="!(counter === goToNextStep)"
         class="next-btn"
-        @click="sendDataToNextView, setSeats();  removeSeatsBackend();"
+        @click="
+          sendDataToNextView, setSeats();
+          removeSeatsBackend();
+        "
         :to="'/chosen-movie/' + showing.title + '/booking/' + showing.id"
       >
         Next
@@ -111,8 +114,13 @@ export default {
         this.seatIndexes.length <= 0 ||
         this.seatIndexes.indexOf(seatIndex) < 0
       ) {
-        this.seatIndexes.push(seatIndex);
-        this.counter++;
+        if (
+          this.showing.seats[seatIndex] == undefined ||
+          this.showing.seats[seatIndex] == false
+        ) {
+          this.seatIndexes.push(seatIndex);
+          this.counter++;
+        }
       } else {
         let i = this.seatIndexes.indexOf(seatIndex);
         this.seatIndexes.splice(i, 1);
@@ -126,30 +134,6 @@ export default {
       //   this.increment();
       // }
     },
-    // increment() {
-    //   if (this.totalSeats <= 0) {
-    //     this.totalSeats = 0;
-    //   } else if (this.counter > 7) {
-    //     console.log("You have maxed out");
-    //   } else {
-    //     this.counter++;
-    //     this.totalSeats--;
-    //   }
-    // },
-    // decrement() {
-    //   if (this.totalSeats >= this.showing.seats - 1) {
-    //     this.totalSeats = this.showing.seats - 1;
-    //     this.counter = 1;
-    //   } else {
-    //     this.counter--;
-    //     this.totalSeats++;
-
-    //     if (this.counter >= 1 && !!this.ticketTypes[this.counter]) {
-    //       this.ticketTypes.pop();
-    //     }
-    //     this.updateSum();
-    //   }
-    // },
     updateTickets(type, price, ticketNumber) {
       this.ticketTypes[ticketNumber - 1] = { ticketType: type, price: price };
       this.updateSum();
