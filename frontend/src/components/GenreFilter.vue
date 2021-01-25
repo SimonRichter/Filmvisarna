@@ -56,13 +56,13 @@ export default {
 <style scoped>
 .custom-select {
    position: absolute;
-   top: 20vh;
-   left: 60vw;
-   width: 12vw;
+   top: 27vh;
+   left: 80vw;
+   width: 10vw;
    text-align: left;
    outline: none;
-   height: 47px;
-   line-height: 47px;
+   height: 36px;
+   line-height: 36px;
 }
 
 .custom-select .selected {
@@ -83,8 +83,8 @@ export default {
 .custom-select .selected:after {
    position: absolute;
    content: "";
-   top: 22px;
-   right: 1em;
+   top: 18px;
+   right: 0.7em;
    width: 0;
    height: 0;
    border: 5px solid transparent;

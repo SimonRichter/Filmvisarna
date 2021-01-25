@@ -1,5 +1,4 @@
 <template>
-   <img src="../pictures/Banner.jpg" alt="Banner picture with movie theme" />
    <GenreFilter
       :options="[
          'Show All',
@@ -46,17 +45,16 @@ export default {
 </script>
 
 <style scoped>
-.contentGridContainer{
-   grid-gap: 3vw;
+.contentGridContainer {
+   grid-gap: 2vw;
+   padding: 101px 0 8vw;
 }
 .bannerImg {
-   background-image: url("../pictures/Banner.jpg") ;
+   background-image: url("../pictures/Banner.jpg");
    background-repeat: no-repeat;
    background-size: cover;
    height: 10vw;
    grid-column-start: 1;
    grid-column-end: 3;
-   margin-bottom: 10px;
 }
-
 </style>
