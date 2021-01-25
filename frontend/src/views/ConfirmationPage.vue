@@ -41,7 +41,7 @@
           v-if="!showToggle"
           @click="
             confirmBooking();
-            removeSeatsBackend();
+          
           "
         >
           Confirm
@@ -101,9 +101,7 @@ export default {
     cancelBooking() {
       this.$store.dispatch("fetchShowings");
     },
-    removeSeatsBackend() {
-      this.$store.dispatch("updateSeatsInBackend", this.showing);
-    },
+    
   },
 };
 </script>
