@@ -1,18 +1,4 @@
 <template>
-  <!-- <div class="grid-container-map"> -->
-  <!-- <h3 class="totalSeats">Total seats left: {{ totalSeats }}</h3>
-    <button class="remove" @click="increment">
-      <i class="gg-math-minus"></i>
-    </button>
-    <div class="counter">
-      <h3>{{ counter }}</h3>
-    </div>
-    <button class="add" @click="decrement">
-      <i class="gg-math-plus"></i>
-    </button>
-  </div> -->
-
-  <SeatingList :counter="counter" @update-total="updateTickets" />
   <div class="ticket-grid">
     <h2>Ticket types</h2>
     <div class="ticket-types">
@@ -39,10 +25,11 @@
         "
         :to="'/chosen-movie/' + showing.title + '/booking/' + showing.id"
       >
-        Next
+        Confirm
       </button>
     </router-link>
   </div>
+  <SeatingList :counter="counter" @update-total="updateTickets" />
   <SeatingMapList v-bind:showing="showing" @changeTicket="changeTicket" />
 </template>
 
@@ -239,7 +226,7 @@ button:disabled {
   grid-column: 1;
   display: grid;
   grid-template-columns: minmax(100px, 1fr) 100px;
-  grid-template-rows: 20px minmax(30px, 1fr) 10px;
+  grid-template-rows: 20px minmax(30px, 1fr) 10px 30px;
   gap: 5px;
   border-radius: 5px;
   background-color: #131313;
@@ -247,13 +234,17 @@ button:disabled {
   margin-bottom: 10px;
 }
 .next-btn {
-  grid-column: 2;
+  grid-column: 1;
   grid-row: 4;
   height: 30px;
-  width: 50px;
+  width: 70px;
   padding-left: 5px;
   margin-left: 50px;
   cursor: pointer;
+  background-color: #6e1020;
+}
+.next-btn:disabled {
+  background-color: #131313;
 }
 .ticket-types {
   grid-column: 1;
