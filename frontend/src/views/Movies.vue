@@ -38,7 +38,7 @@ export default {
    methods: {
       addFilterItem(itemName) {
          console.log(itemName);
-         this.$store.state.filterItem = itemName;
+         this.$store.state.genreFilterItem = itemName;
       },
    },
 };
