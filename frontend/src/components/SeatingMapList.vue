@@ -30,13 +30,7 @@ export default {
   methods: {
     changeTicket(seatIndex) {
       this.clicked = !this.clicked;
-      if (this.clicked == true) {
-        console.log("I have clicked in map list at seat index", seatIndex);
-        this.$emit("changeTicket", seatIndex);
-      } else {
-        console.log("I dont want this seat anymore", seatIndex);
-        this.$emit("changeTicket", seatIndex);
-      }
+      this.$emit("changeTicket", seatIndex);
     },
   },
 };

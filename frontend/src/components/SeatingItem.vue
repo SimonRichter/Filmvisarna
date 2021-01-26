@@ -1,6 +1,8 @@
 <template>
   <div class="grid-container-item">
-    <h3 class="seat">Row: {{ getRow() }}, Seat: {{ seatIndexes[count] + 1 }}</h3>
+    <h3 class="seat">
+      Row: {{ getRow() }}, Seat: {{ seatIndexes[count] + 1 }}
+    </h3>
     <h3 class="price">Price: {{ ticketPrice }} kr</h3>
     <div class="box">
       <Dropdown
@@ -44,10 +46,7 @@ export default {
     updatePrice(title, price) {
       this.ticketPrice = price;
       this.placeHolder = title;
-      console.log("this.seatIndexes in ITEM", this.seatIndexes);
-      console.log("this.count in ITEM", this.count);
-      console.log("this.seats index", this.seatIndexes[this.count]);
-      this.$emit("update-total", title, price, this.count);
+      this.$emit("update-total", title, price, this.seatIndexes[this.count]);
     },
     getRow() {
       const x = this.seatIndexes[this.count];

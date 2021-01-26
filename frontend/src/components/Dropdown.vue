@@ -38,7 +38,6 @@ export default {
 <style scoped>
 h3 {
   padding-top: 3px;
-  /* color: black; */
   font-size: medium;
 }
 .sub-menu {
@@ -50,8 +49,6 @@ h3 {
   margin-top: 10px;
 }
 .menu-item {
-  /* font-size: 18px; */
-  /* font-family: "Bebas Neue", cursive; */
   padding: 2px;
   margin: 2px;
   text-align: left;

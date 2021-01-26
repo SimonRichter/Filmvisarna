@@ -16,19 +16,13 @@ import SeatingItem from "./SeatingItem.vue";
 export default {
   emits: ["update-total"],
   props: ["counter", "seatIndexes"],
-  data() {
-    return {
-      ticketTypes: [],
-    };
-  },
   components: {
     SeatingItem,
   },
   computed: {},
   methods: {
-    updateTotal(type, price, ticketNumber) {
-      console.log("this.seatIndexes in seatingList", this.seatIndexes);
-      this.$emit("update-total", type, price, ticketNumber, this.counter);
+    updateTotal(type, price, seatIndex) {
+      this.$emit("update-total", type, price, seatIndex);
     },
   },
 };

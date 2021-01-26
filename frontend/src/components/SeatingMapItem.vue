@@ -12,7 +12,6 @@
 
 <script>
 export default {
-  // emits: ["changeTicket"],
   props: ["showing", "seatIndex"],
   data() {
     return {
@@ -23,24 +22,6 @@ export default {
     availableSeat() {
       return this.showing.seats[this.seatIndex];
     },
-    // content() {
-    //   return this.clicked == true ? "Reserved" : "Available";
-    // },
-    // changeTicket() {
-    //   this.content = this.clicked == false ? "Available" : "Reserved";
-    //   if (this.clicked == true) {
-    //     console.log('I have clicked in map item');
-    //     this.$emit("changeTicket", this.seatIndex);
-    //   } else {
-    //     this.$emit("changeTicket", null);
-    //   }
-    // },
-  },
-  methods: {
-    // setContent() {
-    //   this.clicked = !this.clicked;
-    //   this.content = this.clicked == true ? "Reserved" : "Available";
-    // },
   },
 };
 </script>

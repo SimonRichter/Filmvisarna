@@ -11,8 +11,8 @@
     <div class="ticket-sum">
       <h3>Total sum: {{ totalSum }} kr</h3>
     </div>
-    <!-- Needs to to have correc route after confirmation page is done-->
-    <router-link :to="'/confirmation-page/' + showing.id">
+  </div>
+  <router-link :to="'/confirmation-page/' + showing.id">
     <button
       :disabled="!(counter === goToNextStep) || counter == 0"
       class="next-btn"
@@ -28,8 +28,11 @@
   <div class="if-disabled-btn" v-if="!(counter == goToNextStep)">
     <h3>Choose ticket types</h3>
   </div>
-  </div>
-  <SeatingList :counter="counter" v-bind:seatIndexes="seatIndexes" @update-total="updateTickets" />
+  <SeatingList
+    :counter="counter"
+    v-bind:seatIndexes="seatIndexes"
+    @update-total="updateTickets"
+  />
   <SeatingMapList v-bind:showing="showing" @changeTicket="changeTicket" />
 </template>
 
@@ -39,6 +42,22 @@ import SeatingMapList from "./SeatingMapList.vue";
 
 export default {
   props: ["showing"],
+  watch: {
+    showing: function (newVal, oldVal) {
+      if (this.seatIndexes.length <= 0) {
+        return;
+      }
+
+      for (let i = 0; i < this.seatIndexes.length; i++) {
+        const index = this.seatIndexes[i];
+        if (newVal.seats[index] == true) {
+          this.seatIndexes = [];
+          this.counter = 0;
+        }
+      }
+      console.log("what is showing here", newVal, oldVal);
+    },
+  },
   data() {
     return {
       counter: 0,
@@ -91,7 +110,11 @@ export default {
         }
       }
     },
+    updateSeats(showingSeats) {
+      console.log("showingSeats updated", showingSeats);
+    },
     changeTicket(seatIndex) {
+      console.log("SEAT INDEX", seatIndex);
       if (
         this.seatIndexes.length <= 0 ||
         this.seatIndexes.indexOf(seatIndex) < 0
@@ -104,29 +127,79 @@ export default {
           this.counter++;
         }
       } else {
-        let i = this.seatIndexes.indexOf(seatIndex);
+        const i = this.seatIndexes.indexOf(seatIndex);
         this.seatIndexes.splice(i, 1);
+        let index;
+        if (this.ticketTypes.length <= 0) {
+          index = -1;
+        } else {
+          this.ticketTypes.filter((ticket) => {
+            if (ticket.seatIndex == seatIndex) {
+              index = this.ticketTypes.indexOf(ticket);
+            } else {
+              index = -1;
+            }
+          });
+        }
+        if (index >= 0) {
+          this.ticketTypes.splice(index, 1);
+        }
+
         this.counter--;
+        this.updateSum();
       }
-      console.log('In ThreatreSeatMap: this.seatIndexes', this.seatIndexes);
+      console.log("In ThreatreSeatMap: this.seatIndexes", this.seatIndexes);
+      console.log("In ThreatreSeatMap: this.ticketTypes", this.ticketTypes);
     },
-    updateTickets(type, price, ticketNumber) {
-      this.ticketTypes[ticketNumber - 1] = { ticketType: type, price: price };
+    updateTickets(type, price, seatIndex) {
+      let index;
+      if (this.ticketTypes.length <= 0) {
+        index = -1;
+      } else {
+        this.ticketTypes.filter((ticket) => {
+          if (ticket.seatIndex == seatIndex) {
+            index = this.ticketTypes.indexOf(ticket);
+          } else {
+            index = -1;
+          }
+        });
+      }
+      if (index < 0) {
+        this.ticketTypes.push({
+          seatIndex: seatIndex,
+          ticketType: type,
+          price: price,
+        });
+      } else {
+        this.ticketTypes[index] = {
+          seatIndex: seatIndex,
+          ticketType: type,
+          price: price,
+        };
+      }
+      console.log("this ticket type after update tickets", this.ticketTypes);
       this.updateSum();
     },
     updateSum() {
+      console.log("UPDATE SUM CALLED");
       let localTotalSum = 0;
       this.typeAdult = 0;
       this.typeChild = 0;
       this.typeSenior = 0;
       this.goToNextStep = 0;
 
+      if (this.counter == 0) {
+        this.totalSum = 0;
+        return;
+      }
+
       for (let i = 0; i < this.counter; i++) {
-        if (!this.ticketTypes[i]) {
+        const ticket = this.ticketTypes[i];
+        if (ticket == undefined) {
           console.log("You havent filled in all ticket types");
         } else {
-          localTotalSum += +this.ticketTypes[i].price;
-          switch (this.ticketTypes[i].ticketType) {
+          localTotalSum += +ticket.price;
+          switch (ticket.type) {
             case "Adult":
               this.typeAdult++;
               break;
