@@ -4,7 +4,7 @@ import { createStore } from 'vuex'
 
 const state = {
   movies: [],
-  members: null,
+  member: null,
   bookings: [],
   showings: [],
   bookingInfo: [],
@@ -14,8 +14,8 @@ const mutations = {
   setMovies(state, moviesList) {
     state.movies = moviesList;
   },
-    setMembers(state, members) {
-    state.members = members;
+  setMember(state, member) {
+    state.member = member;
   },
   setBookings(state, bookingsList) {
     state.bookings = bookingsList;
@@ -85,39 +85,40 @@ const actions = {
     })
   },
   async login(store, credentials) {
-    let user = await fetch('/api/login', {
+    let member = await fetch('/api/login', {
         method: 'POST', 
         body: JSON.stringify(credentials)
     })
 
     try {
-        user = await members.json()
-        console.log(user);
-        store.commit('setMembers', user)
+      console.log('kör från store');
+        member = await member.json()
+        console.log(member);
+        store.commit('setMember', member)
     } catch {
         console.warn('Bad credentials');
     }
 },
 async register(store, credentials) {
-    let user = await fetch('/api/register', {
+    let member = await fetch('/api/register', {
         method: 'POST', 
         body: JSON.stringify(credentials)
     })
 
     try {
-        user = await members.json()
-        console.log(user);
-        store.commit('setMembers', user)
+        member = await member.json()
+        console.log(member);
+        store.commit('setMember', member)
     } catch {
         console.warn('Bad credentials');
     }
 },
 async whoAmI(store) {
-    let user = await fetch('/api/whoami')
+    let member = await fetch('/api/whoami')
     try {
-        user = await members.json()
-        console.log(user);
-        store.commit('setMembers', user)
+        member = await member.json()
+        console.log(member);
+        store.commit('setMember', member)
     } catch {
         console.warn('Not logged in');
     }

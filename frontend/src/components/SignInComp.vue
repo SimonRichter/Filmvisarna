@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form action="">
+    <form>
     <div class="signInInfo">
       <h1>{{ "Sign in" }}</h1>
 
@@ -25,8 +25,10 @@
       </button>
     </div>
     <div class="signInButtonDiv">
-      <button class="signInButton" @click="login">Sign in</button>
+      <button class="signInButton" @click.prevent="login()">Sign in</button>
     </div>
+    
+  
     <div class="signUpInfo">
       <div class="signUpPopUp">
         <h3>{{ "Are you not a member?" }}</h3>
@@ -77,12 +79,13 @@ export default {
       showPasswordModal: false,
     };
     return {
-      email: "",
-      password: "",
+      email: '',
+      password: '',
     };
   },
   methods: {
     login() {
+      console.log('kommer in')
       const credentials = {
         email: this.email,
         password: this.password,

@@ -8,7 +8,7 @@
         <h3></h3>
         <input class="email" type="email" v-model="email" placeholder="E-mail">
         <h3></h3>
-        <input type="tel" v-model="phone" placeholder="xxx-xxxxxxx">
+        <input type="tel" v-model="telephone" placeholder="xxx-xxxxxxx">
         <h3></h3>
         <input type="password" v-model="password" placeholder="Password">
         <h3></h3>
@@ -29,7 +29,7 @@ export default {
             name: '',
             lastName: '',
             email: '',
-            phone: '',
+            telephone: '',
             password: '',
             passConfirm: ''
         }
@@ -41,7 +41,7 @@ export default {
                 name: this.name,
                 lastName: this.lastName,
                 email: this.email,
-                phone: this.phone,
+                telephone: this.telephone,
                 password: this.password
             }
             console.log(credentials);
