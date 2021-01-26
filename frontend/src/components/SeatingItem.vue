@@ -1,6 +1,6 @@
 <template>
   <div class="grid-container-item">
-    <h3 class="seat">Ticket {{ count }}</h3>
+    <h3 class="seat">Row: {{ getRow() }}, Seat: {{ seatIndexes[count] }}</h3>
     <h3 class="price">Price: {{ ticketPrice }} kr</h3>
     <div class="box">
       <Dropdown
@@ -16,7 +16,7 @@
 import Dropdown from "./Dropdown.vue";
 export default {
   emits: ["update-total"],
-  props: ["count"],
+  props: ["count", "seatIndexes"],
   components: {
     Dropdown,
   },
@@ -44,7 +44,32 @@ export default {
     updatePrice(title, price) {
       this.ticketPrice = price;
       this.placeHolder = title;
+      console.log("this.seatIndexes in ITEM", this.seatIndexes);
+      console.log("this.count in ITEM", this.count);
+      console.log("this.seats index", this.seatIndexes[this.count]);
       this.$emit("update-total", title, price, this.count);
+    },
+    getRow() {
+      const x = this.seatIndexes[this.count];
+      return x < 10
+        ? 1
+        : x < 20
+        ? 2
+        : x < 30
+        ? 3
+        : x < 40
+        ? 4
+        : x < 50
+        ? 5
+        : x < 60
+        ? 6
+        : x < 70
+        ? 7
+        : x < 80
+        ? 8
+        : x < 90
+        ? 9
+        : 10;
     },
   },
 };

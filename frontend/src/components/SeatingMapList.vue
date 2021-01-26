@@ -38,11 +38,6 @@ export default {
         this.$emit("changeTicket", seatIndex);
       }
     },
-    // changeTicket(seatIndex) {
-    //   console.log("I am in change ticket - seat list");
-    //   console.log("seatIndex", seatIndex);
-    //   this.$emit("changeTicket", seatIndex);
-    // },
   },
 };
 </script>

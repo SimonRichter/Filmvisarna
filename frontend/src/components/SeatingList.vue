@@ -3,7 +3,8 @@
     <SeatingItem
       v-for="count in counter"
       :key="count"
-      :count="count"
+      :count="count - 1"
+      v-bind:seatIndexes="seatIndexes"
       @update-total="updateTotal"
     />
   </div>
@@ -14,7 +15,7 @@ import SeatingItem from "./SeatingItem.vue";
 
 export default {
   emits: ["update-total"],
-  props: ["counter"],
+  props: ["counter", "seatIndexes"],
   data() {
     return {
       ticketTypes: [],
@@ -26,6 +27,7 @@ export default {
   computed: {},
   methods: {
     updateTotal(type, price, ticketNumber) {
+      console.log("this.seatIndexes in seatingList", this.seatIndexes);
       this.$emit("update-total", type, price, ticketNumber, this.counter);
     },
   },

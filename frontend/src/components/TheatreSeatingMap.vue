@@ -12,24 +12,24 @@
       <h3>Total sum: {{ totalSum }} kr</h3>
     </div>
     <!-- Needs to to have correc route after confirmation page is done-->
-    <div class="if-disabled-btn" v-if="!(counter === goToNextStep)">
-      <h3>Choose ticket types</h3>
-    </div>
     <router-link :to="'/confirmation-page/' + showing.id">
-      <button
-        :disabled="!(counter === goToNextStep)"
-        class="next-btn"
-        @click="
-          sendDataToNextView, setSeats();
-          removeSeatsBackend();
-        "
-        :to="'/chosen-movie/' + showing.title + '/booking/' + showing.id"
-      >
-        Confirm
-      </button>
-    </router-link>
+    <button
+      :disabled="!(counter === goToNextStep) || counter == 0"
+      class="next-btn"
+      @click="
+        sendDataToNextView, setSeats();
+        removeSeatsBackend();
+      "
+      :to="'/chosen-movie/' + showing.title + '/booking/' + showing.id"
+    >
+      Confirm your tickets
+    </button>
+  </router-link>
+  <div class="if-disabled-btn" v-if="!(counter == goToNextStep)">
+    <h3>Choose ticket types</h3>
   </div>
-  <SeatingList :counter="counter" @update-total="updateTickets" />
+  </div>
+  <SeatingList :counter="counter" v-bind:seatIndexes="seatIndexes" @update-total="updateTickets" />
   <SeatingMapList v-bind:showing="showing" @changeTicket="changeTicket" />
 </template>
 
@@ -92,11 +92,6 @@ export default {
       }
     },
     changeTicket(seatIndex) {
-      console.log("I have arrived in theatre seating map");
-      console.log(
-        "this.seatIndexes.indexOf(seatIndex)",
-        this.seatIndexes.indexOf(seatIndex)
-      );
       if (
         this.seatIndexes.length <= 0 ||
         this.seatIndexes.indexOf(seatIndex) < 0
@@ -113,13 +108,7 @@ export default {
         this.seatIndexes.splice(i, 1);
         this.counter--;
       }
-      // if (seatIndex == null) {
-      //   console.log("Remove ticket");
-      //   this.decrement();
-      // } else {
-      //   console.log("I have added a ticket");
-      //   this.increment();
-      // }
+      console.log('In ThreatreSeatMap: this.seatIndexes', this.seatIndexes);
     },
     updateTickets(type, price, ticketNumber) {
       this.ticketTypes[ticketNumber - 1] = { ticketType: type, price: price };
@@ -180,28 +169,6 @@ export default {
   border-radius: 5px;
   border: #6e1020 1px solid;
 }
-.totalSeats {
-  grid-column: 1;
-  grid-row: 1;
-  text-align: left;
-  margin-left: 10px;
-  padding-top: 2px;
-  margin-bottom: 5px;
-}
-.counter {
-  grid-column: 3;
-  grid-row: 1;
-  text-align: center;
-  padding-top: 2px;
-}
-.add {
-  grid-column: 2;
-  grid-row: 1;
-}
-.remove {
-  grid-column: 4;
-  grid-row: 1;
-}
 button {
   text-align: center;
   border: #6e1020 1px solid;
@@ -209,24 +176,21 @@ button {
   border-radius: 5px;
   color: rgb(238, 220, 192);
 }
-button:active,
-button:disabled {
-  background-color: #222222;
-}
-button:disabled {
-  cursor: default;
+button:enabled {
+  background-color: #6e1020;
 }
 .grid-container-list {
   grid-column: 1;
   min-height: 80px;
   padding-top: 15px;
   padding-bottom: 5px;
+  margin-bottom: 60px;
 }
 .ticket-grid {
   grid-column: 1;
   display: grid;
-  grid-template-columns: minmax(100px, 1fr) 100px;
-  grid-template-rows: 20px minmax(30px, 1fr) 10px 30px;
+  grid-template-columns: minmax(50px, 1fr) 100px;
+  grid-template-rows: 20px minmax(40px, 1fr) 10px;
   gap: 5px;
   border-radius: 5px;
   background-color: #131313;
@@ -234,17 +198,12 @@ button:disabled {
   margin-bottom: 10px;
 }
 .next-btn {
-  grid-column: 1;
-  grid-row: 4;
+  /* grid-column: 1; */
   height: 30px;
-  width: 70px;
+  width: 150px;
   padding-left: 5px;
-  margin-left: 50px;
+  margin-top: 20px;
   cursor: pointer;
-  background-color: #6e1020;
-}
-.next-btn:disabled {
-  background-color: #131313;
 }
 .ticket-types {
   grid-column: 1;
@@ -254,7 +213,7 @@ button:disabled {
 }
 .ticket-sum {
   grid-column: 1;
-  grid-row: 4;
+  grid-row: 3;
   text-align: left;
   padding-top: 10px;
   display: flex;
@@ -263,39 +222,11 @@ button:disabled {
 }
 .if-disabled-btn,
 .if-disabled-btn h3 {
-  grid-column: 2;
-  grid-row: 2;
-  text-align: right;
+  text-align: left;
   font-size: 12px;
   color: #6e1020;
   margin-bottom: 2px;
-  margin-top: 5px;
-}
-.gg-math-plus,
-.gg-math-minus {
-  margin-left: 10px;
-  margin-top: -2px;
-  position: relative;
-  transform: scale(var(--ggs, 1));
-  width: 16px;
-  height: 2px;
-}
-.gg-math-plus,
-.gg-math-plus::after,
-.gg-math-minus,
-.gg-math-minus::after {
-  display: block;
-  box-sizing: border-box;
-  background: currentColor;
-  border-radius: 10px;
-}
-.gg-math-minus::after {
-  content: "";
-  position: absolute;
-  width: 2px;
-  height: 16px;
-  top: -7px;
-  left: 7px;
+  margin-top: -30px;
 }
 * {
   -webkit-touch-callout: none; /* iOS Safari */
