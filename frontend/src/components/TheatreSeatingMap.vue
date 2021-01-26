@@ -44,18 +44,23 @@ import SeatingMapList from "./SeatingMapList.vue";
 export default {
   props: ["showing"],
   watch: {
-    showing: function (newVal) {
-      if (this.seatIndexes.length <= 0) {
-        return;
-      }
-
-      for (let i = 0; i < this.seatIndexes.length; i++) {
-        const index = this.seatIndexes[i];
-        if (newVal.seats[index] == true) {
-          this.seatIndexes = [];
-          this.counter = 0;
+    showing: {
+      deep: true,
+      handler(newVal) {
+        if (this.seatIndexes.length <= 0) {
+          return;
         }
-      }
+
+        for (let i = 0; i < this.seatIndexes.length; i++) {
+          const index = this.seatIndexes[i];
+          if (newVal.seats[index] == true) {
+            this.seatIndexes = [];
+            this.ticketTypes = [];
+            this.counter = 0;
+            this.totalSum = 0;
+          }
+        }
+      },
     },
   },
   data() {
