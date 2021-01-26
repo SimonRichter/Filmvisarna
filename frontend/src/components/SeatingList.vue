@@ -5,6 +5,7 @@
       :key="count"
       :count="count - 1"
       v-bind:seatIndexes="seatIndexes"
+      v-bind:ticketTypes="ticketTypes"
       @update-total="updateTotal"
     />
   </div>
@@ -15,7 +16,7 @@ import SeatingItem from "./SeatingItem.vue";
 
 export default {
   emits: ["update-total"],
-  props: ["counter", "seatIndexes"],
+  props: ["counter", "seatIndexes", "ticketTypes"],
   components: {
     SeatingItem,
   },

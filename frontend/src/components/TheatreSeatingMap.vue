@@ -31,6 +31,7 @@
   <SeatingList
     :counter="counter"
     v-bind:seatIndexes="seatIndexes"
+    v-bind:ticketTypes="ticketTypes"
     @update-total="updateTickets"
   />
   <SeatingMapList v-bind:showing="showing" @changeTicket="changeTicket" />
@@ -43,7 +44,7 @@ import SeatingMapList from "./SeatingMapList.vue";
 export default {
   props: ["showing"],
   watch: {
-    showing: function (newVal, oldVal) {
+    showing: function (newVal) {
       if (this.seatIndexes.length <= 0) {
         return;
       }
@@ -55,7 +56,6 @@ export default {
           this.counter = 0;
         }
       }
-      console.log("what is showing here", newVal, oldVal);
     },
   },
   data() {
@@ -110,9 +110,6 @@ export default {
         }
       }
     },
-    updateSeats(showingSeats) {
-      console.log("showingSeats updated", showingSeats);
-    },
     changeTicket(seatIndex) {
       console.log("SEAT INDEX", seatIndex);
       if (
@@ -129,6 +126,7 @@ export default {
       } else {
         const i = this.seatIndexes.indexOf(seatIndex);
         this.seatIndexes.splice(i, 1);
+
         let index;
         if (this.ticketTypes.length <= 0) {
           index = -1;
@@ -136,20 +134,15 @@ export default {
           this.ticketTypes.filter((ticket) => {
             if (ticket.seatIndex == seatIndex) {
               index = this.ticketTypes.indexOf(ticket);
-            } else {
-              index = -1;
             }
           });
         }
         if (index >= 0) {
           this.ticketTypes.splice(index, 1);
         }
-
         this.counter--;
         this.updateSum();
       }
-      console.log("In ThreatreSeatMap: this.seatIndexes", this.seatIndexes);
-      console.log("In ThreatreSeatMap: this.ticketTypes", this.ticketTypes);
     },
     updateTickets(type, price, seatIndex) {
       let index;

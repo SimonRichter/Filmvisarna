@@ -43,7 +43,7 @@ h3 {
 .sub-menu {
   border: #6e1020 1px solid;
   position: absolute;
-  background-color: #202020;;
+  background-color: #202020;
   width: 131px;
   border-radius: 5px;
   margin-top: 10px;

@@ -18,7 +18,27 @@
 import Dropdown from "./Dropdown.vue";
 export default {
   emits: ["update-total"],
-  props: ["count", "seatIndexes"],
+  props: ["count", "seatIndexes", "ticketTypes"],
+  watch: {
+    ticketTypes: {
+      deep: true,
+      handler(newVal) {
+        let obj = newVal.filter(
+          (ticket) => ticket.seatIndex == this.seatIndexes[this.count]
+        )[0];
+        console.log("object", obj);
+        if (obj != undefined) {
+          console.log("obj.ticketType", obj.ticketType);
+          console.log("obj.price", obj.price);
+          this.placeHolder = obj.ticketType;
+          this.ticketPrice = obj.price;
+        } else {
+          this.placeHolder = "Choose ticket type";
+          this.ticketPrice = "-";
+        }
+      },
+    },
+  },
   components: {
     Dropdown,
   },
@@ -44,8 +64,11 @@ export default {
   },
   methods: {
     updatePrice(title, price) {
-      this.ticketPrice = price;
-      this.placeHolder = title;
+      // console.log("this seat index", this.seatIndexes[this.count]);
+      // console.log("this ticket price", price);
+      // console.log("this title", title);
+      // this.ticketPrice = price;
+      // this.placeHolder = title;
       this.$emit("update-total", title, price, this.seatIndexes[this.count]);
     },
     getRow() {
