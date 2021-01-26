@@ -30,7 +30,6 @@
 
 <script>
 export default {
- emits:["a","b"],
 
   data() {
     const date = new Date();
@@ -64,8 +63,8 @@ export default {
   methods: { 
     testDate(dateNum,monthNum){
       this.a=dateNum
-      this.b=this.months.indexOf(monthNum)
-      console.log(this.a,this.b) 
+      this.b=this.months.indexOf(monthNum)+1
+      this.$emit('datePicked',this.a,this.b)
     },
 
     newMethod(){

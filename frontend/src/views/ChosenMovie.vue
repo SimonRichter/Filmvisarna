@@ -32,14 +32,14 @@
          >
             Book
          </button>
-         <h3>
+         <h3 >
             {{ showing.date }} - {{ showing.time }} | {{ showing.theatre }} |
             {{ showing.salon }}
          </h3>
       </div>
 
    </div>
-   <Calendar />
+   <Calendar v-on:datePicked="what" />
 
 </template>
 
@@ -51,13 +51,20 @@ export default {
       Calendar
 
    },
+   methods:{
+      what(dayPicked,monthPicked){    
+         console.log("testt",dayPicked,monthPicked)    
+         return {dayPicked,monthPicked}
+      }
+
+   },
    computed: {
       today() {
          const x = new Date();
          const year = x.getFullYear();
-         const month = 1;
-         const day = this.a
-
+         const month = this.monthPicked|| 1;
+         const day = this.dayPicked || 29
+          console.log("inside",this.dayPicked,this.monthPicked)
          const date =
             year +
             "-" +
