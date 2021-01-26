@@ -38,7 +38,7 @@ export default {
   data() {
     return {
       showModal: false,
-      loggedIn: true,
+      loggedIn: false,
     };
   },
 };

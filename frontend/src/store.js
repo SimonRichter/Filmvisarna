@@ -4,7 +4,7 @@ import { createStore } from 'vuex'
 
 const state = {
   movies: [],
-  members: [],
+  members: null,
   bookings: [],
   showings: [],
   bookingInfo: [],
@@ -14,9 +14,9 @@ const mutations = {
   setMovies(state, moviesList) {
     state.movies = moviesList;
   },
-  // setMembers(store, membersList) {
-  //   store.members = membersList;
-  // },
+    setMembers(state, members) {
+    state.members = members;
+  },
   setBookings(state, bookingsList) {
     state.bookings = bookingsList;
   },
@@ -83,38 +83,46 @@ const actions = {
       method: 'PUT',
       body: JSON.stringify(showing)
     })
-  }
-  // ------------- SPRINT 2 ------------
-  // in-parameter is a user object user = {name: Anna, email: anna@gmail.com, password: Hej123}
-  // Backend: need to use collection('Klass').insert(Object) to add a new 
-  // addMemberToServer(store, newMember) {
-  //   // Fetch url of the json file. Method = POST because we want to add something new to the json file in the server
-  //   // Body = convert the object to a json object
-  //   let response = await fetch('/rest/member', {
-  //     method: 'POST',
-  //     body: JSON.stringify(newMember)
-  //   })
-  //   // After the new member has been saved to the json file, get it again and commit to the state array -> members
-  //   newMember = await response.json()
-  //   store.commit('addMemberToState', newMember)
-  // },
-  // removeMemberFromServer(store, memberToDelete) {
-  //   let response = await fetch('/rest/member', {
-  //     method: 'DELETE',
-  //     body: JSON.stringify(memberToDelete)
-  //   })
-  //   memberToDelete = await response.json()
-  //   store.commit('removeMemberFromState', memberToDelete)
-  // },
-  // // Updates the member if they have added or removed a booking in My Page or Confirmed window
-  // updateMemberInServer(store, updatedMember) {
-  //   let response = await fetch('/rest/member', {
-  //     method: 'PUT',
-  //     body: JSON.stringify(updatedMember)
-  //   })
-  //   member = await response.json()
-  //   store.commit('updateMemberInState', updatedMember)
-  // },
+  },
+  async login(store, credentials) {
+    let user = await fetch('/api/login', {
+        method: 'POST', 
+        body: JSON.stringify(credentials)
+    })
+
+    try {
+        user = await members.json()
+        console.log(user);
+        store.commit('setMembers', user)
+    } catch {
+        console.warn('Bad credentials');
+    }
+},
+async register(store, credentials) {
+    let user = await fetch('/api/register', {
+        method: 'POST', 
+        body: JSON.stringify(credentials)
+    })
+
+    try {
+        user = await members.json()
+        console.log(user);
+        store.commit('setMembers', user)
+    } catch {
+        console.warn('Bad credentials');
+    }
+},
+async whoAmI(store) {
+    let user = await fetch('/api/whoami')
+    try {
+        user = await members.json()
+        console.log(user);
+        store.commit('setMembers', user)
+    } catch {
+        console.warn('Not logged in');
+    }
+},
+ 
 }
 
 export default createStore({ state, mutations, actions })
