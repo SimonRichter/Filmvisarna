@@ -1,6 +1,6 @@
 <template>
   <div class="grid-container-item">
-    <h3 class="seat">Row: {{ getRow() }}, Seat: {{ seatIndexes[count] }}</h3>
+    <h3 class="seat">Row: {{ getRow() }}, Seat: {{ seatIndexes[count] + 1 }}</h3>
     <h3 class="price">Price: {{ ticketPrice }} kr</h3>
     <div class="box">
       <Dropdown
@@ -76,9 +76,6 @@ export default {
 </script>
 
 <style scoped>
-/* h3 {
-  color: black;
-} */
 .grid-container-item {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
