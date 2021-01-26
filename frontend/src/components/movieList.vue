@@ -25,7 +25,7 @@ export default {
       },
       filteredMovies() {
          console.log("Running filteredMovies()");
-         let item = this.$store.state.filterItem;
+         let item = this.$store.state.genreFilterItem;
          if (
             item === null ||
             item === "Show All" ||
@@ -39,7 +39,6 @@ export default {
          }
       },
    },
-   methods: {},
 };
 </script>
 

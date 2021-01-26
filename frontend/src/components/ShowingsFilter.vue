@@ -56,9 +56,9 @@ export default {
 <style scoped>
 .custom-select {
    position: absolute;
-   top: 27vh;
-   left: 80vw;
-   width: 10vw;
+   top: 74vh;
+   left: 73vw;
+   width: 11vw;
    text-align: left;
    outline: none;
    height: 36px;
