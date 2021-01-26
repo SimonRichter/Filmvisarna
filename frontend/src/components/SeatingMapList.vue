@@ -6,6 +6,7 @@
         v-for="(seat, i) in showing.totalSeats"
         :key="seat"
         :seatIndex="i"
+        :counter="counter"
         v-bind:showing="showing"
         @click="changeTicket(i)"
       />
@@ -18,7 +19,7 @@ import SeatingMapItem from "./SeatingMapItem.vue";
 
 export default {
   emits: ["changeTicket"],
-  props: ["showing"],
+  props: ["showing", "counter"],
   data() {
     return {
       clicked: false,
@@ -29,8 +30,10 @@ export default {
   },
   methods: {
     changeTicket(seatIndex) {
-      this.clicked = !this.clicked;
-      this.$emit("changeTicket", seatIndex);
+      if (this.counter < 8) {
+        this.clicked = !this.clicked;
+        this.$emit("changeTicket", seatIndex);
+      }
     },
   },
 };

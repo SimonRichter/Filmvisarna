@@ -34,7 +34,7 @@
     v-bind:ticketTypes="ticketTypes"
     @update-total="updateTickets"
   />
-  <SeatingMapList v-bind:showing="showing" @changeTicket="changeTicket" />
+  <SeatingMapList v-bind:showing="showing" :counter="counter" @changeTicket="changeTicket" />
 </template>
 
 <script>
@@ -197,7 +197,7 @@ export default {
           console.log("You havent filled in all ticket types");
         } else {
           localTotalSum += +ticket.price;
-          switch (ticket.type) {
+          switch (ticket.ticketType) {
             case "Adult":
               this.typeAdult++;
               break;

@@ -1,9 +1,9 @@
 <template>
   <div>
     <div
-      @click="clicked = !clicked"
+      @click="checkTotalSeats()"
       class="chair available"
-      v-bind:class="[clicked == true ? ' reserved' : '']"
+      v-bind:class="[clicked == true ? ' reserved' : counter >= 8 ? ' max' : '']"
       v-if="availableSeat == null || availableSeat == false"
     ></div>
     <div class="chair taken" v-else></div>
@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  props: ["showing", "seatIndex"],
+  props: ["showing", "seatIndex", "counter"],
   data() {
     return {
       clicked: false,
@@ -23,6 +23,13 @@ export default {
       return this.showing.seats[this.seatIndex];
     },
   },
+  methods:{
+    checkTotalSeats(){
+      if(this.counter < 8){
+        this.clicked = !this.clicked;
+      }
+    }
+  }
 };
 </script>
 
@@ -50,5 +57,12 @@ export default {
 }
 .reserved {
   background-color: rgb(238, 220, 192);
+}
+.max {
+  background-color: rgb(212, 154, 61);
+  cursor: default;
+}
+.max:hover {
+  background-color: rgb(212, 154, 61);
 }
 </style>
