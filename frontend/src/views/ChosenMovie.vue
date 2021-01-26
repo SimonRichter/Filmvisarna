@@ -20,34 +20,19 @@
       <p class="plotText">{{ movie.plot.substring(0, 1000).trimRight() }}...</p>
    </div>
 
-   <div class="showingList" v-for="showing of showings" :key="showing.id">
-      <div class="anotherFormattingDiv">
-         <button
-            class="bookButton"
-            @click="
-               $router.push(
-                  '/chosen-movie/' + showing.title + '/booking/' + showing.id
-               )
-            "
-         >
-            Book
-         </button>
-         <h3 >
-            {{ showing.date }} - {{ showing.time }} | {{ showing.theatre }} |
-            {{ showing.salon }}
-         </h3>
-      </div>
-
-   </div>
+   <AvailableShowing />
    <Calendar v-on:datePicked="what" />
 
 </template>
 
 <script>
+import AvailableShowing from "../components/AvailableShowing.vue"
 import Calendar from"../components/Calendar.vue"
 
 export default {
-   components:{
+  // props:{dp:"dayPicked",mp:"monthPicked"},
+
+   components:{AvailableShowing,
       Calendar
 
    },
@@ -59,62 +44,7 @@ export default {
 
    },
    computed: {
-      today() {
-         const x = new Date();
-         const year = x.getFullYear();
-         const month = this.monthPicked|| 1;
-         const day = this.dayPicked || 29
-          console.log("inside",this.dayPicked,this.monthPicked)
-         const date =
-            year +
-            "-" +
-            (month < 10 ? "0" : "") +
-            month +
-            "-" +
-            (day < 10 ? "0" : "") +
-            day;
-         return date;
-      },
-
-     /* tomorrow() {
-         const today = new Date();
-         const x = new Date(today);
-         x.setDate(x.getDate() + 1);
-         const year = x.getFullYear();
-         const month = x.getMonth() + 1;
-         const day = x.getDate();
-
-         const tomorrow =
-            year +
-            "-" +
-            (month < 10 ? "0" : "") +
-            month +
-            "-" +
-            (day < 10 ? "0" : "") +
-            day;
-
-         return tomorrow;
-      },*/
-
-     /*/ dayAfterTomorrow() {
-         const today = new Date();
-         const x = new Date(today);
-         x.setDate(x.getDate() + 2);
-         const year = x.getFullYear();
-         const month = x.getMonth() + 1;
-         const day = x.getDate();
-
-         const dayAfterTomorrow =
-            year +
-            "-" +
-            (month < 10 ? "0" : "") +
-            month +
-            "-" +
-            (day < 10 ? "0" : "") +
-            day;
-
-         return dayAfterTomorrow;
-      },/*/
+    
 
       title() {
          // get showing id from url parameter
@@ -131,16 +61,7 @@ export default {
             (obj) => obj.title == this.title
          )[0];
       },
-      showings() {
-         return this.$store.state.showings
-            .filter((obj) => obj.title == this.title)
-            .filter(
-               (obj) =>
-                  obj.date == this.today
-                 // obj.date == this.tomorrow ||
-                  //obj.date == this.dayAfterTomorrow
-            );
-      },
+      
       allMovies() {
          return this.$store.state.movies;
       },
@@ -154,27 +75,7 @@ iframe {
    margin-top: 86px;
    margin-bottom: 20px;
 }
-button {
-   text-align: center;
-   border: #6e1020 1px solid;
-   background-color: #131313;
-   border-radius: 5px;
-   color: rgb(238, 220, 192);
-   font-family: "Bebas Neue", cursive;
-   width: 60px;
-   padding-left: 9px;
-   padding-top: 2px;
-   margin-top: 7px;
-   margin-bottom: 7px;
-   font-size: 20px;
-}
-button:active,
-button:disabled {
-   background-color: rgb(46, 46, 46);
-}
-button:disabled {
-   cursor: default;
-}
+
 h1 {
    margin-top: 5px;
    margin-bottom: 10px;
@@ -202,17 +103,6 @@ h3 {
    display: flex;
    align-items: center;
    justify-content: center;
-}
-.showingList {
-   grid-column-start: 1;
-   grid-column-end: 3;
-   border-top: 1px solid #6e1020;
-   padding: 5px 0px 5px 0px;
-   margin: 0px 15vw 0px 15vw;
-}
-.bookButton {
-   margin-right: 20px;
-   cursor: pointer;
 }
 .anotherFormattingDiv {
    display: flex;

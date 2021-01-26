@@ -52,7 +52,7 @@ export default {
 }
 </script>
 
-<style >
+<style scoped>
 .signInInfo{
     margin-top: 50px;
     text-align: center;
