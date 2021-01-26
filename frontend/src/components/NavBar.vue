@@ -37,16 +37,16 @@
 import NavLogIn from "../components/NavLogIn.vue";
 import SignInComp from "../components/SignInComp.vue";
 export default {
-   components: {
-      NavLogIn,
-      SignInComp,
-   },
-   data() {
-      return {
-         showModal: false,
-         loggedIn: false,
-      };
-   },
+  components: {
+    NavLogIn,
+    SignInComp,
+  },
+  data() {
+    return {
+      showModal: false,
+      loggedIn: true,
+    };
+  },
 };
 </script>
 

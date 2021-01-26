@@ -34,7 +34,7 @@ const routes = [
   },
   {
     name: 'MyPage',
-    path: '/my-page/',
+    path: '/my-page',
     component: MyPage
   },
   {
