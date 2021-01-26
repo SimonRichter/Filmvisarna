@@ -55,8 +55,8 @@ export default {
       today() {
          const x = new Date();
          const year = x.getFullYear();
-         const month = x.getMonth() + 1;
-         const day = x.getDate();
+         const month = 1;
+         const day = this.a
 
          const date =
             year +
@@ -69,7 +69,7 @@ export default {
          return date;
       },
 
-      tomorrow() {
+     /* tomorrow() {
          const today = new Date();
          const x = new Date(today);
          x.setDate(x.getDate() + 1);
@@ -87,9 +87,9 @@ export default {
             day;
 
          return tomorrow;
-      },
+      },*/
 
-      dayAfterTomorrow() {
+     /*/ dayAfterTomorrow() {
          const today = new Date();
          const x = new Date(today);
          x.setDate(x.getDate() + 2);
@@ -107,7 +107,7 @@ export default {
             day;
 
          return dayAfterTomorrow;
-      },
+      },/*/
 
       title() {
          // get showing id from url parameter
@@ -129,9 +129,9 @@ export default {
             .filter((obj) => obj.title == this.title)
             .filter(
                (obj) =>
-                  obj.date == this.today ||
-                  obj.date == this.tomorrow ||
-                  obj.date == this.dayAfterTomorrow
+                  obj.date == this.today
+                 // obj.date == this.tomorrow ||
+                  //obj.date == this.dayAfterTomorrow
             );
       },
       allMovies() {
