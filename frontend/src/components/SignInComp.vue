@@ -1,111 +1,172 @@
 <template>
   <div>
+    <form>
     <div class="signInInfo">
-        
-        <h1>{{ 'Sign in' }} </h1>
-        
-        <input class="emailInputSignIn" type="email" name="" id="" placeholder="E-mail">
-        <h3></h3>
-        <input class="passwordInputSignIn" type="password" name="" id="" placeholder="Password">
-  </div>
-  <div class="forgotPassButtonDiv">
-        <button class="forgotPasswordButton" @click= "showPasswordModal = true">Forgot Password?</button>
-  </div>
-    <div class="signUpInfo">
-       <h3>{{ 'Are you not a member?' }}</h3>
+      <h1>{{ "Sign in" }}</h1>
 
-       <div class="signUpPopUp">
-      <Button class="signUpButton" @click= "showModal = true">Sign Up</Button>
-  </div>
+      <input
+        class="emailInputSignIn"
+        type="text"
+        v-model="email"
+        placeholder="E-mail"
+      />
+      <h3></h3>
+      <input
+        class="passwordInputSignIn"
+        type="password"
+        v-model="password"
+        placeholder="Password"
+      />
+    </div>
+    </form>
+    <div class="forgotPassButtonDiv">
+      <button class="forgotPasswordButton" @click="showPasswordModal = true">
+        Forgot Password?
+      </button>
+    </div>
+    <div class="signInButtonDiv">
+      <button class="signInButton" @click.prevent="login()">Sign in</button>
+    </div>
+    
+  
+    <div class="signUpInfo">
+      <div class="signUpPopUp">
+        <h3>{{ "Are you not a member?" }}</h3>
+        <Button class="signUpButton" @click="showModal = true">Sign Up</Button>
+      </div>
+
       <transition name="fade" appear>
-        <div class="modal-overlay" v-if= "showModal" @click= "showModal = false"></div>
+        <div
+          class="modal-overlay"
+          v-if="showModal"
+          @click="showModal = false"
+        ></div>
       </transition>
       <transition name="slide" appear>
-        <div class="modal" v-if= "showModal">
+        <div class="modal" v-if="showModal">
           <SignUpComp class="signUpComp" />
-          <button class= "closeModalButton" @click= "showModal = false">X</button>
+          <button class="closeModalButton" @click="showModal = false">X</button>
         </div>
-        </transition>
-      </div>
-        <div class="modal-overlayPassword" v-if= "showPasswordModal" @click= "showPasswordModal = false"></div>
-        <div class="modalPassword" v-if= "showPasswordModal">
-          <ForgotPassword class="ForgotPassword" />
-          <button class= "closePasswordModalButton" @click= "showPasswordModal = false">X</button>
-        </div>
-       
+      </transition>
     </div>
+    <div
+      class="modal-overlayPassword"
+      v-if="showPasswordModal"
+      @click="showPasswordModal = false"
+    ></div>
+    <div class="modalPassword" v-if="showPasswordModal">
+      <ForgotPassword class="ForgotPassword" />
+      <button
+        class="closePasswordModalButton"
+        @click="showPasswordModal = false"
+      >
+        X
+      </button>
+    </div>
+  </div>
 </template>
 
 <script>
 import SignUpComp from "../components/SignUpComp.vue";
-import ForgotPassword from './ForgotPassword.vue';
+import ForgotPassword from "./ForgotPassword.vue";
 export default {
-    components: { SignUpComp, ForgotPassword },
- data (){
-    return{
-      showModal: false
-    }
-    return{
-      showPasswordModal: false
-    }
-  }
-}
+  components: { SignUpComp, ForgotPassword },
+  data() {
+    return {
+      showModal: false,
+    };
+    return {
+      showPasswordModal: false,
+    };
+    return {
+      email: '',
+      password: '',
+    };
+  },
+  methods: {
+    login() {
+      console.log('kommer in')
+      const credentials = {
+        email: this.email,
+        password: this.password,
+      };
+      this.$store.dispatch("login", credentials);
+    },
+  },
+};
 </script>
 
-<style >
-.signInInfo{
-    margin-top: 50px;
-    text-align: center;
-    color: aliceblue;
+<style scoped>
+.signInInfo {
+  margin-top: 50px;
+  text-align: center;
+  color: aliceblue;
 }
-h1{
-    font-size: 50px;
-    margin-bottom: 25px;
+h1 {
+  font-size: 50px;
+  margin-bottom: 25px;
 }
-h2{
-    font-size: 25px;
-    margin-bottom: 5px;
-    margin-top: 10px;
+h2 {
+  font-size: 25px;
+  margin-bottom: 5px;
+  margin-top: 10px;
 }
-h3{
-    margin-top: 18px;
+h3 {
+  margin-top: 18px;
 }
-.forgotPassButtonDiv{
-    text-align: center;
-    margin-top: 10px;
+.signInButtonDiv {
+  text-align: center;
 }
-.forgotPasswordButton{
-    appearance: none;
-    outline: none;
-    border: none;
-    background: none;
-    cursor: pointer;
-    font-size: 15px;
-    color: rgb(238, 220, 192);
-    font-family: "Bebas Neue", cursive;
+.signInButton {
+  margin-top: 10px;
+  font-size: 30px;
+  border: #6e1020 1px solid;
+  background-color: #131313;
+  border-radius: 5px;
+  color: rgb(238, 220, 192);
+  font-family: "Bebas Neue", cursive;
+  cursor: pointer;
 }
-.signUpInfo{
-    text-align: center;
+.forgotPassButtonDiv {
+  text-align: center;
+  margin-top: 10px;
 }
-.signUpButton{
-    margin-top: 10px;
-    font-size: 22px;
-    border: #6e1020 1px solid;
-    background-color: #131313;
-    border-radius: 5px;
-    color: rgb(238, 220, 192);
-    font-family: "Bebas Neue", cursive;
-    cursor: pointer;
+.forgotPasswordButton {
+  appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 15px;
+  color: rgb(238, 220, 192);
+  font-family: "Bebas Neue", cursive;
 }
-.passwordInputSignIn{
-    font-size: 20px;
-    padding-top: 5px;
+.signUpInfo {
+  text-align: center;
 }
-.emailInputSignIn{
-    font-size: 20px;
-    padding-top: 5px;
+.signUpButton {
+  margin-top: 10px;
+  font-size: 22px;
+  border: #6e1020 1px solid;
+  background-color: #131313;
+  border-radius: 5px;
+  color: rgb(238, 220, 192);
+  font-family: "Bebas Neue", cursive;
+  cursor: pointer;
 }
-.modal-overlay{
+.signUpPopUp {
+  float: left;
+  margin-bottom: 100px;
+}
+.passwordInputSignIn {
+  font-size: 20px;
+  padding-top: 5px;
+}
+.emailInputSignIn {
+  font-size: 20px;
+  padding-top: 5px;
+}
+.modal-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -136,7 +197,7 @@ h3{
 }
 */
 
-.modal{
+.modal {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -149,7 +210,7 @@ h3{
   border-radius: 16px;
   padding: 25px;
 }
-.closeModalButton{
+.closeModalButton {
   font-size: 35px;
   border: #6e1020 1px solid;
   background-color: #131313;
@@ -157,13 +218,13 @@ h3{
   color: rgb(238, 220, 192);
   font-family: "Bebas Neue", cursive;
   width: 60px;
-  position:absolute;
-  top:0;
-  right:0;
+  position: absolute;
+  top: 0;
+  right: 0;
   cursor: pointer;
-  }
+}
 
-  .modal-overlayPassword{
+.modal-overlayPassword {
   position: absolute;
   top: 0;
   left: 0;
@@ -173,7 +234,7 @@ h3{
   background-color: rbga(0, 0, 0, 0.5);
 }
 
-.modalPassword{
+.modalPassword {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -186,7 +247,7 @@ h3{
   border-radius: 16px;
   padding: 25px;
 }
-.closePasswordModalButton{
+.closePasswordModalButton {
   font-size: 35px;
   border: #6e1020 1px solid;
   background-color: #131313;
@@ -194,9 +255,9 @@ h3{
   color: rgb(238, 220, 192);
   font-family: "Bebas Neue", cursive;
   width: 60px;
-  position:absolute;
-  top:0;
-  right:0;
+  position: absolute;
+  top: 0;
+  right: 0;
   cursor: pointer;
-  }
+}
 </style>
