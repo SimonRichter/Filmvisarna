@@ -117,7 +117,6 @@ export default {
       }
     },
     changeTicket(seatIndex) {
-      console.log("SEAT INDEX", seatIndex);
       if (this.seatIndexes.length <= 0 || this.seatIndexes.indexOf(seatIndex) < 0) {
         if (this.counter < 8 && (this.showing.seats[seatIndex] == undefined || this.showing.seats[seatIndex] == false)) {
           this.seatIndexes.push(seatIndex);
@@ -170,11 +169,9 @@ export default {
           price: price,
         };
       }
-      console.log("this ticket type after update tickets", this.ticketTypes);
       this.updateSum();
     },
     updateSum() {
-      console.log("UPDATE SUM CALLED");
       let localTotalSum = 0;
       this.typeAdult = 0;
       this.typeChild = 0;
