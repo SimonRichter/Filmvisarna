@@ -253,7 +253,7 @@ button:enabled {
   min-height: 80px;
   padding-bottom: 5px;
   margin-bottom: 100px;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 .ticket-grid {
   grid-column: 1;
