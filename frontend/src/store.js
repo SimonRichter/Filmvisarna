@@ -4,7 +4,7 @@ import { createStore } from 'vuex'
 
 const state = {
   movies: [],
-  member: [],
+  member: null,
   bookings: [],
   showings: [],
   bookingInfo: [],
@@ -18,6 +18,7 @@ const mutations = {
   },
   setMember(state, member) {
     state.member = member;
+    console.log(state.member)
   },
   setBookings(state, bookingsList) {
     state.bookings = bookingsList;
@@ -100,6 +101,8 @@ const actions = {
 
     try {
       console.log('kör från store');
+      console.log('login state.member', state.member)
+      //member = state.members
       member = await member.json()
       console.log(member);
       store.commit('setMember', member)
