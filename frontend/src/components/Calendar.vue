@@ -21,8 +21,8 @@
       <div class="days">
         <div v-for="index in firstDayNum-1" :key="index" class="prev-date">{{ prevDays -( firstDayNum -index)+1 }}</div>
         <div v-for="index in lastDay" :key="index">
-          <div  @click="testDate(index,testmonth)" v-bind:class="{ today: new Date().getDate()==index && new Date().getMonth()==date.getMonth() }">{{index}}</div> </div>
-        <div v-for="index in nextMonthDays" :key="index" class="prev-date">{{index}}</div>
+          <div @click="testDate(index,testmonth)" v-bind:class="{ today: new Date().getDate()==index && new Date().getMonth()==date.getMonth() }">{{index}}</div> </div>
+        <!--<div v-for="index in nextMonthDays" :key="index" class="prev-date">{{index}}</div>-->
       </div>
     </div>
   </div>
@@ -32,6 +32,7 @@
 export default {
 
   data() {
+
     const date = new Date();
     const months = [
       "Jan",
@@ -57,7 +58,7 @@ export default {
     const lastDayNum= new Date(date.getFullYear(),date.getMonth()+1,0).getDay();
     const nextMonthDays=7-lastDayNum
     let a,b;
-    return { testmonth, testtoday,lastDay ,firstDayNum,prevDays,nextMonthDays,thisMonth,months,a,b,date};
+    return { testmonth, testtoday,lastDay ,firstDayNum,prevDays,nextMonthDays,thisMonth,months,a,b,date,};
   },
 
   methods: { 
@@ -125,15 +126,19 @@ export default {
 }
 
 .calendar {
+ 
   width: 300px;
-  height: 300px;
+  height: 60px;
   background-color: #222227;
   box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
     border-radius: 30px;
+    transition: height 1s;
 
 
 }
-
+.calendar:hover{
+  height: 300px;
+}
 .month {
   width: 100%;
   height: 60px;

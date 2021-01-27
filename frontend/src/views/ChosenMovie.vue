@@ -21,28 +21,20 @@
    </div>
 
    <AvailableShowing />
-   <Calendar v-on:datePicked="what" />
 
 </template>
 
 <script>
 import AvailableShowing from "../components/AvailableShowing.vue"
-import Calendar from"../components/Calendar.vue"
 
 export default {
   // props:{dp:"dayPicked",mp:"monthPicked"},
 
-   components:{AvailableShowing,
-      Calendar
+   components:{
+      AvailableShowing
 
    },
-   methods:{
-      what(dayPicked,monthPicked){    
-         console.log("testt",dayPicked,monthPicked)    
-         return {dayPicked,monthPicked}
-      }
-
-   },
+ 
    computed: {
     
 
@@ -104,10 +96,7 @@ h3 {
    align-items: center;
    justify-content: center;
 }
-.anotherFormattingDiv {
-   display: flex;
-   align-items: center;
-}
+
 .setWidth {
    width: 69vw;
    margin: 0 auto;
