@@ -1,23 +1,23 @@
 <template>
   <div>
     <form>
-    <div class="signInInfo">
-      <h1>{{ "Sign in" }}</h1>
+      <div class="signInInfo">
+        <h1>{{ "Sign in" }}</h1>
 
-      <input
-        class="emailInputSignIn"
-        type="text"
-        v-model="email"
-        placeholder="E-mail"
-      />
-      <h3></h3>
-      <input
-        class="passwordInputSignIn"
-        type="password"
-        v-model="password"
-        placeholder="Password"
-      />
-    </div>
+        <input
+          class="emailInputSignIn"
+          type="text"
+          v-model="email"
+          placeholder="E-mail"
+        />
+        <h3></h3>
+        <input
+          class="passwordInputSignIn"
+          type="password"
+          v-model="password"
+          placeholder="Password"
+        />
+      </div>
     </form>
     <div class="forgotPassButtonDiv">
       <button class="forgotPasswordButton" @click="showPasswordModal = true">
@@ -27,8 +27,7 @@
     <div class="signInButtonDiv">
       <button class="signInButton" @click.prevent="login()">Sign in</button>
     </div>
-    
-  
+
     <div class="signUpInfo">
       <div class="signUpPopUp">
         <h3>{{ "Are you not a member?" }}</h3>
@@ -79,17 +78,18 @@ export default {
       showPasswordModal: false,
     };
     return {
-      email: '',
-      password: '',
+      email: "",
+      password: "",
     };
   },
   methods: {
     login() {
-      console.log('kommer in')
+      console.log("kommer in");
       const credentials = {
         email: this.email,
         password: this.password,
       };
+
       this.$store.dispatch("login", credentials);
     },
   },

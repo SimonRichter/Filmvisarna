@@ -4,7 +4,7 @@ import { createStore } from 'vuex'
 
 const state = {
   movies: [],
-  member: null,
+  member: [],
   bookings: [],
   showings: [],
   bookingInfo: [],
@@ -94,44 +94,44 @@ const actions = {
   },
   async login(store, credentials) {
     let member = await fetch('/api/login', {
-        method: 'POST', 
-        body: JSON.stringify(credentials)
+      method: 'POST',
+      body: JSON.stringify(credentials)
     })
 
     try {
       console.log('kör från store');
-        member = await member.json()
-        console.log(member);
-        store.commit('setMember', member)
+      member = await member.json()
+      console.log(member);
+      store.commit('setMember', member)
     } catch {
-        console.warn('Bad credentials');
+      console.warn('Bad credentials');
     }
-},
-async register(store, credentials) {
+  },
+  async register(store, credentials) {
     let member = await fetch('/api/register', {
-        method: 'POST', 
-        body: JSON.stringify(credentials)
+      method: 'POST',
+      body: JSON.stringify(credentials)
     })
 
     try {
-        member = await member.json()
-        console.log(member);
-        store.commit('setMember', member)
+      member = credentials;
+      console.log(member);
+      store.commit('setMember', member)
     } catch {
-        console.warn('Bad credentials');
+      console.warn('Bad credentials');
     }
-},
-async whoAmI(store) {
+  },
+  async whoAmI(store) {
     let member = await fetch('/api/whoami')
     try {
-        member = await member.json()
-        console.log(member);
-        store.commit('setMember', member)
+      member = await member.json()
+      console.log(member);
+      store.commit('setMember', member)
     } catch {
-        console.warn('Not logged in');
+      console.warn('Not logged in');
     }
-},
- 
+  },
+
 }
 
 export default createStore({ state, mutations, actions })
