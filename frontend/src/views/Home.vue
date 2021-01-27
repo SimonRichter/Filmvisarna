@@ -1,11 +1,15 @@
 <template>
-  <div class="contentGridContainer" id="test">
-    <!-- Put all content here in grid container -->
-    <CarouselList class="carousel" />
-    <h2 class="inCinemas">Now in vue <span class="x"> X </span> cinemas</h2>
+   <div class="contentGridContainer" id="animation">
+      <CarouselList class="carousel" />
+      <h2 class="inCinemas">Now in vue <span class="x"> X </span> cinemas</h2>
 
-    <ShowingList class="showingList" />
-  </div>
+      <ShowingList class="showingList" />
+      <div class="centerMe">
+      <router-link to="/movies">
+         <button>See all movies</button>
+      </router-link>
+   </div>
+   </div>
 </template>
 
 <script>
@@ -13,85 +17,94 @@ import ShowingList from "../components/ShowingList.vue";
 import CarouselList from "../components/CarouselList.vue";
 
 export default {
-  components: {
-    ShowingList,
-    CarouselList,
-  },
-  // data() {
-  //   return {};
-  // },
-  // computed: {
-  //   movies() {
-  //     return this.$store.state.movies;
-  //   },
-  // },
+   components: {
+      ShowingList,
+      CarouselList,
+   },
+ 
 };
 </script>
 
 <style scoped>
-.contentGridContainer {
-  padding-top: 15vh;
+button {
+   border: #6e1020 1px solid;
+   background-color: #131313;
+   border-radius: 5px;
+   color: rgb(238, 220, 192);
+   height: 36px;
+   width: 150px;
+   cursor: pointer;
+   margin-bottom: 2vh;
+   font-size: 18px;
+}
+button:active,
+button:disabled {
+   background-color: #222222;
 }
 .carousel {
-  grid-area: 1/1/2/3;
-  /* height: 80vh; */
-  /* background-color: white; */
-  /* TEST 1 */
-  background-color: #131313;
-  /* TEST 2 */
-  /* TEST 3 */
-  margin: 2vw 0 2vw;
-  color: darkgreen;
+   grid-area: 1/1/2/3;
+  
+   background-color: #131313;
+  
+   margin: 2vw 0 2vw;
+   color: darkgreen;
 }
 .inCinemas {
-  grid-area: 2/1/3/3;
-  /* color: white;
-  border-bottom: 1px #dc0428 solid; */
-  /* TEST 1 */
-  /* color: #c09b55; */
-  border-bottom: #6e1020 1px solid;
-  /* TEST 2 */
-  /* TEST 3 */
+   grid-area: 2/1/3/3;
+   
+   border-bottom: #6e1020 1px solid;
+ 
 }
 .showingList {
-  grid-area: 3/1/4/3;
-  height: auto;
-  margin: 1vw 0 5vw;
-  display: flex;
-  font-weight: 800;
+   grid-area: 3/1/4/3;
+   height: auto;
+   margin: 1vw 0 1vw;
+   display: flex;
+   font-weight: 800;
 }
 .x {
-  font-family: "Bebas Neue", cursive;
-  font-size: 30px;
-  color: #6e1020 
+   font-family: "Bebas Neue", cursive;
+   font-size: 30px;
+   color: #6e1020;
 }
-#test  {
-    animation: fadein 2s;
-    -moz-animation: fadein 2s; /* Firefox */
-    -webkit-animation: fadein 2s; /* Safari and Chrome */
+.centerMe {
+   padding-top: 2vw;
+   grid-column-start: 1;
+   grid-column-end: 3;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+#animation {
+   animation: fadein 2s;
+   -moz-animation: fadein 2s; /* Firefox */
+   -webkit-animation: fadein 2s; /* Safari and Chrome */
 }
 @keyframes fadein {
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
 }
-@-moz-keyframes fadein { /* Firefox */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
+@-moz-keyframes fadein {
+   /* Firefox */
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
 }
-@-webkit-keyframes fadein { /* Safari and Chrome */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
+@-webkit-keyframes fadein {
+   /* Safari and Chrome */
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
 }
 </style>

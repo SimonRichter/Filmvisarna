@@ -8,6 +8,8 @@ const state = {
   bookings: [],
   showings: [],
   bookingInfo: [],
+  genreFilterItem: [],
+  showingsFilterItem: [],
 }
 
 const mutations = {

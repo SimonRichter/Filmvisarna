@@ -7,7 +7,7 @@
             <h3>{{ movieGenres }}</h3>
             <h3><span></span> | {{ movieLength }}</h3>
             <h3><span></span> | {{ ageClassification }}</h3>
-            <h4>{{ moviePlot.substring(0, 200).trimRight() }}...</h4>
+            <p>{{ moviePlot.substring(0, 200).trimRight() }}...</p>
          </div>
       </div>
    </router-link>
@@ -26,7 +26,7 @@ export default {
    ],
    computed: {
       movieTitleForLink() {
-         return this.movieTitle.replace(/ /g, "-");
+         return this.movieTitle.replaceAll(/ /g, "-");
       },
    },
 };
@@ -44,22 +44,19 @@ h2 {
 }
 h3 {
    display: inline;
-   /* color: rgba(245, 222, 179, 0.432); */
 }
-h4 {
+p {
    margin-top: 5px;
-   /* color: wheat; */
+   margin-bottom: 5px;
 }
 img {
    border-radius: 5px;
-   /* width: 10vw; */
-   height: 30vh;
+   height: 14vw;
 }
 .movieItemContainer {
    border-radius: 5px;
    display: flex;
    background-color: rgba(51, 51, 51, 0.39);
-   margin: 0 20px 20px 20px;
    box-shadow: 0 0 5px 0 #6e1020;
 }
 .infoContainer {

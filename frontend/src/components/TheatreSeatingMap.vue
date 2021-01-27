@@ -9,7 +9,7 @@
       </h3>
     </div>
     <div class="ticket-sum">
-      <h3>Total sum: {{ totalSum }} kr</h3>
+      <h3>Total:   {{ totalSum }} kr</h3>
     </div>
   </div>
   <router-link :to="'/confirmation-page/' + showing.id">
