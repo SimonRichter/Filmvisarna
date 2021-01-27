@@ -11,6 +11,9 @@
     <div class="ticket-sum">
       <h3>Total:   {{ totalSum }} kr</h3>
     </div>
+    <div class="if-disabled-btn" v-if="!(counter == goToNextStep)">
+    <h3>Choose ticket types</h3>
+  </div>
   </div>
   <router-link :to="'/confirmation-page/' + showing.id">
     <button
@@ -25,9 +28,7 @@
       Confirm your tickets
     </button>
   </router-link>
-  <div class="if-disabled-btn" v-if="!(counter == goToNextStep)">
-    <h3>Choose ticket types</h3>
-  </div>
+  
   <SeatingList
     :counter="counter"
     v-bind:seatIndexes="seatIndexes"
@@ -216,6 +217,9 @@ export default {
 </script>
 
 <style scoped>
+h3{
+  margin-top: -18px;
+}
 .grid-seating-map {
   grid-column: 2;
   grid-row: 1 / 4;
@@ -249,12 +253,13 @@ button:enabled {
   min-height: 80px;
   padding-bottom: 5px;
   margin-bottom: 100px;
+  margin-top: 50px;
 }
 .ticket-grid {
   grid-column: 1;
   display: grid;
   grid-template-columns: minmax(50px, 1fr) 100px;
-  grid-template-rows: 20px 50px minmax(10px, 1fr);
+  grid-template-rows: 50px 100px minmax(10px, 1fr) 30px;
   gap: 5px;
   border-radius: 5px;
   background-color: #131313;
@@ -263,10 +268,12 @@ button:enabled {
 }
 .next-btn {
   grid-column: 1;
+  grid-row: 4;
   height: 30px;
   width: 150px;
   padding-left: 5px;
-  margin-top: 20px;
+  margin-top: 10px;
+
   cursor: pointer;
 }
 a {
@@ -289,11 +296,13 @@ a {
 }
 .if-disabled-btn,
 .if-disabled-btn h3 {
+  grid-column: 1;
+  grid-row: 4;
   text-align: left;
   font-size: 16px;
   color: #6e1020;
   margin-bottom: 2px;
-  margin-top: -5px;
+  margin-top: 10px;
 }
 .max-8{
   grid-column: 2;

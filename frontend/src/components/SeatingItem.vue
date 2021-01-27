@@ -98,6 +98,9 @@ export default {
 </script>
 
 <style scoped>
+h3{
+  margin-top: 0;
+}
 .grid-container-item {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
