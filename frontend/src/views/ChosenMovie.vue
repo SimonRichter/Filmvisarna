@@ -15,12 +15,7 @@
       <h3>Language: {{ movie.language }}</h3>
       <h3><span></span> Director: {{ movie.director }}</h3>
       <h3><span></span> Actors: {{ movie.actors }}</h3>
-      <ShowingsFilter
-         :options="['Show All', 'Theatre 1', 'Theatre 2']"
-         :default="'Filter by Theatre'"
-         class="select"
-         @input="addFilterItem($event)"
-      />
+     
       <p class="plotText">{{ movie.plot.substring(0, 1000).trimRight() }}...</p>
    </div>
 
@@ -60,29 +55,10 @@ export default {
       allMovies() {
          return this.$store.state.movies;
       },
-      filteredShowings() {
-         console.log("Running filteredShowings()");
-         let item = this.$store.state.showingsFilterItem;
-         if (
-            item === null ||
-            item === "Show All" ||
-            item === "Filter by Theatre"
-         ) {
-            console.log("Showing all");
-            return this.showings;
-         } else {
-            console.log("Trying to filter by: ", item);
-            return this.showings.filter((showing) =>
-               showing.theatre.includes(item)
-            );
-         }
-      },
+   
    },
    methods: {
-      addFilterItem(itemName) {
-         console.log(itemName);
-         this.$store.state.showingsFilterItem = itemName;
-      },
+    
    },
 };
 </script>
@@ -130,7 +106,5 @@ h3 {
    margin-top: 10px;
    margin-bottom: 20px;
 }
-.noTopMargin {
-   margin-top: 0;
-}
+
 </style>
