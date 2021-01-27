@@ -19,6 +19,7 @@
 
 <script>
 import TheatreSeatingMap from "../components/TheatreSeatingMap.vue";
+
 export default {
    components: {
       TheatreSeatingMap
@@ -57,8 +58,13 @@ span {
    height: 1px;
    width: 100%;
 }
-
-.grid-container-map {
-   grid-area: 2/1/3/2;
-}
+/* h3 {
+  color: lightblue;
+} */
+/* .grid-container-map {
+  grid-area: 2/1/3/2;
+} */
+/* hr{
+  color: #6e1020;
+} */
 </style>

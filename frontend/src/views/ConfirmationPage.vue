@@ -4,7 +4,7 @@
          <h1>Your booking</h1>
          <div id="pictureSeparatorDiv">
             <img :src="moviePoster" />
-            <div>
+            <div class="bookingInfo">
                <h2>{{ showing.title }}</h2>
                <h4>{{ showing.theatre }}, {{ showing.salon }}</h4>
                <h3>{{ showing.date }} {{ showing.time }}</h3>
@@ -25,10 +25,10 @@
                </h4>
             </div>
          </div>
-         <h2 v-if="showToggle" class="emailSentNotification">
+         <h2 class="emailSentNotification">
             An email with your booking information was sent to your mail
          </h2>
-         <div class="buttonsDiv">
+         <!-- <div class="buttonsDiv">
             <router-link :to="'/'">
                <button
                   class="cancelBtn"
@@ -39,36 +39,33 @@
                </button>
             </router-link>
 
-            <button
-               v-if="!showToggle"
-               @click="
-                  confirmBooking();
-                  removeSeatsBackend();
-               "
-            >
-               Confirm
-            </button>
-            <button v-if="showToggle" @click="printBookingDetails">
-               Print
-            </button>
-            <router-link :to="'/'">
-               <button v-if="showToggle">Home</button>
-            </router-link>
-            <router-link :to="'/my-page/'">
-               <button v-if="showToggle">My page</button>
-            </router-link>
-         </div>
+        <button
+          v-if="!showToggle"
+          @click="
+            confirmBooking();
+          
+          "
+        >
+          Confirm
+        </button> -->
+        <button class="print" @click="printBookingDetails">Print</button>
+        <router-link :to="'/'">
+          <button>Home</button>
+        </router-link>
+        <router-link :to="'/my-page/'">
+          <button>My page</button>
+        </router-link>
       </div>
    </div>
 </template>
 
 <script>
 export default {
-   data: function () {
-      return {
-         showToggle: false,
-      };
-   },
+  //  data: function () {
+  //     return {
+  //        showToggle: false,
+  //     };
+  //  },
 
    computed: {
       moviePoster() {
@@ -84,22 +81,20 @@ export default {
       },
    },
 
-   methods: {
-      confirmBooking() {
-         this.showToggle = true;
-      },
-      printBookingDetails() {
-         window.print();
-         return false;
-      },
-
-      cancelBooking() {
-         this.$store.dispatch("fetchShowings");
-      },
-      removeSeatsBackend() {
-         this.$store.dispatch("updateSeatsInBackend", this.showing);
-      },
-   },
+  methods: {
+    // confirmBooking() {
+    //   //console.log("Confirming booking: ", this.itemName);
+    //   this.showToggle = true;
+    // },
+    printBookingDetails() {
+      window.print();
+      return false;
+    },
+    // cancelBooking() {
+    //   this.$store.dispatch("fetchShowings");
+    // },
+    
+  },
 };
 </script>
 
@@ -133,6 +128,8 @@ button {
 }
 
 img {
+  grid-column: 1;
+  grid-row: 1;
    margin-left: 10vw;
    max-height: 40vh;
    border-radius: 5px;
@@ -143,10 +140,17 @@ img {
    max-width: fit-content;
    margin: 0 auto;
 }
-
-.cancelBtn {
-   background-color: #940000;
+.bookingInfo{
+  grid-column: 2;
+  grid-row: 1;
 }
+.print {
+  margin-left: 220px;
+}
+
+/* .cancelBtn {
+   background-color: #940000;
+} */
 
 .emailSentNotification {
    color: #4caf50;
@@ -168,5 +172,6 @@ img {
 #pictureSeparatorDiv {
    display: grid;
    grid-template-columns: 50% 50%;
+   grid-template-rows: 2;
 }
 </style>

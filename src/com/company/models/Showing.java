@@ -3,7 +3,9 @@
     import express.database.Model;
     import org.dizitart.no2.objects.Id;
 
-@Model
+    import java.util.Arrays;
+
+    @Model
 public class Showing {
     @Id
     private String id;
@@ -12,7 +14,8 @@ public class Showing {
     private String theatre;
     private String salon;
     private String time;
-    private int seats;
+    private int totalSeats;
+    private Boolean[] seats;
 
     public String getId() {
         return id;
@@ -62,13 +65,18 @@ public class Showing {
         this.time = time;
     }
 
-    public int getSeats() {
+    public Boolean[] getSeats() {
         return seats;
     }
 
-    public void setSeats(int seats) {
+    public void setSeats(Boolean[] seats) {
         this.seats = seats;
     }
 
-    public Showing() {  }
+    public int getTotalSeats() { return totalSeats; }
+
+    public void setTotalSeats(int totalSeats) { this.totalSeats = totalSeats; }
+
+    public Showing() {
+    }
 }
