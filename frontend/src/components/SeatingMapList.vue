@@ -30,10 +30,8 @@ export default {
   },
   methods: {
     changeTicket(seatIndex) {
-      if (this.counter < 8) {
-        this.clicked = !this.clicked;
-        this.$emit("changeTicket", seatIndex);
-      }
+      this.clicked = !this.clicked;
+      this.$emit("changeTicket", seatIndex);
     },
   },
 };

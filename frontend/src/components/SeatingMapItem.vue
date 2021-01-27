@@ -1,9 +1,9 @@
 <template>
   <div>
     <div
-      @click="checkTotalSeats()"
+      @click="[counter >= 8 ? clicked = false : clicked = !clicked]"
       class="chair available"
-      v-bind:class="[clicked == true ? ' reserved' : counter >= 8 ? ' max' : '']"
+      v-bind:class="[clicked == true ? ' reserved' : '']"
       v-if="availableSeat == null || availableSeat == false"
     ></div>
     <div class="chair taken" v-else></div>
@@ -23,13 +23,6 @@ export default {
       return this.showing.seats[this.seatIndex];
     },
   },
-  methods:{
-    checkTotalSeats(){
-      if(this.counter < 8){
-        this.clicked = !this.clicked;
-      }
-    }
-  }
 };
 </script>
 

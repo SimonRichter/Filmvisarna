@@ -35,6 +35,7 @@
     @update-total="updateTickets"
   />
   <SeatingMapList v-bind:showing="showing" :counter="counter" @changeTicket="changeTicket" />
+  <h3 class="max-8" v-if="counter >= 8">You can choose max 8 tickets</h3>
 </template>
 
 <script>
@@ -50,7 +51,6 @@ export default {
         if (this.seatIndexes.length <= 0) {
           return;
         }
-
         for (let i = 0; i < this.seatIndexes.length; i++) {
           const index = this.seatIndexes[i];
           if (newVal.seats[index] == true) {
@@ -117,14 +117,8 @@ export default {
     },
     changeTicket(seatIndex) {
       console.log("SEAT INDEX", seatIndex);
-      if (
-        this.seatIndexes.length <= 0 ||
-        this.seatIndexes.indexOf(seatIndex) < 0
-      ) {
-        if (
-          this.showing.seats[seatIndex] == undefined ||
-          this.showing.seats[seatIndex] == false
-        ) {
+      if (this.seatIndexes.length <= 0 || this.seatIndexes.indexOf(seatIndex) < 0) {
+        if (this.counter < 8 && (this.showing.seats[seatIndex] == undefined || this.showing.seats[seatIndex] == false)) {
           this.seatIndexes.push(seatIndex);
           this.counter++;
         }
@@ -253,15 +247,14 @@ button:enabled {
 .grid-container-list {
   grid-column: 1;
   min-height: 80px;
-  padding-top: 15px;
   padding-bottom: 5px;
-  margin-bottom: 60px;
+  margin-bottom: 100px;
 }
 .ticket-grid {
   grid-column: 1;
   display: grid;
   grid-template-columns: minmax(50px, 1fr) 100px;
-  grid-template-rows: 20px minmax(40px, 1fr) 10px;
+  grid-template-rows: 20px 50px minmax(10px, 1fr);
   gap: 5px;
   border-radius: 5px;
   background-color: #131313;
@@ -269,12 +262,15 @@ button:enabled {
   margin-bottom: 10px;
 }
 .next-btn {
-  /* grid-column: 1; */
+  grid-column: 1;
   height: 30px;
   width: 150px;
   padding-left: 5px;
   margin-top: 20px;
   cursor: pointer;
+}
+a {
+  max-height: 0;
 }
 .ticket-types {
   grid-column: 1;
@@ -294,10 +290,19 @@ button:enabled {
 .if-disabled-btn,
 .if-disabled-btn h3 {
   text-align: left;
-  font-size: 12px;
+  font-size: 16px;
   color: #6e1020;
   margin-bottom: 2px;
-  margin-top: -30px;
+  margin-top: -5px;
+}
+.max-8{
+  grid-column: 2;
+  grid-row: 4;
+  text-align: left;
+  color: #6e1020;
+  margin-bottom: 2px;
+  margin-top: 5px;
+  margin-left: 200px;
 }
 * {
   -webkit-touch-callout: none; /* iOS Safari */
