@@ -39,6 +39,7 @@ export default {
 h3 {
   padding-top: 3px;
   font-size: medium;
+  margin-top: 0;
 }
 .sub-menu {
   border: #6e1020 1px solid;

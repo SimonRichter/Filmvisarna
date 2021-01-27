@@ -23,19 +23,14 @@ export default {
     ticketTypes: {
       deep: true,
       handler(newVal) {
-        let obj = newVal.filter(
-          (ticket) => ticket.seatIndex == this.seatIndexes[this.count]
-        )[0];
-        console.log("object", obj);
-        if (obj != undefined) {
-          console.log("obj.ticketType", obj.ticketType);
-          console.log("obj.price", obj.price);
-          this.placeHolder = obj.ticketType;
-          this.ticketPrice = obj.price;
-        } else {
-          this.placeHolder = "Choose ticket type";
-          this.ticketPrice = "-";
-        }
+        this.newVal = newVal;
+        this.setTicketInfo();
+      },
+    },
+    seatIndexes: {
+      deep: true,
+      handler() {
+        this.setTicketInfo();
       },
     },
   },
@@ -60,15 +55,23 @@ export default {
       ],
       ticketPrice: "-",
       placeHolder: "Choose ticket type",
+      newVal: []
     };
   },
   methods: {
+    setTicketInfo() {
+      let obj = this.newVal.filter(
+        (ticket) => ticket.seatIndex == this.seatIndexes[this.count]
+      )[0];
+      if (obj != undefined) {
+        this.placeHolder = obj.ticketType;
+        this.ticketPrice = obj.price;
+      } else {
+        this.placeHolder = "Choose ticket type";
+        this.ticketPrice = "-";
+      }
+    },
     updatePrice(title, price) {
-      // console.log("this seat index", this.seatIndexes[this.count]);
-      // console.log("this ticket price", price);
-      // console.log("this title", title);
-      // this.ticketPrice = price;
-      // this.placeHolder = title;
       this.$emit("update-total", title, price, this.seatIndexes[this.count]);
     },
     getRow() {
@@ -98,6 +101,9 @@ export default {
 </script>
 
 <style scoped>
+h3 {
+  margin-top: 0;
+}
 .grid-container-item {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
