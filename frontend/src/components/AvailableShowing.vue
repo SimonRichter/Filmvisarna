@@ -10,7 +10,7 @@
     <div class="showingList" v-for="showing of filteredShowings" :key="showing">
       <div class="anotherFormattingDiv">
         <button
-          class="bookButton"
+          class="bookButton grow"
           @click="
             $router.push(
               '/chosen-movie/' + showing.title + '/booking/' + showing.id
@@ -122,6 +122,7 @@ export default {
   border-top: 1px solid #6e1020;
   padding: 5px 0px 5px 0px;
   margin: 0px 15vw 0px 15vw;
+
 }
 .bookButton {
   margin-right: 20px;
@@ -146,6 +147,16 @@ button:active,
 button:disabled {
   background-color: rgb(46, 46, 46);
 }
+
+
+.grow:hover
+{
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+}
+
+
 button:disabled {
   cursor: default;
 }
@@ -162,5 +173,6 @@ h3 {
 }
 .noTopMargin {
    margin-top: 0;
+   
 }
 </style>
