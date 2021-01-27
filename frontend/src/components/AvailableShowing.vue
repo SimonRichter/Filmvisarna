@@ -1,5 +1,6 @@
 <template>
 
+ <div v-if="showings.length && new Date(today())> new Date()-86400000">
   <div class="showingList" v-for="showing of showings" :key="showing">
     <div class="anotherFormattingDiv">
       <button
@@ -12,12 +13,14 @@
       >
         Book
       </button>
-      <h3>
-        {{ showing.date }} - {{ showing.time }} | {{ showing.theatre }} |
-        {{ showing.salon }}
+      <h3 v-if="showings.length">
+        {{ showing.date }} - {{ showing.time }} | {{ showing.theatre }} | {{ showing.salon }}
       </h3>
+ 
     </div>
   </div>
+ </div>
+ <div class="noMovie" v-else >--- NO BOOKINGS AVAILABLE FOR THE SELECTED DATE ---</div>
    <Calendar v-on:datePicked="what" />
  
 </template>
@@ -29,22 +32,24 @@ export default {
     Calendar,
   },
 
-  methods: {
-    what(dayPicked, monthPicked) {
-      console.log("testt", dayPicked, monthPicked);
-     
-  
-        return { dayPicked, monthPicked};
-    },
+  data(){
+    return {hello:0,bye:0}
+
   },
 
-  computed: {
-    today() {
+  methods: {
+    what(dayPicked, monthPicked) {
+      this.hello =dayPicked
+      this.bye=monthPicked
+      console.log("testt", this.hello, this.bye);
+      
+    },
+     today() {
       const x = new Date();
       const year = x.getFullYear();
-      const month = this.monthPicked || 1;
-      const day = this.dayPicked || 29;
-      console.log("inside", this.dayPicked, this.monthPicked);
+      const month = this.bye || x.getMonth()+1;
+      const day = this.hello || x.getDate();
+      console.log("inside", this.bye, this.hello);
       const date =
         year +
         "-" +
@@ -55,7 +60,10 @@ export default {
         day;
       return date;
     },
+  },
 
+  computed: {
+   
     title() {
       // get showing id from url parameter
       return this.$route.params.title.replaceAll("-", " ");
@@ -64,7 +72,7 @@ export default {
     showings() {
       return this.$store.state.showings
         .filter((obj) => obj.title == this.title)
-        .filter((obj) => obj.date == this.today);
+        .filter((obj) => obj.date == this.today());
     },
    
   },
@@ -72,6 +80,14 @@ export default {
 </script>
 
 <style scoped>
+.noMovie{
+  text-align: center;
+  padding:20px 0 40px 0;
+  border-top: 1px solid #6e1020;
+
+  
+}
+
 .showingList {
   grid-column-start: 1;
   grid-column-end: 3;
