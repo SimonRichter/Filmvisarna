@@ -36,6 +36,7 @@ export default {
     },
     methods: {
      register() {
+         if(this.checkEmail()){
          if(this.checkPassword()){
             const credentials = {
                 name: this.name,
@@ -50,9 +51,16 @@ export default {
          else{
              console.log('Password did not match');
          }
+         }
+         else{
+             console.log('Not valid email')
+         }
         },
         checkPassword() {
            return this.passConfirm === this.password;
+        },
+        checkEmail(){
+            return this.email.includes('@');
         }
     }
 };
