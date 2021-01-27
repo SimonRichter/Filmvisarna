@@ -225,7 +225,7 @@ h3{
   grid-row: 1 / 4;
   padding-top: 15px;
   padding-bottom: 5px;
-  margin-top: 10vh;
+  margin-top: 12vh;
   margin-left: 10vh;
 }
 .grid-container-map {
