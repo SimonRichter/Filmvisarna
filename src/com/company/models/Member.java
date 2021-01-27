@@ -1,5 +1,6 @@
 package com.company.models;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import express.database.Model;
 import org.dizitart.no2.objects.Id;
 
@@ -44,7 +45,7 @@ public class Member {
     public String getPassword() {
         return password;
     }
-
+    @JsonProperty
     public void setPassword(String password) {
         this.password = password;
     }
