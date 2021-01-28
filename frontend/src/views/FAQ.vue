@@ -90,12 +90,20 @@
       </h3>
       <br />
       <br />
+         <QuestionForm />
    </div>
+
 </template>
 
 
 <script>
-export default {};
+import QuestionForm from '../components/QuestionForm.vue'
+
+export default {
+   components: {
+      QuestionForm
+   }
+};
 </script>
 
 <style scoped>
