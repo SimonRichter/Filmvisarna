@@ -14,7 +14,7 @@ public class Booking {
     private String time;
     private String name;
     private String lastName;
-    private Array seats;
+    private int seats;
 
     public String getId() {
         return id;
@@ -80,7 +80,7 @@ public class Booking {
         this.lastName = lastName;
     }
 
-    public Array getSeats() {
+    public int getSeats() {
         return seats;
     }
 
