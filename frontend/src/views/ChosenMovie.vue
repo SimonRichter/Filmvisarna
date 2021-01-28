@@ -4,7 +4,7 @@
          <iframe
             width="1220"
             height="400"
-            :src="'https://www.youtube.com/embed/' + movie.trailer"
+            :src="'https://www.youtube-nocookie.com/embed/' + movie.trailer +'?controls=0'" 
          >
          </iframe>
       </div>
