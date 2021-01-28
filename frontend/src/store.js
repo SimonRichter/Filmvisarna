@@ -101,7 +101,7 @@ const actions = {
 
     try {
       console.log('kör från store');
-      console.log('login state.member', state.member)
+    
       //member = state.members
       member = await member.json()
       console.log(member);

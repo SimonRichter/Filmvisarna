@@ -47,6 +47,11 @@ export default {
       loggedIn: false,
     };
   },
+  computed: {
+      loggedIn() {
+         return this.$store.state.member.length;
+      },
+   },
 };
 </script>
 

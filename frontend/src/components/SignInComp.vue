@@ -72,14 +72,10 @@ export default {
   components: { SignUpComp, ForgotPassword },
   data() {
     return {
-      showModal: false,
-    };
-    return {
-      showPasswordModal: false,
-    };
-    return {
       email: "",
       password: "",
+      showModal: false,
+      showPasswordModal: false,
     };
   },
   methods: {
