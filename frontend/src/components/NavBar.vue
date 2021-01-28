@@ -44,12 +44,11 @@ export default {
   data() {
     return {
       showModal: false,
-      loggedIn: false,
     };
   },
   computed: {
       loggedIn() {
-         return this.$store.state.member.length;
+         return this.$store.state.member;
       },
    },
 };
