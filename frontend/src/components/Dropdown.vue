@@ -38,20 +38,18 @@ export default {
 <style scoped>
 h3 {
   padding-top: 3px;
-  /* color: black; */
   font-size: medium;
+  margin-top: 0;
 }
 .sub-menu {
   border: #6e1020 1px solid;
   position: absolute;
-  background-color: #202020;;
+  background-color: #202020;
   width: 131px;
   border-radius: 5px;
   margin-top: 10px;
 }
 .menu-item {
-  /* font-size: 18px; */
-  /* font-family: "Bebas Neue", cursive; */
   padding: 2px;
   margin: 2px;
   text-align: left;

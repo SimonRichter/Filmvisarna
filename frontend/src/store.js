@@ -30,6 +30,12 @@ const mutations = {
   setShowings(state, showingsList) {
     state.showings = showingsList;
   },
+  // Updates the show that has been changed so another user can get 'live updates' if seats are taken or not
+  // after the tickets has been 'confirmed'
+  updateShow(state, showObj) {
+    const index = state.showings.indexOf(state.showings.filter(show => show.id == showObj.id)[0]);
+    state.showings.splice(index, 1, showObj);
+  }
   // ----------- SPRINT 2 -----------
   // addMemberToState(store, newMember) {
   //   store.members.push(newMember)
@@ -78,9 +84,10 @@ const actions = {
       theatre: showingObj.theatre,
       salon: showingObj.salon,
       time: showingObj.time,
-      seats: showingObj.seats
+      seats: showingObj.seats,
+      totalSeats: showingObj.totalSeats
     }
-    let response = await fetch('/rest/showings/' + showingObj.id, {
+    await fetch('/rest/showings/' + showingObj.id, {
       method: 'PUT',
       body: JSON.stringify(showing)
     })

@@ -1,6 +1,8 @@
 <template>
   <div class="grid-container-item">
-    <h3 class="seat">Ticket {{ count }}</h3>
+    <h3 class="seat">
+      Row: {{ getRow() }}, Seat: {{ seatIndexes[count] + 1 }}
+    </h3>
     <h3 class="price">Price: {{ ticketPrice }} kr</h3>
     <div class="box">
       <Dropdown
@@ -16,7 +18,22 @@
 import Dropdown from "./Dropdown.vue";
 export default {
   emits: ["update-total"],
-  props: ["count"],
+  props: ["count", "seatIndexes", "ticketTypes"],
+  watch: {
+    ticketTypes: {
+      deep: true,
+      handler(newVal) {
+        this.newVal = newVal;
+        this.setTicketInfo();
+      },
+    },
+    seatIndexes: {
+      deep: true,
+      handler() {
+        this.setTicketInfo();
+      },
+    },
+  },
   components: {
     Dropdown,
   },
@@ -38,22 +55,55 @@ export default {
       ],
       ticketPrice: "-",
       placeHolder: "Choose ticket type",
+      newVal: []
     };
   },
   methods: {
+    setTicketInfo() {
+      let obj = this.newVal.filter(
+        (ticket) => ticket.seatIndex == this.seatIndexes[this.count]
+      )[0];
+      if (obj != undefined) {
+        this.placeHolder = obj.ticketType;
+        this.ticketPrice = obj.price;
+      } else {
+        this.placeHolder = "Choose ticket type";
+        this.ticketPrice = "-";
+      }
+    },
     updatePrice(title, price) {
-      this.ticketPrice = price;
-      this.placeHolder = title;
-      this.$emit("update-total", title, price, this.count);
+      this.$emit("update-total", title, price, this.seatIndexes[this.count]);
+    },
+    getRow() {
+      const x = this.seatIndexes[this.count];
+      return x < 10
+        ? 1
+        : x < 20
+        ? 2
+        : x < 30
+        ? 3
+        : x < 40
+        ? 4
+        : x < 50
+        ? 5
+        : x < 60
+        ? 6
+        : x < 70
+        ? 7
+        : x < 80
+        ? 8
+        : x < 90
+        ? 9
+        : 10;
     },
   },
 };
 </script>
 
 <style scoped>
-/* h3 {
-  color: black;
-} */
+h3 {
+  margin-top: 0;
+}
 .grid-container-item {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
