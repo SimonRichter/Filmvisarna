@@ -42,7 +42,6 @@ li {
 }
 
 .nav_dropbtn{
-  width: 100px;
   overflow-x: hidden;
   padding: 18px 0px 18px 0px;
   margin-left: 16px;
@@ -59,7 +58,7 @@ li {
   right: 0;
   top: 100px;
   background-color:#131313;
-  width: 150px;
+  width: 9vw;
   border-width: 0px 0px 1px 0px;
   border-color: #6e1020;
   border-style: solid;

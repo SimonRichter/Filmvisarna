@@ -90,12 +90,12 @@ img {
    padding: 0;
 }
 .floatRight {
-   padding-right: 30px;
+   padding-right: 35px;
    width: 50%;
    justify-content: flex-end;
 }
 .floatLeft {
-   padding-left: 30px;
+   padding-left: 35px;
    width: 50%;
    justify-content: flex-start;
 }
