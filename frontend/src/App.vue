@@ -27,7 +27,7 @@ export default {
    },
    created() {
       this.$store.dispatch("fetchMovies");
-      // this.$store.dispatch("fetchMembers");
+      this.$store.dispatch("whoAmI");
       this.$store.dispatch("fetchBookings");
       this.$store.dispatch("fetchShowings");
    },

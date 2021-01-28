@@ -74,11 +74,7 @@ export default {
   data() {
     return {
       showModal: false,
-    };
-    return {
       showPasswordModal: false,
-    };
-    return {
       email: '',
       password: '',
     };

@@ -60,7 +60,7 @@ public class Main {
             var id=(req.params("id"));
             collection(Booking.class).deleteById(id);
         });
-
+/*
         //Adding a new member
         app.post("/rest/members",(req,res) ->{
             var member=req.body(Member.class);
@@ -76,7 +76,7 @@ public class Main {
             res.json(savedUpdate);
         });
 
-
+*/
         //Delete (cancel membership) member
         app.delete("/rest/members/:id",(req,res)->{
             var id=(req.params("id"));
