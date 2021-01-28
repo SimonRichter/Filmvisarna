@@ -1,8 +1,8 @@
 <template>
-  <li class="nav_dropbtn" @click="show = !show">@abc@gmail.com</li>
+  <li class="nav_dropbtn" @click="show = !show">{{loggedIn.name}}</li>
   <div class="sub-menu" v-if="show">
     <router-link to="/my-page"><h3 @click="myPage($event)" class="myPage_btn">Bookings</h3></router-link>
-    <h3 @click="logOut($event)" class="logOut_btn">Log out</h3>
+    <h3 @click="logOut()" class="logOut_btn">Log out</h3>
   </div>
 </template>
 
@@ -14,13 +14,21 @@ export default {
     };
   },
   methods: {
+    logOut() {
+      fetch('/api/logout')
+      this.$store.commit('setMember', null)
+    },
     myPage(ev) {
       console.log("--my page button click event");
     },
-    logOut(ev) {
-      console.log("--log out button click event");
-    },
+   
   },
+  computed: {
+      loggedIn() {
+        console.log(this.$store.state.member.name)
+         return this.$store.state.member;
+      },
+   },
 };
 </script>
 

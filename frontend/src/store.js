@@ -107,6 +107,7 @@ const actions = {
       console.log(member);
       store.commit('setMember', member)
     } catch {
+      
       console.warn('Bad credentials');
     }
   },
@@ -134,6 +135,7 @@ const actions = {
       console.warn('Not logged in');
     }
   },
+  
 
 }
 
