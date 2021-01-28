@@ -64,13 +64,13 @@ public class Main {
             collection(Booking.class).deleteById(id);
         });
 
-        // Adding a new member
+      /*  // Adding a new member
         app.post("/rest/members", (req, res) -> {
             var member = req.body(Member.class);
             var savedMember = collection(Member.class).save(member);
             res.json(savedMember);
 
-        });
+        });*/
 
         // update to an existing member
         app.put("/rest/members/:id", (req, res) -> {
