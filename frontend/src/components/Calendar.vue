@@ -21,7 +21,7 @@
       <div class="days">
         <div v-for="index in firstDayNum-1" :key="index" class="prev-date">{{ prevDays -( firstDayNum -index)+1 }}</div>
         <div v-for="index in lastDay" :key="index">
-          <div @click="testDate(index,testmonth)" v-bind:class="{ today: new Date().getDate()==index && new Date().getMonth()==date.getMonth() }">{{index}}</div> </div>
+          <div @click="testDate(index,testmonth); changeToday()" v-bind:class="{ today: new Date().getDate()==index && new Date().getMonth()==date.getMonth() }">{{index}}</div> </div>
         <!--<div v-for="index in nextMonthDays" :key="index" class="prev-date">{{index}}</div>-->
       </div>
     </div>
@@ -54,7 +54,7 @@ export default {
     const prevDays=new Date(date.getFullYear(),date.getMonth(),0).getDate();
     const firstDayNum = date.getDay();
     const testmonth = months[date.getMonth()];
-    const testtoday = new Date().toDateString();
+    const testtoday = new Date().toLocaleDateString();
     const lastDayNum= new Date(date.getFullYear(),date.getMonth()+1,0).getDay();
     const nextMonthDays=7-lastDayNum
     let a,b;
@@ -66,6 +66,10 @@ export default {
       this.a=dateNum
       this.b=this.months.indexOf(monthNum)+1
       this.$emit('datePicked',this.a,this.b)
+    },
+
+    changeToday() {
+      this.testtoday ='2021-'+ (this.b < 10 ? '0' : '') + this.b  + '-' + (this.a < 10 ? '0' : '') + this.a
     },
 
     newMethod(){
@@ -89,7 +93,6 @@ export default {
      this.prevDays=new Date(this.date.getFullYear(),this.date.getMonth(),0).getDate();
      this.firstDayNum = this.date.getDay();
      this.testmonth = this.months[this.date.getMonth()];
-     this.testtoday = new Date().toDateString();
      this.lastDayNum= new Date(this.date.getFullYear(),this.date.getMonth()+1,0).getDay();
      this.nextMonthDays=7-this.lastDayNum
 
