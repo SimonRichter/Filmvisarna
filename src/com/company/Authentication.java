@@ -26,7 +26,6 @@ public class Authentication {
             }
 
             var member = req.body(Member.class);
-            System.out.println(member);
 
             Member memberInColl = collection("Member").findOne(ObjectFilters.eq("email", member.getEmail()));
             if(memberInColl != null) {

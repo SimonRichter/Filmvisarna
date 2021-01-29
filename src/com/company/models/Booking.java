@@ -11,7 +11,7 @@ public class Booking {
     private String id;
     private String showingId;
     private String tickets;
-    private String seats;
+    private String seatIndexes;
     private String totalSum;
 
 
@@ -41,12 +41,12 @@ public class Booking {
                 this.tickets = tickets;
             }
 
-            public String getSeats() {
-                return seats;
+            public String getSeatIndexes() {
+                return seatIndexes;
             }
 
-            public void setSeats(String seats) {
-                this.seats = seats;
+            public void setSeatIndexes(String seats) {
+                this.seatIndexes = seats;
             }
 
             public String getTotalSum() {

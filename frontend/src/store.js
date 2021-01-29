@@ -96,15 +96,25 @@ const actions = {
 
   async createBookings(store, bookingObj) {
     let showingId = bookingObj.showing.id.toString()
-    let tickets0 = bookingObj.tickets[0].title + bookingObj.tickets[0].value
-    let tickets1 = bookingObj.tickets[1].title + bookingObj.tickets[1].value
-    let tickets2 = bookingObj.tickets[2].title + bookingObj.tickets[2].value
+    let tickets0 = bookingObj.tickets[0].title + ": " + bookingObj.tickets[0].value + ", "
+    let tickets1 = bookingObj.tickets[1].title + ": " + bookingObj.tickets[1].value + ", "
+    let tickets2 = bookingObj.tickets[2].title + ": " + bookingObj.tickets[2].value
     let totalSum = bookingObj.totalSum.toString()
+    let seatIndexes = bookingObj.seatIndexes
+    let seatIndexesString = '';
+    for (let i = 0; i < seatIndexes.length; i++) {
+      if (i == seatIndexes.length - 1) {
+        seatIndexesString += "" + (seatIndexes[i] + 1)
+      } else {
+              seatIndexesString += "" + (seatIndexes[i] + 1) + ", "
+      }
+    }
 
     let tickets = tickets0 + tickets1 + tickets2;
 
+    seatIndexes = seatIndexesString
     let booking = {
-      showingId, tickets, totalSum
+      showingId, tickets, seatIndexes, totalSum
     }
 
     console.log("createBookings", JSON.stringify(booking))
