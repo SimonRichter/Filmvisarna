@@ -1,33 +1,52 @@
-[ {
-  "title": "Blade",
-  "date": "2021-01-12",
-  "time": "21:00",
-  "theatre": "Theatre 1",
-  "salon": "Big room",
-  "seats": [[98, "A"],[99, "S"],[100, "C"]],
-  "total": 260
-}, {
-  "title": "Pulp Fiction",
-  "date": "2021-01-27",
-  "time": "21:00",
-  "theatre": "Theatre 1",
-  "salon": "Big room",
-  "seats": [[98, "A"],[99, "S"],[100, "C"]],
-  "total": 260
-}, {
-  "title": "Blade 2",
-  "date": "2021-01-30",
-  "time": "21:00",
-  "theatre": "Theatre 1",
-  "salon": "Big room",
-  "seats": [[98, "A"],[99, "S"],[100, "C"]],
-  "total": 260
-}, {
-  "title": "Dagger",
-  "date": "2021-01-10",
-  "time": "21:00",
-  "theatre": "Theatre 1",
-  "salon": "Big room",
-  "seats": [[98, "A"],[99, "S"],[100, "C"]],
-  "total": 260
-} ]
+[
+  {
+    "tickets": [
+      {
+        "title": "Adult",
+        "value": 1
+      },
+      {
+        "title": "Child (0-12)",
+        "value": 0
+      },
+      {
+        "title": "Senior (65+)",
+        "value": 0
+      }
+    ],
+    "totalSum": 250,
+    "showing": {
+      "id": "a5dyWda2-J-9Qu9xPbF0f",
+      "title": "Interstellar",
+      "date": "2021-01-29",
+      "theatre": "Theatre 2",
+      "salon": "Big room 2",
+      "time": "20:30",
+      "totalSeats": 100,
+      "seats": [
+        null,
+        true,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        true
+      ]
+    }
+  }
+]

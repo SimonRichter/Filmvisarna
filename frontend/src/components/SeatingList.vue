@@ -11,6 +11,8 @@
   </div>
 </template>
 
+
+
 <script>
 import SeatingItem from "./SeatingItem.vue";
 
