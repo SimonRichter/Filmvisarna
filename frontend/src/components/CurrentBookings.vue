@@ -1,4 +1,5 @@
 <template>
+   <h1>{{ currentBookings }}</h1>
    <h2>Current bookings</h2>
    <div
       class="currentTicketCont"
@@ -11,6 +12,7 @@
       </div>
       <div class="what">
          <h3>{{ showing.title }}</h3>
+         <h3>{{ booking.tickets }}</h3>
          <div v-for="ticket in currentBookings.tickets" :key="ticket">
             <h3>{{ ticket.value }} {{ ticket.title }}</h3>
          </div>
@@ -26,12 +28,32 @@ export default {
       showing() {
          return this.$store.state.bookingInfo.showing;
       },
+      userEmail() {
+         return this.$store.state.member.email;
+      },
       currentBookings() {
          this.$store.commit("setBookings", this.$store.state.bookingInfo);
-         console.log("bookings: ", this.$store.state.bookings);
+         console.log("BookingInfo: ", this.$store.state.bookingInfo);
+         console.log("Bookings: ", this.$store.state.bookings);
+         console.log(
+            "filteredBookings: ",
+            this.$store.state.bookings.filter((booking) =>
+               booking.userEmail.includes(this.userEmail)
+            )
+         );
          return this.$store.state.bookings;
+         // .filter((booking) =>
+         //    booking.userEmail.includes(this.userEmail)
+         // );
       },
    },
+   // methods: {
+   //    getUserEmail() {
+   //       console.log("Member: ", this.$store.state.member);
+   //       console.log("Email: ", this.$store.state.member.email);
+   //       return this.$store.state.member.email;
+   //    },
+   // },
 };
 </script>
 
