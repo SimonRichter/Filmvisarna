@@ -1,5 +1,6 @@
 "use strict";
 
+import { isVNode, vShow } from 'vue';
 import { createStore } from 'vuex'
 
 const state = {
@@ -91,12 +92,12 @@ const actions = {
     })
 
     try {
-      console.log('kör från store');
         member = await member.json()
         console.log(member);
         store.commit('setMember', member)
     } catch {
         console.warn('Bad credentials');
+        return false;
     }
 },
 async register(store, credentials) {
@@ -111,6 +112,7 @@ async register(store, credentials) {
         store.commit('setMember', member)
     } catch {
         console.warn('Bad credentials');
+        return false;
     }
 },
 async whoAmI(store) {

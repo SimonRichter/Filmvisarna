@@ -26,6 +26,12 @@
     </div>
     <div class="signInButtonDiv">
       <button class="signInButton" @click.prevent="login()">Sign in</button>
+      <h2 v-if="isLoggedIn && showToggle">
+         {{ "Logged In" }}
+    </h2>
+    <h2 v-else-if="showToggle">
+      {{ "Bad Credentials" }}
+    </h2>
     </div>
     
   
@@ -77,16 +83,28 @@ export default {
       showPasswordModal: false,
       email: '',
       password: '',
+      showToggle: false,
     };
+  },
+  computed:{
+     isLoggedIn() {
+      return this.$store.state.user != null;
+    }
   },
   methods: {
     login() {
-      console.log('kommer in')
+      console.log(this.isLoggedIn , this.showToggle)
       const credentials = {
         email: this.email,
         password: this.password,
       };
-      this.$store.dispatch("login", credentials);
+      if(this.$store.dispatch("login", credentials)){
+          this.showToggle = true;
+      }
+      else{
+        this.showToggle = false;
+      }
+      console.log('efter' , this.isLoggedIn , this.showToggle)
     },
   },
 };

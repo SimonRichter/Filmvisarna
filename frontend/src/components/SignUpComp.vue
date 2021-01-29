@@ -14,10 +14,18 @@
         <h3></h3>
         <input type="password" v-model="passConfirm" placeholder="Password Confirm">
         <h3></h3>
+        <h2 v-if="!checkPassword()">  {{"Password does not match"}}</h2>
+        <h2 v-if="!checkEmail()">{{"Wrong Email"}}</h2>
         <button class="signUpConfirmButton" @click.prevent="register()">Sign Up</button>
         </form>
+
+         <h2 v-if="isLoggedIn && showToggle">
+         {{ "Registered" }}
+    </h2>
+    <h2 v-else-if="showToggle">
+      {{ "Bad Credentials" }}
+    </h2>
   </div>
-   
 </div>
 </template>
 
@@ -31,13 +39,19 @@ export default {
             email: '',
             telephone: '',
             password: '',
-            passConfirm: ''
+            passConfirm: '',
+            showToggle: false,
         }
     },
+    computed:{
+     isLoggedIn() {
+      return this.$store.state.user == null;
+    },
+  },
     methods: {
      register() {
-         if(this.checkEmail()){
-         if(this.checkPassword()){
+         console.log('före' , this.isLoggedIn , this.showToggle)
+        
             const credentials = {
                 name: this.name,
                 lastName: this.lastName,
@@ -45,16 +59,13 @@ export default {
                 telephone: this.telephone,
                 password: this.password
             }
-            console.log(credentials);
-            this.$store.dispatch('register', credentials)
+            if(this.$store.dispatch("register", credentials)){
+                this.showToggle = true;
+            }
+            else{
+                this.showToggle = false;
          }
-         else{
-             console.log('Password did not match');
-         }
-         }
-         else{
-             console.log('Not valid email')
-         }
+         console.log('efter' , this.isLoggedIn , this.showToggle)
         },
         checkPassword() {
            return this.passConfirm === this.password;
