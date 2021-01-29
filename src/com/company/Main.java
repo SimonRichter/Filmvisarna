@@ -70,14 +70,14 @@ public class Main {
             var savedMember = collection(Member.class).save(member);
             res.json(savedMember);
 
-        });*/
+        });
 
         // update to an existing member
         app.put("/rest/members/:id", (req, res) -> {
             var update = req.body(Member.class);
             var savedUpdate = collection(Member.class).save(update);
             res.json(savedUpdate);
-        });
+        });*/
 
         // Delete (cancel membership) member
         app.delete("/rest/members/:id", (req, res) -> {

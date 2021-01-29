@@ -43,7 +43,8 @@ export default {
                 lastName: this.lastName,
                 email: this.email,
                 telephone: this.telephone,
-                password: this.password
+                password: this.password,
+            
             }
             console.log(credentials);
             this.$store.dispatch('register', credentials)

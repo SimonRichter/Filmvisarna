@@ -101,7 +101,9 @@ export default {
         totalSum: this.totalSum,
         showing: this.showing,
       };
+      
       this.$store.commit("setBookingInfo", this.objToSend);
+      this.$store.dispatch("createBookings", this.objToSend)
     },
   },
   methods: {

@@ -93,6 +93,36 @@ const actions = {
       body: JSON.stringify(showing)
     })
   },
+
+  async createBookings(store, bookingObj) {
+    let showingId = bookingObj.showing.id.toString()
+    let tickets0 = bookingObj.tickets[0].title + bookingObj.tickets[0].value
+    let tickets1 = bookingObj.tickets[1].title + bookingObj.tickets[1].value
+    let tickets2 = bookingObj.tickets[2].title + bookingObj.tickets[2].value
+    let totalSum = bookingObj.totalSum.toString()
+
+    let tickets = tickets0 + tickets1 + tickets2;
+
+    let booking = {
+      showingId, tickets, totalSum
+    }
+
+    console.log("createBookings", JSON.stringify(booking))
+    await fetch('/rest/bookings', {
+      method: 'POST',
+      body: JSON.stringify(booking)
+    })
+
+
+    // let member = await fetch('/api/whoami')
+    // try {
+    //   member = await member.json()
+    //   console.log(member);
+    //   store.commit('setMember', member)
+    // } catch {
+    //   console.warn('Not logged in');
+    // }
+  },
   async login(store, credentials) {
     let member = await fetch('/api/login', {
       method: 'POST',
@@ -101,13 +131,13 @@ const actions = {
 
     try {
       console.log('kör från store');
-    
+
       //member = state.members
       member = await member.json()
       console.log(member);
       store.commit('setMember', member)
     } catch {
-      
+
       console.warn('Bad credentials');
     }
   },
@@ -135,7 +165,7 @@ const actions = {
       console.warn('Not logged in');
     }
   },
-  
+
 
 }
 

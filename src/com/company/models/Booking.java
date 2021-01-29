@@ -3,88 +3,57 @@
         import express.database.Model;
         import org.dizitart.no2.objects.Id;
 
-@Model
+        import java.util.ArrayList;
+
+        @Model
 public class Booking {
     @Id
     private String id;
-    private String title;
-    private String date;
-    private String theatre;
-    private String salon;
-    private String time;
-    private String name;
-    private String lastName;
-    private int seats;
+    private String showingId;
+    private String tickets;
+    private String seats;
+    private String totalSum;
 
-    public String getId() {
-        return id;
-    }
 
-    public void setId(String id) {
-        this.id = id;
-    }
+    public Booking(){}
 
-    public String getTitle() {
-        return title;
-    }
+            public String getId() {
+                return id;
+            }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+            public void setId(String id) {
+                this.id = id;
+            }
 
-    public String getDate() {
-        return date;
-    }
+            public String getShowingId() {
+                return showingId;
+            }
 
-    public void setDate(String date) {
-        this.date = date;
-    }
+            public void setShowingId(String showingId) {
+                this.showingId = showingId;
+            }
 
-    public String getTheatre() {
-        return theatre;
-    }
+            public String getTickets() {
+                return tickets;
+            }
 
-    public void setTheatre(String theatre) {
-        this.theatre = theatre;
-    }
+            public void setTickets(String tickets) {
+                this.tickets = tickets;
+            }
 
-    public String getSalon() {
-        return salon;
-    }
+            public String getSeats() {
+                return seats;
+            }
 
-    public void setSalon(String salon) {
-        this.salon = salon;
-    }
+            public void setSeats(String seats) {
+                this.seats = seats;
+            }
 
-    public String getTime() {
-        return time;
-    }
+            public String getTotalSum() {
+                return totalSum;
+            }
 
-    public void setTime(String time) {
-        this.time = time;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public int getSeats() {
-        return seats;
-    }
-
-    public void setSeats(int seats) {
-        this.seats = seats;
-    }
-}
+            public void setTotalSum(String totalSum) {
+                this.totalSum = totalSum;
+            }
+        }
