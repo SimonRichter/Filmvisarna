@@ -10,6 +10,7 @@ const state = {
   bookingInfo: [],
   genreFilterItem: [],
   showingsFilterItem: [],
+  messages: []
 }
 
 const mutations = {
@@ -35,6 +36,12 @@ const mutations = {
   updateShow(state, showObj) {
     const index = state.showings.indexOf(state.showings.filter(show => show.id == showObj.id)[0]);
     state.showings.splice(index, 1, showObj);
+  },
+  setMessages(state, messages) {
+    state.messages = messages;
+  },
+  addMessage(state, message) {
+    state.messages.push(message);
   }
   // ----------- SPRINT 2 -----------
   // addMemberToState(store, newMember) {
@@ -92,6 +99,19 @@ const actions = {
       method: 'PUT',
       body: JSON.stringify(showing)
     })
+  },
+  async fetchMessages(store) {
+    let messages = await fetch('/rest/messages')
+    messages = await messages.json()
+    store.commit('setMessages', messages)
+  },
+  async addNewMessage(store, message) {
+    let response = await fetch('/rest/messages', {
+      method: 'POST',
+      body: JSON.stringify(message)
+    })
+    message = await response.json()
+    store.commit('addMessage', message)
   }
   // ------------- SPRINT 2 ------------
   // in-parameter is a user object user = {name: Anna, email: anna@gmail.com, password: Hej123}

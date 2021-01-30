@@ -1,12 +1,7 @@
 package com.company;
-import com.company.models.Booking;
-import com.company.models.Member;
-import com.company.models.Movie;
-import com.company.models.Showing;
+import com.company.models.*;
 import express.Express;
 import express.database.CollectionOptions;
-
-import java.util.Arrays;
 
 import static express.database.Database.collection;
 
@@ -102,6 +97,21 @@ public class Main {
             res.json(savedUpdate);
 
         });
+
+        // Get messages sent in by question form
+        app.get("/rest/messages", (req, res) -> {
+            var message = collection(Message.class).find();
+            res.json(message);
+        });
+
+        // Add new messages sent in by question form
+        app.post("/rest/messages",(req,res) ->{
+            var message= req.body(Message.class);
+            //var savedBooking=collection(Member.class).save(booking);    // sprint 2
+            var savedMessage= collection(Message.class).save(message);
+            res.json(savedMessage);
+
+        } );
 
 
         //choose another port so it doesn't collide with VUE port
