@@ -14,6 +14,7 @@
       name="lastName"
       v-model="lastName"
       placeholder="Last name"
+      @keyup="reset()"
     />
     <input
       class="email"
@@ -21,19 +22,24 @@
       name="email"
       v-model="email"
       placeholder="Email"
+      @keyup="reset()"
     />
     <textarea
       class="message"
       name="message"
       v-model="message"
-      @keyup="charCount()"
+      @keyup="
+        charCount();
+        reset();
+      "
       :maxlength="totalChar"
       placeholder="Write your message here"
     /><span class="counter">{{ remainingChar }} / {{ totalChar }}</span>
     <button type="submit" @submit="submit">Submit</button>
     <span class="error" v-if="error != ''">{{ error }}</span>
     <span class="sent" v-if="submitOk"
-      >Thank you for your message!<br> We'll try to respond within 48 hrs.</span
+      >Thank you for your message!<br />
+      We'll try to respond within 48 hrs.</span
     >
   </form>
 </template>
@@ -115,6 +121,7 @@ export default {
     },
     reset() {
       this.submitOk = false;
+      this.error = "";
     },
   },
 };
