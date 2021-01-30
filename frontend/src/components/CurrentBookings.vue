@@ -1,55 +1,45 @@
 <template>
   <h2>Current bookings</h2>
-  <div
-    class="currentTicketCont"
-    v-for="booking of currentBookings"
-    :key="booking"
-  >
-    <div class="whereWhen" v-for="showing of newShowingsArr" :key="showing">
-      <div v-for="index in showing" :key="index">
-        <h4>{{ index.title }}, {{ index.salon }}</h4>
-        <h3 class="dateTime">{{ index.date }} {{ index.time }}</h3>
-      </div>
-    </div>
-    <!-- <div class="what">
-      <h3>{{ showing.title }}</h3>
-      <h3>{{ booking.tickets }}</h3>
-      <div v-for="ticket in currentBookings.tickets" :key="ticket">
-        <h3>{{ ticket.value }} {{ ticket.title }}</h3>
-      </div>
-      <h3>Total: {{ booking.totalSum }} kr</h3>
-      <h3>Booking ID: {{ showing.id }}</h3>
-    </div> -->
-  </div>
+  <currentBookingsItem
+    v-for="(show, index) in showingInfoArr"
+    :key="index"
+    :movieTitle="show[0].title"
+    :salon="show[0].salon"
+    :date="show[0].date"
+    :time="show[0].time"
+    :tickets="currentBookingsArr[index].tickets"
+    :totalSum="currentBookingsArr[index].totalSum"
+    :bookingId="currentBookingsArr[index].id"
+  />
 </template>
 
 <script>
+import currentBookingsItem from "./currentBookingsItem.vue";
 export default {
+  components: {
+    currentBookingsItem,
+  },
   computed: {
     memberEmail() {
       return this.$store.state.member.email;
     },
-    currentBookings() {
-      console.log("this.userEmail computed: ", this.memberEmail);
-      let x = this.$store.state.bookings.filter(
+    currentBookingsArr() {
+      let getBookings = this.$store.state.bookings.filter(
         (booking) => booking.userEmail == this.memberEmail
       );
-      console.log("filteredBookings: ", x);
 
-      return this.$store.state.bookings.filter(
-        (booking) => booking.userEmail == this.memberEmail
-      );
+      console.log("-- filtered bookings: ", getBookings);
+      return getBookings;
     },
-    newShowingsArr() {
+    showingInfoArr() {
       const showingsArr = [];
-      for (let i = 0; i < this.currentBookings.length; i++) {
-        let xFind = this.$store.state.showings.filter(
-          (x) => x.id == this.currentBookings[i].showingId
+      for (let i = 0; i < this.currentBookingsArr.length; i++) {
+        let getShowings = this.$store.state.showings.filter(
+          (show) => show.id == this.currentBookingsArr[i].showingId
         );
-        console.log("49 ", xFind);
-        showingsArr.push(xFind);
+        showingsArr.push(getShowings);
       }
-      console.log("52 ", showingsArr);
+      console.log("-- filtered showings ", showingsArr);
       return showingsArr;
     },
   },
@@ -64,12 +54,5 @@ h2 {
 }
 h3 {
   margin-top: 0px;
-}
-.currentTicketCont {
-  text-align: center;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 3;
-  grid-row-end: auto;
 }
 </style>

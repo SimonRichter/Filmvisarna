@@ -17,6 +17,29 @@ export default {
 };
 </script>
 
+<style>
+.ticketContainer{
+   display: flex;
+   border: 1px red solid;
+   padding: 7px;
+   height: 150px;
+   width: 100%;
+   justify-content: space-between;
+}
+
+.whereWhen{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.what{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   text-align: end;
+}
+</style>
 <style scoped>
 h2 {
    grid-column-start: 1;
