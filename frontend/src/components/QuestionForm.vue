@@ -1,36 +1,41 @@
 <template>
-  <div class="grid-container-questionForm">
-    <form id="questions-form" @submit.prevent="processForm">
-      <input
-        class="firstName"
-        type="text"
-        name="firstName"
-        v-model="firstName"
-        placeholder="First name"
-      />
-      <input
-        class="lastName"
-        type="text"
-        name="lastName"
-        v-model="lastName"
-        placeholder="Last name"
-      />
-      <input
-        class="email"
-        type="text"
-        name="email"
-        v-model="email"
-        placeholder="Email"
-      />
-      <textarea
-        class="message"
-        name="message"
-        v-model="message"
-        placeholder="Write your message here"
-      />
-      <button type="submit" @submit="submit">Submit</button>
-    </form>
-  </div>
+  <form id="questions-form" @submit.prevent="processForm">
+    <input
+      class="firstName"
+      type="text"
+      name="firstName"
+      v-model="firstName"
+      placeholder="First name"
+      @keyup="reset()"
+    />
+    <input
+      class="lastName"
+      type="text"
+      name="lastName"
+      v-model="lastName"
+      placeholder="Last name"
+    />
+    <input
+      class="email"
+      type="text"
+      name="email"
+      v-model="email"
+      placeholder="Email"
+    />
+    <textarea
+      class="message"
+      name="message"
+      v-model="message"
+      @keyup="charCount()"
+      :maxlength="totalChar"
+      placeholder="Write your message here"
+    /><span class="counter">{{ remainingChar }} / {{ totalChar }}</span>
+    <button type="submit" @submit="submit">Submit</button>
+    <span class="error" v-if="error != ''">{{ error }}</span>
+    <span class="sent" v-if="submitOk"
+      >Thank you for your message!<br> We'll try to respond within 48 hrs.</span
+    >
+  </form>
 </template>
 
 <script>
@@ -41,6 +46,10 @@ export default {
       lastName: "",
       email: "",
       message: "",
+      remainingChar: 0,
+      totalChar: 250,
+      error: "",
+      submitOk: false,
     };
   },
   methods: {
@@ -48,31 +57,31 @@ export default {
       const nameOK = this.checkName();
       const emailOK = this.checkEmail();
       const messageOK = this.checkMessage();
-      console.log("firstName", this.firstName);
-      console.log("lastName", this.lastName);
-      console.log("email", this.email);
-      console.log("message", this.message);
       if (nameOK == false) {
-        console.log("You have invalid characters in name");
+        this.error = "Invalid name";
       } else if (emailOK == false) {
-        console.log("You have not the right form of email");
+        this.error = "Invalid email";
       } else if (messageOK == false) {
-        console.log("Your message is empty or have invalid characters");
+        this.error = "Invalid characters in message";
       } else {
+        this.error = "";
         let message = {
           firstName: this.firstName,
           lastName: this.lastName,
           email: this.email,
-          message: this.message
-        }
+          message: this.message,
+        };
         this.$store.dispatch("addNewMessage", message);
+        this.firstName = "";
+        this.lastName = "";
+        this.email = "";
+        this.message = "";
+        this.submitOk = true;
         console.log("Everythings good, processing form!");
       }
     },
     checkName() {
       let validLetters = /^[A-Za-z]+$/;
-      console.log(this.firstName.match(validLetters));
-      console.log(this.lastName.match(validLetters));
       if (
         this.firstName.match(validLetters) &&
         this.lastName.match(validLetters)
@@ -91,43 +100,102 @@ export default {
       }
     },
     checkMessage() {
-      let validCharacters = /^[a-zA-Z0-9.!%&'+/=?_`-]+$/;
-      let trimmedMessage = this.message.trim();
+      let validCharacters = /^[a-zA-Z0-9.!%&'+/=?-`]+$/;
+      console.log("this.message", this.message);
+      let trimmedMessage = this.message.replaceAll(/\s/g, "");
+      console.log("trimmed message", trimmedMessage);
       if (trimmedMessage.match(validCharacters)) {
         return true;
       } else {
         return false;
       }
     },
+    charCount() {
+      this.remainingChar = this.message.length;
+    },
+    reset() {
+      this.submitOk = false;
+    },
   },
 };
 </script>
 
 <style scoped>
-.grid-container-questionForm {
+#questions-form {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 30px 30px 200px 30px;
-  gap: 10px;
+  grid-template-rows: 30px 30px 170px 30px 30px;
+  gap: 15px;
+  margin: auto;
+  width: 70%;
   margin-bottom: 50px;
-  margin-left: 200px;
-  margin-right: 200px;
 }
 .firstName {
   grid-area: 1 / 1 / 2 / auto;
+  padding: 15px;
+  border: 0;
+  border-radius: 5px;
+  font-size: inherit;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  background-color: rgb(238, 220, 192);
 }
 .lastName {
   grid-area: 1 / 2 / 2 / auto;
+  padding: 15px;
+  border: 0;
+  border-radius: 5px;
+  font-size: inherit;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  background-color: rgb(238, 220, 192);
 }
 .email {
   grid-area: 2 / 1 / 3 / 3;
+  padding: 15px;
+  border: 0;
+  border-radius: 5px;
+  font-size: inherit;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  background-color: rgb(238, 220, 192);
 }
 .message {
   grid-area: 3 / 1 / 4 / 3;
+  padding: 15px;
+  border: 0;
+  border-radius: 5px;
+  font-size: inherit;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  background-color: rgb(238, 220, 192);
+}
+.counter {
+  grid-area: 4 / 1 / 4 / 2;
+}
+.error {
+  grid-area: 4 / 2 / 4 / 3;
+  margin-left: 50px;
+  color: #6e1020;
+}
+.sent {
+  grid-area: 5 / 1 / 5 / 3;
+  color: rgb(238, 220, 192);
+  margin: auto;
+  text-align: center;
 }
 button {
   grid-area: 4 / 1 / 5 / 3;
   width: 100px;
   margin-left: calc(50% - 50px);
+  text-align: center;
+  border: #6e1020 1px solid;
+  background-color: #6e1020;
+  border-radius: 5px;
+  color: rgb(238, 220, 192);
+  cursor: pointer;
+}
+button:hover {
+  background-color: #6e10209a;
 }
 </style>
