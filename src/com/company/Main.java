@@ -16,7 +16,7 @@ public class Main {
     public static void main(String[] args) {
         var app = new Express();
 
-        app.enableCollections("database/temp/db/movies.db");
+        app.enableCollections("database/temp/db/movies.db",CollectionOptions.ENABLE_WATCHER);
         new Authentication(app);
 
         app.get("/hello", (req, res) -> res.send("<h1>Hello from Java Express!</h1>"));
