@@ -41,9 +41,13 @@ export default {
   data() {
     return {
       showModal: false,
-      loggedIn: false,
     };
   },
+  computed: {
+      loggedIn() {
+         return this.$store.state.member;
+      },
+   },
 };
 </script>
 
@@ -83,14 +87,14 @@ img {
   padding: 0;
 }
 .floatRight {
-  padding-right: 30px;
-  width: 50%;
-  justify-content: flex-end;
+   padding-right: 35px;
+   width: 50%;
+   justify-content: flex-end;
 }
 .floatLeft {
-  padding-left: 30px;
-  width: 50%;
-  justify-content: flex-start;
+   padding-left: 35px;
+   width: 50%;
+   justify-content: flex-start;
 }
 .firstListItem {
   padding: 0;
