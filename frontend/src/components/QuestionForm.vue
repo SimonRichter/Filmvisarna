@@ -107,9 +107,7 @@ export default {
     },
     checkMessage() {
       let validCharacters = /^[a-zA-Z0-9.!%&'+/=?-`]+$/;
-      console.log("this.message", this.message);
       let trimmedMessage = this.message.replaceAll(/\s/g, "");
-      console.log("trimmed message", trimmedMessage);
       if (trimmedMessage.match(validCharacters)) {
         return true;
       } else {
