@@ -1,4 +1,6 @@
 package com.company.models;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import express.database.Model;
 import org.dizitart.no2.objects.Id;
 
@@ -39,11 +41,11 @@ public class Member {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-
+    @JsonIgnore
     public String getPassword() {
         return password;
     }
-
+    @JsonProperty
     public void setPassword(String password) {
         this.password = password;
     }
@@ -70,5 +72,18 @@ public class Member {
 
     public void setBookingsId(ArrayList<String> bookingsId) {
         this.bookingsId = bookingsId;
+    }
+
+    @Override
+    public String toString() {
+        return "Member{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", password='" + password + '\'' +
+                ", telephone='" + telephone + '\'' +
+                ", email='" + email + '\'' +
+                ", bookingsId=" + bookingsId +
+                '}';
     }
 }
