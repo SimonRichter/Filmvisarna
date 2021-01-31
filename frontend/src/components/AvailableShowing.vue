@@ -164,7 +164,7 @@ export default {
   cursor: pointer;
   position: absolute;
   left: 40vw;
-   top: 35vw;
+   top: 38vw;
   z-index: 1;
 }
 .noMovie {
