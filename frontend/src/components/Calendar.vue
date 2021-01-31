@@ -123,27 +123,24 @@ export default {
 }
 
 .container {
- margin-left: 40vw;
+ 
+ margin-left: 50vw;
+ margin-top: -20vh;
   color: rgb(241, 236, 236);
   width: fit-content;
 
 }
 
 .calendar {
-  position:absolute;
-  float: left;
   width: 300px;
-  height:60px;
+  height:300px;
   background-color: #222227;
   box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
-    border-radius: 30px;
-    transition: height 1s;
-
+  border-radius: 30px;
+ 
 
 }
-.calendar:hover{
-  height: 300px;
-}
+
 .month {
   width: 100%;
   height: 60px;
@@ -164,6 +161,7 @@ export default {
 }
 
 .month h1 {
+    cursor: move;
   font-size: 20px;
   font-weight: 400;
   text-transform: uppercase;
@@ -172,6 +170,8 @@ export default {
 
 .month p {
   font-size:15px;
+    cursor: move;
+
 }
 
 .weekdays {
