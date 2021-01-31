@@ -2,12 +2,12 @@
   <div class="container">
     <div class="calendar">
       <div class="month">
-        <div class="arrow" @click="callMeBackBaby()" v-bind:class="{ inactivate: testmonth==thisMonth }"> &#8678;</div>
+        <div class="arrow" @click="backToCurrentMonth()" v-bind:class="{ inactivate: testmonth==thisMonth }"> &#8678;</div>
         <div class="date">
           <h1>{{ testmonth }}</h1>
           <p>{{ testtoday }}</p>
         </div>
-        <div class="arrow"  @click="callMeBaby()" v-bind:class="{ inactivate: testmonth!=thisMonth }" > &#x21E8;</div>
+        <div class="arrow"  @click="nextMonth()" v-bind:class="{ inactivate: testmonth!=thisMonth }" > &#x21E8;</div>
       </div>
       <div class="weekdays">
         <div>Mon</div>
@@ -97,13 +97,14 @@ export default {
      this.nextMonthDays=7-this.lastDayNum
 
     },
-    callMeBaby(){
+    nextMonth(){
     this.date= new Date()
-    this.date.setMonth(this.date.getMonth()+1)
+    this.date.setDate(1).toString()  //next will start at day 1 of the month
+    this.date.setMonth(this.date.getMonth()+1) //
     this.newMethod()
 
     },
-     callMeBackBaby(){
+     backToCurrentMonth(){
      this.date= new Date()
      this.date.setMonth(this.date.getMonth())
      this.newMethod()
@@ -129,9 +130,10 @@ export default {
 }
 
 .calendar {
- 
+  position:absolute;
+  float: left;
   width: 300px;
-  height: 60px;
+  height:60px;
   background-color: #222227;
   box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
     border-radius: 30px;
