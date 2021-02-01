@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form>
+    <form @submit="login">
     <div class="signInInfo">
       <h1>{{ "Sign in" }}</h1>
 
@@ -18,23 +18,21 @@
         placeholder="Password"
       />
     </div>
+    <div class="signInButtonDiv">
+      <button class="signInButton" >Sign in</button>
+    </div>
+    <div v-if="!isLoggedIn && showToggle">
+      Bad Credentials
+    </div>
     </form>
-    <div class="forgotPassButtonDiv">
+
+
+
+  <div class="forgotPassButtonDiv">
       <button class="forgotPasswordButton" @click="showPasswordModal = true">
         Forgot Password?
       </button>
     </div>
-    <div class="signInButtonDiv">
-      <button class="signInButton" @click.prevent="login()">Sign in</button>
-      <h2 v-if="isLoggedIn && showToggle">
-         {{ "Logged In" }}
-    </h2>
-    <h2 v-else-if="showToggle">
-      {{ "Bad Credentials" }}
-    </h2>
-    </div>
-    
-  
     <div class="signUpInfo">
       <div class="signUpPopUp">
         <h3>{{ "Are you not a member?" }}</h3>
@@ -86,26 +84,31 @@ export default {
       showToggle: false,
     };
   },
-  computed:{
-     isLoggedIn() {
-      return this.$store.state.user != null;
+  computed: {
+    isLoggedIn() {
+      return this.$store.state.member;
+    },
+    closeModal(){
+      return this.showModal;
     }
   },
   methods: {
-    login() {
-      console.log(this.isLoggedIn , this.showToggle)
+   login: async function(x) {
       const credentials = {
         email: this.email,
         password: this.password,
       };
-      if(this.$store.dispatch("login", credentials)){
-          this.showToggle = true;
+      await this.$store.dispatch("login", credentials)
+      if(!this.isLoggedIn){
+        x.preventDefault();
       }
       else{
-        this.showToggle = false;
+        this.showToggle = true;
+         console.log('wrong')
       }
-      console.log('efter' , this.isLoggedIn , this.showToggle)
+        
     },
+  
   },
 };
 </script>
@@ -274,4 +277,5 @@ h3 {
   right: 0;
   cursor: pointer;
 }
+
 </style>
