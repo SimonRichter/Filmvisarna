@@ -7,7 +7,7 @@
     :salon="show[0].salon"
     :date="show[0].date"
     :time="show[0].time"
-    :tickets="currentBookingsArr[index].tickets"
+    :seats="currentBookingsArr[index].seatIndexes"
     :totalSum="currentBookingsArr[index].totalSum"
     :bookingId="currentBookingsArr[index].id"
   />

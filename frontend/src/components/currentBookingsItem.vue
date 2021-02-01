@@ -6,7 +6,7 @@
       <h3 class="dateTime">{{ date }} {{ time }}</h3>
     </div>
     <div class="what">
-      <h4>{{ tickets }}</h4>
+      <h4>Seats: {{ seats }}</h4>
       <h4>Total: {{ totalSum }} kr</h4>
       <h4>Booking ID: {{ bookingId }}</h4>
     </div>
@@ -20,7 +20,7 @@ export default {
     "salon",
     "date",
     "time",
-    "tickets",
+    "seats",
     "totalSum",
     "bookingId",
   ],
