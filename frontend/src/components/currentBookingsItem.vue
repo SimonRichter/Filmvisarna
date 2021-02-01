@@ -1,14 +1,16 @@
 <template>
   <div class="ticketContainer currentBookingItem">
     <div class="whereWhen">
-      <h4>{{ movieTitle }}</h4>
-       <h4>{{ salon }}</h4>
-      <h3 class="dateTime">{{ date }} {{ time }}</h3>
+      <div class="titleSalon">
+        <h4>{{ movieTitle }}</h4>
+        <h4>{{ salon }}</h4>
+      </div>
+      <h4 class="dateTime">{{ time }} , {{ date }}</h4>
     </div>
     <div class="what">
       <h4>Seats: {{ seats }}</h4>
-      <h4>Total: {{ totalSum }} kr</h4>
-      <h4>Booking ID: {{ bookingId }}</h4>
+      <!-- <h4>Total: {{ totalSum }} kr</h4> -->
+      <h4>{{ bookingId }}</h4>
     </div>
   </div>
 </template>
@@ -21,14 +23,14 @@ export default {
     "date",
     "time",
     "seats",
-    "totalSum",
+    // "totalSum",
     "bookingId",
   ],
 };
 </script>
 
 <style scoped>
-.currentBookingItem{
+.currentBookingItem {
   grid-column: 1;
 }
 </style>

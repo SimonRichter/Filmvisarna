@@ -1,6 +1,5 @@
 <template>
    <div class="contentGridContainer">
-      <h2>My Page</h2>
       <CurrentBookings />
       <!-- <OldBookings /> -->
    </div>
@@ -18,29 +17,46 @@ export default {
 </script>
 
 <style>
+
 .ticketContainer{
    display: flex;
-   border: 1px red solid;
-   padding: 7px;
+   padding: 20px;
    height: 150px;
-   width: 100%;
    justify-content: space-between;
+   background-color:rgba(51, 51, 51, 0.39);
+   border-radius: 5px;
+}
+
+.whereWhen > *, .what > h4:nth-child(1){
+   font-size: 25px;
+   
+}
+
+.titleSalon > *{
+   color: rgb(116, 109, 98);
+}
+
+.what > h4:nth-child(2){
+   color: rgb(116, 109, 98);
 }
 
 .whereWhen{
    display: flex;
    flex-direction: column;
-   justify-content: space-between;
+   justify-content: space-around;
 }
 
 .what{
    display: flex;
    flex-direction: column;
-   justify-content: space-between;
+   justify-content: space-around;
    text-align: end;
 }
 </style>
 <style scoped>
+.contentGridContainer{
+   margin-top:100px;
+}
 h2 {
    grid-column-start: 1;
    grid-column-end: 3;
