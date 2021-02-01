@@ -34,6 +34,7 @@ export default {
 
 .titleSalon > *{
    color: rgb(116, 109, 98);
+    text-decoration: underline;
 }
 
 .what > h4:nth-child(2){
@@ -50,7 +51,8 @@ export default {
    display: flex;
    flex-direction: column;
    justify-content: space-around;
-   text-align: end;
+  
+   
 }
 </style>
 <style scoped>
