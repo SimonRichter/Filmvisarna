@@ -15,16 +15,23 @@
   <div v-if="showings.length && new Date(today()) > new Date() - 86400000">
     <div class="showingList" v-for="showing of filteredShowings" :key="showing">
       <div class="anotherFormattingDiv">
-        <button
-          class="bookButton grow"
-          @click="
-            $router.push(
-              '/chosen-movie/' + showing.title + '/booking/' + showing.id
-            )
-          "
-        >
-          Book
-        </button>
+        <div v-if="member">
+          <button
+            class="bookButton grow"
+            @click="
+              $router.push(
+                '/chosen-movie/' + showing.title + '/booking/' + showing.id
+              )
+            "
+          >
+            Book
+          </button>
+        </div>
+        <div v-else>
+          <button class="popup bookButton" @click="popUp()">
+            Book <span class="popuptext" id="myPopup">You need to Sign In First</span>
+          </button>
+        </div>
         <h3 class="noTopMargin" v-if="showings.length">
           {{ showing.date }} - {{ showing.time }} | {{ showing.theatre }} |
           {{ showing.salon }}
@@ -35,13 +42,12 @@
   <div class="noMovie" v-else>
     --- NO BOOKINGS AVAILABLE FOR THE SELECTED DATE ---
   </div>
-
-  
 </template>
 
 <script>
 import ShowingsFilter from "./ShowingsFilter.vue";
 import Calendar from "./Calendar.vue";
+
 export default {
   components: {
     Calendar,
@@ -50,7 +56,8 @@ export default {
 
   data() {
     return {
-      showCalen:false,
+      signIn: false,
+      showCalen: false,
       hello: 0,
       bye: 0,
       positions: {
@@ -63,9 +70,16 @@ export default {
   },
 
   methods: {
-     show(){
-       console.log(this.showCalen)
-      return this.showCalen=!this.showCalen
+    popUp() {
+      const popup = document.getElementById("myPopup");
+      popup.classList.toggle("show");
+    },
+    goSignIn() {
+      return (this.signIn = !this.signIn);
+    },
+    show() {
+      console.log("calen here??", this.showCalen);
+      return (this.showCalen = !this.showCalen);
     },
     what(dayPicked, monthPicked) {
       this.hello = dayPicked;
@@ -124,7 +138,11 @@ export default {
   },
 
   computed: {
-   
+    member() {
+      console.log("acwecwecew", this.$store.state.member);
+      return this.$store.state.member;
+    },
+
     title() {
       // get showing id from url parameter
       return this.$route.params.title.replaceAll("-", " ");
@@ -158,19 +176,30 @@ export default {
 </script>
 
 <style scoped>
-.calenIcon{
+.signInButton {
+  appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: rgb(116, 109, 98);
+  padding: 16px 18px;
+  font-size: 20px;
+  z-index: 100;
+}
+.calenIcon {
   font-size: 40px;
   width: fit-content;
   cursor: pointer;
   position: absolute;
   left: 40vw;
-   top: 38vw;
+  top: 38vw;
   z-index: 1;
 }
 .noMovie {
   text-align: center;
   padding: 20px 0 40px 0;
-  margin-top: 150px;
+
   border-top: 1px solid #6e1020;
 }
 
@@ -229,12 +258,65 @@ h3 {
   margin-top: 0;
 }
 #draggable-container {
-    width: 0%;
+  width: 0%;
   position: absolute;
   z-index: 9;
-  }
+}
 #draggable-header {
   width: 0%;
   z-index: 10;
+}
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 </style>
