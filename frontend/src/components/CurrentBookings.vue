@@ -7,8 +7,10 @@
   >
     <div class="whereWhen" v-for="showing of newShowingsArr" :key="showing">
       <div v-for="index in showing" :key="index">
-        <h4>{{ index.title }}, {{ index.salon }}</h4>
-        <h3 class="dateTime">{{ index.date }} {{ index.time }}</h3>
+        <div v-if="index.date >= today">
+          <h4>{{ index.title }}, {{ index.salon }}</h4>
+          <h3 class="dateTime">{{ index.date }} {{ index.time }}</h3>
+        </div>
       </div>
     </div>
     <!-- <div class="what">
@@ -40,6 +42,13 @@ export default {
         (booking) => booking.userEmail == this.memberEmail
       );
     },
+
+    today() {
+      let today = new Date();
+      console.log('TODAY: ', today.toLocaleDateString())
+      return today.toLocaleDateString()
+    },
+
     newShowingsArr() {
       const showingsArr = [];
       for (let i = 0; i < this.currentBookings.length; i++) {
@@ -50,6 +59,8 @@ export default {
         showingsArr.push(xFind);
       }
       console.log("52 ", showingsArr);
+      showingsArr.filter((date) => date.date >= this.today)
+      console.log("54 ", showingsArr);
       return showingsArr;
     },
   },
