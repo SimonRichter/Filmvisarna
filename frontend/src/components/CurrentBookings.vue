@@ -8,9 +8,9 @@
     :date="show[0].date"
     :time="show[0].time"
     :seats="currentBookingsArr[index].seatIndexes"
-    :totalSum="currentBookingsArr[index].totalSum"
     :bookingId="currentBookingsArr[index].id"
   />
+   <!-- :totalSum="currentBookingsArr[index].totalSum" -->
 </template>
 
 <script>
