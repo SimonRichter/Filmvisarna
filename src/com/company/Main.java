@@ -1,13 +1,8 @@
 package com.company;
 
-import com.company.models.Booking;
-import com.company.models.Member;
-import com.company.models.Movie;
-import com.company.models.Showing;
+import com.company.models.*;
 import express.Express;
 import express.database.CollectionOptions;
-
-import java.util.Arrays;
 
 import static express.database.Database.collection;
 
@@ -16,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
         var app = new Express();
 
-        app.enableCollections("database/temp/db/movies.db",CollectionOptions.ENABLE_WATCHER);
+        app.enableCollections("database/temp/db/movies.db", CollectionOptions.ENABLE_WATCHER);
         new Authentication(app);
 
         app.get("/hello", (req, res) -> res.send("<h1>Hello from Java Express!</h1>"));
@@ -64,20 +59,17 @@ public class Main {
             collection(Booking.class).deleteById(id);
         });
 
-      /*  // Adding a new member
-        app.post("/rest/members", (req, res) -> {
-            var member = req.body(Member.class);
-            var savedMember = collection(Member.class).save(member);
-            res.json(savedMember);
-
-        });
-
-        // update to an existing member
-        app.put("/rest/members/:id", (req, res) -> {
-            var update = req.body(Member.class);
-            var savedUpdate = collection(Member.class).save(update);
-            res.json(savedUpdate);
-        });*/
+        /*
+         * // Adding a new member app.post("/rest/members", (req, res) -> { var member =
+         * req.body(Member.class); var savedMember =
+         * collection(Member.class).save(member); res.json(savedMember);
+         * 
+         * });
+         * 
+         * // update to an existing member app.put("/rest/members/:id", (req, res) -> {
+         * var update = req.body(Member.class); var savedUpdate =
+         * collection(Member.class).save(update); res.json(savedUpdate); });
+         */
 
         // Delete (cancel membership) member
         app.delete("/rest/members/:id", (req, res) -> {
@@ -96,6 +88,21 @@ public class Main {
             var update = req.body(Showing.class);
             var savedUpdate = collection(Showing.class).save(update);
             res.json(savedUpdate);
+
+        });
+
+        // Get messages sent in by question form
+        app.get("/rest/messages", (req, res) -> {
+            var message = collection(Message.class).find();
+            res.json(message);
+        });
+
+        // Add new messages sent in by question form
+        app.post("/rest/messages", (req, res) -> {
+            var message = req.body(Message.class);
+            // var savedBooking=collection(Member.class).save(booking); // sprint 2
+            var savedMessage = collection(Message.class).save(message);
+            res.json(savedMessage);
 
         });
 

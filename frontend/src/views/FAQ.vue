@@ -84,23 +84,35 @@
       </p>
       <br />
       <h3>
-         Do you have any more questions? Please contact us at
-         <a href="mailto:info@vuexcinemas.com">info@vuexcinemas.com</a> or
-         <a href="tel:+4646007007">+46-46-007007</a>
+         Do you have any questions? Send us a message!
       </h3>
       <br />
       <br />
+         <QuestionForm />
    </div>
+
 </template>
 
 
 <script>
-export default {};
+import QuestionForm from '../components/QuestionForm.vue'
+
+export default {
+   components: {
+      QuestionForm
+   }
+};
 </script>
 
 <style scoped>
 h2 {
    padding-top: 4vh;
+}
+h3{
+   text-align: center;
+   border-bottom: #6e1020 1px solid;
+   width: 50%;
+   margin:auto;
 }
 
 p {

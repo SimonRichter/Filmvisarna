@@ -10,6 +10,7 @@ const state = {
   bookingInfo: [],
   genreFilterItem: [],
   showingsFilterItem: [],
+  messages: []
 }
 
 const mutations = {
@@ -36,6 +37,12 @@ const mutations = {
   updateShow(state, showObj) {
     const index = state.showings.indexOf(state.showings.filter(show => show.id == showObj.id)[0]);
     state.showings.splice(index, 1, showObj);
+  },
+  setMessages(state, messages) {
+    state.messages = messages;
+  },
+  addMessage(state, message) {
+    state.messages.push(message);
   }
   // ----------- SPRINT 2 -----------
   // addMemberToState(store, newMember) {
@@ -93,6 +100,50 @@ const actions = {
       body: JSON.stringify(showing)
     })
   },
+  async fetchMessages(store) {
+    let messages = await fetch('/rest/messages')
+    messages = await messages.json()
+    store.commit('setMessages', messages)
+  },
+  async addNewMessage(store, message) {
+    let response = await fetch('/rest/messages', {
+      method: 'POST',
+      body: JSON.stringify(message)
+    })
+    message = await response.json()
+    store.commit('addMessage', message)
+  },
+  // ------------- SPRINT 2 ------------
+  // in-parameter is a user object user = {name: Anna, email: anna@gmail.com, password: Hej123}
+  // Backend: need to use collection('Klass').insert(Object) to add a new 
+  // addMemberToServer(store, newMember) {
+  //   // Fetch url of the json file. Method = POST because we want to add something new to the json file in the server
+  //   // Body = convert the object to a json object
+  //   let response = await fetch('/rest/member', {
+  //     method: 'POST',
+  //     body: JSON.stringify(newMember)
+  //   })
+  //   // After the new member has been saved to the json file, get it again and commit to the state array -> members
+  //   newMember = await response.json()
+  //   store.commit('addMemberToState', newMember)
+  // },
+  // removeMemberFromServer(store, memberToDelete) {
+  //   let response = await fetch('/rest/member', {
+  //     method: 'DELETE',
+  //     body: JSON.stringify(memberToDelete)
+  //   })
+  //   memberToDelete = await response.json()
+  //   store.commit('removeMemberFromState', memberToDelete)
+  // },
+  // // Updates the member if they have added or removed a booking in My Page or Confirmed window
+  // updateMemberInServer(store, updatedMember) {
+  //   let response = await fetch('/rest/member', {
+  //     method: 'PUT',
+  //     body: JSON.stringify(updatedMember)
+  //   })
+  //   member = await response.json()
+  //   store.commit('updateMemberInState', updatedMember)
+  // },
 
   async createBookings(store, bookingObj) {
     let showingId = bookingObj.showing.id.toString()
