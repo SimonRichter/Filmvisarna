@@ -8,9 +8,7 @@
       <h4 class="dateTime">{{ time }} , {{ date }}</h4>
     </div>
     <div class="what">
-      <h4>Seats: {{ seats }}</h4>
-      <!-- <h4>Total: {{ totalSum }} kr</h4> -->
-      <h4>{{ bookingId }}</h4>
+      <h4 class="bookingId">{{ bookingId }}</h4>
     </div>
   </div>
 </template>
@@ -22,8 +20,6 @@ export default {
     "salon",
     "date",
     "time",
-    "seats",
-    // "totalSum",
     "bookingId",
   ],
 };
@@ -31,6 +27,6 @@ export default {
 
 <style scoped>
 .oldBookingItem {
-  grid-column: 2;
+ height: 75px;
 }
 </style>

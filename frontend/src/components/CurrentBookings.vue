@@ -10,7 +10,6 @@
     :seats="currentBookingsArr[index].seatIndexes"
     :bookingId="currentBookingsArr[index].id"
   />
-   <!-- :totalSum="currentBookingsArr[index].totalSum" -->
 </template>
 
 <script>
@@ -48,13 +47,12 @@ export default {
 
 <style scoped>
 h2 {
+  letter-spacing: 2px;
+  color: rgb(161, 152, 138);
+  margin-top:60px;
   text-align: center;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  border-bottom: 1px solid red;
+  grid-column: 1/3;
+  border-bottom: 1px solid #6e1020;
   padding: 16px;
-}
-h3 {
-  margin-top: 0px;
 }
 </style>

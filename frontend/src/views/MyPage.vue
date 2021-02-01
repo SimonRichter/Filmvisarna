@@ -27,18 +27,13 @@ export default {
    border-radius: 5px;
 }
 
-.whereWhen > *, .what > h4:nth-child(1){
-   font-size: 25px;
-   
-}
-
 .titleSalon > *{
    color: rgb(116, 109, 98);
-    text-decoration: underline;
 }
 
-.what > h4:nth-child(2){
+.what > .bookingId{
    color: rgb(116, 109, 98);
+   font-size: 14px;
 }
 
 .whereWhen{
@@ -56,14 +51,6 @@ export default {
 }
 </style>
 <style scoped>
-.contentGridContainer{
-   margin-top:100px;
-}
-h2 {
-   grid-column-start: 1;
-   grid-column-end: 3;
-   text-align: center;
-}
 .contentGridContainer:not(:first-child) {
    grid-gap: 2vw;
 }

@@ -8,9 +8,8 @@
       <h4 class="dateTime">{{ time }} , {{ date }}</h4>
     </div>
     <div class="what">
-      <h4>Seats: {{ seats }}</h4>
-      <!-- <h4>Total: {{ totalSum }} kr</h4> -->
-      <h4>{{ bookingId }}</h4>
+      <h4 class="seats">Seats: {{ seats }}</h4>
+      <h4 class="bookingId">{{ bookingId }}</h4>
     </div>
   </div>
 </template>
@@ -23,14 +22,17 @@ export default {
     "date",
     "time",
     "seats",
-    // "totalSum",
     "bookingId",
   ],
 };
 </script>
 
 <style scoped>
-.currentBookingItem {
-  grid-column: 1;
+.currentBookingItem{
+  box-shadow: 1px 1px wheat;
+}
+.whereWhen > *, .what > .seats{
+   font-size: 22px;
+   
 }
 </style>
