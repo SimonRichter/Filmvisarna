@@ -7,8 +7,11 @@
     </ul>
     <ul class="navBar floatRight">
       <router-link to="/movies"><li>Movies</li></router-link>
+      <router-link to="/faq"><li>FAQ</li></router-link>
       <router-link to="/about"><li>About</li></router-link>
-      <Button class="signInButton" v-if="!loggedIn" @click="showModal = true">Sign in</Button>
+      <button class="signInButton" v-if="!loggedIn" @click="showModal = true">
+        Sign in
+      </button>
       <NavLogIn v-if="loggedIn" />
     </ul>
   </div>
@@ -38,91 +41,64 @@ export default {
   data() {
     return {
       showModal: false,
-      loggedIn: false,
     };
   },
+  computed: {
+      loggedIn() {
+         return this.$store.state.member;
+      },
+   },
 };
 </script>
 
 <style scoped>
+li {
+  color: rgb(116, 109, 98);
+  padding: 16px 18px;
+  font-size: 20px;
+}
+li:hover {
+  color: rgb(238, 220, 192);
+}
+a {
+  text-decoration: none;
+}
+img {
+  padding: 18px 0 18px;
+  height: 60px;
+  width: auto;
+}
 .navBarContainer {
   display: flex;
-  /* border-bottom: 1px #dc0428 solid; */
-  /* TEST 1 */
   border-bottom: #96162b 1px solid;
-  /* TEST 2 */
-  /* TEST 3 */
   margin: 0;
   padding: 0;
   overflow: hidden;
   position: fixed;
-  width:100%;
+  width: 100%;
   z-index: 1;
 }
 .navBar {
   display: flex;
   align-items: center;
   list-style-type: none;
-  /* background-color: black; */
-  /* TEST 1 */
   background-color: #131313;
-  /* TEST 2 */
-  /* TEST 3 */
-
   text-decoration: none;
   padding: 0;
-  /* display: flex;
-   border-bottom: 1px #dc0428 solid; */
 }
-/* .navBar {
-   display: flex;
-   align-items: center;
-   list-style-type: none;
-   background-color: #000000;
-   text-decoration: none;
-   padding: 0;
-} */
-
 .floatRight {
-  padding-right: 30px;
-  width: 50%;
-  justify-content: flex-end;
+   padding-right: 35px;
+   width: 50%;
+   justify-content: flex-end;
 }
 .floatLeft {
-  padding-left: 30px;
-  width: 50%;
-  justify-content: flex-start;
+   padding-left: 35px;
+   width: 50%;
+   justify-content: flex-start;
 }
 .firstListItem {
   padding: 0;
   padding-top: 7px;
-}
-
-li {
-  color: rgb(116, 109, 98);
-  /* color: white; */
-  /* TEST 1 */
-  
-  /* TEST 2 */
-  /* TEST 3 */
-
-  padding: 16px 18px;
-  font-size: 20px;
-}
-
-li:hover{
-  color: rgb(238, 220, 192);
-}
-
-a {
-  text-decoration: none;
-}
-img {
-  padding: 18px 0 18px;
- height:60px;
-
-  
-  width: auto;
 }
 .signInButton {
   appearance: none;
@@ -143,28 +119,6 @@ img {
   z-index: 98;
   background-color: rbga(0, 0, 0, 0.5);
 }
-/*
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5;
-}
-
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
-
-.slide-enter-active,
-.slide-leave-active {
-  transition: transform 0.5;
-}
-
-.slide-enter,
-.slide-leave-to {
-  transform: translateX(-50%) translateY(100vw);
-}
-*/
-
 .modal {
   position: fixed;
   top: 50%;

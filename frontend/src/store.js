@@ -9,6 +9,9 @@ const state = {
   bookings: [],
   showings: [],
   bookingInfo: [],
+  genreFilterItem: [],
+  showingsFilterItem: [],
+  messages: []
 }
 
 const mutations = {
@@ -17,6 +20,7 @@ const mutations = {
   },
   setMember(state, member) {
     state.member = member;
+    console.log(state.member)
   },
   setBookings(state, bookingsList) {
     state.bookings = bookingsList;
@@ -29,6 +33,18 @@ const mutations = {
   setShowings(state, showingsList) {
     state.showings = showingsList;
   },
+  // Updates the show that has been changed so another user can get 'live updates' if seats are taken or not
+  // after the tickets has been 'confirmed'
+  updateShow(state, showObj) {
+    const index = state.showings.indexOf(state.showings.filter(show => show.id == showObj.id)[0]);
+    state.showings.splice(index, 1, showObj);
+  },
+  setMessages(state, messages) {
+    state.messages = messages;
+  },
+  addMessage(state, message) {
+    state.messages.push(message);
+  }
   // ----------- SPRINT 2 -----------
   // addMemberToState(store, newMember) {
   //   store.members.push(newMember)
@@ -52,7 +68,6 @@ const actions = {
   async fetchMovies(store) {
     let moviesList = await fetch('/rest/movies')
     moviesList = await moviesList.json()
-    console.log(moviesList);
     store.commit('setMovies', moviesList)
   },
   // async fetchMembers(store) {
@@ -78,54 +93,133 @@ const actions = {
       theatre: showingObj.theatre,
       salon: showingObj.salon,
       time: showingObj.time,
-      seats: showingObj.seats
+      seats: showingObj.seats,
+      totalSeats: showingObj.totalSeats
     }
-    let response = await fetch('/rest/showings/' + showingObj.id, {
+    await fetch('/rest/showings/' + showingObj.id, {
       method: 'PUT',
       body: JSON.stringify(showing)
     })
   },
+  async fetchMessages(store) {
+    let messages = await fetch('/rest/messages')
+    messages = await messages.json()
+    store.commit('setMessages', messages)
+  },
+  async addNewMessage(store, message) {
+    let response = await fetch('/rest/messages', {
+      method: 'POST',
+      body: JSON.stringify(message)
+    })
+    message = await response.json()
+    store.commit('addMessage', message)
+  },
+  // ------------- SPRINT 2 ------------
+  // in-parameter is a user object user = {name: Anna, email: anna@gmail.com, password: Hej123}
+  // Backend: need to use collection('Klass').insert(Object) to add a new 
+  // addMemberToServer(store, newMember) {
+  //   // Fetch url of the json file. Method = POST because we want to add something new to the json file in the server
+  //   // Body = convert the object to a json object
+  //   let response = await fetch('/rest/member', {
+  //     method: 'POST',
+  //     body: JSON.stringify(newMember)
+  //   })
+  //   // After the new member has been saved to the json file, get it again and commit to the state array -> members
+  //   newMember = await response.json()
+  //   store.commit('addMemberToState', newMember)
+  // },
+  // removeMemberFromServer(store, memberToDelete) {
+  //   let response = await fetch('/rest/member', {
+  //     method: 'DELETE',
+  //     body: JSON.stringify(memberToDelete)
+  //   })
+  //   memberToDelete = await response.json()
+  //   store.commit('removeMemberFromState', memberToDelete)
+  // },
+  // // Updates the member if they have added or removed a booking in My Page or Confirmed window
+  // updateMemberInServer(store, updatedMember) {
+  //   let response = await fetch('/rest/member', {
+  //     method: 'PUT',
+  //     body: JSON.stringify(updatedMember)
+  //   })
+  //   member = await response.json()
+  //   store.commit('updateMemberInState', updatedMember)
+  // },
+
+  async createBookings(store, bookingObj) {
+    let showingId = bookingObj.showing.id.toString()
+    let tickets0 = bookingObj.tickets[0].title + ": " + bookingObj.tickets[0].value + ", "
+    let tickets1 = bookingObj.tickets[1].title + ": " + bookingObj.tickets[1].value + ", "
+    let tickets2 = bookingObj.tickets[2].title + ": " + bookingObj.tickets[2].value
+    let totalSum = bookingObj.totalSum.toString()
+    let seatIndexes = bookingObj.seatIndexes
+    let seatIndexesString = '';
+    for (let i = 0; i < seatIndexes.length; i++) {
+      if (i == seatIndexes.length - 1) {
+        seatIndexesString += "" + (seatIndexes[i] + 1)
+      } else {
+              seatIndexesString += "" + (seatIndexes[i] + 1) + ", "
+      }
+    }
+
+    let tickets = tickets0 + tickets1 + tickets2;
+    let userEmail = this.state.member.email
+    console.log(userEmail)
+    seatIndexes = seatIndexesString
+    let booking = {
+      showingId, tickets, seatIndexes, totalSum, userEmail
+    }
+
+    console.log("createBookings", JSON.stringify(booking))
+    await fetch('/rest/bookings', {
+      method: 'POST',
+      body: JSON.stringify(booking)
+    })
+  },
   async login(store, credentials) {
     let member = await fetch('/api/login', {
-        method: 'POST', 
-        body: JSON.stringify(credentials)
+      method: 'POST',
+      body: JSON.stringify(credentials)
     })
 
     try {
-        member = await member.json()
-        console.log(member);
-        store.commit('setMember', member)
+      console.log('kör från store');
+
+      //member = state.members
+      member = await member.json()
+      console.log(member);
+      store.commit('setMember', member)
     } catch {
-        console.warn('Bad credentials');
-        return false;
+
+      console.warn('Bad credentials');
     }
-},
-async register(store, credentials) {
+  },
+  async register(store, credentials) {
     let member = await fetch('/api/register', {
-        method: 'POST', 
-        body: JSON.stringify(credentials)
+      method: 'POST',
+      body: JSON.stringify(credentials)
     })
 
     try {
-        member = await member.json()
-        console.log(member);
-        store.commit('setMember', member)
+      member = credentials;
+      console.log(member);
+      store.commit('setMember', member)
     } catch {
-        console.warn('Bad credentials');
-        return false;
+      console.warn('Bad credentials');
     }
-},
-async whoAmI(store) {
+  },
+  async whoAmI(store) {
     let member = await fetch('/api/whoami')
     try {
-        member = await member.json()
-        console.log(member);
-        store.commit('setMember', member)
+      member = await member.json()
+      console.log(member);
+      store.commit('setMember', member)
     } catch {
-        console.warn('Not logged in');
+      console.warn('Not logged in');
     }
-},
- 
+  },
+
+
 }
 
 export default createStore({ state, mutations, actions })

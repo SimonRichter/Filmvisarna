@@ -3,88 +3,65 @@
         import express.database.Model;
         import org.dizitart.no2.objects.Id;
 
-@Model
+        import java.util.ArrayList;
+
+        @Model
 public class Booking {
     @Id
     private String id;
-    private String title;
-    private String date;
-    private String theatre;
-    private String salon;
-    private String time;
-    private String name;
-    private String lastName;
-    private int seats;
+    private String showingId;
+    private String tickets;
+    private String seatIndexes;
+    private String totalSum;
+    private String userEmail;
 
-    public String getId() {
-        return id;
-    }
+    public Booking(){}
 
-    public void setId(String id) {
-        this.id = id;
-    }
+            public String getId() {
+                return id;
+            }
 
-    public String getTitle() {
-        return title;
-    }
+            public void setId(String id) {
+                this.id = id;
+            }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+            public String getShowingId() {
+                return showingId;
+            }
 
-    public String getDate() {
-        return date;
-    }
+            public void setShowingId(String showingId) {
+                this.showingId = showingId;
+            }
 
-    public void setDate(String date) {
-        this.date = date;
-    }
+            public String getTickets() {
+                return tickets;
+            }
 
-    public String getTheatre() {
-        return theatre;
-    }
+            public void setTickets(String tickets) {
+                this.tickets = tickets;
+            }
 
-    public void setTheatre(String theatre) {
-        this.theatre = theatre;
-    }
+            public String getSeatIndexes() {
+                return seatIndexes;
+            }
 
-    public String getSalon() {
-        return salon;
-    }
+            public void setSeatIndexes(String seats) {
+                this.seatIndexes = seats;
+            }
 
-    public void setSalon(String salon) {
-        this.salon = salon;
-    }
+            public String getTotalSum() {
+                return totalSum;
+            }
 
-    public String getTime() {
-        return time;
-    }
+            public void setTotalSum(String totalSum) {
+                this.totalSum = totalSum;
+            }
 
-    public void setTime(String time) {
-        this.time = time;
-    }
+            public String getUserEmail() {
+                return userEmail;
+            }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public int getSeats() {
-        return seats;
-    }
-
-    public void setSeats(int seats) {
-        this.seats = seats;
-    }
-}
+            public void setUserEmail(String userEmail) {
+                this.userEmail = userEmail;
+            }
+        }

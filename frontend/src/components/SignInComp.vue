@@ -33,6 +33,10 @@
         Forgot Password?
       </button>
     </div>
+    <div class="signInButtonDiv">
+      <button class="signInButton" @click.prevent="login()">Sign in</button>
+    </div>
+
     <div class="signUpInfo">
       <div class="signUpPopUp">
         <h3>{{ "Are you not a member?" }}</h3>
@@ -77,6 +81,8 @@ export default {
   components: { SignUpComp, ForgotPassword },
   data() {
     return {
+      email: "",
+      password: "",
       showModal: false,
       showPasswordModal: false,
       email: '',
@@ -114,76 +120,59 @@ export default {
 </script>
 
 <style scoped>
-.signInInfo {
-  margin-top: 50px;
-  text-align: center;
-  color: aliceblue;
+.signInInfo{
+    margin-top: 50px;
+    text-align: center;
+    color: aliceblue;
 }
-h1 {
-  font-size: 50px;
-  margin-bottom: 25px;
+h1{
+    font-size: 50px;
+    margin-bottom: 25px;
 }
-h2 {
-  font-size: 25px;
-  margin-bottom: 5px;
-  margin-top: 10px;
+h2{
+    font-size: 25px;
+    margin-bottom: 5px;
+    margin-top: 10px;
 }
-h3 {
-  margin-top: 18px;
+h3{
+    margin-top: 18px;
 }
-.signInButtonDiv {
-  text-align: center;
+.forgotPassButtonDiv{
+    text-align: center;
+    margin-top: 10px;
 }
-.signInButton {
-  margin-top: 10px;
-  font-size: 30px;
-  border: #6e1020 1px solid;
-  background-color: #131313;
-  border-radius: 5px;
-  color: rgb(238, 220, 192);
-  font-family: "Bebas Neue", cursive;
-  cursor: pointer;
+.forgotPasswordButton{
+    appearance: none;
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 15px;
+    color: rgb(238, 220, 192);
+    font-family: "Bebas Neue", cursive;
 }
-.forgotPassButtonDiv {
-  text-align: center;
-  margin-top: 10px;
+.signUpInfo{
+    text-align: center;
 }
-.forgotPasswordButton {
-  appearance: none;
-  outline: none;
-  border: none;
-  background: none;
-  cursor: pointer;
-  font-size: 15px;
-  color: rgb(238, 220, 192);
-  font-family: "Bebas Neue", cursive;
+.signUpButton{
+    margin-top: 10px;
+    font-size: 22px;
+    border: #6e1020 1px solid;
+    background-color: #131313;
+    border-radius: 5px;
+    color: rgb(238, 220, 192);
+    font-family: "Bebas Neue", cursive;
+    cursor: pointer;
 }
-.signUpInfo {
-  text-align: center;
+.passwordInputSignIn{
+    font-size: 20px;
+    padding-top: 5px;
 }
-.signUpButton {
-  margin-top: 10px;
-  font-size: 22px;
-  border: #6e1020 1px solid;
-  background-color: #131313;
-  border-radius: 5px;
-  color: rgb(238, 220, 192);
-  font-family: "Bebas Neue", cursive;
-  cursor: pointer;
+.emailInputSignIn{
+    font-size: 20px;
+    padding-top: 5px;
 }
-.signUpPopUp {
-  float: left;
-  margin-bottom: 100px;
-}
-.passwordInputSignIn {
-  font-size: 20px;
-  padding-top: 5px;
-}
-.emailInputSignIn {
-  font-size: 20px;
-  padding-top: 5px;
-}
-.modal-overlay {
+.modal-overlay{
   position: absolute;
   top: 0;
   left: 0;

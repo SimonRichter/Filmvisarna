@@ -57,7 +57,8 @@ export default {
                 lastName: this.lastName,
                 email: this.email,
                 telephone: this.telephone,
-                password: this.password
+                password: this.password,
+            
             }
             if(this.$store.dispatch("register", credentials)){
                 this.showToggle = true;
