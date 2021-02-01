@@ -85,6 +85,35 @@ export default {
       return this.passConfirm === this.password;
     },
   },
+<<<<<<< HEAD
+=======
+    methods: {
+     register() {
+         console.log('före' , this.isLoggedIn , this.showToggle)
+        
+            const credentials = {
+                name: this.name,
+                lastName: this.lastName,
+                email: this.email,
+                telephone: this.telephone,
+                password: this.password
+            }
+            if(this.$store.dispatch("register", credentials)){
+                this.showToggle = true;
+            }
+            else{
+                this.showToggle = false;
+         }
+         console.log('efter' , this.isLoggedIn , this.showToggle)
+        },
+        checkPassword() {
+           return this.passConfirm === this.password;
+        },
+        checkEmail(){
+            return this.email.includes('@');
+        }
+    }
+>>>>>>> parent of 8c67e09... Merge branch 'feature-my-page-view' into feature-backend-signIn-signUp
 };
 </script>
 
