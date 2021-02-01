@@ -8,7 +8,7 @@
       <h4 class="dateTime">{{ time }} , {{ date }}</h4>
     </div>
     <div class="what">
-      <h4 class="seats">Seats: {{ seats }}</h4>
+      <h4 class="seats">Seat{{seats.includes(',')?'s':''}}: {{ seats }}</h4>
       <h4 class="bookingId">{{ bookingId }}</h4>
     </div>
   </div>
