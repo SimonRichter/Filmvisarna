@@ -1,23 +1,23 @@
 <template>
-  <h2>Old bookings</h2>
-  <currentBookingsItem
+  <h2>History</h2>
+  <oldBookingsItem
     v-for="(show, index) in showingInfoArr"
     :key="index"
     :movieTitle="show[0].title"
     :salon="show[0].salon"
     :date="show[0].date"
     :time="show[0].time"
-    :tickets="currentBookingsArr[index].tickets"
-    :totalSum="currentBookingsArr[index].totalSum"
+    :seats="currentBookingsArr[index].seatIndexes"
     :bookingId="currentBookingsArr[index].id"
   />
+   <!-- :totalSum="currentBookingsArr[index].totalSum" -->
 </template>
 
 <script>
-import currentBookingsItem from "./currentBookingsItem.vue";
+import oldBookingsItem from "./oldBookingsItem.vue";
 export default {
   components: {
-    currentBookingsItem,
+    oldBookingsItem,
   },
   computed: {
     memberEmail() {
@@ -49,17 +49,12 @@ export default {
 <style scoped>
 h2 {
   text-align: center;
-  grid-column-start: 1;
-  grid-column-end: 2;
+  grid-column: 2;
+  grid-row:1;
+  border-bottom: 1px solid red;
+  padding: 16px;
 }
 h3 {
   margin-top: 0px;
-}
-.currentTicketCont {
-  text-align: center;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 3;
-  grid-row-end: auto;
 }
 </style>

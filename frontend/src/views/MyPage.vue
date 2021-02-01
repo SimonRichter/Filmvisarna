@@ -1,17 +1,17 @@
 <template>
    <div class="contentGridContainer">
       <CurrentBookings />
-      <!-- <OldBookings /> -->
+      <OldBookings />
    </div>
 </template>
 
 <script>
 import CurrentBookings from "../components/CurrentBookings.vue";
-// import OldBookings from "../components/OldBookings.vue";
+import OldBookings from "../components/OldBookings.vue";
 export default {
    components: {
       CurrentBookings,
-      // OldBookings,
+      OldBookings,
    },
 };
 </script>

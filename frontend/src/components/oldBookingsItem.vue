@@ -1,14 +1,16 @@
 <template>
   <div class="ticketContainer oldBookingItem">
     <div class="whereWhen">
-      <h4>{{ movieTitle }}</h4>
-      <h4>{{ salon }}</h4>
-      <h3 class="dateTime">{{ date }} {{ time }}</h3>
+      <div class="titleSalon">
+        <h4>{{ movieTitle }}</h4>
+        <h4>{{ salon }}</h4>
+      </div>
+      <h4 class="dateTime">{{ time }} , {{ date }}</h4>
     </div>
     <div class="what">
-      <h3>{{ tickets }}</h3>
-      <h3>Total: {{ totalSum }} kr</h3>
-      <h3>Booking ID: {{ bookingId }}</h3>
+      <h4>Seats: {{ seats }}</h4>
+      <!-- <h4>Total: {{ totalSum }} kr</h4> -->
+      <h4>{{ bookingId }}</h4>
     </div>
   </div>
 </template>
@@ -20,8 +22,8 @@ export default {
     "salon",
     "date",
     "time",
-    "tickets",
-    "totalSum",
+    "seats",
+    // "totalSum",
     "bookingId",
   ],
 };
