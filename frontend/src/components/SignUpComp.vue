@@ -3,11 +3,15 @@
     <div class="signUpInfo">
       <form @submit="checkForm">
         <h1>{{ "Become A Member ! " }}</h1>
+        <div class="error" v-if="error">Passwords do not match</div>
+        <br />
         <input
           class="firstName"
           type="text"
           v-model="name"
           placeholder="First Name"
+          pattern="[a-zA-Z]+"
+          oninvalid="setCustomValidity('Alphabets only. ')"
           required
         />
         <input
@@ -15,6 +19,8 @@
           type="text"
           v-model="lastName"
           placeholder="Last Name"
+          pattern="[a-zA-Z]+"
+          oninvalid="setCustomValidity('Alphabets only. ')"
           required
         />
         <h3></h3>
@@ -54,7 +60,7 @@
 export default {
   data() {
     return {
-      error: [],
+      error: false,
       name: null,
       lastName: null,
       email: null,
@@ -64,7 +70,7 @@ export default {
     };
   },
   methods: {
-    checkForm: async function (x) {
+    checkForm: function (x) {
       const credentials = {
         name: this.name,
         lastName: this.lastName,
@@ -73,47 +79,15 @@ export default {
         password: this.password,
       };
       if (this.password === this.passConfirm) {
-        console.log("same?", this.password === this.passConfirm);
-        await this.$store.dispatch("register", credentials);
-        true;
+        this.$store.dispatch("register", credentials).then((x) => {
+          true;
+        });
+        return true;
       }
       x.preventDefault();
-    },
-
-
-    checkPassword() {
-      return this.passConfirm === this.password;
+      this.error = true;
     },
   },
-<<<<<<< HEAD
-=======
-    methods: {
-     register() {
-         console.log('före' , this.isLoggedIn , this.showToggle)
-        
-            const credentials = {
-                name: this.name,
-                lastName: this.lastName,
-                email: this.email,
-                telephone: this.telephone,
-                password: this.password
-            }
-            if(this.$store.dispatch("register", credentials)){
-                this.showToggle = true;
-            }
-            else{
-                this.showToggle = false;
-         }
-         console.log('efter' , this.isLoggedIn , this.showToggle)
-        },
-        checkPassword() {
-           return this.passConfirm === this.password;
-        },
-        checkEmail(){
-            return this.email.includes('@');
-        }
-    }
->>>>>>> parent of 8c67e09... Merge branch 'feature-my-page-view' into feature-backend-signIn-signUp
 };
 </script>
 
@@ -124,10 +98,14 @@ export default {
 }
 h1 {
   font-size: 50px;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 h3 {
   margin-top: 16px;
+}
+.error {
+  font-size: 20px;
+  color: red;
 }
 
 .signUpConfirmButton {

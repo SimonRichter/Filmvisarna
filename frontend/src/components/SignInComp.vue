@@ -1,34 +1,36 @@
 <template>
   <div>
-    <form @submit="login">
-    <div class="signInInfo">
-      <h1>{{ "Sign in" }}</h1>
+    <form @submit="checkLogin">
+      <div class="signInInfo">
+        <h1>{{ "Sign in" }}</h1>
 
-      <input
-        class="emailInputSignIn"
-        type="text"
-        v-model="email"
-        placeholder="E-mail"
-      />
-      <h3></h3>
-      <input
-        class="passwordInputSignIn"
-        type="password"
-        v-model="password"
-        placeholder="Password"
-      />
-    </div>
-    <div class="signInButtonDiv">
-      <button class="signInButton" >Sign in</button>
-    </div>
-    <div v-if="!isLoggedIn && showToggle">
-      Bad Credentials
-    </div>
+        <div class="error" v-if="error">Not found in our System</div>
+        <br>
+
+        <input
+          class="emailInputSignIn"
+          type="email"
+          v-model="email"
+          placeholder="E-mail"
+          required
+        />
+        <h3></h3>
+        <input
+          class="passwordInputSignIn"
+          type="password"
+          v-model="password"
+          placeholder="Password"
+          required
+        />
+      </div>
+      <div class="signInButtonDiv">
+        <button type="submit" value="Sing Up" class="signInButton">
+          Sign in
+        </button>
+      </div>
     </form>
 
-
-
-  <div class="forgotPassButtonDiv">
+    <div class="forgotPassButtonDiv">
       <button class="forgotPasswordButton" @click="showPasswordModal = true">
         Forgot Password?
       </button>
@@ -77,38 +79,38 @@ export default {
   components: { SignUpComp, ForgotPassword },
   data() {
     return {
+      error: false,
       showModal: false,
       showPasswordModal: false,
-      email: '',
-      password: '',
-      showToggle: false,
+      email: null,
+      password: null,
     };
   },
   computed: {
     isLoggedIn() {
       return this.$store.state.member;
     },
-    closeModal(){
+    closeModal() {
       return this.showModal;
-    }
+    },
   },
   methods: {
-   login: async function(x) {
+    checkLogin: function (a) {
+      this.waitAbit();
+      if (this.isLoggedIn) {
+        return true;
+      } else {
+        a.preventDefault();
+        this.error = true;
+      }
+    },
+    async waitAbit() {
       const credentials = {
         email: this.email,
         password: this.password,
       };
-      await this.$store.dispatch("login", credentials)
-      if(!this.isLoggedIn){
-        x.preventDefault();
-      }
-      else{
-        this.showToggle = true;
-         console.log('wrong')
-      }
-        
+      await this.$store.dispatch("login", credentials);
     },
-  
   },
 };
 </script>
@@ -277,5 +279,11 @@ h3 {
   right: 0;
   cursor: pointer;
 }
-
+.gone {
+  display: none;
+}
+.error {
+  font-size: 20px;
+  color: red;
+}
 </style>

@@ -183,8 +183,6 @@ const actions = {
     })
 
     try {
-      console.log('kör från store');
-
       //member = state.members
       member = await member.json()
       console.log(member);
