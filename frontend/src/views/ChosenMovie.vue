@@ -27,7 +27,6 @@
 
     <p class="plotText">{{ movie.plot.substring(0, 1000).trimRight() }}...</p>
   </div>
-
   <AvailableShowing />
 </template>
 
