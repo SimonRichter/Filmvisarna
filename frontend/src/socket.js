@@ -22,9 +22,28 @@ function connect() {
     // data is the list of objects that has changed
 
     if (model == 'Showing') {
+      console.log('this showing is what', event);
+      console.log('what is data', data[0])
       if (event == 'update') {
         // Updates only the show that has been changed and not the entire list
         store.commit('updateShow', data[0]);
+      }
+      // when removing a booking from signed in user, the event is 'insert' and the data[0] has the showing.id as its id but the other fields as null
+      // NOT WORKING YET
+      // if (event == 'insert') {
+      //   let showing = this.$store.state.showing.filter(
+      //     (s) => s.id == data[0].id)[0];
+      //   store.commit('updateShow', showing);
+      // }
+    }
+    if (model == 'Booking') {
+      // insert when adding a new booking
+      if (event == 'insert') {
+        console.log('WS: new data', data[0])
+        store.commit('updateBookings', data[0])
+      } else if (event == 'delete') {
+        console.log('WS: deleted data', data[0])
+        store.commit('removeBooking', data[0])
       }
     }
   }
