@@ -1,5 +1,5 @@
 <template>
-  <div class="ticketContainer oldBookingItem">
+  <div v-if="(date + ' ' + time) < new Date().toLocaleString()" class="ticketContainer oldBookingItem">
     <div class="whereWhen">
       <div class="titleSalon">
         <h4>{{ movieTitle }}</h4>
