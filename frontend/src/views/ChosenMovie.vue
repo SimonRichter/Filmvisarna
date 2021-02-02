@@ -31,14 +31,16 @@
     <p class="plotText">{{ movie.plot.substring(0, 1000).trimRight() }}...</p>
     <AvailableShowing />
   </div>
+  <Footer />
 </template>
 
 <script>
 import AvailableShowing from "../components/AvailableShowing.vue";
+import Footer from "../components/Footer.vue"
 
 export default {
   components: {
-    AvailableShowing,
+    AvailableShowing,Footer
   },
 
   data() {

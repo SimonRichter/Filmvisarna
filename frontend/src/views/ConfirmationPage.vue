@@ -57,6 +57,7 @@
         </router-link>
       </div>
    </div>
+   <Footer />
 </template>
 
 <script>

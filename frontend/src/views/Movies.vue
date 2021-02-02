@@ -25,15 +25,18 @@
       
       <MovieList />
    </div>
+    <Footer />
 </template>
 
 <script>
 import MovieList from "../components/movieList.vue";
 import GenreFilter from "../components/GenreFilter.vue";
+import Footer from "../components/Footer.vue"
 export default {
    components: {
       MovieList,
       GenreFilter,
+      Footer
    },
    props: ["itemName"],
    methods: {

@@ -15,14 +15,15 @@
       <TheatreSeatingMap v-bind:showing="showing" />
    </div>
    <Calendar />
+   <Footer />
 </template>
 
 <script>
 import TheatreSeatingMap from "../components/TheatreSeatingMap.vue";
-
-export default {
+import Footer from "../components/Footer.vue"
+export default { 
    components: {
-      TheatreSeatingMap
+      TheatreSeatingMap,  Footer
    },
    computed: {
       id() {
@@ -58,6 +59,7 @@ span {
    height: 1px;
    width: 100%;
 }
+
 /* h3 {
   color: lightblue;
 } */
