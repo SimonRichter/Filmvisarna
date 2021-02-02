@@ -55,7 +55,6 @@
     <div class="noMovie" v-else>
       --- NO BOOKINGS AVAILABLE FOR THE SELECTED DATE ---
     </div>
-  </div>
 </template>
 
 <script>
