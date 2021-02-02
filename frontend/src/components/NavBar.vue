@@ -1,12 +1,18 @@
 <template>
-  <div class="navBarContainer">
-    <ul class="navBar floatLeft">
+  <div v-bind:class="{ trans: isOurCinemas }" class="navBarContainer">
+    <ul v-bind:class="{ trans: isOurCinemas }" class="navBar floatLeft">
       <router-link to="/">
-        <img src="../pictures/logoSmall.png" id="logo" />
+        <img
+          v-bind:class="{ inver: isOurCinemas }"
+          src="../pictures/logo2.svg"
+          class="logo"
+          
+        />
       </router-link>
     </ul>
-    <ul class="navBar floatRight">
+    <ul v-bind:class="{ trans: isOurCinemas }" class="navBar floatRight">
       <router-link to="/movies"><li>Movies</li></router-link>
+      <router-link to="/ourcinemas"><li>Our Cinemas</li></router-link>
       <router-link to="/faq"><li>FAQ</li></router-link>
       <router-link to="/about"><li>About</li></router-link>
       <button class="signInButton" v-if="!loggedIn" @click="showModal = true">
@@ -49,7 +55,10 @@ export default {
       },
       change(){
         return !this.$store.state.member
-      }
+      },
+        isOurCinemas() {
+      return this.$route.name === "OurCinemas";
+    },
    },
 };
 </script>
@@ -66,9 +75,9 @@ li:hover {
 a {
   text-decoration: none;
 }
-img {
-  padding: 18px 0 18px;
-  height: 60px;
+.logo {
+  padding: 0px 0px 0px 0px;
+  height: 80px;
   width: auto;
 }
 .navBarContainer {
@@ -147,6 +156,10 @@ img {
   top: 0;
   right: 0;
   cursor: pointer;
+}
+.trans {
+  opacity: 0.9;
+  border: none;
 }
 .gone{
   display: none;
