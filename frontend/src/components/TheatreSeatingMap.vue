@@ -113,7 +113,7 @@ export default {
         for (let j = 0; j < this.showing.totalSeats; j++) {
           if (this.seatIndexes[i] == j) {
             this.showing.seats[j] = true;
-          } else if (this.showing.seats[j] == false) {
+          } else if (this.showing.seats[j] == false || this.showing.seats[j] == null) {
             this.showing.seats[j] = false;
           }
         }

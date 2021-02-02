@@ -3,6 +3,8 @@
   <currentBookingsItem
     v-for="(show, index) in showingInfoArr"
     :key="index"
+    :showingId="currentBookingsArr[index].showingId"
+    :booking="currentBookingsArr[index]"
     :movieTitle="show[0].title"
     :salon="show[0].salon"
     :date="show[0].date"
@@ -49,7 +51,7 @@ export default {
 h2 {
   letter-spacing: 2px;
   color: rgb(161, 152, 138);
-  margin-top:60px;
+  margin-top: 60px;
   text-align: center;
   grid-column: 1/3;
   border-bottom: 1px solid #6e1020;
