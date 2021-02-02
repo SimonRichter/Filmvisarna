@@ -1,6 +1,6 @@
 <template>
-  <div class="setWidth">
-    <div class="movieInfo">
+  <div class="contentGridContainer">
+    <div class="trailer">
       <div class="videoContainer">
         <video
           @click="playPause()"
@@ -10,33 +10,34 @@
           :src="movie.trailer"
         ></video>
         <img
-         @click="playPause()"
+          @click="playPause()"
           src="../pictures/playbutton.svg"
           class="buttonColor"
           v-bind:class="{ hideButton: playing, showButton: !playing }"
         />
       </div>
     </div>
-    <h2>{{ movie.genre }}</h2>
-    <h2><span></span> {{ movie.length }}</h2>
-    <h2><span></span> | {{ movie.runtime }}</h2>
-    <h2><span></span> | {{ movie.rated }}</h2>
-    <h3>Language: {{ movie.language }}</h3>
-    <h3><span></span> Director: {{ movie.director }}</h3>
-    <h3><span></span> Actors: {{ movie.actors }}</h3>
-
+    <h1>{{ movie.title }}</h1>
+    <div class="movieInfo1">
+      <h2><span></span> {{ movie.length }}</h2>
+      <h2><span></span> | {{ movie.runtime }}</h2>
+      <h2><span></span> | {{ movie.rated }}</h2>
+      <h2><span></span> | {{ movie.genre }}</h2>
+    </div>
+    <h3 class="lang">Language: {{ movie.language }}</h3>
+    <div class="movieInfo2">
+      <h3><span></span> Director: {{ movie.director }}</h3>
+      <h3><span></span> Actors: {{ movie.actors }}</h3>
+    </div>
     <p class="plotText">{{ movie.plot.substring(0, 1000).trimRight() }}...</p>
+    <AvailableShowing />
   </div>
-
-  <AvailableShowing />
 </template>
 
 <script>
 import AvailableShowing from "../components/AvailableShowing.vue";
 
 export default {
-  // props:{dp:"dayPicked",mp:"monthPicked"},
-
   components: {
     AvailableShowing,
   },
@@ -80,33 +81,13 @@ export default {
 </script>
 
 <style scoped>
-.hideButton {
-  visibility: hidden;
-}
-.showButton {
-  visibility: visible;
-}
-.buttonColor {
-  width: 7%;
-  color: #5e0202;
-  filter: invert(6%) sepia(96%) saturate(4244%) hue-rotate(10deg)
-    brightness(99%) contrast(111%);
-
-  position: absolute;
-  left:45vw;
-  top:300px;
-
+.contentGridContainer {
+  grid-gap: 1vw;
 }
 
-video {
-  border: none;
-  margin-top: 86px;
-  margin-bottom: 20px;
-}
-
-h1 {
-  margin-top: 5px;
-  margin-bottom: 10px;
+h1{
+  color: rgb(150, 22, 43);
+  text-shadow: 1px 2px rgb(206, 191, 168);
 }
 h2 {
   display: inline;
@@ -125,19 +106,46 @@ h3 {
   margin-top: 2px;
 }
 
-.movieInfo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.trailer {
+  grid-column: 1/3;
 }
 
-.setWidth {
-  padding-top: 50px;
-  width: 69vw;
-  margin: 0 auto;
+.movieInfo1 {
+  grid-column: 1/3;
 }
+
+.lang {
+  color: rgb(206, 191, 168, 0.8);
+  grid-column: 1/3;
+}
+
+.movieInfo2 {
+  grid-column: 1/3;
+}
+
 .plotText {
-  margin-top: 10px;
-  margin-bottom: 20px;
+  grid-column: 1/3;
+}
+
+.hideButton {
+  visibility: hidden;
+}
+.showButton {
+  visibility: visible;
+}
+.buttonColor {
+  width: 7%;
+  color: #5e0202;
+  filter: invert(6%) sepia(96%) saturate(4244%) hue-rotate(10deg)
+    brightness(99%) contrast(111%);
+  position: absolute;
+  left: 45vw;
+  top: 300px;
+}
+</style>
+<style>
+.availableShowing {
+  grid-column: 1/3;
+  margin-top: 4vw;
 }
 </style>

@@ -24,7 +24,7 @@
     ></div>
   </transition>
   <transition name="slide" appear>
-    <div class="modal" v-if="showModal">
+    <div v-bind:class="{gone:!change}" class="modal" v-if="showModal">
       <SignInComp class="signInComp" />
       <button class="closeModalButton" @click="showModal = false">X</button>
     </div>
@@ -47,6 +47,9 @@ export default {
       loggedIn() {
          return this.$store.state.member;
       },
+      change(){
+        return !this.$store.state.member
+      }
    },
 };
 </script>
@@ -144,5 +147,8 @@ img {
   top: 0;
   right: 0;
   cursor: pointer;
+}
+.gone{
+  display: none;
 }
 </style>

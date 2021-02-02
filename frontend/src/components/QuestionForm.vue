@@ -83,15 +83,15 @@ export default {
         this.email = "";
         this.message = "";
         this.submitOk = true;
+        this.remainingChar = 0;
         console.log("Everythings good, processing form!");
       }
     },
     checkName() {
       let validLetters = /^[A-Za-z]+$/;
-      if (
-        this.firstName.match(validLetters) &&
-        this.lastName.match(validLetters)
-      ) {
+      let trimmedFN = this.firstName.trim();
+      let trimmedLN = this.lastName.trim();
+      if (trimmedFN.match(validLetters) && trimmedLN.match(validLetters)) {
         return true;
       } else {
         return false;
@@ -99,15 +99,17 @@ export default {
     },
     checkEmail() {
       let validEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-]+$/;
-      if (this.email.match(validEmail)) {
+      let trimmedEmail = this.email.trim();
+      if (trimmedEmail.match(validEmail)) {
         return true;
       } else {
         return false;
       }
     },
     checkMessage() {
-      let validCharacters = /^[a-zA-Z0-9.!%&'+/=?-`]+$/;
+      let validCharacters = /^[a-zA-Z0-9.,!%&'+/=?-`]+$/;
       let trimmedMessage = this.message.replaceAll(/\s/g, "");
+      console.log("trimmed message", trimmedMessage);
       if (trimmedMessage.match(validCharacters)) {
         return true;
       } else {

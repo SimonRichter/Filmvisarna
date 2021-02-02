@@ -1,4 +1,5 @@
 package com.company;
+
 import com.company.models.*;
 import express.Express;
 import express.database.CollectionOptions;
@@ -58,20 +59,17 @@ public class Main {
             collection(Booking.class).deleteById(id);
         });
 
-      /*  // Adding a new member
-        app.post("/rest/members", (req, res) -> {
-            var member = req.body(Member.class);
-            var savedMember = collection(Member.class).save(member);
-            res.json(savedMember);
-
-        });
-
-        // update to an existing member
-        app.put("/rest/members/:id", (req, res) -> {
-            var update = req.body(Member.class);
-            var savedUpdate = collection(Member.class).save(update);
-            res.json(savedUpdate);
-        });*/
+        /*
+         * // Adding a new member app.post("/rest/members", (req, res) -> { var member =
+         * req.body(Member.class); var savedMember =
+         * collection(Member.class).save(member); res.json(savedMember);
+         * 
+         * });
+         * 
+         * // update to an existing member app.put("/rest/members/:id", (req, res) -> {
+         * var update = req.body(Member.class); var savedUpdate =
+         * collection(Member.class).save(update); res.json(savedUpdate); });
+         */
 
         // Delete (cancel membership) member
         app.delete("/rest/members/:id", (req, res) -> {
@@ -100,16 +98,15 @@ public class Main {
         });
 
         // Add new messages sent in by question form
-        app.post("/rest/messages",(req,res) ->{
-            var message= req.body(Message.class);
-            //var savedBooking=collection(Member.class).save(booking);    // sprint 2
-            var savedMessage= collection(Message.class).save(message);
+        app.post("/rest/messages", (req, res) -> {
+            var message = req.body(Message.class);
+            // var savedBooking=collection(Member.class).save(booking); // sprint 2
+            var savedMessage = collection(Message.class).save(message);
             res.json(savedMessage);
 
-        } );
+        });
 
-
-        //choose another port so it doesn't collide with VUE port
+        // choose another port so it doesn't collide with VUE port
         app.listen(5000);
     }
 }

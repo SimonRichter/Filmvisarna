@@ -1,16 +1,19 @@
 <template>
-  <ShowingsFilter
-    :options="['Show All', 'Theatre 1', 'Theatre 2']"
-    :default="'Filter by Theatre'"
-    class="select"
-    @input="addFilterItem($event)"
-  />
-  <div class="calenIcon noselect" @click="show()">📅</div>
-  <div ref="draggableContainer" id="draggable-container">
-    <div id="draggable-header" @mousedown="dragMouseDown">
-      <Calendar v-if="showCalen" v-on:datePicked="what" />
-    </div>
+  <div class="availableShowing">
+    <div class="calenderFilterContainer">
+    <ShowingsFilter
+      :options="['Show All', 'Theatre 1', 'Theatre 2']"
+      :default="'Filter by Theatre'"
+      class="select"
+      @input="addFilterItem($event)"
+    />
+    <div class="calenIcon noselect" @click="show()">📅</div>
   </div>
+    <div ref="draggableContainer" id="draggable-container">
+      <div id="draggable-header" @mousedown="dragMouseDown">
+        <Calendar v-if="showCalen" v-on:datePicked="what" />
+      </div>
+    </div>
 
   <div v-if="showings.length && new Date(today()) > new Date() - 86400000">
     <div class="showingList" v-for="showing of filteredShowings" :key="showing">
@@ -84,14 +87,12 @@ export default {
     what(dayPicked, monthPicked) {
       this.hello = dayPicked;
       this.bye = monthPicked;
-      console.log("testt", this.hello, this.bye);
     },
     today() {
       const x = new Date();
       const year = x.getFullYear();
       const month = this.bye || x.getMonth() + 1;
       const day = this.hello || x.getDate();
-      console.log("inside", this.bye, this.hello);
       const date =
         year +
         "-" +
@@ -104,7 +105,6 @@ export default {
     },
 
     addFilterItem(itemName) {
-      console.log(itemName);
       this.$store.state.showingsFilterItem = itemName;
     },
     dragMouseDown: function (event) {
@@ -149,17 +149,14 @@ export default {
     },
 
     filteredShowings() {
-      console.log("Running filteredShowings()");
       let item = this.$store.state.showingsFilterItem;
       if (
         item === null ||
         item === "Show All" ||
         item === "Filter by Theatre"
       ) {
-        console.log("Showing all");
         return this.showings;
       } else {
-        console.log("Trying to filter by: ", item);
         return this.showings.filter((showing) =>
           showing.theatre.includes(item)
         );
@@ -191,7 +188,6 @@ export default {
   font-size: 40px;
   width: fit-content;
   cursor: pointer;
-  position: absolute;
   left: 40vw;
   top: 38vw;
   z-index: 1;
@@ -204,11 +200,8 @@ export default {
 }
 
 .showingList {
-  grid-column-start: 1;
-  grid-column-end: 3;
   border-top: 1px solid #6e1020;
   padding: 5px 0px 5px 0px;
-  margin: 0px 15vw 0px 15vw;
 }
 .bookButton {
   margin-right: 20px;

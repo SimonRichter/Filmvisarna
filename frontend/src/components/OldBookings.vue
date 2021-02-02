@@ -1,33 +1,59 @@
 <template>
-  <div class="oldTicketCont">
-     <!-- <div class="whereWhen">
-    <h4>{{ showing.theatre }}, {{ showing.salon }}</h4>
-    <h3 class="dateTime">{{ showing.date }} {{ showing.time }}</h3>
-    </div>
-    <div class="what">
-      <h3>{{ showing.title }}</h3>
-      <div v-for="ticket in currentBookings.tickets" :key="ticket">
-          <h3>{{ ticket.value }} {{ ticket.title }}</h3>
-      </div>
-      <h3>{{ currentBookings.totalSum }} kr</h3>
-      <h4>{{ showing.id }}</h4> -->
-  </div>
+  <h2>History</h2>
+  <oldBookingsItem
+    v-for="(show, index) in showingInfoArr"
+    :key="index"
+    :movieTitle="show[0].title"
+    :salon="show[0].salon"
+    :date="show[0].date"
+    :time="show[0].time"
+    :seats="currentBookingsArr[index].seatIndexes"
+    :bookingId="currentBookingsArr[index].id"
+  />
+   <!-- :totalSum="currentBookingsArr[index].totalSum" -->
 </template>
 
 <script>
+import oldBookingsItem from "./oldBookingsItem.vue";
 export default {
+  components: {
+    oldBookingsItem,
+  },
   computed: {
-    showing() {
-      return this.$store.state.showing;
+    memberEmail() {
+      return this.$store.state.member.email;
     },
-    currentBookings() {
-      console.log("bookings: ", this.$store.state.bookingInfo)
-      return this.$store.state.bookingInfo;
+    currentBookingsArr() {
+      let getBookings = this.$store.state.bookings.filter(
+        (booking) => booking.userEmail == this.memberEmail
+      );
+
+      console.log("-- filtered bookings: ", getBookings);
+      return getBookings;
+    },
+    showingInfoArr() {
+      const showingsArr = [];
+      for (let i = 0; i < this.currentBookingsArr.length; i++) {
+        let getShowings = this.$store.state.showings.filter(
+          (show) => show.id == this.currentBookingsArr[i].showingId
+        );
+        showingsArr.push(getShowings);
+      }
+      console.log("-- filtered showings ", showingsArr);
+      return showingsArr;
     },
   },
 };
 </script>
 
-<style>
-
+<style scoped>
+h2 {
+  letter-spacing: 2px;
+  color: rgb(161, 152, 138);
+  margin-top:60px;
+  text-align: center;
+  grid-column: 1/3;
+  border-bottom: 1px solid #6e1020;
+  padding: 16px;
+}
 </style>

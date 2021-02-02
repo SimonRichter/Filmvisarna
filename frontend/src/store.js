@@ -1,5 +1,6 @@
 "use strict";
 
+import { isVNode, vShow } from 'vue';
 import { createStore } from 'vuex'
 
 const state = {
@@ -162,10 +163,11 @@ const actions = {
     }
 
     let tickets = tickets0 + tickets1 + tickets2;
-
+    let userEmail = this.state.member.email
+    console.log(userEmail)
     seatIndexes = seatIndexesString
     let booking = {
-      showingId, tickets, seatIndexes, totalSum
+      showingId, tickets, seatIndexes, totalSum, userEmail
     }
 
     console.log("createBookings", JSON.stringify(booking))
@@ -173,16 +175,6 @@ const actions = {
       method: 'POST',
       body: JSON.stringify(booking)
     })
-
-
-    // let member = await fetch('/api/whoami')
-    // try {
-    //   member = await member.json()
-    //   console.log(member);
-    //   store.commit('setMember', member)
-    // } catch {
-    //   console.warn('Not logged in');
-    // }
   },
   async login(store, credentials) {
     let member = await fetch('/api/login', {
@@ -191,8 +183,6 @@ const actions = {
     })
 
     try {
-      console.log('kör från store');
-
       //member = state.members
       member = await member.json()
       console.log(member);
