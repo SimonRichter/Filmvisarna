@@ -184,7 +184,7 @@ const actions = {
       body: JSON.stringify(booking)
     })
   },
-  // delete booking
+  // delete booking 
   async deleteBooking(store, booking) {
     console.log('i should remove a booking', booking)
     console.log('booking id', booking.id);

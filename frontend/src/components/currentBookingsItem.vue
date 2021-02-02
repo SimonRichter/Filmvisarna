@@ -35,7 +35,7 @@ import Modal from "./Modal.vue";
 
 export default {
   props: [
-    "showing",
+    "showingId",
     "booking",
     "movieTitle",
     "salon",
@@ -54,9 +54,7 @@ export default {
   },
   methods: {
     deleteBooking(option) {
-      console.log("im clicking and the option is", option);
       if (option) {
-        console.log("Delete booking", this.booking);
         this.$store.dispatch("deleteBooking", this.booking);
         this.updateSeatsInBackend();
         // DELETE BOOKING AND REMOVE THE SEATS FROM SHOWING
@@ -64,15 +62,23 @@ export default {
       this.showModal = false;
     },
     updateSeatsInBackend() {
-      console.log("seats", this.seats);
+      // Find the right show so the seats can be updated
+      const showing = this.$store.state.showings.filter(
+        (s) => s.id == this.showingId
+      )[0];
+
+      // seats are the indexes, needs to be seperated
       let seatsArray = this.seats.split(",");
-      for (let i = 0; i < seatsArray.length; i++) {
-        let index = seatsArray[i] - 1;
-        console.log("this.seatsArray[i]", index);
-        console.log("this.showing", this.showing);
-        this.showing[0].seats[index] = false;
+
+      for (let i = 0; i < showing.seats.length; i++) {
+        for (let j = 0; j < seatsArray.length; j++) {
+          // The indexes are (-1) of the seats
+          if (i == seatsArray[j] - 1) {
+            showing.seats[i] = false;
+          }
+        }
       }
-      this.$store.dispatch("updateSeatsInBackend", this.showing);
+      this.$store.dispatch("updateSeatsInBackend", showing);
     },
   },
 };

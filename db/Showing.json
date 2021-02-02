@@ -591,7 +591,7 @@
   "salon" : "Big room 1",
   "time" : "18:00",
   "totalSeats" : 100,
-  "seats" : [ ]
+  "seats" : [ true, true, true, true ]
 }, {
   "id" : "AoIcJFBFx2Z47D_J80kyk",
   "title" : "Finding Nemo",
@@ -636,33 +636,6 @@
   "salon" : "Big room 2",
   "time" : "20:30",
   "totalSeats" : 100,
-  "seats" : [ ]
-}, {
-  "id" : "YX9vkGtyw9eH9XxcHRpTp",
-  "title" : "Star Wars: Episode IV A New Hope",
-  "date" : "2021-01-29",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room 2",
-  "time" : "23:00",
-  "totalSeats" : 100,
-  "seats" : [ ]
-}, {
-  "id" : "4W-OXTMklqf64Ko9-RKfO",
-  "title" : "The Hitchhiker's Guide to the Galaxy",
-  "date" : "2021-01-29",
-  "theatre" : "Theatre 1",
-  "salon" : "Small room 1",
-  "time" : "15:30",
-  "totalSeats" : 50,
-  "seats" : [ ]
-}, {
-  "id" : "e15u6Ts29L-pjY3smEPN3",
-  "title" : "The Hitchhiker's Guide to the Galaxy",
-  "date" : "2021-01-29",
-  "theatre" : "Theatre 1",
-  "salon" : "Small room 1",
-  "time" : "18:00",
-  "totalSeats" : 50,
   "seats" : [ ]
 }, {
   "id" : "XEW_SzmJ2kfJSNxU_Cfdm",
@@ -773,24 +746,6 @@
   "totalSeats" : 100,
   "seats" : [ ]
 }, {
-  "id" : "a5dyWda2-J-9Qu9xPbF0f",
-  "title" : "Interstellar",
-  "date" : "2021-01-29",
-  "theatre" : "Theatre 2",
-  "salon" : "Big room 2",
-  "time" : "20:30",
-  "totalSeats" : 100,
-  "seats" : [ ]
-}, {
-  "id" : "a65GDZY2S32Y1jjxXPBlc",
-  "title" : "The Hunger Games",
-  "date" : "2021-01-29",
-  "theatre" : "Theatre 2",
-  "salon" : "Big room 2",
-  "time" : "23:00",
-  "totalSeats" : 100,
-  "seats" : [ ]
-}, {
   "id" : "whn_ztljK1janjZmDzNLU",
   "title" : "Sin City",
   "date" : "2021-01-29",
@@ -818,48 +773,12 @@
   "totalSeats" : 50,
   "seats" : [ ]
 }, {
-  "id" : "XhtMIL3IaWv5dDkoYbXpr",
-  "title" : "It",
-  "date" : "2021-01-29",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room 1",
-  "time" : "23:00",
-  "totalSeats" : 50,
-  "seats" : [ ]
-}, {
-  "id" : "ZlWXTdlZzNlx0jnZHDIQO",
-  "title" : "The Hitchhiker's Guide to the Galaxy",
-  "date" : "2021-01-29",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room 2",
-  "time" : "15:30",
-  "totalSeats" : 50,
-  "seats" : [ ]
-}, {
   "id" : "grEkHra0gLtEPibUyEeyL",
   "title" : "Soul",
   "date" : "2021-01-29",
   "theatre" : "Theatre 2",
   "salon" : "Small room 2",
   "time" : "18:00",
-  "totalSeats" : 50,
-  "seats" : [ ]
-}, {
-  "id" : "B_VKeZ-MPWtqboD_vIue0",
-  "title" : "The Hitchhiker's Guide to the Galaxy",
-  "date" : "2021-01-29",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room 2",
-  "time" : "20:30",
-  "totalSeats" : 50,
-  "seats" : [ ]
-}, {
-  "id" : "UEeYI7DH5fwYYcjp1NuUo",
-  "title" : "Finding Nemo",
-  "date" : "2021-01-29",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room 2",
-  "time" : "23:00",
   "totalSeats" : 50,
   "seats" : [ ]
 }, {
@@ -908,33 +827,6 @@
   "totalSeats" : 100,
   "seats" : [ ]
 }, {
-  "id" : "8aTjllGLsVzzjyYAnjOgH",
-  "title" : "Interstellar",
-  "date" : "2021-01-30",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room 2",
-  "time" : "18:00",
-  "totalSeats" : 100,
-  "seats" : [ ]
-}, {
-  "id" : "oBtR8TJdKKpf71mcQqRVp",
-  "title" : "Pulp Fiction",
-  "date" : "2021-01-30",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room 2",
-  "time" : "20:30",
-  "totalSeats" : 100,
-  "seats" : [ ]
-}, {
-  "id" : "G6oOkCNDrpKz4DceQqPW_",
-  "title" : "Blade",
-  "date" : "2021-01-30",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room 2",
-  "time" : "23:00",
-  "totalSeats" : 100,
-  "seats" : [ ]
-}, {
   "id" : "pAjitiu55xX7mXt93Q8gS",
   "title" : "The Hunger Games",
   "date" : "2021-01-30",
@@ -950,15 +842,6 @@
   "theatre" : "Theatre 1",
   "salon" : "Small room 1",
   "time" : "18:00",
-  "totalSeats" : 50,
-  "seats" : [ ]
-}, {
-  "id" : "O_w75dWGfoO8nVxx2d82Y",
-  "title" : "Interstellar",
-  "date" : "2021-01-30",
-  "theatre" : "Theatre 1",
-  "salon" : "Small room 1",
-  "time" : "20:30",
   "totalSeats" : 50,
   "seats" : [ ]
 }, {
@@ -1025,15 +908,6 @@
   "totalSeats" : 100,
   "seats" : [ ]
 }, {
-  "id" : "ATReNocozKHemnQJPZjjT",
-  "title" : "Soul",
-  "date" : "2021-01-30",
-  "theatre" : "Theatre 2",
-  "salon" : "Big room 1",
-  "time" : "20:30",
-  "totalSeats" : 100,
-  "seats" : [ ]
-}, {
   "id" : "OIAuLxSxWVMINGanQIVMm",
   "title" : "The Shawshank Redemption",
   "date" : "2021-01-30",
@@ -1067,15 +941,6 @@
   "theatre" : "Theatre 2",
   "salon" : "Big room 2",
   "time" : "20:30",
-  "totalSeats" : 100,
-  "seats" : [ ]
-}, {
-  "id" : "aGOwbwQ6mrDip-A5KWxYD",
-  "title" : "Soul",
-  "date" : "2021-01-30",
-  "theatre" : "Theatre 2",
-  "salon" : "Big room 2",
-  "time" : "23:00",
   "totalSeats" : 100,
   "seats" : [ ]
 }, {
@@ -1184,15 +1049,6 @@
   "theatre" : "Theatre 1",
   "salon" : "Big room 1",
   "time" : "23:00",
-  "totalSeats" : 100,
-  "seats" : [ ]
-}, {
-  "id" : "oUTB2w_bxaGHsLwM2XNcp",
-  "title" : "It",
-  "date" : "2021-01-31",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room 2",
-  "time" : "15:30",
   "totalSeats" : 100,
   "seats" : [ ]
 }, {
@@ -1421,15 +1277,6 @@
   "totalSeats" : 50,
   "seats" : [ ]
 }, {
-  "id" : "Pktfe4a_LV4lcXSQK5XVs",
-  "title" : "It",
-  "date" : "2021-01-31",
-  "theatre" : "Theatre 2",
-  "salon" : "Small room 2",
-  "time" : "20:30",
-  "totalSeats" : 50,
-  "seats" : [ ]
-}, {
   "id" : "odLce4VV89NOCAW8tyloR",
   "title" : "Blade",
   "date" : "2021-01-31",
@@ -1437,15 +1284,6 @@
   "salon" : "Small room 2",
   "time" : "23:00",
   "totalSeats" : 50,
-  "seats" : [ ]
-}, {
-  "id" : "PPfmidRliKu6UHJg0XnB2",
-  "title" : "Finding Nemo",
-  "date" : "2021-02-01",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room 1",
-  "time" : "15:30",
-  "totalSeats" : 100,
   "seats" : [ ]
 }, {
   "id" : "tvM8KUrF3hdPmLRYXAA63",
@@ -1499,15 +1337,6 @@
   "theatre" : "Theatre 1",
   "salon" : "Big room 2",
   "time" : "20:30",
-  "totalSeats" : 100,
-  "seats" : [ ]
-}, {
-  "id" : "uIWhBKSUiRQ7DJHAPkEex",
-  "title" : "Finding Nemo",
-  "date" : "2021-02-01",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room 2",
-  "time" : "23:00",
   "totalSeats" : 100,
   "seats" : [ ]
 }, {
@@ -1754,15 +1583,6 @@
   "totalSeats" : 100,
   "seats" : [ ]
 }, {
-  "id" : "2bILeZHCfjOA1IdLjIgxP",
-  "title" : "Soul",
-  "date" : "2021-02-02",
-  "theatre" : "Theatre 1",
-  "salon" : "Big room 1",
-  "time" : "23:00",
-  "totalSeats" : 100,
-  "seats" : [ ]
-}, {
   "id" : "POMX5YSTlKdqdl9oe80_2",
   "title" : "Soul",
   "date" : "2021-02-02",
@@ -1968,7 +1788,7 @@
   "salon" : "Small room 1",
   "time" : "20:30",
   "totalSeats" : 50,
-  "seats" : [ ]
+  "seats" : [ true, true, true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, true, true, true, true ]
 }, {
   "id" : "OjZVp3IB43Y-m1bJTrBgO",
   "title" : "Sin City",

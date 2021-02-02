@@ -3,7 +3,7 @@
   <currentBookingsItem
     v-for="(show, index) in showingInfoArr"
     :key="index"
-    :showing="show"
+    :showingId="currentBookingsArr[index].showingId"
     :booking="currentBookingsArr[index]"
     :movieTitle="show[0].title"
     :salon="show[0].salon"
