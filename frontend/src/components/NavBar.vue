@@ -77,9 +77,7 @@ a {
   height: 80px;
   width: auto;
 }
-.inver {
-  filter: invert(100%);
-}
+
 .navBarContainer {
   display: flex;
   border-bottom: #96162b 1px solid;
@@ -158,7 +156,7 @@ a {
   cursor: pointer;
 }
 .trans {
-  background-color: transparent;
+  opacity: 0.9;
   border: none;
 }
 </style>
