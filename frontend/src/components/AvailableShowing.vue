@@ -18,7 +18,8 @@
     </div>
   </div>
 
-    <div v-if="showings.length && new Date(today()) > new Date() - 86400000">
+
+    <div class="showingsListContainer" v-if="showings.length && new Date(today()) > new Date() - 86400000">
       <div
         class="showingList"
         v-for="showing of filteredShowings"
@@ -46,8 +47,8 @@
             </button>
           </div>
           <h3 class="noTopMargin" v-if="showings.length">
-            {{ showing.date }} - {{ showing.time }} | {{ showing.theatre }} |
-            {{ showing.salon }}
+            <span>{{ showing.date }}</span><span>{{ showing.time }}</span><span>{{ showing.theatre }}</span>
+            <span>{{ showing.salon }}</span>
           </h3>
         </div>
       </div>
@@ -60,11 +61,13 @@
 <script>
 import ShowingsFilter from "./ShowingsFilter.vue";
 import Calendar from "./Calendar.vue";
+import About from "../views/About.vue";
 
 export default {
   components: {
     Calendar,
     ShowingsFilter,
+    About,
   },
 
   data() {
@@ -183,6 +186,9 @@ export default {
 </script>
 
 <style scoped>
+.showingsListContainer{
+  height: 330px;
+}
 .signInButton {
   appearance: none;
   outline: none;
@@ -205,13 +211,12 @@ export default {
 .noMovie {
   text-align: center;
   padding: 20px 0 40px 0;
-
+  height: 330px;
   border-top: 1px solid #6e1020;
 }
 
 .showingList {
   border-top: 1px solid #6e1020;
-  padding: 5px 0px 5px 0px;
 }
 .bookButton {
   margin-right: 20px;
@@ -258,8 +263,8 @@ h3 {
   display: flex;
   align-items: center;
 }
-.noTopMargin {
-  margin-top: 0;
+.noTopMargin > span {
+  padding: 15px 25px 20px;
 }
 #draggable-container {
   width: 0%;
