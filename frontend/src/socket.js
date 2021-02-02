@@ -27,6 +27,16 @@ function connect() {
         store.commit('updateShow', data[0]);
       }
     }
+    if (model == 'Booking') {
+      // insert when adding a new booking
+      if (event == 'insert') {
+        console.log('WS: new data', data[0])
+        store.commit('updateBookings', data[0])
+      } else if (event == 'delete') {
+        console.log('WS: deleted data', data[0])
+        store.commit('removeBooking', data[0])
+      }
+    }
   }
 
   ws.onclose = () => {
