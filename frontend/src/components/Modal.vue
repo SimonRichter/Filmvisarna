@@ -3,7 +3,7 @@
     <div class="modal-content">
       <h5>
         Are you sure you want to cancel your reservation for<br />
-        {{ seats.length }} ticket{{ seats.includes(",") ? "s" : "" }} to
+        {{ seats.split(',').length }} ticket{{ seats.includes(",") ? "s" : "" }} to
         {{ movieTitle }}, {{ time }} - {{ date }}?
         <br />
         <button id="cancel" @click="$emit('modalOption', false)">Cancel</button>

@@ -57,6 +57,7 @@ img {
   display: flex;
   background-color: rgba(51, 51, 51, 0.39);
   box-shadow: 0 0 5px 0 #6e1020;
+  transition: 150ms;
 }
 .movieItemContainer:hover {
   transform: scale(1.05);

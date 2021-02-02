@@ -50,10 +50,10 @@ export default {
    padding: 101px 0 8vw;
 }
 .bannerImg {
-   background-image: url("../pictures/Banner.jpg");
+   background-image: url("../pictures/movie-cinema-poster.jpg");
    background-repeat: no-repeat;
    background-size: cover;
-   height: 10vw;
+   height: 15vw;
    grid-column-start: 1;
    grid-column-end: 3;
 }

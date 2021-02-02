@@ -1,6 +1,6 @@
 <template>
   <div
-    v-if="date + ' ' + time >= new Date().toLocaleString()"
+    v-if="new Date(date + ' ' + time) >= Date.now()"
     class="ticketContainer currentBookingItem"
   >
     <div class="whereWhen">

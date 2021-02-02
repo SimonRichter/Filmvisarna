@@ -7,47 +7,54 @@
         class="select"
         @input="addFilterItem($event)"
       />
+      <div class="calenIcon noselect" @click="show()">📅</div>
     </div>
-    <div class="calenIcon noselect" @click="show()">📅</div>
-  </div>
-  <div ref="draggableContainer" id="draggable-container">
-    <div id="draggable-header" @mousedown="dragMouseDown">
-      <Calendar v-if="showCalen" v-on:datePicked="what" />
-    </div>
-  </div>
-
-  <div v-if="showings.length && new Date(today()) > new Date() - 86400000">
-    <div class="showingList" v-for="showing of filteredShowings" :key="showing">
-      <div class="anotherFormattingDiv">
-        <div v-if="member">
-          <button
-            class="bookButton grow"
-            @click="
-              $router.push(
-                '/chosen-movie/' + showing.title + '/booking/' + showing.id
-              )
-            "
-          >
-            Book
-          </button>
-        </div>
-        <div v-else>
-          <button class="popup bookButton" @click="popUp()">
-            Book
-            <span class="popuptext" id="myPopup"
-              >You need to Sign In First</span
-            >
-          </button>
-        </div>
-        <h3 class="noTopMargin" v-if="showings.length">
-          {{ showing.date }} - {{ showing.time }} | {{ showing.theatre }} |
-          {{ showing.salon }}
-        </h3>
+    <div ref="draggableContainer" id="draggable-container">
+      <div id="draggable-header" @mousedown="dragMouseDown">
+        <transition name="custom-classes-transition"  mode="out-in" enter-active-class="animate__animated animate__zoomIn" leave-active-class="animate__animated animate__zoomOut">
+          <Calendar v-if="showCalen" v-on:datePicked="what" />
+        </transition>
       </div>
     </div>
   </div>
-  <div class="noMovie" v-else>
-    --- NO BOOKINGS AVAILABLE FOR THE SELECTED DATE ---
+
+    <div v-if="showings.length && new Date(today()) > new Date() - 86400000">
+      <div
+        class="showingList"
+        v-for="showing of filteredShowings"
+        :key="showing"
+      >
+        <div class="anotherFormattingDiv">
+          <div v-if="member">
+            <button
+              class="bookButton grow"
+              @click="
+                $router.push(
+                  '/chosen-movie/' + showing.title + '/booking/' + showing.id
+                )
+              "
+            >
+              Book
+            </button>
+          </div>
+          <div v-else>
+            <button class="popup bookButton" @click="popUp()">
+              Book
+              <span class="popuptext" id="myPopup"
+                >You need to Sign In First</span
+              >
+            </button>
+          </div>
+          <h3 class="noTopMargin" v-if="showings.length">
+            {{ showing.date }} - {{ showing.time }} | {{ showing.theatre }} |
+            {{ showing.salon }}
+          </h3>
+        </div>
+      </div>
+    </div>
+    <div class="noMovie" v-else>
+      --- NO BOOKINGS AVAILABLE FOR THE SELECTED DATE ---
+    </div>
   </div>
 </template>
 
