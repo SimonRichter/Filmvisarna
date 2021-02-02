@@ -11,7 +11,9 @@
     </div>
     <div ref="draggableContainer" id="draggable-container">
       <div id="draggable-header" @mousedown="dragMouseDown">
-        <Calendar v-if="showCalen" v-on:datePicked="what" />
+        <transition name="custom-classes-transition"  mode="out-in" enter-active-class="animate__animated animate__zoomIn" leave-active-class="animate__animated animate__zoomOut">
+          <Calendar v-if="showCalen" v-on:datePicked="what" />
+        </transition>
       </div>
     </div>
 

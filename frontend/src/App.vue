@@ -30,6 +30,7 @@ export default {
       this.$store.dispatch("fetchBookings");
       this.$store.dispatch("fetchShowings");
       this.$store.dispatch("whoAmI");
+      this.$router.replace("/")
    },
 };
 </script>

@@ -25,6 +25,7 @@ h3 {
 }
 .moviePoster {
    width: 13vw;
+   transition: 200ms;
 }
 .moviePoster:hover{
    transform:scale(1.05);
