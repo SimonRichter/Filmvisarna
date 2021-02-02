@@ -1,5 +1,6 @@
 "use strict";
 
+import { isVNode, vShow } from 'vue';
 import { createStore } from 'vuex'
 
 const state = {
@@ -182,8 +183,6 @@ const actions = {
     })
 
     try {
-      console.log('kör från store');
-
       //member = state.members
       member = await member.json()
       console.log(member);

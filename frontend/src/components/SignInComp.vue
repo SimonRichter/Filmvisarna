@@ -1,14 +1,18 @@
 <template>
   <div>
-    <form>
+    <form @submit="checkLogin">
       <div class="signInInfo">
         <h1>{{ "Sign in" }}</h1>
 
+        <div class="error" v-if="error">Not found in our System</div>
+        <br>
+
         <input
           class="emailInputSignIn"
-          type="text"
+          type="email"
           v-model="email"
           placeholder="E-mail"
+          required
         />
         <h3></h3>
         <input
@@ -16,18 +20,21 @@
           type="password"
           v-model="password"
           placeholder="Password"
+          required
         />
       </div>
+      <div class="signInButtonDiv">
+        <button type="submit" value="Sing Up" class="signInButton">
+          Sign in
+        </button>
+      </div>
     </form>
+
     <div class="forgotPassButtonDiv">
       <button class="forgotPasswordButton" @click="showPasswordModal = true">
         Forgot Password?
       </button>
     </div>
-    <div class="signInButtonDiv">
-      <button class="signInButton" @click.prevent="login()">Sign in</button>
-    </div>
-
     <div class="signUpInfo">
       <div class="signUpPopUp">
         <h3>{{ "Are you not a member?" }}</h3>
@@ -72,80 +79,113 @@ export default {
   components: { SignUpComp, ForgotPassword },
   data() {
     return {
-      email: "",
-      password: "",
+      error: false,
       showModal: false,
       showPasswordModal: false,
+      email: null,
+      password: null,
     };
   },
+  computed: {
+    isLoggedIn() {
+      return this.$store.state.member;
+    },
+    closeModal() {
+      return this.showModal;
+    },
+  },
   methods: {
-    login() {
-      console.log("kommer in");
+    checkLogin: function (a) {
+      this.waitAbit();
+      if (this.isLoggedIn) {
+        return true;
+      } else {
+        a.preventDefault();
+        this.error = true;
+      }
+    },
+    async waitAbit() {
       const credentials = {
         email: this.email,
         password: this.password,
       };
-
-      this.$store.dispatch("login", credentials);
+      await this.$store.dispatch("login", credentials);
     },
   },
 };
 </script>
 
 <style scoped>
-.signInInfo{
-    margin-top: 50px;
-    text-align: center;
-    color: aliceblue;
+.signInInfo {
+  margin-top: 50px;
+  text-align: center;
+  color: aliceblue;
 }
-h1{
-    font-size: 50px;
-    margin-bottom: 25px;
+h1 {
+  font-size: 50px;
+  margin-bottom: 25px;
 }
-h2{
-    font-size: 25px;
-    margin-bottom: 5px;
-    margin-top: 10px;
+h2 {
+  font-size: 25px;
+  margin-bottom: 5px;
+  margin-top: 10px;
 }
-h3{
-    margin-top: 18px;
+h3 {
+  margin-top: 18px;
 }
-.forgotPassButtonDiv{
-    text-align: center;
-    margin-top: 10px;
+.signInButtonDiv {
+  text-align: center;
 }
-.forgotPasswordButton{
-    appearance: none;
-    outline: none;
-    border: none;
-    background: none;
-    cursor: pointer;
-    font-size: 15px;
-    color: rgb(238, 220, 192);
-    font-family: "Bebas Neue", cursive;
+.signInButton {
+  margin-top: 10px;
+  font-size: 30px;
+  border: #6e1020 1px solid;
+  background-color: #131313;
+  border-radius: 5px;
+  color: rgb(238, 220, 192);
+  font-family: "Bebas Neue", cursive;
+  cursor: pointer;
 }
-.signUpInfo{
-    text-align: center;
+.forgotPassButtonDiv {
+  text-align: center;
+  margin-top: 10px;
 }
-.signUpButton{
-    margin-top: 10px;
-    font-size: 22px;
-    border: #6e1020 1px solid;
-    background-color: #131313;
-    border-radius: 5px;
-    color: rgb(238, 220, 192);
-    font-family: "Bebas Neue", cursive;
-    cursor: pointer;
+.forgotPasswordButton {
+  appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 15px;
+  color: rgb(238, 220, 192);
+  font-family: "Bebas Neue", cursive;
 }
-.passwordInputSignIn{
-    font-size: 20px;
-    padding-top: 5px;
+.signUpInfo {
+  text-align: center;
 }
-.emailInputSignIn{
-    font-size: 20px;
-    padding-top: 5px;
+.signUpButton {
+  margin-top: 10px;
+  font-size: 22px;
+  border: #6e1020 1px solid;
+  background-color: #131313;
+  border-radius: 5px;
+  color: rgb(238, 220, 192);
+  font-family: "Bebas Neue", cursive;
+  cursor: pointer;
 }
-.modal-overlay{
+.signUpPopUp {
+  float: left;
+  margin-bottom: 100px;
+}
+.passwordInputSignIn {
+  font-size: 20px;
+  padding-top: 5px;
+}
+.emailInputSignIn {
+  font-size: 20px;
+  padding-top: 5px;
+}
+.modal-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -238,5 +278,12 @@ h3{
   top: 0;
   right: 0;
   cursor: pointer;
+}
+.gone {
+  display: none;
+}
+.error {
+  font-size: 20px;
+  color: red;
 }
 </style>
