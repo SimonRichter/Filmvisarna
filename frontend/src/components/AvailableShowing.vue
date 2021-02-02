@@ -1,13 +1,12 @@
 <template>
+  <ShowingsFilter
+    :options="['Show All', 'Theatre 1', 'Theatre 2']"
+    :default="'Filter by Theatre'"
+    @input="addFilterItem($event)"
+  />
   <div class="availableShowing">
-    <div class="calenderFilterContainer">
-      <ShowingsFilter
-        :options="['Show All', 'Theatre 1', 'Theatre 2']"
-        :default="'Filter by Theatre'"
-        class="select"
-        @input="addFilterItem($event)"
-      />
-      <div class="calenIcon noselect" @click="show()">📅</div>
+    <div class="calenContainer">
+      <img class="calenIcon" @click="show()" src="../pictures/calendar.svg" />
     </div>
     <div ref="draggableContainer" id="draggable-container">
       <div id="draggable-header" @mousedown="dragMouseDown">
@@ -24,7 +23,7 @@
   </div>
 
   <div
-    class="showingsListContainer"
+    class="space"
     v-if="showings.length && new Date(today()) > new Date() - 86400000"
   >
     <div class="showingList" v-for="showing of filteredShowings" :key="showing">
@@ -194,6 +193,13 @@ export default {
 .showingsListContainer {
   height: 330px;
 }
+.availableShowing {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.space {
+  height: 300px;
+}
 .signInButton {
   appearance: none;
   outline: none;
@@ -206,12 +212,11 @@ export default {
   z-index: 100;
 }
 .calenIcon {
-  font-size: 40px;
-  width: fit-content;
   cursor: pointer;
-  left: 40vw;
-  top: 38vw;
-  z-index: 1;
+  width: 5%;
+}
+.calenContainer {
+  text-align: center;
 }
 .noMovie {
   text-align: center;
