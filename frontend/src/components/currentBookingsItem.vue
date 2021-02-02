@@ -87,11 +87,6 @@ export default {
 <style scoped>
 .currentBookingItem {
   box-shadow: 1px 1px wheat;
-  transition: 200ms;
-}
-.currentBookingItem:hover {
-  box-shadow: 1px 1px rgb(114, 4, 4);
-  
 }
 .whereWhen > *,
 .what > .seats {
@@ -108,7 +103,6 @@ button {
   background-color: transparent;
   border-radius: 5px;
   cursor: pointer;
-  transition: 200ms;
 }
 button:hover {
   background-color: #131313;

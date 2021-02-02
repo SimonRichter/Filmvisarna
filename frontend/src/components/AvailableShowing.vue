@@ -231,7 +231,6 @@ button {
   margin-top: 7px;
   margin-bottom: 7px;
   font-size: 20px;
-  transition: 200ms;
 }
 button:active,
 button:disabled {
