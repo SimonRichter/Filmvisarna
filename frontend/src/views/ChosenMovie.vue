@@ -7,7 +7,7 @@
           ref="trailerVideo"
           width="1220"
           height="400"
-          :src="movie.trailer"
+          :src="'https://imdb-video.media-imdb.com/vi563330585/1434659607842-pgv4ql-1584637373251.mp4?Expires=1612369847&Signature=ZUHlJZSL56u3Sq4dpDE-R4Og1lerOG-SImkzAu8P~OB50lFrfVB-ZSogGv-gWJJIoAUCsPdP-t6gIzpMO~Sk3V106qltMt7i3-3R3vtugrTumcrP0aJWKSuv3nAlevhxpkPvFp-IE-YQ50CCRjeQ77jDO9pF5W8CiBR5~~FhzZ6a88f8219yQaidqyffB8RPRTLmVlPYmfoLpqdkkv9BRYEoOhDC0ZkxLPWXPsVy9azBxr-A3QJ2BCLAnqmaR5eTzPvbtjvD-omRTHODW9iUoBw~ehVOOJPYmVtpbyS54a9rE2hI3-2MlSFWoFLhKqISvTIyqfh1mnBs-uiA6~LjYw__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA'"
         ></video>
         <img
           @click="playPause()"

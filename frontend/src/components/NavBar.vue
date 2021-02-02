@@ -1,16 +1,11 @@
 <template>
-  <div v-bind:class="{ trans: isOurCinemas }" class="navBarContainer">
-    <ul v-bind:class="{ trans: isOurCinemas }" class="navBar floatLeft">
+  <div class="navBarContainer">
+    <ul class="navBar floatLeft">
       <router-link to="/">
-        <img
-          v-bind:class="{ inver: isOurCinemas }"
-          src="../pictures/logo2.svg"
-          class="logo"
-          
-        />
+        <img src="../pictures/logo2.svg" class="logo" />
       </router-link>
     </ul>
-    <ul v-bind:class="{ trans: isOurCinemas }" class="navBar floatRight">
+    <ul class="navBar floatRight">
       <router-link to="/movies"><li>Movies</li></router-link>
       <router-link to="/ourcinemas"><li>Our Cinemas</li></router-link>
       <router-link to="/faq"><li>FAQ</li></router-link>
@@ -30,7 +25,7 @@
     ></div>
   </transition>
   <transition name="slide" appear>
-    <div v-bind:class="{gone:!change}" class="modal" v-if="showModal">
+    <div v-bind:class="{ gone: !change }" class="modal" v-if="showModal">
       <SignInComp class="signInComp" />
       <button class="closeModalButton" @click="showModal = false">X</button>
     </div>
@@ -50,16 +45,16 @@ export default {
     };
   },
   computed: {
-      loggedIn() {
-         return this.$store.state.member;
-      },
-      change(){
-        return !this.$store.state.member
-      },
-        isOurCinemas() {
+    loggedIn() {
+      return this.$store.state.member;
+    },
+    change() {
+      return !this.$store.state.member;
+    },
+    isOurCinemas() {
       return this.$route.name === "OurCinemas";
     },
-   },
+  },
 };
 </script>
 
@@ -99,14 +94,14 @@ a {
   padding: 0;
 }
 .floatRight {
-   padding-right: 35px;
-   width: 50%;
-   justify-content: flex-end;
+  padding-right: 35px;
+  width: 50%;
+  justify-content: flex-end;
 }
 .floatLeft {
-   padding-left: 35px;
-   width: 50%;
-   justify-content: flex-start;
+  padding-left: 35px;
+  width: 50%;
+  justify-content: flex-start;
 }
 .firstListItem {
   padding: 0;
@@ -161,7 +156,7 @@ a {
   opacity: 0.9;
   border: none;
 }
-.gone{
+.gone {
   display: none;
 }
 </style>
