@@ -1,42 +1,48 @@
 <template>
-  <ShowingsFilter
-    :options="['Show All', 'Theatre 1', 'Theatre 2']"
-    :default="'Filter by Theatre'"
-    class="select"
-    @input="addFilterItem($event)"
-  />
-  <div class="calenIcon noselect" @click="show()">📅</div>
-  <div ref="draggableContainer" id="draggable-container">
-    <div id="draggable-header" @mousedown="dragMouseDown">
-      <Calendar v-if="showCalen" v-on:datePicked="what" />
-    </div>
+  <div class="availableShowing">
+    <div class="calenderFilterContainer">
+    <ShowingsFilter
+      :options="['Show All', 'Theatre 1', 'Theatre 2']"
+      :default="'Filter by Theatre'"
+      class="select"
+      @input="addFilterItem($event)"
+    />
+    <div class="calenIcon noselect" @click="show()">📅</div>
   </div>
-
-  <div v-if="showings.length && new Date(today()) > new Date() - 86400000">
-    <div class="showingList" v-for="showing of filteredShowings" :key="showing">
-      <div class="anotherFormattingDiv">
-        <button
-          class="bookButton grow"
-          @click="
-            $router.push(
-              '/chosen-movie/' + showing.title + '/booking/' + showing.id
-            )
-          "
-        >
-          Book
-        </button>
-        <h3 class="noTopMargin" v-if="showings.length">
-          {{ showing.date }} - {{ showing.time }} | {{ showing.theatre }} |
-          {{ showing.salon }}
-        </h3>
+    <div ref="draggableContainer" id="draggable-container">
+      <div id="draggable-header" @mousedown="dragMouseDown">
+        <Calendar v-if="showCalen" v-on:datePicked="what" />
       </div>
     </div>
-  </div>
-  <div class="noMovie" v-else>
-    --- NO BOOKINGS AVAILABLE FOR THE SELECTED DATE ---
-  </div>
 
-  
+    <div v-if="showings.length && new Date(today()) > new Date() - 86400000">
+      <div
+        class="showingList"
+        v-for="showing of filteredShowings"
+        :key="showing"
+      >
+        <div class="anotherFormattingDiv">
+          <button
+            class="bookButton grow"
+            @click="
+              $router.push(
+                '/chosen-movie/' + showing.title + '/booking/' + showing.id
+              )
+            "
+          >
+            Book
+          </button>
+          <h3 class="noTopMargin" v-if="showings.length">
+            {{ showing.date }} - {{ showing.time }} | {{ showing.theatre }} |
+            {{ showing.salon }}
+          </h3>
+        </div>
+      </div>
+    </div>
+    <div class="noMovie" v-else>
+      --- NO BOOKINGS AVAILABLE FOR THE SELECTED DATE ---
+    </div>
+  </div>
 </template>
 
 <script>
@@ -50,7 +56,7 @@ export default {
 
   data() {
     return {
-      showCalen:false,
+      showCalen: false,
       hello: 0,
       bye: 0,
       positions: {
@@ -63,21 +69,18 @@ export default {
   },
 
   methods: {
-     show(){
-       console.log(this.showCalen)
-      return this.showCalen=!this.showCalen
+    show() {
+      return (this.showCalen = !this.showCalen);
     },
     what(dayPicked, monthPicked) {
       this.hello = dayPicked;
       this.bye = monthPicked;
-      console.log("testt", this.hello, this.bye);
     },
     today() {
       const x = new Date();
       const year = x.getFullYear();
       const month = this.bye || x.getMonth() + 1;
       const day = this.hello || x.getDate();
-      console.log("inside", this.bye, this.hello);
       const date =
         year +
         "-" +
@@ -90,7 +93,6 @@ export default {
     },
 
     addFilterItem(itemName) {
-      console.log(itemName);
       this.$store.state.showingsFilterItem = itemName;
     },
     dragMouseDown: function (event) {
@@ -124,24 +126,20 @@ export default {
   },
 
   computed: {
-   
     title() {
       // get showing id from url parameter
       return this.$route.params.title.replaceAll("-", " ");
     },
 
     filteredShowings() {
-      console.log("Running filteredShowings()");
       let item = this.$store.state.showingsFilterItem;
       if (
         item === null ||
         item === "Show All" ||
         item === "Filter by Theatre"
       ) {
-        console.log("Showing all");
         return this.showings;
       } else {
-        console.log("Trying to filter by: ", item);
         return this.showings.filter((showing) =>
           showing.theatre.includes(item)
         );
@@ -158,13 +156,12 @@ export default {
 </script>
 
 <style scoped>
-.calenIcon{
+.calenIcon {
   font-size: 40px;
   width: fit-content;
   cursor: pointer;
-  position: absolute;
   left: 40vw;
-   top: 38vw;
+  top: 38vw;
   z-index: 1;
 }
 .noMovie {
@@ -175,11 +172,8 @@ export default {
 }
 
 .showingList {
-  grid-column-start: 1;
-  grid-column-end: 3;
   border-top: 1px solid #6e1020;
   padding: 5px 0px 5px 0px;
-  margin: 0px 15vw 0px 15vw;
 }
 .bookButton {
   margin-right: 20px;
@@ -229,10 +223,10 @@ h3 {
   margin-top: 0;
 }
 #draggable-container {
-    width: 0%;
+  width: 0%;
   position: absolute;
   z-index: 9;
-  }
+}
 #draggable-header {
   width: 0%;
   z-index: 10;

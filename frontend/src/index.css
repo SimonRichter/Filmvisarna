@@ -115,7 +115,7 @@ a {
   grid-template-columns: 50% 50%;
   width: 80vw;
   margin: 0 auto 0;
-  padding:110px 0 8vw;
+  padding:110px 0 12vw;
 }
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */

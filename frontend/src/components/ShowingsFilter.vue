@@ -65,12 +65,17 @@ export default {
    line-height: 36px;
 }
 
+.custom-select > *{
+   /* font-family: 'Oswald', sans-serif; */
+   font-family: 'Bebas Neue', cursive;
+}
+
 .custom-select .selected {
    background-color: #131313;
    border-radius: 6px;
    border: 1px solid #666666;
    color: rgb(238, 220, 192);
-   padding-left: 1em;
+   padding-left: 0.5em;
    cursor: pointer;
    user-select: none;
 }
