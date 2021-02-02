@@ -2,11 +2,13 @@
     <div class="image">
       <img :src="object.imageUrl" />
     </div>
-    <!-- <div class="description">
-      <div class="title">{{ object.title }}</div>
+    <div class="description">
+      <div class="title">
+        <h1>{{ object.title }}</h1>
+      </div>
       <br />
       <div class="text">{{ object.text }}</div>
-    </div> -->
+    </div>
 </template>
 
 <script>
@@ -21,5 +23,11 @@ img {
   height: 100%;
   border-radius: 20px;
 }
-
+.description {
+  position: absolute;
+  text-align: center;
+  padding: 30px;
+  bottom: -5px;
+  left: 0;
+}
 </style>

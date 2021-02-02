@@ -6,9 +6,11 @@
       />
     </div>
     <button id="left" @click="nextSlide(false)"></button>
-    <div class="carousel__item">
-      <CarouselItem :object="objects[index]" />
-    </div>
+    <transition name="fade" v-on:enter="enter">
+      <div class="carousel__item">
+        <CarouselItem :object="objects[index]" />
+      </div>
+    </transition>
     <button id="right" @click="nextSlide(true)"></button>
     <div class="next__item">
       <CarouselItem
@@ -62,7 +64,18 @@ export default {
     let translateX = 0;
     this.object = [];
 
-    return { index, objects, translateX };
+    return { objects, translateX, index };
+  },
+  computed: {
+    enter() {
+      setInterval(() => {
+        if (this.index >= this.objects.length - 1) {
+          this.index = 0;
+        } else {
+          this.index++;
+        }
+      }, 5000);
+    },
   },
   methods: {
     getObject() {
@@ -111,6 +124,8 @@ export default {
   width: 1800px;
   height: 400px;
   margin: 10px;
+  animation: fadeIn;
+  animation-duration: 2s;
 }
 .previous__item {
   display: flex;
@@ -129,6 +144,10 @@ export default {
   filter: blur(2px);
   width: 600px;
   height: 200px;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: scale(0.5) 1s;
 }
 
 #left,
