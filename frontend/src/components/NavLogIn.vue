@@ -2,7 +2,7 @@
   <li class="nav_dropbtn" @click="show = !show">{{loggedIn.name}}</li>
   <div class="sub-menu" v-if="show">
     <router-link to="/my-page"><h3 @click="myPage($event)" class="myPage_btn">Bookings</h3></router-link>
-    <h3 @click="logOut()" class="logOut_btn">Log out</h3>
+    <h3 @click="logOut();$router.push('/')" class="logOut_btn">Log out</h3>
   </div>
 </template>
 
