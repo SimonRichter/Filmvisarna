@@ -46,9 +46,7 @@ const mutations = {
     state.bookings = bookingsList;
   },
   removeBooking(state, booking) {
-    console.log('hello i will remove a booking', booking);
     const index = state.bookings.indexOf(state.bookings.filter(b => b.id == booking.id)[0]);
-
     state.bookings.splice(index, 1);
   },
   updateBookings(state, booking) {
@@ -187,8 +185,6 @@ const actions = {
   },
   // delete booking 
   async deleteBooking(store, booking) {
-    console.log('i should remove a booking', booking)
-    console.log('booking id', booking.id);
     let response = await fetch('/rest/bookings/' + booking.id, {
       method: 'DELETE',
       body: JSON.stringify(booking)
