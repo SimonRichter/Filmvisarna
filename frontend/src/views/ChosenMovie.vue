@@ -87,7 +87,8 @@ export default {
 
 h1{
   color: rgb(150, 22, 43);
-  text-shadow: 1px 2px rgb(206, 191, 168);
+  text-shadow: 1px 1px rgb(206, 191, 168);
+  letter-spacing: 3px;
 }
 h2 {
   display: inline;
