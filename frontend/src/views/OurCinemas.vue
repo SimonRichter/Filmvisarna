@@ -66,11 +66,18 @@
       <h3>Johanna/ CSS Master and Manager of Mangers<span> - joahan@vuexcinemas.com</span></h3>
     </div>
   </div>
+   <Footer />
 </template>
 
 
 <script>
-export default {};
+import Footer from "../components/Footer.vue"
+
+export default {
+  components:{
+    Footer
+  }
+};
 </script>
 
 <style scoped>

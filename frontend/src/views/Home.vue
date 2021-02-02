@@ -10,16 +10,19 @@
       </router-link>
    </div>
    </div>
+    <Footer />
 </template>
 
 <script>
 import ShowingList from "../components/ShowingList.vue";
 import CarouselList from "../components/CarouselList.vue";
+import Footer from "../components/Footer.vue"
+
 
 export default {
    components: {
       ShowingList,
-      CarouselList,
+      CarouselList,Footer
    },
  
 };

@@ -18,7 +18,7 @@
     </div>
   </div>
 
-    <div v-if="showings.length && new Date(today()) > new Date() - 86400000">
+    <div class="space" v-if="showings.length && new Date(today()) > new Date() - 86400000">
       <div
         class="showingList"
         v-for="showing of filteredShowings"
@@ -52,7 +52,7 @@
         </div>
       </div>
     </div>
-    <div class="noMovie" v-else>
+    <div class="noMovie space" v-else>
       --- NO BOOKINGS AVAILABLE FOR THE SELECTED DATE ---
     </div>
 </template>
@@ -183,6 +183,10 @@ export default {
 </script>
 
 <style scoped>
+.space{
+  height: 300px;
+
+}
 .signInButton {
   appearance: none;
   outline: none;

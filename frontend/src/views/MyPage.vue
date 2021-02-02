@@ -3,6 +3,7 @@
       <CurrentBookings />
       <OldBookings />
    </div>
+    <Footer />
 </template>
 
 <script>
