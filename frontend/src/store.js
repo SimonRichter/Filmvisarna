@@ -188,8 +188,8 @@ const actions = {
     let response = await fetch('/rest/bookings/' + booking.id, {
       method: 'DELETE',
       body: JSON.stringify(booking)
-    });
-    booking = await response.json();
+    })
+    booking = await response.json()
     store.commit('removeBooking', booking);
   },
 
