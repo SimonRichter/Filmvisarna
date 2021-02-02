@@ -24,7 +24,7 @@
     ></div>
   </transition>
   <transition name="slide" appear>
-    <div v-bind:class="{gone:!change}" class="modal" v-if="showModal">
+    <div v-bind:class="{ gone: !change }" class="modal" v-if="showModal">
       <SignInComp class="signInComp" />
       <button class="closeModalButton" @click="showModal = false">X</button>
     </div>
@@ -44,13 +44,13 @@ export default {
     };
   },
   computed: {
-      loggedIn() {
-         return this.$store.state.member;
-      },
-      change(){
-        return !this.$store.state.member
-      }
-   },
+    loggedIn() {
+      return this.$store.state.member;
+    },
+    change() {
+      return !this.$store.state.member;
+    },
+  },
 };
 </script>
 
@@ -79,7 +79,7 @@ img {
   overflow: hidden;
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 10;
 }
 .navBar {
   display: flex;
@@ -90,14 +90,14 @@ img {
   padding: 0;
 }
 .floatRight {
-   padding-right: 35px;
-   width: 50%;
-   justify-content: flex-end;
+  padding-right: 35px;
+  width: 50%;
+  justify-content: flex-end;
 }
 .floatLeft {
-   padding-left: 35px;
-   width: 50%;
-   justify-content: flex-start;
+  padding-left: 35px;
+  width: 50%;
+  justify-content: flex-start;
 }
 .firstListItem {
   padding: 0;
@@ -148,7 +148,7 @@ img {
   right: 0;
   cursor: pointer;
 }
-.gone{
+.gone {
   display: none;
 }
 </style>
