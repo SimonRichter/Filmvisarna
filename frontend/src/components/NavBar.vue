@@ -2,7 +2,7 @@
   <div class="navBarContainer">
     <ul class="navBar floatLeft">
       <router-link to="/">
-        <img src="../pictures/logo2.svg" class="logo" />
+        <img src="../pictures/logoV3.png" class="logo" />
       </router-link>
     </ul>
     <ul class="navBar floatRight">
@@ -71,6 +71,7 @@ a {
   text-decoration: none;
 }
 .logo {
+  align-items: right;
   padding: 0px 0px 0px 0px;
   height: 80px;
   width: auto;
