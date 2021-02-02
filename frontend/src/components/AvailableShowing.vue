@@ -1,60 +1,63 @@
 <template>
+  <ShowingsFilter
+    :options="['Show All', 'Theatre 1', 'Theatre 2']"
+    :default="'Filter by Theatre'"
+    @input="addFilterItem($event)"
+  />
   <div class="availableShowing">
-    <div class="calenderFilterContainer">
-      <ShowingsFilter
-        :options="['Show All', 'Theatre 1', 'Theatre 2']"
-        :default="'Filter by Theatre'"
-        class="select"
-        @input="addFilterItem($event)"
-      />
-      <div class="calenIcon noselect" @click="show()">📅</div>
+    <div class="calenContainer">
+      <img class="calenIcon" @click="show()" src="../pictures/calendar.svg" />
     </div>
     <div ref="draggableContainer" id="draggable-container">
       <div id="draggable-header" @mousedown="dragMouseDown">
-        <transition name="custom-classes-transition"  mode="out-in" enter-active-class="animate__animated animate__zoomIn" leave-active-class="animate__animated animate__zoomOut">
+        <transition
+          name="custom-classes-transition"
+          mode="out-in"
+          enter-active-class="animate__animated animate__zoomIn"
+          leave-active-class="animate__animated animate__zoomOut"
+        >
           <Calendar v-if="showCalen" v-on:datePicked="what" />
         </transition>
       </div>
     </div>
   </div>
 
-    <div class="space" v-if="showings.length && new Date(today()) > new Date() - 86400000">
-      <div
-        class="showingList"
-        v-for="showing of filteredShowings"
-        :key="showing"
-      >
-        <div class="anotherFormattingDiv">
-          <div v-if="member">
-            <button
-              class="bookButton grow"
-              @click="
-                $router.push(
-                  '/chosen-movie/' + showing.title + '/booking/' + showing.id
-                )
-              "
-            >
-              Book
-            </button>
-          </div>
-          <div v-else>
-            <button class="popup bookButton" @click="popUp()">
-              Book
-              <span class="popuptext" id="myPopup"
-                >You need to Sign In First</span
-              >
-            </button>
-          </div>
-          <h3 class="noTopMargin" v-if="showings.length">
-            {{ showing.date }} - {{ showing.time }} | {{ showing.theatre }} |
-            {{ showing.salon }}
-          </h3>
+  <div
+    class="space"
+    v-if="showings.length && new Date(today()) > new Date() - 86400000"
+  >
+    <div class="showingList" v-for="showing of filteredShowings" :key="showing">
+      <div class="anotherFormattingDiv">
+        <div v-if="member">
+          <button
+            class="bookButton grow"
+            @click="
+              $router.push(
+                '/chosen-movie/' + showing.title + '/booking/' + showing.id
+              )
+            "
+          >
+            Book
+          </button>
         </div>
+        <div v-else>
+          <button class="popup bookButton" @click="popUp()">
+            Book
+            <span class="popuptext" id="myPopup"
+              >You need to Sign In First</span
+            >
+          </button>
+        </div>
+        <h3 class="noTopMargin" v-if="showings.length">
+          {{ showing.date }} - {{ showing.time }} | {{ showing.theatre }} |
+          {{ showing.salon }}
+        </h3>
       </div>
     </div>
-    <div class="noMovie space" v-else>
-      --- NO BOOKINGS AVAILABLE FOR THE SELECTED DATE ---
-    </div>
+  </div>
+  <div class="noMovie space" v-else>
+    --- NO BOOKINGS AVAILABLE FOR THE SELECTED DATE ---
+  </div>
 </template>
 
 <script>
@@ -183,9 +186,12 @@ export default {
 </script>
 
 <style scoped>
-.space{
+.availableShowing {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.space {
   height: 300px;
-
 }
 .signInButton {
   appearance: none;
@@ -199,12 +205,11 @@ export default {
   z-index: 100;
 }
 .calenIcon {
-  font-size: 40px;
-  width: fit-content;
   cursor: pointer;
-  left: 40vw;
-  top: 38vw;
-  z-index: 1;
+  width: 5%;
+}
+.calenContainer {
+  text-align: center;
 }
 .noMovie {
   text-align: center;

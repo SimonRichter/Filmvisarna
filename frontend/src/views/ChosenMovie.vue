@@ -137,13 +137,13 @@ h3 {
   visibility: visible;
 }
 .buttonColor {
-  width: 7%;
+  width: 5%;
   color: #5e0202;
   filter: invert(6%) sepia(96%) saturate(4244%) hue-rotate(10deg)
     brightness(99%) contrast(111%);
   position: absolute;
-  left: 45vw;
-  top: 300px;
+  left: 47vw;
+  top: 35vh;
 }
 </style>
 <style>
@@ -151,4 +151,5 @@ h3 {
   grid-column: 1/3;
   margin-top: 4vw;
 }
+
 </style>
