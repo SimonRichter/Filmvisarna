@@ -87,6 +87,12 @@ public class Main {
             res.json(showings);
         });
 
+        app.get("/rest/showings/:id", (req, res) -> {
+            var id = (req.params("id"));
+            var showing = collection(Showing.class).findById(id);
+            res.json(showing);
+        });
+
         // removing/updating seats left
         app.put("/rest/showings/:id", (req, res) -> {
             var update = req.body(Showing.class);

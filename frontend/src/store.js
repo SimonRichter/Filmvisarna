@@ -93,6 +93,14 @@ const actions = {
     store.commit('setShowings', showingsList)
   },
   async updateSeatsInBackend(store, showingObj) {
+
+    let oldShowing = await fetch('/rest/showings/' + showingObj.id)
+    oldShowing = await oldShowing.json()
+    for(let i = 1; i <= oldShowing.seats.length; i++) {
+      if(oldShowing.seats[i]) console.log('seat: ',i)
+    }
+    //console.log('look at me: ', oldShowing.seats, oldShowing.seats[5])
+
     let showing = {
       id: showingObj.id,
       title: showingObj.title,
