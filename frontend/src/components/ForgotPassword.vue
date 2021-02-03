@@ -1,21 +1,31 @@
 <template>
   <div>
     <div class="passwordInfo">
-        
+        <form >
         <h1>{{ 'Enter your E-mail' }} </h1>
         
-        <input class="emailInput" type="email" name="" id="" placeholder="E-mail">
+        <input class="emailInput" type="email" placeholder="E-mail" required />
         <h2></h2>
-        <button class="passwordResetButton" v-on:click="method">Reset Password</button>
+        <button class="passwordResetButton" v-on:click="showMessage()">Reset Password</button>
+        </form>
   </div>
-   
+  <div class="messageReset" v-if="message"> An E-mail has been sent with information </div>
 </div>
 </template>
 
 <script>
 
 export default {
-   
+    data() {
+        return{
+            message: false,
+        };
+    },
+   methods :{
+       showMessage(){
+           return this.message = true;
+       },
+   },
 };
 </script>
 
@@ -43,6 +53,11 @@ h1{
 .emailInput{
     font-size: 20px;
     padding-top: 5px;
+}
+.messageReset{
+    text-align: center;
+    font-size: 18px;
+    margin-top: 15px;
 }
 
 </style>
