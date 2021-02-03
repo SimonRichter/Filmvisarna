@@ -6,13 +6,18 @@
         :middle="false"
       />
     </div>
-    <button id="left" @click="nextSlide(false)"></button>
-    <transition name="fade" v-on:enter="enter">
+    <button id="left" @click="nextSlide(false)">&#8592;</button>
+    <transition
+      name="fade"
+      v-on:enter="enter"
+      mode="out-in"
+      enter-active-class="animate__animated animate__fadeIn animate__slower"
+    >
       <div class="carousel__item" :key="index" @click="goToChosenMovie()">
         <CarouselItem :object="objects[index]" :middle="true" />
       </div>
     </transition>
-    <button id="right" @click="nextSlide(true)"></button>
+    <button id="right" @click="nextSlide(true)">&#8594;</button>
     <div class="next__item">
       <CarouselItem
         :object="objects[[index + 1 > objects.length - 1 ? 0 : index + 1]]"
@@ -131,30 +136,29 @@ export default {
   z-index: 1;
   width: 1500px;
   height: 350px;
-  margin: 10px;
+  margin: 0;
   transform: translateX(0);
-  transition: transform 0.25s;
+  /* transition: transform 0.25s; */
 }
 .carousel__item:hover {
   transform: scale(1.05);
   cursor: pointer;
+  filter: brightness(120%) saturate(105%);
 }
 .previous__item {
   display: flex;
-  transform: perspective(800px) rotateY(-45deg);
-  transition: transform 0.25s;
+  transform: perspective(1000px) rotateY(-45deg);
+  /* transition: transform 5s; */
   filter: blur(2px);
   width: 600px;
-  height: 200px;
   font-size: 5px;
 }
 .next__item {
   display: flex;
-  transform: perspective(800px) rotateY(45deg);
-  transition: transform 0.25s;
+  transform: perspective(1000px) rotateY(45deg);
+  /* transition: transform 5s; */
   filter: blur(2px);
   width: 600px;
-  height: 200px;
 }
 
 .fade-enter-active,
@@ -165,28 +169,33 @@ export default {
 .fade-enter,
 .fade-leave {
   opacity: 1;
+  transition: all 5s ease;
 }
 #left,
 #right {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background-color: whitesmoke;
+  border: none;
   position: absolute;
   opacity: 0.25;
-  transition: opacity 0.25s;
+  transition: opacity 0.5s;
   z-index: 2;
   cursor: pointer;
   border-radius: 50%;
-  font-size: 50px;
+  font-size: 20px;
+  bottom: 155px;
+  color: rgb(71, 71, 71);
 }
 #left:hover,
 #right:hover {
-  opacity: 1;
+  opacity: 0.75;
+  color: black;
 }
 #left {
-  left: 10px;
+  left: 0;
 }
 #right {
-  right: 10px;
+  right: 0;
 }
 </style>

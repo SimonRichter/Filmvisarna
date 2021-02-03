@@ -3,8 +3,12 @@
     <img :src="object.imageUrl" />
   </div>
   <div class="description" v-if="middle">
-    <div class="title">{{ object.title }}</div>
-    <div class="text">{{ object.texts.substring(0, 35) }} <br /> {{ object.texts.substring(35, 1000) }}</div>
+    <!-- <div class="title">{{ object.title }}</div> -->
+    <div class="text">
+      {{ object.texts.substring(0, 35) }} <br />
+      {{ object.texts.substring(35, 1000) }}
+    </div>
+  </div>
 </template>
 
 <script>
@@ -23,6 +27,7 @@ img {
   position: absolute;
   text-align: left;
   padding: 30px;
+  padding-bottom: 0;
   bottom: 5px;
   left: 0;
   font-family: "Alfa Slab One", cursive;
