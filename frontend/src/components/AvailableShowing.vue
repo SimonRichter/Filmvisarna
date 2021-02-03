@@ -267,14 +267,13 @@ h3 {
   color: rgb(206, 191, 168);
   font-size: 17px;
   /* font-weight: lighter; */
-  margin-top: 2px;
 }
 .anotherFormattingDiv {
   display: flex;
   align-items: center;
 }
 .noTopMargin > span {
-  padding: 15px 25px 20px;
+  padding:0 18px 0;
 }
 #draggable-container {
   width: 0%;
