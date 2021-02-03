@@ -2,6 +2,7 @@
    <div class="contentGridContainer">
       <CurrentBookings />
       <OldBookings />
+      
    </div>
     <Footer />
 </template>
@@ -9,10 +10,12 @@
 <script>
 import CurrentBookings from "../components/CurrentBookings.vue";
 import OldBookings from "../components/OldBookings.vue";
+import Footer from "../components/Footer.vue"
+
 export default {
    components: {
       CurrentBookings,
-      OldBookings,
+      OldBookings,Footer
    },
 };
 </script>
