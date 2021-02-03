@@ -42,12 +42,17 @@ h3 {
   margin-top: 0;
 }
 .sub-menu {
-  border: #6e1020 1px solid;
   position: absolute;
   background-color: #202020;
-  width: 131px;
+  width: 13.5vw;
   border-radius: 5px;
   margin-top: 10px;
+}
+
+@media (min-width:1800px){
+  .sub-menu{
+     width: 11.5vw;
+  }
 }
 .menu-item {
   padding: 2px;

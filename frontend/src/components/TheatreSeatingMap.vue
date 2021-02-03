@@ -12,7 +12,7 @@
     />
   </div>
   <div class="ticketsInfo-grid">
-    <h2>Ticket types</h2>
+    <h2>Ticket types :</h2>
     <h3 class="ticket-types">
       <div v-if="typeAdult > 0">{{ typeAdult }} Adult</div>
       <div v-if="typeChild > 0">{{ typeChild }} Child (0-12)</div>

@@ -27,7 +27,6 @@ export default {
   },
   computed: {
     id() {
-      // get showing id from url parameter
       return this.$route.params.id;
     },
     showing() {
@@ -54,22 +53,6 @@ span {
   font-size: 18px;
   font-family: "Bebas Neue", cursive;
 }
-
-/* .border {
-  background-color: #6e1020;
-  height: 1px;
-  width: 100%;
-} */
-
-/* h3 {
-  color: lightblue;
-} */
-/* .grid-container-map {
-  grid-area: 2/1/3/2;
-} */
-/* hr{
-  color: #6e1020;
-} */
 </style>
 <style>
 
