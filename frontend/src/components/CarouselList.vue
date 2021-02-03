@@ -121,8 +121,8 @@ export default {
   transform: translateX(0);
   transition: transform 0.25s;
   z-index: 1;
-  width: 1800px;
-  height: 400px;
+  width: 1500px;
+  height: 350px;
   margin: 10px;
   animation: fadeIn;
   animation-duration: 2s;
@@ -131,7 +131,7 @@ export default {
   display: flex;
   transform: translateX(150);
   transition: transform 0.25s;
-  transform: perspective(800px) rotateY(-25deg);
+  transform: perspective(800px) rotateY(-45deg);
   filter: blur(2px);
   width: 600px;
   height: 200px;
@@ -140,7 +140,7 @@ export default {
   display: flex;
   transform: translateX(-150);
   transition: transform 0.25s;
-  transform: perspective(800px) rotateY(25deg);
+  transform: perspective(800px) rotateY(45deg);
   filter: blur(2px);
   width: 600px;
   height: 200px;
