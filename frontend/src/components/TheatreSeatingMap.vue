@@ -1,42 +1,48 @@
 <template>
-  <div class="ticket-grid">
-    <h2>Ticket types</h2>
-    <div class="ticket-types">
-      <h3>
-        <div v-if="typeAdult > 0">{{ typeAdult }} Adult</div>
-        <div v-if="typeChild > 0">{{ typeChild }} Child (0-12)</div>
-        <div v-if="typeSenior > 0">{{ typeSenior }} Senior (65+)</div>
+  <div class="chooseType-grid">
+      <h3 class="max-8" v-if="counter >= 8">You can choose max 8 tickets</h3>
+      <h3 class="if-disabled-btn" v-if="!(counter == goToNextStep)">
+        Choose ticket types
       </h3>
-    </div>
+    <SeatingList
+      :counter="counter"
+      v-bind:seatIndexes="seatIndexes"
+      v-bind:ticketTypes="ticketTypes"
+      @update-total="updateTickets"
+    />
+  </div>
+  <div class="ticketsInfo-grid">
+    <h2>Ticket types</h2>
+    <h3 class="ticket-types">
+      <div v-if="typeAdult > 0">{{ typeAdult }} Adult</div>
+      <div v-if="typeChild > 0">{{ typeChild }} Child (0-12)</div>
+      <div v-if="typeSenior > 0">{{ typeSenior }} Senior (65+)</div>
+    </h3>
     <div class="ticket-sum">
-      <h3>Total:   {{ totalSum }} kr</h3>
+      <h3>Total: {{ totalSum }} kr</h3>
     </div>
-    <div class="if-disabled-btn" v-if="!(counter == goToNextStep)">
-    <h3>Choose ticket types</h3>
-  </div>
-  </div>
-  <router-link :to="'/confirmation-page/' + showing.id">
-    <button
-      :disabled="!(counter === goToNextStep) || counter == 0"
-      class="next-btn"
-      @click="
-        sendDataToNextView, setSeats();
-        removeSeatsBackend();
-      "
-      :to="'/chosen-movie/' + showing.title + '/booking/' + showing.id"
+    <router-link
+      class="bookingConfirmationBtn"
+      :to="'/confirmation-page/' + showing.id"
     >
-      Confirm your tickets
-    </button>
-  </router-link>
-  
-  <SeatingList
+      <button
+        :disabled="!(counter === goToNextStep) || counter == 0"
+        class="next-btn"
+        @click="
+          sendDataToNextView, setSeats();
+          removeSeatsBackend();
+        "
+        :to="'/chosen-movie/' + showing.title + '/booking/' + showing.id"
+      >
+        Confirm your tickets
+      </button>
+    </router-link>
+  </div>
+  <SeatingMapList
+    v-bind:showing="showing"
     :counter="counter"
-    v-bind:seatIndexes="seatIndexes"
-    v-bind:ticketTypes="ticketTypes"
-    @update-total="updateTickets"
+    @changeTicket="changeTicket"
   />
-  <SeatingMapList v-bind:showing="showing" :counter="counter" @changeTicket="changeTicket" />
-  <h3 class="max-8" v-if="counter >= 8">You can choose max 8 tickets</h3>
 </template>
 
 <script>
@@ -102,9 +108,9 @@ export default {
         showing: this.showing,
         seatIndexes: this.seatIndexes,
       };
-      
+
       this.$store.commit("setBookingInfo", this.objToSend);
-      this.$store.dispatch("createBookings", this.objToSend)
+      this.$store.dispatch("createBookings", this.objToSend);
     },
   },
   methods: {
@@ -113,15 +119,25 @@ export default {
         for (let j = 0; j < this.showing.totalSeats; j++) {
           if (this.seatIndexes[i] == j) {
             this.showing.seats[j] = true;
-          } else if (this.showing.seats[j] == false || this.showing.seats[j] == null) {
+          } else if (
+            this.showing.seats[j] == false ||
+            this.showing.seats[j] == null
+          ) {
             this.showing.seats[j] = false;
           }
         }
       }
     },
     changeTicket(seatIndex) {
-      if (this.seatIndexes.length <= 0 || this.seatIndexes.indexOf(seatIndex) < 0) {
-        if (this.counter < 8 && (this.showing.seats[seatIndex] == undefined || this.showing.seats[seatIndex] == false)) {
+      if (
+        this.seatIndexes.length <= 0 ||
+        this.seatIndexes.indexOf(seatIndex) < 0
+      ) {
+        if (
+          this.counter < 8 &&
+          (this.showing.seats[seatIndex] == undefined ||
+            this.showing.seats[seatIndex] == false)
+        ) {
           this.seatIndexes.push(seatIndex);
           this.counter++;
         }
@@ -189,7 +205,6 @@ export default {
       for (let i = 0; i < this.counter; i++) {
         const ticket = this.ticketTypes[i];
         if (ticket == undefined) {
-          console.log("You havent filled in all ticket types");
         } else {
           localTotalSum += +ticket.price;
           switch (ticket.ticketType) {
@@ -204,7 +219,6 @@ export default {
               break;
           }
           this.goToNextStep++;
-          console.log("you can go to the next step");
         }
       }
       this.totalSum = localTotalSum;
@@ -217,17 +231,12 @@ export default {
 </script>
 
 <style scoped>
-h3{
-  margin-top: -18px;
-}
+
 .grid-seating-map {
-  grid-column: 2;
-  grid-row: 1 / 4;
   padding-top: 15px;
   padding-bottom: 5px;
-  margin-top: 12vh;
-  margin-left: 10vh;
 }
+
 .grid-container-map {
   margin-top: 20px;
   display: grid;
@@ -238,6 +247,7 @@ h3{
   border-radius: 5px;
   border: #6e1020 1px solid;
 }
+
 button {
   text-align: center;
   border: #6e1020 1px solid;
@@ -245,73 +255,59 @@ button {
   border-radius: 5px;
   color: rgb(238, 220, 192);
 }
+
 button:enabled {
   background-color: #6e1020;
 }
-.grid-container-list {
-  grid-column: 1;
-  min-height: 80px;
-  padding-bottom: 5px;
-  margin-bottom: 100px;
-  margin-top: 20px;
-}
-.ticket-grid {
-  grid-column: 1;
-  display: grid;
-  grid-template-columns: minmax(50px, 1fr) 100px;
-  grid-template-rows: 50px 100px minmax(10px, 1fr) 30px;
-  gap: 5px;
-  border-radius: 5px;
-  background-color: #131313;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.next-btn {
-  grid-column: 1;
-  grid-row: 4;
-  height: 30px;
-  width: 150px;
-  padding-left: 5px;
-  margin-top: 10px;
 
+.chooseType-grid {
+  display: grid;
+  grid-template-rows: 20px 330px;
+  grid-template-columns: auto auto;
+  gap: 5px;
+}
+
+.ticketsInfo-grid{
+  display: grid;
+  grid-gap:10px;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  border-top: 1px #6e1020 solid;
+  padding-top: 15px;
+}
+
+
+.next-btn {
+  height: 50px;
+  width: 150px;
+  font-size: 18px;
   cursor: pointer;
 }
+
 a {
   max-height: 0;
 }
 .ticket-types {
-  grid-column: 1;
-  grid-row: 2;
-  text-align: left;
-  margin-top: 10px;
+  height:82px;
 }
-.ticket-sum {
-  grid-column: 1;
-  grid-row: 3;
-  text-align: left;
-  padding-top: 10px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
+
+.ticket-sum > * {
+  font-size: 24px;
+  font-family: "Bebas Neue", cursive;
 }
 .if-disabled-btn,
 .if-disabled-btn h3 {
-  grid-column: 1;
-  grid-row: 4;
-  text-align: left;
   font-size: 16px;
   color: #6e1020;
-  margin-bottom: 2px;
-  margin-top: 10px;
+  text-align: right;
 }
-.max-8{
-  grid-column: 2;
-  grid-row: 4;
-  text-align: left;
+.max-8 {
   color: #6e1020;
-  margin-bottom: 2px;
-  margin-top: 5px;
-  margin-left: 200px;
+}
+
+.bookingAlerts {
+  display: flex;
+  justify-content: space-between;
 }
 * {
   -webkit-touch-callout: none; /* iOS Safari */

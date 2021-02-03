@@ -1,6 +1,6 @@
 <template>
   <div class="grid-seating-map">
-    <hr />
+
     <div class="seats">
       <SeatingMapItem
         v-for="(seat, i) in showing.totalSeats"
