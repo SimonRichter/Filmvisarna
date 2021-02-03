@@ -1,10 +1,11 @@
 <template>
-  <ShowingsFilter
-    :options="['Show All', 'Theatre 1', 'Theatre 2']"
-    :default="'Filter by Theatre'"
-    @input="addFilterItem($event)"
-  />
   <div class="availableShowing">
+    <h1 class="getTickets">Get tickets</h1>
+    <ShowingsFilter
+      :options="['Show All', 'Theatre 1', 'Theatre 2']"
+      :default="'Filter by Theatre'"
+      @input="addFilterItem($event)"
+    />
     <div class="calenContainer">
       <img class="calenIcon" @click="show()" src="../pictures/calendar.svg" />
     </div>
@@ -193,11 +194,11 @@ export default {
 .showingsListContainer {
   height: 330px;
 }
-.availableShowing {
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
+
 .space {
+  grid-row: 8;
+  grid-column: 1/3;
+  padding-top: 110px;
   height: 300px;
 }
 .signInButton {
@@ -213,30 +214,31 @@ export default {
 }
 .calenIcon {
   cursor: pointer;
-  width: 5%;
+  width: 30%;
 }
-.calenContainer {
-  text-align: center;
-}
+
 .noMovie {
   text-align: center;
-  padding: 20px 0 40px 0;
-  height: 330px;
-  border-top: 1px solid #6e1020;
 }
 
 .showingList {
-  border-top: 1px solid #6e1020;
+  background-color: rgba(51, 51, 51, 0.39);
+  margin-bottom: 2px;
 }
 .bookButton {
   margin-right: 20px;
   cursor: pointer;
+  margin-left: 5px;
+}
+
+.bookButton:hover{
+  background-color: #6e1020;
 }
 
 button {
+   background-color: #131313 ;
+  border: 1px solid #131313 ;
   text-align: center;
-  border: #6e1020 1px solid;
-  background-color: #131313;
   border-radius: 5px;
   color: rgb(238, 220, 192);
   font-family: "Bebas Neue", cursive;
@@ -253,11 +255,11 @@ button:disabled {
   background-color: rgb(46, 46, 46);
 }
 
-.grow:hover {
+/* .grow:hover {
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
-}
+} */
 
 button:disabled {
   cursor: default;
@@ -273,7 +275,7 @@ h3 {
   align-items: center;
 }
 .noTopMargin > span {
-  padding:0 18px 0;
+  padding: 0 18px 0;
 }
 #draggable-container {
   width: 0%;
@@ -303,7 +305,6 @@ h3 {
   left: 50%;
   margin-left: -80px;
 }
-
 
 .popup .show {
   visibility: visible;

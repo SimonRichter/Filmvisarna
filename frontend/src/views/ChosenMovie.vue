@@ -16,7 +16,7 @@
   />
 
   <div class="contentGridContainer">
-    <h1>{{ movie.title }}</h1>
+    <h1 class="movieTitleH1">{{ movie.title }}</h1>
     <div class="movieInfo1">
       <h2><span></span> {{ movie.length }}</h2>
       <h2><span></span> | {{ movie.runtime }}</h2>
@@ -36,11 +36,12 @@
 
 <script>
 import AvailableShowing from "../components/AvailableShowing.vue";
-import Footer from "../components/Footer.vue"
+import Footer from "../components/Footer.vue";
 
 export default {
   components: {
-    AvailableShowing,Footer
+    AvailableShowing,
+    Footer,
   },
 
   data() {
@@ -85,10 +86,11 @@ export default {
 .contentGridContainer {
   grid-gap: 1vw;
   padding-top: 2vw;
-  width:70vw;
+  width: 70vw;
+  padding-bottom: 2vw;
 }
 
-h1 {
+.movieTitleH1 {
   color: rgb(150, 22, 43);
   text-shadow: 1px 1px rgb(206, 191, 168);
   letter-spacing: 3px;
@@ -117,7 +119,7 @@ h3 {
   justify-content: center;
 }
 
-video{
+video {
   border-inline: 7px black solid;
 }
 
@@ -155,11 +157,23 @@ video{
 }
 </style>
 <style>
-.availableShowing {
-  grid-column: 1/3;
-  margin-top: 4vw;
+
+.getTickets {
+  grid-area: 7 / 1 / 8 / 3;
+  letter-spacing: 2px;
 }
-.showingsListContainer{
+.availableShowing {
+  border-top: 1px #5e0202 solid;
+  display: flex;
+  grid-area: 7/1/8/3;
+  /* grid-column: 1/3; */
+  margin-top: 7vw;
+}
+
+.availableShowing > *{
+  padding:15px 20px 5px;
+}
+.showingsListContainer {
   grid-column: 1/3;
 }
 </style>
