@@ -123,7 +123,7 @@ export default {
 }
 h1 {
   font-size: 50px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 h2 {
   font-size: 25px;
@@ -161,11 +161,11 @@ h3 {
   font-family: "Bebas Neue", cursive;
 }
 .signUpInfo {
-  text-align: center;
+  float: left;
 }
 .signUpButton {
-  margin-top: 10px;
-  font-size: 22px;
+  margin-top: 8px;
+  font-size: 20px;
   border: #6e1020 1px solid;
   background-color: #131313;
   border-radius: 5px;
@@ -174,8 +174,8 @@ h3 {
   cursor: pointer;
 }
 .signUpPopUp {
-  float: left;
-  margin-bottom: 100px;
+  text-align: center;
+  
 }
 .passwordInputSignIn {
   font-size: 20px;
@@ -194,28 +194,6 @@ h3 {
   z-index: 99;
   background-color: rbga(0, 0, 0, 0.5);
 }
-/*
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5;
-}
-
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
-
-.slide-enter-active,
-.slide-leave-active {
-  transition: transform 0.5;
-}
-
-.slide-enter,
-.slide-leave-to {
-  transform: translateX(-50%) translateY(100vw);
-}
-*/
-
 .modal {
   position: fixed;
   top: 50%;

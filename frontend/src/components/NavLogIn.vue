@@ -1,8 +1,20 @@
 <template>
-  <li class="nav_dropbtn" ref="dropdownMenu" @click="show = !show">{{ loggedIn.name }}</li>
+  <li class="nav_dropbtn" ref="dropdownMenu" @click="show = !show">
+    {{ loggedIn.name }}
+  </li>
   <div class="sub-menu" v-if="show">
-    <router-link to="/my-page"><h3 @click="myPage($event)" class="myPage_btn">Bookings</h3></router-link>
-    <h3 @click="logOut();$router.push('/')" class="logOut_btn">Log out</h3>
+    <router-link to="/my-page"
+      ><h3 @click="myPage($event)" class="myPage_btn">Bookings</h3></router-link
+    >
+    <h3
+      @click="
+        logOut();
+        $router.push('/');
+      "
+      class="logOut_btn"
+    >
+      Log out
+    </h3>
   </div>
 </template>
 
@@ -15,19 +27,19 @@ export default {
   },
   methods: {
     logOut() {
+      this.$store.commit("logOutMember");
       fetch("/api/logout");
-      this.$store.commit("setMember", null);
     },
     myPage(ev) {
       console.log("--my page button click event");
     },
-    documentClick(e){
-        let el = this.$refs.dropdownMenu
-        let target = e.target
-        if ( el !== target && !el.contains(target)) {
-          this.show=false
-        }
+    documentClick(e) {
+      let el = this.$refs.dropdownMenu;
+      let target = e.target;
+      if (el !== target && !el.contains(target)) {
+        this.show = false;
       }
+    },
   },
   computed: {
     loggedIn() {
@@ -35,13 +47,13 @@ export default {
       return this.$store.state.member;
     },
   },
-  created () {
-      document.addEventListener('click', this.documentClick)
-    },
-    destroyed () {
+  created() {
+    document.addEventListener("click", this.documentClick);
+  },
+  destroyed() {
     // important to clean up!!
-    document.removeEventListener('click', this.documentClick)
-  }
+    document.removeEventListener("click", this.documentClick);
+  },
 };
 </script>
 

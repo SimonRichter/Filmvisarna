@@ -2,7 +2,7 @@
   <div class="contentGridContainer">
     <div class="map" style="width: 100%; overflow: hidden; height: 300px">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8988.611700266438!2d13.162159345680744!3d55.72109449828493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4653bd7809088d27%3A0xf626b08182a4c26e!2zw4VrZXJncsOkbmRlbiwgMjI2IDYwIEx1bmQ!5e0!3m2!1sen!2sse!4v1612132497208!5m2!1sen!2sse"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8989.363127085939!2d13.166832505006354!3d55.71782964332671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8f40c452cc9528c6!2sVueX%20Cinemas!5e0!3m2!1sen!2sse!4v1612352369883!5m2!1sen!2sse"
         width="100%"
         height="600"
         frameborder="0"

@@ -133,8 +133,8 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 99;
-  width: 40%;
-  height: 40%;
+  height: 25vw;
+  width: 42vw;
   max-width: 100;
   background-color: #131313;
   border-radius: 16px;
