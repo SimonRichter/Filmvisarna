@@ -130,6 +130,7 @@ export default {
   margin: 2rem auto;
   position: relative;
   width: 100%;
+  margin-bottom: 15vh;
 }
 .carousel__item {
   display: flex;
@@ -197,5 +198,9 @@ export default {
 }
 #right {
   right: 0;
+}
+button{
+outline: none;
+
 }
 </style>
