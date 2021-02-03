@@ -3,18 +3,20 @@
     <div class="previous__item">
       <CarouselItem
         :object="objects[[index - 1 < 0 ? objects.length - 1 : index - 1]]"
+        :middle="false"
       />
     </div>
     <button id="left" @click="nextSlide(false)"></button>
     <transition name="fade" v-on:enter="enter">
       <div class="carousel__item" :key="index" @click="goToChosenMovie()">
-        <CarouselItem :object="objects[index]" />
+        <CarouselItem :object="objects[index]" :middle="true" />
       </div>
     </transition>
     <button id="right" @click="nextSlide(true)"></button>
     <div class="next__item">
       <CarouselItem
         :object="objects[[index + 1 > objects.length - 1 ? 0 : index + 1]]"
+        :middle="false"
       />
     </div>
   </div>
@@ -33,13 +35,15 @@ export default {
         imageUrl:
           "https://www.themoviedb.org/t/p/original/gIR61o4awBHCNHUOrBcjyZa22BZ.jpg",
         title: "Blade",
-        texts: "The comic book hero: Blade",
+        texts:
+          "The comic book hero,                       the slayer of vampires",
       },
       {
         imageUrl:
           "https://www.themoviedb.org/t/p/original/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg",
         title: "Pulp-Fiction",
-        texts: "A classic from Quentin Tarantino",
+        texts:
+          'A Quentin Tarantino classic;       "Hamburgers: the cornerstone of any nutritious breakfast"',
       },
       {
         imageUrl:
@@ -51,13 +55,14 @@ export default {
         imageUrl:
           "https://www.themoviedb.org/t/p/original/rAQcPrEaPzDRVNX7XX5TWyxCGFN.jpg",
         title: "It",
-        texts: "A clown that doesn't make you laugh",
+        texts:
+          "\"I'm Pennywise, the dancing clown. No we aren't strangers, are we?\"",
       },
       {
         imageUrl:
           "https://www.themoviedb.org/t/p/original/xJHokMbljvjADYdit5fK5VQsXEG.jpg",
         title: "Interstellar",
-        texts: "A multidimensional movie: Interstellar",
+        texts: "Humanity hangs on a fragile thread. Can it be saved in time?",
       },
     ];
     let index = 0;
@@ -141,6 +146,7 @@ export default {
   filter: blur(2px);
   width: 600px;
   height: 200px;
+  font-size: 5px;
 }
 .next__item {
   display: flex;
@@ -150,6 +156,7 @@ export default {
   width: 600px;
   height: 200px;
 }
+
 .fade-enter-active,
 .fade-leave-active {
   filter: blur(2px);
