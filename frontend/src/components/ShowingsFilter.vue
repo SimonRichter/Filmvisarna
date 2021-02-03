@@ -55,14 +55,11 @@ export default {
 
 <style scoped>
 .custom-select {
-   position: absolute;
-   top: 74vh;
-   left: 73vw;
+   grid-area: 7/1/8/3;
    width: 11vw;
    text-align: left;
    outline: none;
-   height: 36px;
-   line-height: 36px;
+   line-height: 40px;
 }
 
 .custom-select > *{
@@ -89,7 +86,7 @@ export default {
    position: absolute;
    content: "";
    top: 18px;
-   right: 0.7em;
+   right: 1em;
    width: 0;
    height: 0;
    border: 5px solid transparent;
@@ -100,21 +97,22 @@ export default {
    color: rgb(238, 220, 192);
    border-radius: 0px 0px 6px 6px;
    overflow: hidden;
-   border-right: 1px solid #6e1020;
-   border-left: 1px solid #6e1020;
+   /* border-right: 1px solid #6e1020;
+   border-left: 1px solid #6e1020; */
    border-bottom: 1px solid #6e1020;
    position: absolute;
    background-color: #131313;
-   left: 0;
+   left: 14vw;
    right: 0;
    z-index: 1;
+   width:70vw;
 }
 
 .custom-select .items div {
    color: rgb(238, 220, 192);
-   text-align: center;
    cursor: pointer;
    user-select: none;
+   padding-left: 1em;
 }
 
 .custom-select .items div:hover {

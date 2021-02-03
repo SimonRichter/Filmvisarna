@@ -57,6 +57,7 @@
         </router-link>
       </div>
    </div>
+   <Footer />
 </template>
 
 <script>
@@ -114,17 +115,17 @@ a {
 }
 button {
    cursor: pointer;
-   margin: 20px;
+   margin: 15px;
+   margin-left: 3vw;
    background-color: #4caf50;
    border: none;
    padding: 6px 16px;
-   text-align: center;
    text-decoration: none;
-   display: inline-block;
    font-size: 28px;
    letter-spacing: 0.5px;
    font-weight: bold;
    border-radius: 5px;
+   
 }
 
 img {
@@ -145,7 +146,7 @@ img {
   grid-row: 1;
 }
 .print {
-  margin-left: 220px;
+  margin-left: 21vw;
 }
 
 /* .cancelBtn {

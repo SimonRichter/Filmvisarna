@@ -1,22 +1,21 @@
 <template>
+  <div class="videoContainer">
+    <video
+      @click="playPause()"
+      ref="trailerVideo"
+      width="1000"
+      height="563"
+      :src="'https://imdb-video.media-imdb.com/vi563330585/1434659607842-pgv4ql-1584637373251.mp4?Expires=1612369847&Signature=ZUHlJZSL56u3Sq4dpDE-R4Og1lerOG-SImkzAu8P~OB50lFrfVB-ZSogGv-gWJJIoAUCsPdP-t6gIzpMO~Sk3V106qltMt7i3-3R3vtugrTumcrP0aJWKSuv3nAlevhxpkPvFp-IE-YQ50CCRjeQ77jDO9pF5W8CiBR5~~FhzZ6a88f8219yQaidqyffB8RPRTLmVlPYmfoLpqdkkv9BRYEoOhDC0ZkxLPWXPsVy9azBxr-A3QJ2BCLAnqmaR5eTzPvbtjvD-omRTHODW9iUoBw~ehVOOJPYmVtpbyS54a9rE2hI3-2MlSFWoFLhKqISvTIyqfh1mnBs-uiA6~LjYw__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA'"
+    ></video>
+  </div>
+  <img
+    @click="playPause()"
+    src="../pictures/playbutton.svg"
+    class="buttonColor"
+    v-bind:class="{ hideButton: playing, showButton: !playing }"
+  />
+
   <div class="contentGridContainer">
-    <div class="trailer">
-      <div class="videoContainer">
-        <video
-          @click="playPause()"
-          ref="trailerVideo"
-          width="1220"
-          height="400"
-          :src="movie.trailer"
-        ></video>
-        <img
-          @click="playPause()"
-          src="../pictures/playbutton.svg"
-          class="buttonColor"
-          v-bind:class="{ hideButton: playing, showButton: !playing }"
-        />
-      </div>
-    </div>
     <h1>{{ movie.title }}</h1>
     <div class="movieInfo1">
       <h2><span></span> {{ movie.length }}</h2>
@@ -32,14 +31,16 @@
     <p class="plotText">{{ movie.plot.substring(0, 1000).trimRight() }}...</p>
     <AvailableShowing />
   </div>
+  <Footer />
 </template>
 
 <script>
 import AvailableShowing from "../components/AvailableShowing.vue";
+import Footer from "../components/Footer.vue"
 
 export default {
   components: {
-    AvailableShowing,
+    AvailableShowing,Footer
   },
 
   data() {
@@ -83,11 +84,14 @@ export default {
 <style scoped>
 .contentGridContainer {
   grid-gap: 1vw;
+  padding-top: 2vw;
+  width:70vw;
 }
 
-h1{
+h1 {
   color: rgb(150, 22, 43);
-  text-shadow: 1px 2px rgb(206, 191, 168);
+  text-shadow: 1px 1px rgb(206, 191, 168);
+  letter-spacing: 3px;
 }
 h2 {
   display: inline;
@@ -106,8 +110,15 @@ h3 {
   margin-top: 2px;
 }
 
-.trailer {
-  grid-column: 1/3;
+.videoContainer {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+video{
+  border-inline: 7px black solid;
 }
 
 .movieInfo1 {
@@ -134,18 +145,21 @@ h3 {
   visibility: visible;
 }
 .buttonColor {
-  width: 7%;
+  width: 5%;
   color: #5e0202;
   filter: invert(6%) sepia(96%) saturate(4244%) hue-rotate(10deg)
     brightness(99%) contrast(111%);
   position: absolute;
-  left: 45vw;
-  top: 300px;
+  left: 47vw;
+  top: 35vh;
 }
 </style>
 <style>
 .availableShowing {
   grid-column: 1/3;
   margin-top: 4vw;
+}
+.showingsListContainer{
+  grid-column: 1/3;
 }
 </style>

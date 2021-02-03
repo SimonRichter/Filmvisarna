@@ -1,68 +1,77 @@
 <template>
+  <ShowingsFilter
+    :options="['Show All', 'Theatre 1', 'Theatre 2']"
+    :default="'Filter by Theatre'"
+    @input="addFilterItem($event)"
+  />
   <div class="availableShowing">
-    <div class="calenderFilterContainer">
-      <ShowingsFilter
-        :options="['Show All', 'Theatre 1', 'Theatre 2']"
-        :default="'Filter by Theatre'"
-        class="select"
-        @input="addFilterItem($event)"
-      />
-      <div class="calenIcon noselect" @click="show()">📅</div>
+    <div class="calenContainer">
+      <img class="calenIcon" @click="show()" src="../pictures/calendar.svg" />
     </div>
     <div ref="draggableContainer" id="draggable-container">
       <div id="draggable-header" @mousedown="dragMouseDown">
-        <Calendar v-if="showCalen" v-on:datePicked="what" />
+        <transition
+          name="custom-classes-transition"
+          mode="out-in"
+          enter-active-class="animate__animated animate__zoomIn"
+          leave-active-class="animate__animated animate__zoomOut"
+        >
+          <Calendar v-if="showCalen" v-on:datePicked="what" />
+        </transition>
       </div>
     </div>
+  </div>
 
-    <div v-if="showings.length && new Date(today()) > new Date() - 86400000">
-      <div
-        class="showingList"
-        v-for="showing of filteredShowings"
-        :key="showing"
-      >
-        <div class="anotherFormattingDiv">
-          <div v-if="member">
-            <button
-              class="bookButton grow"
-              @click="
-                $router.push(
-                  '/chosen-movie/' + showing.title + '/booking/' + showing.id
-                )
-              "
-            >
-              Book
-            </button>
-          </div>
-          <div v-else>
-            <button class="popup bookButton" @click="popUp()">
-              Book
-              <span class="popuptext" id="myPopup"
-                >You need to Sign In First</span
-              >
-            </button>
-          </div>
-          <h3 class="noTopMargin" v-if="showings.length">
-            {{ showing.date }} - {{ showing.time }} | {{ showing.theatre }} |
-            {{ showing.salon }}
-          </h3>
+  <div
+    class="space"
+    v-if="showings.length && new Date(today()) > new Date() - 86400000"
+  >
+    <div class="showingList" v-for="showing of filteredShowings" :key="showing">
+      <div class="anotherFormattingDiv">
+        <div v-if="member">
+          <button
+            class="bookButton grow"
+            @click="
+              $router.push(
+                '/chosen-movie/' + showing.title + '/booking/' + showing.id
+              )
+            "
+          >
+            Book
+          </button>
         </div>
+        <div v-else>
+          <button class="popup bookButton" @click="popUp()">
+            Book
+            <span class="popuptext" id="myPopup"
+              >You need to Sign In First</span
+            >
+          </button>
+        </div>
+        <h3 class="noTopMargin" v-if="showings.length">
+          <span>{{ showing.date }}</span
+          ><span>{{ showing.time }}</span
+          ><span>{{ showing.theatre }}</span>
+          <span>{{ showing.salon }}</span>
+        </h3>
       </div>
     </div>
-    <div class="noMovie" v-else>
-      --- NO BOOKINGS AVAILABLE FOR THE SELECTED DATE ---
-    </div>
+  </div>
+  <div class="noMovie space" v-else>
+    --- NO BOOKINGS AVAILABLE FOR THE SELECTED DATE ---
   </div>
 </template>
 
 <script>
 import ShowingsFilter from "./ShowingsFilter.vue";
 import Calendar from "./Calendar.vue";
+import About from "../views/About.vue";
 
 export default {
   components: {
     Calendar,
     ShowingsFilter,
+    About,
   },
 
   data() {
@@ -181,6 +190,16 @@ export default {
 </script>
 
 <style scoped>
+.showingsListContainer {
+  height: 330px;
+}
+.availableShowing {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.space {
+  height: 300px;
+}
 .signInButton {
   appearance: none;
   outline: none;
@@ -193,23 +212,21 @@ export default {
   z-index: 100;
 }
 .calenIcon {
-  font-size: 40px;
-  width: fit-content;
   cursor: pointer;
-  left: 40vw;
-  top: 38vw;
-  z-index: 1;
+  width: 5%;
+}
+.calenContainer {
+  text-align: center;
 }
 .noMovie {
   text-align: center;
   padding: 20px 0 40px 0;
-
+  height: 330px;
   border-top: 1px solid #6e1020;
 }
 
 .showingList {
   border-top: 1px solid #6e1020;
-  padding: 5px 0px 5px 0px;
 }
 .bookButton {
   margin-right: 20px;
@@ -229,6 +246,7 @@ button {
   margin-top: 7px;
   margin-bottom: 7px;
   font-size: 20px;
+  transition: 200ms;
 }
 button:active,
 button:disabled {
@@ -249,14 +267,13 @@ h3 {
   color: rgb(206, 191, 168);
   font-size: 17px;
   /* font-weight: lighter; */
-  margin-top: 2px;
 }
 .anotherFormattingDiv {
   display: flex;
   align-items: center;
 }
-.noTopMargin {
-  margin-top: 0;
+.noTopMargin > span {
+  padding:0 18px 0;
 }
 #draggable-container {
   width: 0%;
@@ -275,7 +292,7 @@ h3 {
 .popup .popuptext {
   visibility: hidden;
   width: 160px;
-  background-color: #555;
+  background-color: rgb(148, 11, 11);
   color: #fff;
   text-align: center;
   border-radius: 6px;
@@ -287,16 +304,6 @@ h3 {
   margin-left: -80px;
 }
 
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
 
 .popup .show {
   visibility: visible;

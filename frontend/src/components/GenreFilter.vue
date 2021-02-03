@@ -54,21 +54,26 @@ export default {
 </script>
 
 <style scoped>
+
+.custom-select > *{
+   font-family: 'Bebas Neue', cursive;
+}
 .custom-select {
    position: absolute;
-   top: 27vh;
-   left: 80vw;
+   top: 23vw;
+   left: 45.5vw;
    width: 10vw;
    text-align: left;
    outline: none;
    height: 36px;
-   line-height: 36px;
+   line-height: 50px;
+   font-size: 18px;
 }
 
 .custom-select .selected {
    background-color: #131313;
    border-radius: 6px;
-   border: 1px solid #666666;
+   /* border: 1px solid #666666; */
    color: rgb(238, 220, 192);
    padding-left: 1em;
    cursor: pointer;
@@ -83,7 +88,7 @@ export default {
 .custom-select .selected:after {
    position: absolute;
    content: "";
-   top: 18px;
+   top: 22px;
    right: 0.7em;
    width: 0;
    height: 0;

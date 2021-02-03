@@ -40,16 +40,20 @@
 import NavBar from "./components/NavBar.vue";
 export default {
   components: {
-    NavBar,
+    NavBar
   },
   created() {
     this.$store.dispatch("fetchMovies");
     this.$store.dispatch("fetchBookings");
     this.$store.dispatch("fetchShowings");
     this.$store.dispatch("whoAmI");
+    this.$router.replace("/");
   },
 };
 </script>
 
 <style scoped>
+
+
+
 </style>

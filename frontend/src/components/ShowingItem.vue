@@ -25,8 +25,15 @@ h3 {
 }
 .moviePoster {
    width: 13vw;
+   transition: 200ms;
+   border: solid;
+   border-color: transparent;
+   border-radius: 10px;
+  
 }
 .moviePoster:hover{
    transform:scale(1.05);
+   
+
 }
 </style>
