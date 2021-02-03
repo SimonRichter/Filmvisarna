@@ -1,36 +1,27 @@
 <template>
   <div class="footerContainer">
-    <ul class="footer">
-      <router-link to="/movies"><li>Movies</li></router-link>
-      <router-link to="/ourcinemas"><li>Our Cinemas</li></router-link>
-      <router-link to="/faq"><li>FAQ</li></router-link>
-      <router-link to="/about"><li>About</li></router-link>
-    </ul>
+    <div class="footer">
+      <router-link to="/movies"><span>Movies</span></router-link>
+      <router-link to="/ourcinemas"><span>Our Cinemas</span></router-link>
+      <router-link to="/faq"><span>FAQ</span></router-link>
+      <router-link to="/about"><span>About</span></router-link>
+    </div>
   </div>
 </template>
 <script>
 export default {
-  components: {
-
-  },
-  data() {
-    return {
-    };
-  },
-  computed: {
- 
-  },
 };
 </script>
 
 <style scoped>
-li {
+span {
   color: rgb(82, 12, 12);
-  padding: 10px 20px 10px 20px;
+  padding: 0px 100px 0px 100px;
   font-size: 15px;
   text-align: center;
+  width: 100%;
 }
-li:hover {
+span:hover {
   color: rgb(238, 220, 192);
 }
 a {
@@ -40,12 +31,14 @@ a {
   border-top: #631212 2px solid;
   bottom: 0;
   padding: 0;
-  position: relative;
-  width: 100%;
+
+
 }
 .footer {
   background-color: rgb(116, 109, 98);
-  padding: 0;
+  padding-top: 15px;
+ text-align: center;
+ height: 40px;
   
 }
 </style>
