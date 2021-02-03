@@ -292,7 +292,7 @@ h3 {
 .popup .popuptext {
   visibility: hidden;
   width: 160px;
-  background-color: #555;
+  background-color: rgb(148, 11, 11);
   color: #fff;
   text-align: center;
   border-radius: 6px;
@@ -304,16 +304,6 @@ h3 {
   margin-left: -80px;
 }
 
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
 
 .popup .show {
   visibility: visible;
