@@ -62,26 +62,18 @@ export default {
     ];
     let index = 0;
     let translateX = 0;
-    let object = [];
     let interval;
-    let description = "";
     return {
       objects,
-      object,
       translateX,
       index,
       interval,
-      description,
     };
   },
   computed: {
     enter() {
-      this.object = this.objects[this.index];
       console.log("enter the enter-method");
-
-      this.interval = setInterval(() => {
-        console.log("Im changing index", this.index);
-
+      setInterval(() => {
         if (this.index >= this.objects.length - 1) {
           this.index = 0;
         } else {
@@ -110,7 +102,7 @@ export default {
       }
     },
     goToChosenMovie() {
-      this.$router.push("/chosen-movie/" + this.object.title);
+      this.$router.push("/chosen-movie/" + this.objects[this.index].title);
     },
   },
 };
@@ -167,12 +159,6 @@ export default {
 .fade-leave {
   opacity: 1;
 }
-.desc {
-  width: 100px;
-  height: 100px;
-  color: black;
-}
-
 #left,
 #right {
   width: 50px;
