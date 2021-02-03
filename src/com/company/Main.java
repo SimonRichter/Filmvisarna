@@ -34,6 +34,10 @@ public class Main {
         });
 
         app.post("/rest/bookings", (req, res) -> {
+            if(req.session("current-member") == null) {
+                res.send("No one is logged in");
+                return;
+            }
             var booking = req.body(Booking.class);
             // var savedBooking=collection(Member.class).save(booking); // sprint 2
             var savedBooking = collection(Booking.class).save(booking);
