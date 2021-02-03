@@ -138,7 +138,7 @@ export default {
   height: 350px;
   margin: 0;
   transform: translateX(0);
-  /* transition: transform 0.25s; */
+  transition: 0.25s ease;
 }
 .carousel__item:hover {
   transform: scale(1.05);
