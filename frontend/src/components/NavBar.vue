@@ -84,7 +84,7 @@ a {
   overflow: hidden;
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 10;
 }
 .navBar {
   display: flex;

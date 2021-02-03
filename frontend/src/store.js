@@ -76,6 +76,7 @@ const mutations = {
 }
 
 const actions = {
+
   async fetchMovies(store) {
     let moviesList = await fetch('/rest/movies')
     moviesList = await moviesList.json()
@@ -125,6 +126,7 @@ const actions = {
     message = await response.json()
     store.commit('addMessage', message)
   },
+
   // ------------- SPRINT 2 ------------
   // in-parameter is a user object user = {name: Anna, email: anna@gmail.com, password: Hej123}
   // Backend: need to use collection('Klass').insert(Object) to add a new 
