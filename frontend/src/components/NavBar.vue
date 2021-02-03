@@ -136,7 +136,7 @@ a {
   height: 25vw;
   width: 42vw;
   max-width: 100;
-  background-color: #131313;
+  background-color: #2b2b2b;
   border-radius: 16px;
   padding: 25px;
 }

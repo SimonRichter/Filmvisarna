@@ -81,8 +81,13 @@ export default {
 }
 
 .custom-select .selected.open {
-   border: 1px solid #6e1020;
+ 
    border-radius: 6px 6px 0px 0px;
+}
+.items{
+    display: grid;
+   width: 40vw;
+   grid-template-columns: repeat(3,1fr);
 }
 
 .custom-select .selected:after {
@@ -100,14 +105,13 @@ export default {
    color: rgb(238, 220, 192);
    border-radius: 0px 0px 6px 6px;
    overflow: hidden;
-   border-right: 1px solid #6e1020;
-   border-left: 1px solid #6e1020;
-   border-bottom: 1px solid #6e1020;
+
    position: absolute;
    background-color: #131313;
-   left: 0;
-   right: 0;
+   left: -15vw;
+
    z-index: 1;
+  
 }
 
 .custom-select .items div {

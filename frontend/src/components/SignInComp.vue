@@ -135,6 +135,7 @@ h3 {
 }
 .signInButtonDiv {
   text-align: center;
+  
 }
 .signInButton {
   margin-top: 10px;
@@ -203,7 +204,7 @@ h3 {
   width: 94%;
   height: 90%;
   max-width: 100;
-  background-color: #131313;
+  background-color: #2b2b2b;
   border-radius: 16px;
   padding: 25px;
 }
@@ -240,7 +241,7 @@ h3 {
   width: 94%;
   height: 90%;
   max-width: 100;
-  background-color: #131313;
+  background-color: #2b2b2b;
   border-radius: 16px;
   padding: 25px;
 }

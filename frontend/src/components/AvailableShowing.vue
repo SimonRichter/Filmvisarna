@@ -197,7 +197,7 @@ export default {
 
 .space {
   grid-row: 8;
-  grid-column: 1/3;
+  grid-column: 1;
   padding-top: 110px;
   height: 300px;
 }
@@ -231,9 +231,7 @@ export default {
   margin-left: 5px;
 }
 
-.bookButton:hover{
-  background-color: #6e1020;
-}
+
 
 button {
    background-color: #131313 ;
@@ -255,12 +253,13 @@ button:disabled {
   background-color: rgb(46, 46, 46);
 }
 
-/* .grow:hover {
+.grow:hover {
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
-} */
+    background-color: #6e1020;
 
+}
 button:disabled {
   cursor: default;
 }
