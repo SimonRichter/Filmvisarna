@@ -62,8 +62,8 @@
       <h3>Simon / Posters Manager<span> - simon@vuexcinemas.com</span></h3>
       <h3>Jacob / Seats Manager<span> - jacob@vuexcinemas.com</span></h3>
       <h3>Hugo / PopCorn Manager<span> -hugo@vuexcinemas.com</span></h3>
-      <h3>Mauro / Toilet Manager<span>- mauro@vuexcinemas.com</span></h3>
-      <h3>Johanna/ CSS Master and Manager of Mangers<span> - joahan@vuexcinemas.com</span></h3>
+      <h3>Mauro / Toilet Manager<span> - mauro@vuexcinemas.com</span></h3>
+      <h3>Johanna/ CSS Master and Manager of Mangers<span> - johanna@vuexcinemas.com</span></h3>
     </div>
   </div>
    <Footer />
