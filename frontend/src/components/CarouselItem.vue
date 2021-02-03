@@ -1,14 +1,12 @@
 <template>
-    <div class="image">
-      <img :src="object.imageUrl" />
+  <div class="image">
+    <img :src="object.imageUrl" />
+  </div>
+  <div class="description">
+    <div class="title">
+      <h1>{{ object.texts }}</h1>
     </div>
-    <div class="description">
-      <div class="title">
-        <h1>{{ object.title }}</h1>
-      </div>
-      <br />
-      <div class="text">{{ object.text }}</div>
-    </div>
+  </div>
 </template>
 
 <script>
