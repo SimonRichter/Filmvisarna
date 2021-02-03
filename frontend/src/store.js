@@ -22,6 +22,10 @@ const mutations = {
     state.member = member;
     console.log(state.member)
   },
+
+  logOutMember(state){
+  state.member=null;
+},
   setBookingInfo(store, bookingInfo) {
     store.bookingInfo = bookingInfo;
     console.log('store.bookingInfo', store.bookingInfo)
