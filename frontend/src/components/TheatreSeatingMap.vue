@@ -233,8 +233,7 @@ export default {
 <style scoped>
 
 .grid-seating-map {
-  padding-top: 15px;
-  padding-bottom: 5px;
+  padding-top: 30px;
 }
 
 .grid-container-map {

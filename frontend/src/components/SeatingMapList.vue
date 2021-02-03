@@ -1,6 +1,5 @@
 <template>
   <div class="grid-seating-map">
-
     <div class="seats">
       <SeatingMapItem
         v-for="(seat, i) in showing.totalSeats"
@@ -45,19 +44,5 @@ export default {
 }
 .seats {
   padding-left: 60px;
-}
-hr {
-  width: 400px;
-  margin-bottom: 12vh;
-  margin-left: 10px;
-  padding-left: 20px;
-  border: 0;
-  height: 4px;
-  background-image: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0.75),
-    rgba(255, 255, 255, 0)
-  );
 }
 </style>
