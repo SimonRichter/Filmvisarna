@@ -99,13 +99,10 @@ export default {
    overflow: hidden;
    /* border-right: 1px solid #6e1020;
    border-left: 1px solid #6e1020; */
-   border-bottom: 1px solid #6e1020;
    position: absolute;
    background-color: #131313;
-   left: 14vw;
-   right: 0;
    z-index: 1;
-   width:70vw;
+   width: 11vw;
 }
 
 .custom-select .items div {
