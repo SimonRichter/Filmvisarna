@@ -25,10 +25,10 @@ img {
 }
 .text {
   position: absolute;
-  text-align: left;
+
   padding: 30px;
   padding-bottom: 0;
-  bottom: 5px;
+  bottom: -3vh;
   left: 0;
   font-family: "Alfa Slab One", cursive;
   color: rgb(231, 227, 227);
@@ -36,20 +36,8 @@ img {
   filter: brightness(5px);
   border-radius: 20%;
   text-shadow: rgb(32, 75, 32) 2px 2px;
-}
-p {
-  font-size: 30px;
-}
-.title {
-  position: absolute;
-  text-align: left;
-  padding: 7px;
-  bottom: 280px;
-  left: 0;
-  background: rgba(255, 255, 255, 0.61);
-  color: black;
-  font-family: "Oswald", sans-serif;
-  border-radius: 10px;
-  margin: 17px;
+
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
 }
 </style>

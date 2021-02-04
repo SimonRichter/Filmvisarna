@@ -35,7 +35,7 @@ export default {
     CarouselItem,
   },
   data() {
-    const objects = [
+    let objects = [
       {
         imageUrl:
           "https://www.themoviedb.org/t/p/original/gIR61o4awBHCNHUOrBcjyZa22BZ.jpg",
@@ -69,7 +69,75 @@ export default {
         title: "Interstellar",
         texts: "Humanity hangs on a fragile thread. Can it be saved in time?",
       },
+      {
+        imageUrl:
+          "https://www.themoviedb.org/t/p/original/i3IOqOFdAdjw0ebQXkIevybkkNF.jpg",
+        title: "The Hitchhiker's Guide to the Galaxy",
+        texts: " The misadventures of the last         surviving man",
+      },
+      {
+        imageUrl:
+          "https://www.themoviedb.org/t/p/original/t9kQnqiaxQ8TLB25rTzDKLd0fdM.jpg",
+        title: "Sin City",
+        texts: "Non stop action in Black & White",
+      },
+      {
+        imageUrl:
+          "https://www.themoviedb.org/t/p/original/q6OGlZ1KMEb14AC8KbPCxyNOal6.jpg",
+        title: "The Intouchables",
+        texts: "A powerful story of friendship.       Based on a true story",
+      },
+      {
+        imageUrl:
+          "https://www.themoviedb.org/t/p/original/9Xw0I5RV2ZqNLpul6lXKoviYg55.jpg",
+        title: "The Shawshank Redemption",
+        texts: "One of the best films of all time",
+      },
+      {
+        imageUrl:
+          "https://www.themoviedb.org/t/p/original/52AfXWuXCHn3UjD17rBruA9f5qb.jpg",
+        title: "Fight Club",
+        texts: "Everyone is invited, will you      accept the challenge?",
+      },
+      {
+        imageUrl:
+          "https://www.themoviedb.org/t/p/original/zqAtFrTmauJGRbqrL0XoENa2eL.jpg",
+        title: "The Hunger Games",
+        texts: "In a dystopian world, only one will survive.",
+      },
+      {
+        imageUrl:
+          "https://www.themoviedb.org/t/p/original/oB7heykReUrityg2tu7Q3TmGFUA.jpg",
+        title: "Finding Nemo",
+        texts: "An amazing submarine adventure!",
+      },
+      {
+        imageUrl:
+          "https://www.themoviedb.org/t/p/original/jBFxXKCrViA88hhO59fDx0Av4P.jpg",
+        title: "Star Wars: Episode IV A New Hope",
+        texts: "Who is your daddy ?",
+      },
+      {
+        imageUrl:
+          "https://www.themoviedb.org/t/p/original/be35YUapZGUksrW3X25QLmHJjqC.jpg",
+        title: "Avengers: Infinity War",
+        texts: "The whole universe is on danger, or at least half of it.",
+      },
     ];
+
+    let j, k;
+    let temp = objects;
+
+    for (let i = temp.length - 1; i > 0; i--) {
+      j = Math.floor(Math.random() * i);
+      k = temp[i];
+      temp[i] = objects[j];
+      temp[j] = k;
+    }
+    objects = [];
+    for (let i = 0; i < 5; i++) {
+      objects.push(temp[i]);
+    }
     let index = 0;
     let translateX = 0;
     let interval;
@@ -199,8 +267,7 @@ export default {
 #right {
   right: 0;
 }
-button{
-outline: none;
-
+button {
+  outline: none;
 }
 </style>
