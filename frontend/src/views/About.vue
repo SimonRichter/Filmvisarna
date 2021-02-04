@@ -56,6 +56,7 @@ export default {
 .sinContainer {
   text-align: center;
   width: 100vw;
+  padding-bottom: 100px;
 }
 h2 {
   grid-column: 1/3;
@@ -69,6 +70,7 @@ h2 {
 .contentGridContainer {
   width: 80%;
   grid-gap: 0.1vw;
+  padding-bottom: 100px;
 }
 
 .about {
