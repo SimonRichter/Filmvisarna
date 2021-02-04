@@ -14,6 +14,7 @@
           type="email"
           v-model="email"
           placeholder="E-mail"
+          oninput="setCustomValidity('')"
           required
         />
         <h3></h3>
@@ -22,6 +23,7 @@
           type="password"
           v-model="password"
           placeholder="Password"
+          oninput="setCustomValidity('')"
           required
         />
       </div>
@@ -40,7 +42,7 @@
     <div class="signUpInfo">
       <div class="signUpPopUp">
         <h3>{{ "Are you not a member?" }}</h3>
-        <Button class="signUpButton" @click="showModal = true">Sign Up</Button>
+        <button class="signUpButton" @click="showModal = true">Sign Up</button>
       </div>
 
       <transition name="fade" appear>

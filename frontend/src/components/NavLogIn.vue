@@ -30,28 +30,25 @@ export default {
       this.$store.commit("logOutMember");
       fetch("/api/logout");
     },
-    myPage(ev) {
-      console.log("--my page button click event");
-    },
+    myPage(ev) {},
     documentClick(e) {
       let el = this.$refs.dropdownMenu;
       let target = e.target;
-      if (el !== target && !el.contains(target)) {
+
+      if (el !== target) {
         this.show = false;
       }
     },
   },
   computed: {
     loggedIn() {
-      console.log(this.$store.state.member.name);
       return this.$store.state.member;
     },
   },
   created() {
     document.addEventListener("click", this.documentClick);
   },
-  destroyed() {
-    // important to clean up!!
+  unmounted() {
     document.removeEventListener("click", this.documentClick);
   },
 };

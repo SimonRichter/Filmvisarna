@@ -62,12 +62,7 @@
 
 <script>
 export default {
-  //  data: function () {
-  //     return {
-  //        showToggle: false,
-  //     };
-  //  },
-
+  
    computed: {
       moviePoster() {
          return this.$store.state.movies.filter(
@@ -83,18 +78,12 @@ export default {
    },
 
   methods: {
-    // confirmBooking() {
-    //   //console.log("Confirming booking: ", this.itemName);
-    //   this.showToggle = true;
-    // },
+   
     printBookingDetails() {
       window.print();
       return false;
     },
-    // cancelBooking() {
-    //   this.$store.dispatch("fetchShowings");
-    // },
-    
+   
   },
 };
 </script>

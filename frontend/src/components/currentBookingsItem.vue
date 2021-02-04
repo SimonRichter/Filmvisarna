@@ -57,7 +57,7 @@ export default {
       if (option) {
         this.$store.dispatch("deleteBooking", this.booking);
         this.updateSeatsInBackend();
-        // DELETE BOOKING AND REMOVE THE SEATS FROM SHOWING
+    
       }
       this.showModal = false;
     },

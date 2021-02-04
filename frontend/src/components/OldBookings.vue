@@ -10,7 +10,7 @@
     :seats="currentBookingsArr[index].seatIndexes"
     :bookingId="currentBookingsArr[index].id"
   />
-   <!-- :totalSum="currentBookingsArr[index].totalSum" -->
+  <!-- :totalSum="currentBookingsArr[index].totalSum" -->
 </template>
 
 <script>
@@ -21,14 +21,17 @@ export default {
   },
   computed: {
     memberEmail() {
-      return this.$store.state.member.email;
+      if (this.$store.state.member) {
+        return this.$store.state.member.email;
+      }
+      return;
     },
     currentBookingsArr() {
       let getBookings = this.$store.state.bookings.filter(
         (booking) => booking.userEmail == this.memberEmail
       );
 
-      console.log("-- filtered bookings: ", getBookings);
+   
       return getBookings;
     },
     showingInfoArr() {
@@ -39,7 +42,7 @@ export default {
         );
         showingsArr.push(getShowings);
       }
-      console.log("-- filtered showings ", showingsArr);
+   
       return showingsArr;
     },
   },
@@ -50,7 +53,7 @@ export default {
 h2 {
   letter-spacing: 2px;
   color: rgb(161, 152, 138);
-  margin-top:60px;
+  margin-top: 60px;
   text-align: center;
   grid-column: 1/3;
   border-bottom: 1px solid #6e1020;

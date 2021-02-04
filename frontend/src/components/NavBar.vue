@@ -1,11 +1,11 @@
 <template>
-  <div v-bind:class="{ trans: isAbout }" class="navBarContainer">
-    <ul v-bind:class="{ trans: isAbout }" class="navBar floatLeft">
+  <div  class="navBarContainer">
+    <ul  class="navBar floatLeft">
       <router-link to="/">
         <img src="../pictures/logoV3.png" class="logo" />
       </router-link>
     </ul>
-    <ul v-bind:class="{ trans: isAbout }" class="navBar floatRight">
+    <ul  class="navBar floatRight">
       <router-link to="/movies"><li>Movies</li></router-link>
       <router-link to="/ourcinemas"><li>Our Cinemas</li></router-link>
       <router-link to="/faq"><li>FAQ</li></router-link>
@@ -51,9 +51,7 @@ export default {
     change() {
       return !this.$store.state.member;
     },
-    isOurCinemas() {
-      return this.$route.name === "OurCinemas";
-    },
+   
   },
 };
 </script>
@@ -153,10 +151,6 @@ a {
   top: 0;
   right: 0;
   cursor: pointer;
-}
-.trans {
-  opacity: 0.9;
-  border: none;
 }
 .gone {
   display: none;

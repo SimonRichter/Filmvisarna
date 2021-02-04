@@ -12,6 +12,7 @@
           placeholder="First Name"
           pattern="[a-zA-Z]+"
           oninvalid="setCustomValidity('Alphabets only. ')"
+          oninput="setCustomValidity('')"
           required
         />
         <input
@@ -21,6 +22,7 @@
           placeholder="Last Name"
           pattern="[a-zA-Z]+"
           oninvalid="setCustomValidity('Alphabets only. ')"
+          oninput="setCustomValidity('')"
           required
         />
         <h3></h3>
@@ -31,6 +33,7 @@
           v-model="telephone"
           pattern="[0-9]{10,14}"
           placeholder="Phone(max 14 digits)"
+          oninput="setCustomValidity('')"
           required
         />
         <h3></h3>
@@ -84,6 +87,7 @@ export default {
         });
         return true;
       }
+ 
       x.preventDefault();
       this.error = true;
     },

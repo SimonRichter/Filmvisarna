@@ -18,8 +18,6 @@ const routes = [
   },
   {
     name: 'Movies',
-    // för att skicka med dynamisk id till annan url sida
-    // så behöver man lägga till i path: '...+ :id'
     path: '/movies/',
     component: Movies
   },

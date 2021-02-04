@@ -24,17 +24,17 @@ export default {
          return this.$store.state.movies;
       },
       filteredMovies() {
-         console.log("Running filteredMovies()");
+      
          let item = this.$store.state.genreFilterItem;
          if (
             item === null ||
             item === "Show All" ||
             item === "Filter by genre"
          ) {
-            console.log("Showing all");
+ 
             return this.movies;
          } else {
-            console.log("Trying to filter by: ", item);
+      
             return this.movies.filter((movie) => movie.genre.includes(item));
          }
       },

@@ -41,7 +41,7 @@ export default {
    props: ["itemName"],
    methods: {
       addFilterItem(itemName) {
-         console.log(itemName);
+    
          this.$store.state.genreFilterItem = itemName;
       },
    },

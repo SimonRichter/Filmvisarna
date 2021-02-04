@@ -29,7 +29,7 @@ export default {
     showPrices(item) {
       this.isHidden = true;
       this.$emit("update-price", item.title, item.price);
-      console.log("The price for this item is", item.price);
+ 
     },
   },
 };

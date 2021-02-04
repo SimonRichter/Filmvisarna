@@ -150,7 +150,7 @@ export default {
   },
   computed: {
     enter() {
-      console.log("enter the enter-method");
+     
       setInterval(() => {
         if (this.index >= this.objects.length - 1) {
           this.index = 0;
@@ -162,7 +162,7 @@ export default {
   },
   methods: {
     nextSlide(option) {
-      console.log("length of objects", this.objects.length);
+    
       if (!option) {
         if (this.index != 0) {
           this.index--;

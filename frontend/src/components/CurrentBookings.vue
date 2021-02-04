@@ -22,14 +22,16 @@ export default {
   },
   computed: {
     memberEmail() {
-      return this.$store.state.member.email;
+      if (this.$store.state.member) {
+        return this.$store.state.member.email;
+      }
+      return;
     },
     currentBookingsArr() {
       let getBookings = this.$store.state.bookings.filter(
         (booking) => booking.userEmail == this.memberEmail
       );
 
-      console.log("-- filtered bookings: ", getBookings);
       return getBookings;
     },
     showingInfoArr() {
@@ -40,7 +42,7 @@ export default {
         );
         showingsArr.push(getShowings);
       }
-      console.log("-- filtered showings ", showingsArr);
+  
       return showingsArr;
     },
   },

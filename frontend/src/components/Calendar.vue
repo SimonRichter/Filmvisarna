@@ -22,7 +22,6 @@
         <div v-for="index in firstDayNum-1" :key="index" class="prev-date">{{ prevDays -( firstDayNum -index)+1 }}</div>
         <div v-for="index in lastDay" :key="index">
           <div @click="testDate(index,testmonth); changeToday()" v-bind:class="{ today: new Date().getDate()==index && new Date().getMonth()==date.getMonth() }">{{index}}</div> </div>
-        <!--<div v-for="index in nextMonthDays" :key="index" class="prev-date">{{index}}</div>-->
       </div>
     </div>
   </div>

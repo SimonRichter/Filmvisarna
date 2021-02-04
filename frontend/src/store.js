@@ -20,15 +20,15 @@ const mutations = {
   },
   setMember(state, member) {
     state.member = member;
-    console.log(state.member)
+
   },
 
-  logOutMember(state){
-  state.member=null;
-},
+  logOutMember(state) {
+    state.member = null;
+  },
   setBookingInfo(store, bookingInfo) {
     store.bookingInfo = bookingInfo;
-    console.log('store.bookingInfo', store.bookingInfo)
+
 
   },
   setShowings(state, showingsList) {
@@ -56,23 +56,7 @@ const mutations = {
   updateBookings(state, booking) {
     state.bookings.push(booking);
   }
-  // ----------- SPRINT 2 -----------
-  // addMemberToState(store, newMember) {
-  //   store.members.push(newMember)
-  // },
-  // removeMemberFromState(store, memberToDelete) {
-  //   const index = store.members.indexOf(memberToDelete.email)
-  //   if (index > -1) {
-  //     store.members.splice(index, 1)
-  //   }
-  // },
-  // updateMemberInState(store, updatedMember) {
-  //   const index = store.members.indexOf(updatedMember.email)
-  //   if (index > -1) {
-  //     // Remove the old member object with the new
-  //     store.members.splice(index, 1, updatedMember)
-  //   }
-  // }
+
 }
 
 const actions = {
@@ -82,11 +66,7 @@ const actions = {
     moviesList = await moviesList.json()
     store.commit('setMovies', moviesList)
   },
-  // async fetchMembers(store) {
-  //   let membersList = await fetch('/rest/member')
-  //   membersList = await membersList.json()
-  //   store.commit('setMembers', membersList)
-  // },
+
   async fetchBookings(store) {
     let bookingsList = await fetch('/rest/bookings')
     bookingsList = await bookingsList.json()
@@ -127,38 +107,6 @@ const actions = {
     store.commit('addMessage', message)
   },
 
-  // ------------- SPRINT 2 ------------
-  // in-parameter is a user object user = {name: Anna, email: anna@gmail.com, password: Hej123}
-  // Backend: need to use collection('Klass').insert(Object) to add a new 
-  // addMemberToServer(store, newMember) {
-  //   // Fetch url of the json file. Method = POST because we want to add something new to the json file in the server
-  //   // Body = convert the object to a json object
-  //   let response = await fetch('/rest/member', {
-  //     method: 'POST',
-  //     body: JSON.stringify(newMember)
-  //   })
-  //   // After the new member has been saved to the json file, get it again and commit to the state array -> members
-  //   newMember = await response.json()
-  //   store.commit('addMemberToState', newMember)
-  // },
-  // removeMemberFromServer(store, memberToDelete) {
-  //   let response = await fetch('/rest/member', {
-  //     method: 'DELETE',
-  //     body: JSON.stringify(memberToDelete)
-  //   })
-  //   memberToDelete = await response.json()
-  //   store.commit('removeMemberFromState', memberToDelete)
-  // },
-  // // Updates the member if they have added or removed a booking in My Page or Confirmed window
-  // updateMemberInServer(store, updatedMember) {
-  //   let response = await fetch('/rest/member', {
-  //     method: 'PUT',
-  //     body: JSON.stringify(updatedMember)
-  //   })
-  //   member = await response.json()
-  //   store.commit('updateMemberInState', updatedMember)
-  // },
-
   async createBookings(store, bookingObj) {
     let showingId = bookingObj.showing.id.toString()
     let tickets0 = bookingObj.tickets[0].title + ": " + bookingObj.tickets[0].value + ", "
@@ -177,13 +125,13 @@ const actions = {
 
     let tickets = tickets0 + tickets1 + tickets2;
     let userEmail = this.state.member.email
-    console.log(userEmail)
+
     seatIndexes = seatIndexesString
     let booking = {
       showingId, tickets, seatIndexes, totalSum, userEmail
     }
 
-    console.log("createBookings", JSON.stringify(booking))
+
     await fetch('/rest/bookings', {
       method: 'POST',
       body: JSON.stringify(booking)
@@ -206,13 +154,11 @@ const actions = {
     })
 
     try {
-      //member = state.members
       member = await member.json()
-      console.log(member);
+
       store.commit('setMember', member)
     } catch {
 
-      console.warn('Bad credentials');
     }
   },
   async register(store, credentials) {
@@ -223,20 +169,20 @@ const actions = {
 
     try {
       member = credentials;
-      console.log(member);
+
       store.commit('setMember', member)
     } catch {
-      console.warn('Bad credentials');
+  
     }
   },
   async whoAmI(store) {
     let member = await fetch('/api/whoami')
     try {
       member = await member.json()
-      console.log(member);
+
       store.commit('setMember', member)
     } catch {
-      console.warn('Not logged in');
+ 
     }
   },
 

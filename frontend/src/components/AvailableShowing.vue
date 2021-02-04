@@ -99,7 +99,7 @@ export default {
       return (this.signIn = !this.signIn);
     },
     show() {
-      console.log("calen here??", this.showCalen);
+    
       return (this.showCalen = !this.showCalen);
     },
     what(dayPicked, monthPicked) {
@@ -157,7 +157,7 @@ export default {
 
   computed: {
     member() {
-      console.log("acwecwecew", this.$store.state.member);
+  
       return this.$store.state.member;
     },
 

@@ -9,14 +9,7 @@
     <button class="delButton3" v-show="tres" @click="show3()">
       like really really really sure you want delete your account?
     </button>
-    <button
-      class="delButton4"
-      v-show="cuatro"
-      @click="
-        delMem();
-        $router.push('/');
-      "
-    >
+    <button      class="delButton4"      v-show="cuatro"      @click="        delMem();        $router.push('/');      "    >
       c o n f i r m
     </button>
   </div>
@@ -25,7 +18,7 @@
 <script>
 export default {
   data() {
-    return { uno: true, first: false, dos: false, tres: false };
+    return { uno: true, first: false, dos: false, tres: false, cuatro:false };
   },
   computed: {
     curMem() {
