@@ -4,7 +4,7 @@
       <div class="signInInfo">
         <h1>{{ "Sign in" }}</h1>
 
-        <div class="error" v-if="error">Not found in our System</div>
+        <div v-bind:class="{errorr:error}"  v-if="error">Not found in our System</div>
         <br>
 
         <input
@@ -261,7 +261,7 @@ h3 {
 .gone {
   display: none;
 }
-.error {
+.errorr {
   font-size: 20px;
   color: red;
 }

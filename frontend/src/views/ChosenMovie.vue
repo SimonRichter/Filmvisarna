@@ -118,10 +118,10 @@ h3 {
   display: flex;
   justify-content: center;
 }
-
+/*
 video {
   border-inline: 7px black solid;
-}
+}*/
 
 .movieInfo1 {
   grid-column: 1/3;
