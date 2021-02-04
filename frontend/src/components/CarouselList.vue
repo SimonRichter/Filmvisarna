@@ -121,7 +121,7 @@ export default {
         imageUrl:
           "https://www.themoviedb.org/t/p/original/be35YUapZGUksrW3X25QLmHJjqC.jpg",
         title: "Avengers: Infinity War",
-        texts: "The whole universe is on danger, or at least half of it.",
+        texts: "The whole universe is in danger, or at least half of it.",
       },
     ];
 
