@@ -124,7 +124,8 @@ export default {
 
 .container {
  
- margin-left: 55vw;
+ margin-left: 50vw;
+ margin-top: 10vh;;
   color: rgb(241, 236, 236);
   width: fit-content;
 
