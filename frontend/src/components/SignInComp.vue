@@ -4,8 +4,10 @@
       <div class="signInInfo">
         <h1>{{ "Sign in" }}</h1>
 
-        <div v-bind:class="{errorr:error}"  v-if="error">Not found in our System</div>
-        <br>
+        <div v-bind:class="{ errorr: error }" v-if="error">
+          Not found in our System
+        </div>
+        <br />
 
         <input
           class="emailInputSignIn"
@@ -135,7 +137,6 @@ h3 {
 }
 .signInButtonDiv {
   text-align: center;
-  
 }
 .signInButton {
   margin-top: 10px;
@@ -161,9 +162,7 @@ h3 {
   color: rgb(238, 220, 192);
   font-family: "Bebas Neue", cursive;
 }
-.signUpInfo {
-  float: left;
-}
+
 .signUpButton {
   margin-top: 8px;
   font-size: 20px;
@@ -176,7 +175,6 @@ h3 {
 }
 .signUpPopUp {
   text-align: center;
-  
 }
 .passwordInputSignIn {
   font-size: 20px;
