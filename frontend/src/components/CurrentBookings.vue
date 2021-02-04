@@ -1,35 +1,60 @@
 <template>
-  <div class="currentTicketCont" v-for="booking of currentBookings" :key="booking">
-    <div class="whereWhen">
-      <h4>{{ showing.theatre }}, {{ showing.salon }}</h4>
-      <h3 class="dateTime">{{ showing.date }} {{ showing.time }}</h3>
-    </div>
-    <div class="what">
-      <h3>{{ showing.title }}</h3>
-      <div v-for="ticket in currentBookings.tickets" :key="ticket">
-        <h3>{{ ticket.value }} {{ ticket.title }}</h3>
-      </div>
-      <h3>{{ currentBookings.totalSum }} kr</h3>
-     
-      <h4>{{ showing.id }}</h4>
-    </div>
-  </div>
+  <h2>Current bookings</h2>
+  <currentBookingsItem
+    v-for="(show, index) in showingInfoArr"
+    :key="index"
+    :showingId="currentBookingsArr[index].showingId"
+    :booking="currentBookingsArr[index]"
+    :movieTitle="show[0].title"
+    :salon="show[0].salon"
+    :date="show[0].date"
+    :time="show[0].time"
+    :seats="currentBookingsArr[index].seatIndexes"
+    :bookingId="currentBookingsArr[index].id"
+  />
 </template>
 
 <script>
+import currentBookingsItem from "./currentBookingsItem.vue";
 export default {
+  components: {
+    currentBookingsItem,
+  },
   computed: {
-    showing() {
-      return this.$store.state.bookingInfo.showing;
+    memberEmail() {
+      return this.$store.state.member.email;
     },
-    currentBookings() {
-      this.$store.commit("setBookings", this.$store.state.bookingInfo);
-      console.log("bookings: ", this.$store.state.bookings);
-      return this.$store.state.bookings;
+    currentBookingsArr() {
+      let getBookings = this.$store.state.bookings.filter(
+        (booking) => booking.userEmail == this.memberEmail
+      );
+
+      console.log("-- filtered bookings: ", getBookings);
+      return getBookings;
+    },
+    showingInfoArr() {
+      const showingsArr = [];
+      for (let i = 0; i < this.currentBookingsArr.length; i++) {
+        let getShowings = this.$store.state.showings.filter(
+          (show) => show.id == this.currentBookingsArr[i].showingId
+        );
+        showingsArr.push(getShowings);
+      }
+      console.log("-- filtered showings ", showingsArr);
+      return showingsArr;
     },
   },
 };
 </script>
 
-<style>
+<style scoped>
+h2 {
+  letter-spacing: 2px;
+  color: rgb(161, 152, 138);
+  margin-top: 60px;
+  text-align: center;
+  grid-column: 1/3;
+  border-bottom: 1px solid #6e1020;
+  padding: 16px;
+}
 </style>

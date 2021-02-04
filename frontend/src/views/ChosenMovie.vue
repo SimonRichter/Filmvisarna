@@ -1,43 +1,47 @@
 <template>
-  <div class="setWidth">
-    <div class="movieInfo">
-      <div class="videoContainer">
-        <video
-          @click="playPause()"
-          ref="trailerVideo"
-          width="1220"
-          height="400"
-          :src="movie.trailer"
-        ></video>
-        <img
-         @click="playPause()"
-          src="../pictures/playbutton.svg"
-          class="buttonColor"
-          v-bind:class="{ hideButton: playing, showButton: !playing }"
-        />
-      </div>
-    </div>
-    <h2>{{ movie.genre }}</h2>
-    <h2><span></span> {{ movie.length }}</h2>
-    <h2><span></span> | {{ movie.runtime }}</h2>
-    <h2><span></span> | {{ movie.rated }}</h2>
-    <h3>Language: {{ movie.language }}</h3>
-    <h3><span></span> Director: {{ movie.director }}</h3>
-    <h3><span></span> Actors: {{ movie.actors }}</h3>
-
-    <p class="plotText">{{ movie.plot.substring(0, 1000).trimRight() }}...</p>
+  <div class="videoContainer">
+    <video
+      @click="playPause()"
+      ref="trailerVideo"
+      width="1000"
+      height="563"
+      :src="'https://imdb-video.media-imdb.com/vi563330585/1434659607842-pgv4ql-1584637373251.mp4?Expires=1612369847&Signature=ZUHlJZSL56u3Sq4dpDE-R4Og1lerOG-SImkzAu8P~OB50lFrfVB-ZSogGv-gWJJIoAUCsPdP-t6gIzpMO~Sk3V106qltMt7i3-3R3vtugrTumcrP0aJWKSuv3nAlevhxpkPvFp-IE-YQ50CCRjeQ77jDO9pF5W8CiBR5~~FhzZ6a88f8219yQaidqyffB8RPRTLmVlPYmfoLpqdkkv9BRYEoOhDC0ZkxLPWXPsVy9azBxr-A3QJ2BCLAnqmaR5eTzPvbtjvD-omRTHODW9iUoBw~ehVOOJPYmVtpbyS54a9rE2hI3-2MlSFWoFLhKqISvTIyqfh1mnBs-uiA6~LjYw__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA'"
+    ></video>
   </div>
-  <AvailableShowing />
+  <img
+    @click="playPause()"
+    src="../pictures/playbutton.svg"
+    class="buttonColor"
+    v-bind:class="{ hideButton: playing, showButton: !playing }"
+  />
+
+  <div class="contentGridContainer">
+    <h1 class="movieTitleH1">{{ movie.title }}</h1>
+    <div class="movieInfo1">
+      <h2><span></span> {{ movie.length }}</h2>
+      <h2><span></span> | {{ movie.runtime }}</h2>
+      <h2><span></span> | {{ movie.rated }}</h2>
+      <h2><span></span> | {{ movie.genre }}</h2>
+    </div>
+    <h3 class="lang">Language: {{ movie.language }}</h3>
+    <div class="movieInfo2">
+      <h3><span></span> Director: {{ movie.director }}</h3>
+      <h3><span></span> Actors: {{ movie.actors }}</h3>
+    </div>
+    <p class="plotText">{{ movie.plot.substring(0, 1000).trimRight() }}...</p>
+    <AvailableShowing />
+  </div>
+  <Footer />
 </template>
 
 <script>
 import AvailableShowing from "../components/AvailableShowing.vue";
+import Footer from "../components/Footer.vue";
 
 export default {
-  // props:{dp:"dayPicked",mp:"monthPicked"},
-
   components: {
     AvailableShowing,
+    Footer,
   },
 
   data() {
@@ -79,33 +83,17 @@ export default {
 </script>
 
 <style scoped>
-.hideButton {
-  visibility: hidden;
-}
-.showButton {
-  visibility: visible;
-}
-.buttonColor {
-  width: 7%;
-  color: #5e0202;
-  filter: invert(6%) sepia(96%) saturate(4244%) hue-rotate(10deg)
-    brightness(99%) contrast(111%);
-
-  position: absolute;
-  left:45vw;
-  top:300px;
-
+.contentGridContainer {
+  grid-gap: 1vw;
+  padding-top: 2vw;
+  width: 70vw;
+  padding-bottom: 2vw;
 }
 
-video {
-  border: none;
-  margin-top: 86px;
-  margin-bottom: 20px;
-}
-
-h1 {
-  margin-top: 5px;
-  margin-bottom: 10px;
+.movieTitleH1 {
+  color: rgb(150, 22, 43);
+  text-shadow: 1px 1px rgb(206, 191, 168);
+  letter-spacing: 3px;
 }
 h2 {
   display: inline;
@@ -124,19 +112,68 @@ h3 {
   margin-top: 2px;
 }
 
-.movieInfo {
+.videoContainer {
+  margin-top: 100px;
+  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
-.setWidth {
-  padding-top: 50px;
-  width: 69vw;
-  margin: 0 auto;
+video {
+  border-inline: 7px black solid;
 }
+
+.movieInfo1 {
+  grid-column: 1/3;
+}
+
+.lang {
+  color: rgb(206, 191, 168, 0.8);
+  grid-column: 1/3;
+}
+
+.movieInfo2 {
+  grid-column: 1/3;
+}
+
 .plotText {
-  margin-top: 10px;
-  margin-bottom: 20px;
+  grid-column: 1/3;
+}
+
+.hideButton {
+  visibility: hidden;
+}
+.showButton {
+  visibility: visible;
+}
+.buttonColor {
+  width: 5%;
+  color: #5e0202;
+  filter: invert(6%) sepia(96%) saturate(4244%) hue-rotate(10deg)
+    brightness(99%) contrast(111%);
+  position: absolute;
+  left: 47vw;
+  top: 35vh;
+}
+</style>
+<style>
+
+.getTickets {
+  grid-area: 7 / 1 / 8 / 3;
+  letter-spacing: 2px;
+}
+.availableShowing {
+  border-top: 1px #5e0202 solid;
+  display: flex;
+  grid-area: 7/1/8/3;
+  /* grid-column: 1/3; */
+  margin-top: 7vw;
+}
+
+.availableShowing > *{
+  padding:15px 20px 5px;
+}
+.showingsListContainer {
+  grid-column: 1/3;
 }
 </style>

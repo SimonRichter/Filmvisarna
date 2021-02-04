@@ -49,8 +49,6 @@ public class Authentication {
         });
 
         app.post("/api/login", (req, res) -> {
-            var x = req.body();
-            System.out.println(x);
             if(req.session("current-member") != null) {
                 res.send("Already logged in");
                 return;

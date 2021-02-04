@@ -15,7 +15,7 @@ public class Showing {
     private String salon;
     private String time;
     private int totalSeats;
-    private Boolean[] seats;
+    private Boolean[] seats = new Boolean[this.totalSeats];
 
     public String getId() {
         return id;

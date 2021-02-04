@@ -38,11 +38,18 @@
     <img class="signa" src="../pictures/Signatures/jo.png" alt="rbddde" />
     <img class="signa" src="../pictures/Signatures/m.png" alt="rbddde" />
   </div>
+  <Footer />
 </template>
 
 
 <script>
-export default {};
+import Footer from "../components/Footer.vue"
+export default {
+  components:{
+    Footer
+
+  }
+};
 </script>
 
 <style scoped>

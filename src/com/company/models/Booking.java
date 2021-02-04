@@ -13,7 +13,7 @@ public class Booking {
     private String tickets;
     private String seatIndexes;
     private String totalSum;
-
+    private String userEmail;
 
     public Booking(){}
 
@@ -55,5 +55,13 @@ public class Booking {
 
             public void setTotalSum(String totalSum) {
                 this.totalSum = totalSum;
+            }
+
+            public String getUserEmail() {
+                return userEmail;
+            }
+
+            public void setUserEmail(String userEmail) {
+                this.userEmail = userEmail;
             }
         }

@@ -54,21 +54,26 @@ export default {
 </script>
 
 <style scoped>
+
+.custom-select > *{
+   font-family: 'Bebas Neue', cursive;
+}
 .custom-select {
    position: absolute;
-   top: 27vh;
-   left: 80vw;
+   top: 23vw;
+   left: 45.5vw;
    width: 10vw;
    text-align: left;
    outline: none;
    height: 36px;
-   line-height: 36px;
+   line-height: 50px;
+   font-size: 18px;
 }
 
 .custom-select .selected {
    background-color: #131313;
    border-radius: 6px;
-   border: 1px solid #666666;
+   /* border: 1px solid #666666; */
    color: rgb(238, 220, 192);
    padding-left: 1em;
    cursor: pointer;
@@ -76,14 +81,19 @@ export default {
 }
 
 .custom-select .selected.open {
-   border: 1px solid #6e1020;
+ 
    border-radius: 6px 6px 0px 0px;
+}
+.items{
+    display: grid;
+   width: 40vw;
+   grid-template-columns: repeat(3,1fr);
 }
 
 .custom-select .selected:after {
    position: absolute;
    content: "";
-   top: 18px;
+   top: 22px;
    right: 0.7em;
    width: 0;
    height: 0;
@@ -95,14 +105,13 @@ export default {
    color: rgb(238, 220, 192);
    border-radius: 0px 0px 6px 6px;
    overflow: hidden;
-   border-right: 1px solid #6e1020;
-   border-left: 1px solid #6e1020;
-   border-bottom: 1px solid #6e1020;
+
    position: absolute;
    background-color: #131313;
-   left: 0;
-   right: 0;
+   left: -15vw;
+
    z-index: 1;
+  
 }
 
 .custom-select .items div {

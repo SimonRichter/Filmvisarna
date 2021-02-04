@@ -8,6 +8,7 @@ import Booking from './views/Booking.vue'
 import About from './views/About.vue'
 import MyPage from './views/MyPage.vue'
 import Faq from './views/FAQ.vue'
+import OurCinemas from './views/OurCinemas.vue'
 
 const routes = [
   {
@@ -47,6 +48,12 @@ const routes = [
     path: '/about',
     component: About
   },
+  {
+    name: 'OurCinemas',
+    path: '/ourcinemas',
+    component: OurCinemas
+  },
+
   {
     name: 'FAQ',
     path: '/faq',

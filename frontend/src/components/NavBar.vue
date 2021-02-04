@@ -2,16 +2,12 @@
   <div v-bind:class="{ trans: isAbout }" class="navBarContainer">
     <ul v-bind:class="{ trans: isAbout }" class="navBar floatLeft">
       <router-link to="/">
-        <img
-          v-bind:class="{ inver: isAbout }"
-          src="../pictures/logo2.svg"
-          class="logo"
-          
-        />
+        <img src="../pictures/logoV3.png" class="logo" />
       </router-link>
     </ul>
     <ul v-bind:class="{ trans: isAbout }" class="navBar floatRight">
       <router-link to="/movies"><li>Movies</li></router-link>
+      <router-link to="/ourcinemas"><li>Our Cinemas</li></router-link>
       <router-link to="/faq"><li>FAQ</li></router-link>
       <router-link to="/about"><li>About</li></router-link>
       <button class="signInButton" v-if="!loggedIn" @click="showModal = true">
@@ -29,7 +25,7 @@
     ></div>
   </transition>
   <transition name="slide" appear>
-    <div class="modal" v-if="showModal">
+    <div v-bind:class="{ gone: !change }" class="modal" v-if="showModal">
       <SignInComp class="signInComp" />
       <button class="closeModalButton" @click="showModal = false">X</button>
     </div>
@@ -52,8 +48,11 @@ export default {
     loggedIn() {
       return this.$store.state.member;
     },
-    isAbout() {
-      return this.$route.name === "About";
+    change() {
+      return !this.$store.state.member;
+    },
+    isOurCinemas() {
+      return this.$route.name === "OurCinemas";
     },
   },
 };
@@ -71,8 +70,8 @@ li:hover {
 a {
   text-decoration: none;
 }
-
 .logo {
+  align-items: right;
   padding: 0px 0px 0px 0px;
   height: 80px;
   width: auto;
@@ -86,7 +85,7 @@ a {
   overflow: hidden;
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 10;
 }
 .navBar {
   display: flex;
@@ -135,10 +134,10 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 99;
-  width: 40%;
-  height: 40%;
+  height: 25vw;
+  width: 42vw;
   max-width: 100;
-  background-color: #131313;
+  background-color: #2b2b2b;
   border-radius: 16px;
   padding: 25px;
 }
@@ -158,5 +157,8 @@ a {
 .trans {
   opacity: 0.9;
   border: none;
+}
+.gone {
+  display: none;
 }
 </style>

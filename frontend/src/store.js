@@ -1,5 +1,6 @@
 "use strict";
 
+import { isVNode, vShow } from 'vue';
 import { createStore } from 'vuex'
 
 const state = {
@@ -21,9 +22,10 @@ const mutations = {
     state.member = member;
     console.log(state.member)
   },
-  setBookings(state, bookingsList) {
-    state.bookings = bookingsList;
-  },
+
+  logOutMember(state){
+  state.member=null;
+},
   setBookingInfo(store, bookingInfo) {
     store.bookingInfo = bookingInfo;
     console.log('store.bookingInfo', store.bookingInfo)
@@ -43,6 +45,16 @@ const mutations = {
   },
   addMessage(state, message) {
     state.messages.push(message);
+  },
+  setBookings(state, bookingsList) {
+    state.bookings = bookingsList;
+  },
+  removeBooking(state, booking) {
+    const index = state.bookings.indexOf(state.bookings.filter(b => b.id == booking.id)[0]);
+    state.bookings.splice(index, 1);
+  },
+  updateBookings(state, booking) {
+    state.bookings.push(booking);
   }
   // ----------- SPRINT 2 -----------
   // addMemberToState(store, newMember) {
@@ -64,6 +76,7 @@ const mutations = {
 }
 
 const actions = {
+
   async fetchMovies(store) {
     let moviesList = await fetch('/rest/movies')
     moviesList = await moviesList.json()
@@ -113,6 +126,7 @@ const actions = {
     message = await response.json()
     store.commit('addMessage', message)
   },
+
   // ------------- SPRINT 2 ------------
   // in-parameter is a user object user = {name: Anna, email: anna@gmail.com, password: Hej123}
   // Backend: need to use collection('Klass').insert(Object) to add a new 
@@ -157,15 +171,16 @@ const actions = {
       if (i == seatIndexes.length - 1) {
         seatIndexesString += "" + (seatIndexes[i] + 1)
       } else {
-              seatIndexesString += "" + (seatIndexes[i] + 1) + ", "
+        seatIndexesString += "" + (seatIndexes[i] + 1) + ", "
       }
     }
 
     let tickets = tickets0 + tickets1 + tickets2;
-
+    let userEmail = this.state.member.email
+    console.log(userEmail)
     seatIndexes = seatIndexesString
     let booking = {
-      showingId, tickets, seatIndexes, totalSum
+      showingId, tickets, seatIndexes, totalSum, userEmail
     }
 
     console.log("createBookings", JSON.stringify(booking))
@@ -173,17 +188,17 @@ const actions = {
       method: 'POST',
       body: JSON.stringify(booking)
     })
-
-
-    // let member = await fetch('/api/whoami')
-    // try {
-    //   member = await member.json()
-    //   console.log(member);
-    //   store.commit('setMember', member)
-    // } catch {
-    //   console.warn('Not logged in');
-    // }
   },
+  // delete booking 
+  async deleteBooking(store, booking) {
+    let response = await fetch('/rest/bookings/' + booking.id, {
+      method: 'DELETE',
+      body: JSON.stringify(booking)
+    })
+    booking = await response.json()
+    store.commit('removeBooking', booking);
+  },
+
   async login(store, credentials) {
     let member = await fetch('/api/login', {
       method: 'POST',
@@ -191,8 +206,6 @@ const actions = {
     })
 
     try {
-      console.log('kör från store');
-
       //member = state.members
       member = await member.json()
       console.log(member);
