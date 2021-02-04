@@ -1,40 +1,43 @@
 <template>
-
-<div class="contentGridContainer">
+  <div class="contentGridContainer">
+    <h2>About</h2>
     <p class="about">
-      Xorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quia.
-      Tempore deleniti in deserunt consequuntur excepturi. Sed nobis soluta
-      facilis fugiat. Consequatur, est exercitationem. Labore nobis repellendus
-      ipsum impedit amet? Lorem ipsum dolor sit amet, consectetur adipisicing
-      elit. Unde, ducimus maxime. Molestiae reiciendis repellendus rem
-      exercitationem dignissimos, reprehenderit qui pariatur, facilis a
-      molestias tenetur est laboriosam ar chitecto id impedit deserunt? Lorem
-      ipsum dolor sit, ameonsectetur adipisicing elit. Vel fuga cum minima
-      tempora iusto ad reprehenderit numquam nulla doloribus aspernatur,
-      delectus voluptatum! Dolor, est nam. Accusantium, iusto! Eius, voluptatem
-      fugiat? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat
-      a, delectus illum saepe cum sit magnam doloribus dignissimos deleniti,
-      quae sequi vitae quaerat repudiandae rem iste provident voluptate minima
-      ea.
+      Cinemas VueX, with its 2 amazing comfortable theatres, has the capacity
+      for 600 people simultaneously. Impeccable quality of image and sound, but
+      the most important is the quality of the staff and the values of the
+      company for always improving and also for always giving the best service
+      to its customers
+    </p>
+    <br /><br /><br />
+    <h2>history</h2>
+    <p class="about">
+      VueX Cinemas started as a funny thought during a party in 2015. “What if
+      we had our own cinema”, said Johanna(CSS Master and Manager of Managers).
+      Everyone laughed but the thought lingered for a while and it sparked a
+      collective planning and entrepreneurship. Within a year the design of the
+      building, the contract with the film studios and the leasing for the
+      pop-corn machines was done.
     </p>
     <p class="about">
-      Corem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quia.
-      Tempore deleniti in deserunt consequuntur excepturi. Sed nobis soluta
-      facilis fugiat. Conseqatur, est exercitationem. Labore nobis repellendus
-      ipsum impedit amet? Lorem ipsum dolor sit amet, consectetur adipisicing
-      elit. Unde, ducimus maxime. Molestiae reiciendis repellendus rem
-      exercitationem dignissimos, reprehenderit qui pariatur, facilis a
-      molestias tenetur est laboriosam ar chitecto id impedit deserunt? Lorem
-      ipsum dolor sit, amet consectetur adipisicing elit. Vel fuga cum minima
-      tempora iusto ad reprehenderit numquam nulla doloribus aspernatur,
-      delectus voluptatum! Dolor, est nam. Accusantium, iusto! Eius, voluptatem
-      fugiat? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat
-      a, delectus illum saepe cum sit magnam doloribus dignissimos deleniti,
-      quae sequi vitae quaerat repudiandae rem iste provident voluptate minima
-      ea.
+      Soon all the plans were in motion and accelerated when Hugo, the future
+      Pop-Corn manager, decided to invest one million euros in sound and video
+      equipment. By the end of 2016 The first VueX Cinema was open. It was a
+      huge success, which led to very fast acquisition of a new location for the
+      second VueX theatre. This one was built even faster, opening its doors at
+      the beginning of 2018. Right now , there is a pause in the business
+      because of the current pandemic, however the planning for a third theatre
+      is happening behind the curtain. A new theatre will allow VueX to showcase
+      even more than 14 films! Stay toon :)
     </p>
-    </div>
-  
+  </div>
+  <div class="sinContainer">
+    <img class="signa" src="../pictures/Signatures/s.png" alt="rbddde" />
+    <img class="signa" src="../pictures/Signatures/j.png" alt="rbddde" />
+    <img class="signa" src="../pictures/Signatures/r.png" alt="rbddde" />
+    <img class="signa" src="../pictures/Signatures/h.png" alt="rbddde" />
+    <img class="signa" src="../pictures/Signatures/jo.png" alt="rbddde" />
+    <img class="signa" src="../pictures/Signatures/m.png" alt="rbddde" />
+  </div>
 </template>
 
 
@@ -43,8 +46,21 @@ export default {};
 </script>
 
 <style scoped>
+.sinContainer {
+  text-align: center;
+  width: 100vw;
+}
+h2 {
+  grid-column: 1/3;
+  text-align: center;
+}
+.signa {
+  width: 10vw;
+  transform: rotate(-20deg);
+  padding: 0px 10px 0px 10px;
+}
 .contentGridContainer {
-  width: 100%;
+  width: 80%;
   grid-gap: 0.1vw;
 }
 
@@ -52,10 +68,11 @@ export default {};
   padding: 0vw 10vw 0vw;
   text-align: center;
   grid-column: 1/3;
+  font-size: 18px;
 }
 
 p::first-letter {
   font-size: 300%;
-  color: #830202;
+  color: #800505;
 }
 </style>
