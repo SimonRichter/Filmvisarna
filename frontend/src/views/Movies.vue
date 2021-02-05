@@ -54,6 +54,7 @@ export default {
    padding: 0px 0 8vw;
 }
 .bannerImg {
+   margin-top: 80px;
    margin-bottom: 2vw;
    background-image: url("../pictures/movie-cinema-poster2.jpg");
    background-repeat: no-repeat;

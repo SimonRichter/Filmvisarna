@@ -60,7 +60,7 @@ export default {
 }
 .custom-select {
    position: absolute;
-   top: 18vw;
+   top: 23vw;
    left: 45.5vw;
    width: 10vw;
    text-align: left;
