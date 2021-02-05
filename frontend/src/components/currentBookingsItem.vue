@@ -7,12 +7,15 @@
       <div class="titleSalon">
         <h4>{{ movieTitle }}</h4>
         <h4>{{ salon }}</h4>
+          
       </div>
+      
       <h4 class="dateTime">{{ time }} , {{ date }}</h4>
       <button @click="showModal = true" class="cancel">
         <h4>Cancel booking</h4>
       </button>
     </div>
+    <img class="qr" src="../pictures/qr_code.png" />
     <div class="what">
       <h4 class="seats">
         Seat{{ seats.includes(",") ? "s" : "" }}: {{ seats }}
@@ -113,5 +116,12 @@ button {
 button:hover {
   background-color: #131313;
   transform: scale(1.05);
+}
+.qr{
+  background-color: white;
+  width:7vw;
+  height: 7vw;
+ 
+  
 }
 </style>
