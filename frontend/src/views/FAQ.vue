@@ -117,6 +117,6 @@ p {
 .content {
   margin: 0 auto;
   width: 60vw;
-  margin-top: 15vh;
+  padding-top: 15vh;
 }
 </style>
