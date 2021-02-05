@@ -113,16 +113,11 @@ h3 {
 }
 
 .videoContainer {
-  margin-top: 100px;
+  padding-top: 100px;
   width: 100%;
   display: flex;
   justify-content: center;
 }
-/*
-video {
-  border-inline: 7px black solid;
-}*/
-
 .movieInfo1 {
   grid-column: 1/3;
 }
