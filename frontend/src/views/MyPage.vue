@@ -54,11 +54,11 @@ export default {
    flex-direction: column;
    justify-content: space-around;
   
-   
 }
-</style>
-<style scoped>
-.contentGridContainer:not(:first-child) {
+.contentGridContainer{
    grid-gap: 2vw;
 }
+
+
+
 </style>
