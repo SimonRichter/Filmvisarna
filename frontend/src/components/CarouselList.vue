@@ -48,7 +48,7 @@ export default {
           "https://www.themoviedb.org/t/p/original/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg",
         title: "Pulp-Fiction",
         texts:
-          'A Quentin Tarantino classic;       "Hamburgers: the cornerstone of any nutritious breakfast"',
+          'A Quentin Tarantino classic;       "Royal with cheese"',
       },
       {
         imageUrl:

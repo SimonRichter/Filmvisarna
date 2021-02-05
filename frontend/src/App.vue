@@ -1,6 +1,7 @@
 <template>
-  <div @click="betygVg()">
+  
     <NavBar />
+    <div @click="betygVg()">
 
     <router-view />
 
