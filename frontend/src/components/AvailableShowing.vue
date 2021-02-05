@@ -81,11 +81,11 @@ export default {
       showCalen: false,
       hello: 0,
       bye: 0,
-      positions: {
+      pos: {
         clientX: undefined,
         clientY: undefined,
-        movementX: 0,
-        movementY: 0,
+        movX: 0,
+        movY: 0,
       },
     };
   },
@@ -128,25 +128,25 @@ export default {
     dragMouseDown: function (event) {
       event.preventDefault();
       // get the mouse cursor position at startup:
-      this.positions.clientX = event.clientX;
-      this.positions.clientY = event.clientY;
+      this.pos.clientX = event.clientX;
+      this.pos.clientY = event.clientY;
       document.onmousemove = this.elementDrag;
       document.onmouseup = this.closeDragElement;
     },
     elementDrag: function (event) {
       event.preventDefault();
-      this.positions.movementX = this.positions.clientX - event.clientX;
-      this.positions.movementY = this.positions.clientY - event.clientY;
-      this.positions.clientX = event.clientX;
-      this.positions.clientY = event.clientY;
+      this.pos.movX = this.pos.clientX - event.clientX;
+      this.pos.movY = this.pos.clientY - event.clientY;
+      this.pos.clientX = event.clientX;
+      this.pos.clientY = event.clientY;
       // set the element's new position:
       this.$refs.draggableContainer.style.top =
         this.$refs.draggableContainer.offsetTop -
-        this.positions.movementY +
+        this.pos.movY +
         "px";
       this.$refs.draggableContainer.style.left =
         this.$refs.draggableContainer.offsetLeft -
-        this.positions.movementX +
+        this.pos.movX +
         "px";
     },
     closeDragElement() {

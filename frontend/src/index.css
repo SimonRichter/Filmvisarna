@@ -113,3 +113,11 @@ a {
     width: 70vw;
   }
 }
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  
+}
