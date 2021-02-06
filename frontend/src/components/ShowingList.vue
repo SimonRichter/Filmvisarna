@@ -19,7 +19,7 @@ export default {
   },
   computed: {
     movies() {
-      let array = this.$store.state.movies.filter((x) => x.title.length < 15 && x.title.length > 5);
+      let array = this.$store.state.movies.filter((x) => x.title.length < 16);
 
       let j, k;
 

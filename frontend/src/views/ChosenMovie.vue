@@ -58,15 +58,6 @@ export default {
         (movie) => movie.title == this.title
       )[0];
     },
-    whichTheater() {
-      return this.$store.state.showings.filter(
-        (obj) => obj.title == this.title
-      )[0];
-    },
-
-    allMovies() {
-      return this.$store.state.movies;
-    },
   },
   methods: {
     playPause() {
