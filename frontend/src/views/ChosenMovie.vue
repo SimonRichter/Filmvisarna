@@ -7,13 +7,13 @@
       height="563"
       :src="movie.trailer"
     ></video>
+    <img
+      @click="playPause()"
+      src="../pictures/playbutton.svg"
+      class="buttonColor"
+      v-bind:class="{ hideButton: playing, showButton: !playing }"
+    />
   </div>
-  <img
-    @click="playPause()"
-    src="../pictures/playbutton.svg"
-    class="buttonColor"
-    v-bind:class="{ hideButton: playing, showButton: !playing }"
-  />
 
   <div class="contentGridContainer">
     <h1 class="movieTitleH1">{{ movie.title }}</h1>
@@ -117,6 +117,7 @@ h3 {
   width: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 /*
 video {
@@ -147,17 +148,16 @@ video {
   visibility: visible;
 }
 .buttonColor {
-  width: 5%;
+  height: 8%;
   color: #5e0202;
   filter: invert(6%) sepia(96%) saturate(4244%) hue-rotate(10deg)
     brightness(99%) contrast(111%);
   position: absolute;
-  left: 47vw;
-  top: 35vh;
+  bottom: 48%;
+  cursor: pointer;
 }
 </style>
 <style>
-
 .getTickets {
   grid-area: 7 / 1 / 8 / 3;
   letter-spacing: 2px;
@@ -170,8 +170,8 @@ video {
   margin-top: 7vw;
 }
 
-.availableShowing > *{
-  padding:15px 20px 5px;
+.availableShowing > * {
+  padding: 15px 20px 5px;
 }
 .showingsListContainer {
   grid-column: 1/3;
