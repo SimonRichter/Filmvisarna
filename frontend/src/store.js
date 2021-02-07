@@ -136,15 +136,7 @@ const actions = {
       method: 'POST',
       body: JSON.stringify(booking)
     })
-  },
-  // delete booking 
-  async deleteBooking(store, booking) {
-    let response = await fetch('/rest/bookings/' + booking.id, {
-      method: 'DELETE',
-      body: JSON.stringify(booking)
-    })
-    booking = await response.json()
-    store.commit('removeBooking', booking);
+
   },
 
   async login(store, credentials) {
@@ -172,7 +164,7 @@ const actions = {
 
       store.commit('setMember', member)
     } catch {
-  
+
     }
   },
   async whoAmI(store) {
@@ -182,7 +174,7 @@ const actions = {
 
       store.commit('setMember', member)
     } catch {
- 
+
     }
   },
 

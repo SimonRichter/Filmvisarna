@@ -7,9 +7,8 @@
       <div class="titleSalon">
         <h4>{{ movieTitle }}</h4>
         <h4>{{ salon }}</h4>
-          
       </div>
-      
+
       <h4 class="dateTime">{{ time }} , {{ date }}</h4>
       <button @click="showModal = true" class="cancel">
         <h4>Cancel booking</h4>
@@ -58,9 +57,11 @@ export default {
   methods: {
     deleteBooking(option) {
       if (option) {
-        this.$store.dispatch("deleteBooking", this.booking);
+        this.$store.commit("removeBooking", this.booking);
+        fetch("/rest/bookings/" + this.booking.id, {
+          method: "DELETE",
+        });
         this.updateSeatsInBackend();
-    
       }
       this.showModal = false;
     },
@@ -94,7 +95,6 @@ export default {
 }
 .currentBookingItem:hover {
   box-shadow: 1px 1px rgb(114, 4, 4);
-  
 }
 .whereWhen > *,
 .what > .seats {
@@ -117,11 +117,9 @@ button:hover {
   background-color: #131313;
   transform: scale(1.05);
 }
-.qr{
+.qr {
   background-color: white;
-  width:7vw;
+  width: 7vw;
   height: 7vw;
- 
-  
 }
 </style>
