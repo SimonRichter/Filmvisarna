@@ -9,6 +9,10 @@ import static express.database.Database.collection;
 public class Main {
 
     public static void main(String[] args) {
+
+        //Uncomment if you want to generate showings
+        //ShowingGenerator.generateShowings();
+
         var app = new Express();
 
         app.enableCollections("database/temp/db/movies.db", CollectionOptions.ENABLE_WATCHER);
