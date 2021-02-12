@@ -9,6 +9,15 @@ import static express.database.Database.collection;
 public class Main {
 
     public static void main(String[] args) {
+
+        /* ----------------------------------------------
+        Uncomment "ShowingGenerator.generateShowings();"
+         if you want to generate new showings.
+        COPY all from terminal and PASTE it on a notepad.
+        Change format from "txt" to "JSON" and save.
+         -----------------------------------------------*/
+        //ShowingGenerator.generateShowings();
+
         var app = new Express();
 
         app.enableCollections("database/temp/db/movies.db", CollectionOptions.ENABLE_WATCHER);
