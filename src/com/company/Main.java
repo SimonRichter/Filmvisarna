@@ -10,7 +10,12 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //Uncomment if you want to generate showings
+        /* ----------------------------------------------
+        Uncomment "ShowingGenerator.generateShowings();"
+         if you want to generate new showings.
+        COPY all from terminal and PASTE it on a notepad.
+        Change format from "txt" to "JSON" and save.
+         -----------------------------------------------*/
         //ShowingGenerator.generateShowings();
 
         var app = new Express();

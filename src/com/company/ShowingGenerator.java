@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class ShowingGenerator {
 
-    //Run this method to get a JSON-file of showings in the terminal
+    //Run this method to get a JSON-file format-like of 4 weeks(28 days) of showings in the terminal
     public static void generateShowings() {
 
         String[] titles = new String[14];
