@@ -25,7 +25,7 @@ The cinema has showings for 14 films across 8 viewing rooms (4 each location) an
 <hr>
 
 
-### General look the Website:
+### General look of the Website:
 
 <img width="600" src="https://user-images.githubusercontent.com/67017215/107766736-33388080-6d34-11eb-8acc-c771704a16ec.gif">
 
